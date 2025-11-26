@@ -180,6 +180,574 @@ export const collections = {
     })
   }),
 
+  webdesign: defineCollection({
+    source: '0.web-design.yml',
+    type: 'page',
+    schema: z.object({
+      // Top-level meta used in content and SEO
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      headline: z.string().optional(),
+      seo: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty()
+        })
+        .optional(),
+      navigation: z.boolean().optional(),
+
+      // Hero section
+      hero: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        links: z.array(createLinkSchema())
+      }),
+
+      
+      sections: z.array(createBaseSchema().extend({
+        id: z.string().nonempty(),
+        headline: z.string().optional(),
+        orientation: orientationEnum.optional(),
+        reverse: z.boolean().optional(),
+        features: z.array(createFeatureItemSchema()).optional(),
+        price: z.union([
+          z.string(),
+          z.object({
+            display: z.string().optional(),
+            amount: z.number().optional(),
+            billing: z.string().optional()
+          })
+        ]).optional()
+      })),
+      features: createBaseSchema().extend({
+        items: z.array(createFeatureItemSchema())
+
+      }),
+      testimonials: createBaseSchema().extend({
+        headline: z.string().optional(),
+        items: z.array(
+          z.object({
+            quote: z.string().nonempty(),
+            user: z.object({
+              name: z.string().nonempty(),
+              description: z.string().nonempty(),
+              to: z.string().optional(),
+              target: z.string().optional(),
+              avatar: createImageSchema()
+            })
+          })
+        )
+      }),
+      cta: createBaseSchema().extend({
+        links: z.array(createLinkSchema())
+      })
+    })
+  }),
+  seoandpaidads: defineCollection({
+    source: '0.seo-and-paid-ads.yml',
+    type: 'page',
+    schema: z.object({
+      // Top-level meta used in content and SEO
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      headline: z.string().optional(),
+      seo: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty()
+        })
+        .optional(),
+      navigation: z.boolean().optional(),
+
+      // Hero section
+      hero: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        links: z.array(createLinkSchema())
+      }),
+
+      
+      sections: z.array(createBaseSchema().extend({
+        id: z.string().nonempty(),
+        headline: z.string().optional(),
+        orientation: orientationEnum.optional(),
+        reverse: z.boolean().optional(),
+        features: z.array(createFeatureItemSchema()).optional(),
+        price: z.union([
+          z.string(),
+          z.object({
+            display: z.string().optional(),
+            amount: z.number().optional(),
+            billing: z.string().optional()
+          })
+        ]).optional()
+      })),
+      features: createBaseSchema().extend({
+        items: z.array(createFeatureItemSchema())
+
+      }),
+      testimonials: createBaseSchema().extend({
+        headline: z.string().optional(),
+        items: z.array(
+          z.object({
+            quote: z.string().nonempty(),
+            user: z.object({
+              name: z.string().nonempty(),
+              description: z.string().nonempty(),
+              to: z.string().optional(),
+              target: z.string().optional(),
+              avatar: createImageSchema()
+            })
+          })
+        )
+      }),
+      cta: createBaseSchema().extend({
+        links: z.array(createLinkSchema())
+      })
+    })
+  }),
+  marketingautomation: defineCollection({
+    source: '0.marketing-automation.yml',
+    type: 'page',
+    schema: z.object({
+      // Top-level meta used in content and SEO
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      headline: z.string().optional(),
+      seo: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty()
+        })
+        .optional(),
+      navigation: z.boolean().optional(),
+
+      // Hero section
+      hero: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        links: z.array(createLinkSchema())
+      }),
+
+      
+      sections: z.array(createBaseSchema().extend({
+        id: z.string().nonempty(),
+        headline: z.string().optional(),
+        orientation: orientationEnum.optional(),
+        reverse: z.boolean().optional(),
+        features: z.array(createFeatureItemSchema()).optional(),
+        price: z.union([
+          z.string(),
+          z.object({
+            display: z.string().optional(),
+            amount: z.number().optional(),
+            billing: z.string().optional()
+          })
+        ]).optional()
+      })),
+      features: createBaseSchema().extend({
+        items: z.array(createFeatureItemSchema())
+
+      }),
+      testimonials: createBaseSchema().extend({
+        headline: z.string().optional(),
+        items: z.array(
+          z.object({
+            quote: z.string().nonempty(),
+            user: z.object({
+              name: z.string().nonempty(),
+              description: z.string().nonempty(),
+              to: z.string().optional(),
+              target: z.string().optional(),
+              avatar: createImageSchema()
+            })
+          })
+        )
+      }),
+      cta: createBaseSchema().extend({
+        links: z.array(createLinkSchema())
+      })
+    })
+  }),
+  getmoreleads: defineCollection({
+    source: '1.get-more-leads.yml',
+    type: 'page',
+    schema: z.object({
+      // Top-level meta used in content and SEO
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      headline: z.string().optional(),
+      seo: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty()
+        })
+        .optional(),
+      navigation: z.boolean().optional(),
+
+      // Hero section
+      hero: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        links: z.array(createLinkSchema())
+      }),
+
+      
+      sections: z.array(createBaseSchema().extend({
+        id: z.string().nonempty(),
+        headline: z.string().optional(),
+        orientation: orientationEnum.optional(),
+        reverse: z.boolean().optional(),
+        features: z.array(createFeatureItemSchema()).optional(),
+        price: z.union([
+          z.string(),
+          z.object({
+            display: z.string().optional(),
+            amount: z.number().optional(),
+            billing: z.string().optional()
+          })
+        ]).optional()
+      })),
+      features: createBaseSchema().extend({
+        items: z.array(createFeatureItemSchema())
+
+      }),
+      testimonials: createBaseSchema().extend({
+        headline: z.string().optional(),
+        items: z.array(
+          z.object({
+            quote: z.string().nonempty(),
+            user: z.object({
+              name: z.string().nonempty(),
+              description: z.string().nonempty(),
+              to: z.string().optional(),
+              target: z.string().optional(),
+              avatar: createImageSchema()
+            })
+          })
+        )
+      }),
+      cta: createBaseSchema().extend({
+        links: z.array(createLinkSchema())
+      })
+    })
+  }),
+  clarifyyourmessage: defineCollection({
+    source: '1.clarify-your-message.yml',
+    type: 'page',
+    schema: z.object({
+      // Top-level meta used in content and SEO
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      headline: z.string().optional(),
+      seo: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty()
+        })
+        .optional(),
+      navigation: z.boolean().optional(),
+
+      // Hero section
+      hero: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        links: z.array(createLinkSchema())
+      }),
+
+      
+      sections: z.array(createBaseSchema().extend({
+        id: z.string().nonempty(),
+        headline: z.string().optional(),
+        orientation: orientationEnum.optional(),
+        reverse: z.boolean().optional(),
+        features: z.array(createFeatureItemSchema()).optional(),
+        price: z.union([
+          z.string(),
+          z.object({
+            display: z.string().optional(),
+            amount: z.number().optional(),
+            billing: z.string().optional()
+          })
+        ]).optional()
+      })),
+      features: createBaseSchema().extend({
+        items: z.array(createFeatureItemSchema())
+
+      }),
+      testimonials: createBaseSchema().extend({
+        headline: z.string().optional(),
+        items: z.array(
+          z.object({
+            quote: z.string().nonempty(),
+            user: z.object({
+              name: z.string().nonempty(),
+              description: z.string().nonempty(),
+              to: z.string().optional(),
+              target: z.string().optional(),
+              avatar: createImageSchema()
+            })
+          })
+        )
+      }),
+      cta: createBaseSchema().extend({
+        links: z.array(createLinkSchema())
+      })
+    })
+  }),
+  speedupsales: defineCollection({
+    source: '1.speed-up-sales.yml',
+    type: 'page',
+    schema: z.object({
+      // Top-level meta used in content and SEO
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      headline: z.string().optional(),
+      seo: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty()
+        })
+        .optional(),
+      navigation: z.boolean().optional(),
+
+      // Hero section
+      hero: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        links: z.array(createLinkSchema())
+      }),
+
+      
+      sections: z.array(createBaseSchema().extend({
+        id: z.string().nonempty(),
+        headline: z.string().optional(),
+        orientation: orientationEnum.optional(),
+        reverse: z.boolean().optional(),
+        features: z.array(createFeatureItemSchema()).optional(),
+        price: z.union([
+          z.string(),
+          z.object({
+            display: z.string().optional(),
+            amount: z.number().optional(),
+            billing: z.string().optional()
+          })
+        ]).optional()
+      })),
+      features: createBaseSchema().extend({
+        items: z.array(createFeatureItemSchema())
+
+      }),
+      testimonials: createBaseSchema().extend({
+        headline: z.string().optional(),
+        items: z.array(
+          z.object({
+            quote: z.string().nonempty(),
+            user: z.object({
+              name: z.string().nonempty(),
+              description: z.string().nonempty(),
+              to: z.string().optional(),
+              target: z.string().optional(),
+              avatar: createImageSchema()
+            })
+          })
+        )
+      }),
+      cta: createBaseSchema().extend({
+        links: z.array(createLinkSchema())
+      })
+    })
+  }),
+  keepcustomerslonger: defineCollection({
+    source: '1.keep-customers-longer.yml',
+    type: 'page',
+    schema: z.object({
+      // Top-level meta used in content and SEO
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      headline: z.string().optional(),
+      seo: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty()
+        })
+        .optional(),
+      navigation: z.boolean().optional(),
+
+      // Hero section
+      hero: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        links: z.array(createLinkSchema())
+      }),
+
+      
+      sections: z.array(createBaseSchema().extend({
+        id: z.string().nonempty(),
+        headline: z.string().optional(),
+        orientation: orientationEnum.optional(),
+        reverse: z.boolean().optional(),
+        features: z.array(createFeatureItemSchema()).optional(),
+        price: z.union([
+          z.string(),
+          z.object({
+            display: z.string().optional(),
+            amount: z.number().optional(),
+            billing: z.string().optional()
+          })
+        ]).optional()
+      })),
+      features: createBaseSchema().extend({
+        items: z.array(createFeatureItemSchema())
+
+      }),
+      testimonials: createBaseSchema().extend({
+        headline: z.string().optional(),
+        items: z.array(
+          z.object({
+            quote: z.string().nonempty(),
+            user: z.object({
+              name: z.string().nonempty(),
+              description: z.string().nonempty(),
+              to: z.string().optional(),
+              target: z.string().optional(),
+              avatar: createImageSchema()
+            })
+          })
+        )
+      }),
+      cta: createBaseSchema().extend({
+        links: z.array(createLinkSchema())
+      })
+    })
+  }),
+  reachmorebuyers: defineCollection({
+    source: '1.reach-more-buyers.yml',
+    type: 'page',
+    schema: z.object({
+      // Top-level meta used in content and SEO
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      headline: z.string().optional(),
+      seo: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty()
+        })
+        .optional(),
+      navigation: z.boolean().optional(),
+
+      // Hero section
+      hero: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        links: z.array(createLinkSchema())
+      }),
+
+      
+      sections: z.array(createBaseSchema().extend({
+        id: z.string().nonempty(),
+        headline: z.string().optional(),
+        orientation: orientationEnum.optional(),
+        reverse: z.boolean().optional(),
+        features: z.array(createFeatureItemSchema()).optional(),
+        price: z.union([
+          z.string(),
+          z.object({
+            display: z.string().optional(),
+            amount: z.number().optional(),
+            billing: z.string().optional()
+          })
+        ]).optional()
+      })),
+      features: createBaseSchema().extend({
+        items: z.array(createFeatureItemSchema())
+
+      }),
+      testimonials: createBaseSchema().extend({
+        headline: z.string().optional(),
+        items: z.array(
+          z.object({
+            quote: z.string().nonempty(),
+            user: z.object({
+              name: z.string().nonempty(),
+              description: z.string().nonempty(),
+              to: z.string().optional(),
+              target: z.string().optional(),
+              avatar: createImageSchema()
+            })
+          })
+        )
+      }),
+      cta: createBaseSchema().extend({
+        links: z.array(createLinkSchema())
+      })
+    })
+  }),
+  fixyourlivestreamandevents: defineCollection({
+    source: '1.fix-your-live-stream-and-events.yml',
+    type: 'page',
+    schema: z.object({
+      // Top-level meta used in content and SEO
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      headline: z.string().optional(),
+      seo: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty()
+        })
+        .optional(),
+      navigation: z.boolean().optional(),
+
+      // Hero section
+      hero: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        links: z.array(createLinkSchema())
+      }),
+
+      
+      sections: z.array(createBaseSchema().extend({
+        id: z.string().nonempty(),
+        headline: z.string().optional(),
+        orientation: orientationEnum.optional(),
+        reverse: z.boolean().optional(),
+        features: z.array(createFeatureItemSchema()).optional(),
+        price: z.union([
+          z.string(),
+          z.object({
+            display: z.string().optional(),
+            amount: z.number().optional(),
+            billing: z.string().optional()
+          })
+        ]).optional()
+      })),
+      features: createBaseSchema().extend({
+        items: z.array(createFeatureItemSchema())
+
+      }),
+      testimonials: createBaseSchema().extend({
+        headline: z.string().optional(),
+        items: z.array(
+          z.object({
+            quote: z.string().nonempty(),
+            user: z.object({
+              name: z.string().nonempty(),
+              description: z.string().nonempty(),
+              to: z.string().optional(),
+              target: z.string().optional(),
+              avatar: createImageSchema()
+            })
+          })
+        )
+      }),
+      cta: createBaseSchema().extend({
+        links: z.array(createLinkSchema())
+      })
+    })
+  }),
+       
   videoengine: defineCollection({
     source: '0.videoengine.yml',
     type: 'page',

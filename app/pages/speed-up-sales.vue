@@ -1,8 +1,9 @@
-<script setup lang="ts">
-const { data: page } = await useAsyncData('outreachengine', () => queryCollection('outreachengine').first())
 
+<script setup lang="ts">
+const { data: page } = await useAsyncData('speedupsales', () => queryCollection('speedupsales').first())
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
+
 useSeoMeta({
   titleTemplate: '',
   title,
@@ -20,15 +21,7 @@ useSeoMeta({
       :headline="page.hero.headline"
       :links="page.hero.links"
     >
-    <template #title>
-        <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-          Turn
-          <span class="text-primary italic"> cold outreach</span>
-          into
-          <span class="text-secondary italic"> warm conversations</span>
-          with an outbound machine on autopilot.
-        </h1>
-      </template>
+    
       <template #top>
         <HeroBackground />
       </template>

@@ -2,16 +2,18 @@
 const columns = [{
   label: 'Resources',
   children: [{
-    label: 'Help center'
+    label: 'Guides'
   }, {
-    label: 'Docs'
+    label: 'Tutorials'
   }, {
-    label: 'Roadmap'
+    label: 'Case Studies'
   }, {
-    label: 'Changelog'
+    label: 'Blog'
+  },
+{    label: 'Media Kit'
   }]
 }, {
-  label: 'Features',
+  label: 'Solutions',
   children: [{
     label: 'Affiliates'
   }, {
@@ -22,7 +24,7 @@ const columns = [{
     label: 'Sponsors'
   }]
 }, {
-  label: 'Company',
+  label: 'Services',
   children: [{
     label: 'About'
   }, {

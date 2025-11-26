@@ -1,0 +1,156 @@
+title: Clarify Your Message with Video
+description: |
+  We design, produce, and distribute sales-ready video that turns complex B2B offerings into closed-won deals.
+seo:
+  title: TruMedia Creative | Video‑Led Growth Agency for Industrial & Professional Services (NJ)
+  description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings. Book a strategy call.
+navigation: false
+hero:
+  headline: Clarify Your Message with Video
+  title: Turn [*conversations*]{class="text-primary"} into [*clients*]{class="text-primary"} with a video growth engine.
+  links:
+    - label: Industrial Growth Strategy Call
+      icon: i-lucide-calendar
+      trailing: true
+      to: /book
+      size: xl
+features:
+  title: Everything You Need to Win Deals
+  description: Productized packages + a clean process. We plan, film, edit, distribute, and help you publish—then reuse the content across sales and marketing while we measure what moves pipeline.
+  items:
+    - title: Proof Over Promises
+      description: Outcome‑focused stories and objection‑crushing FAQs that buyers actually believe.
+      icon: i-lucide-badge-check
+    - title: Seamless Booking
+      description: Inline scheduling on every key page so interest becomes meetings, fast.
+      icon: i-lucide-calendar-check
+    - title: Fast Turnaround
+      description: Defined SLAs and rush options—most packages deliver in 7–10 business days.
+      icon: i-lucide-rocket
+    - title: SEO & Landing Pages (Add‑On)
+      description: Simple landing pages and video embeds that buyers and search engines can find.
+      icon: i-lucide-search
+    - title: Outreach Engine (Integrated)
+      description: Gravix‑powered outbound and LinkedIn steps to keep qualified conversations coming.
+      icon: i-lucide-zap
+    - title: Analytics & Reporting
+      description: Lightweight dashboards for publish cadence, views, watch %, replies, meetings, and CTA clicks.
+      icon: i-lucide-bar-chart-3
+sections:
+  - title: The FAQ Authority Pack
+    description: A set of FAQ videos that Marketing can publish everywhere and Sales can send 1:1 to answer the most common questions prospects have before the call.
+    headline: Establish authority & eliminate objections 24/7.
+    id: how-we-help
+    orientation: horizontal
+    reverse: true
+    features: 
+      - title: 8 Polished FAQ Videos
+        description: Your most common questions turned into engaging clips
+        icon: i-lucide-video
+      - title: Master Compilation Video ($750 Value)
+        description: All FAQs stitched together for your site.
+        icon: i-lucide-clapperboard
+      - title: SEO Titles & Descriptions ($500 value)
+        description: Done-for-you, optimized copy.
+        icon: i-lucide-search-code
+      - title: Aimated Intro/Outro ($1,000 value)
+        description: Branded polish you can reuse forever.
+        icon: i-lucide-repeat-2
+      - title: Podcast Export ($300 Value)
+        description: Repurpose the audio for your podcast or blog.
+        icon: i-lucide-mic
+  - title: The Case Study Engine
+    description:  Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
+    headline: Showcase Client Success stories that sell while you sleep.
+    id: how-we-help
+    orientation: horizontal
+    reverse: false
+    features: 
+      - title: 1 Hero Interview Video
+        description: Your most common questions turned into engaging clips
+        icon: i-lucide-video
+      - title: 3 Short Cutdowns for social.
+        description: All FAQs stitched together for your site.
+        icon: i-lucide-clapperboard
+      - title: BONUS - PDF Case Study Companion ($500 value)
+        description: Done-for-you, optimized copy.
+        icon: i-lucide-search-code
+      - title: BONUS - 15-Second Teaser ($1,000 value)
+        description: Branded polish you can reuse forever.
+        icon: i-lucide-repeat-2
+      - title: Podcast Export ($300 Value)
+        description: Repurpose the audio for your podcast or blog.
+        icon: i-lucide-mic
+  - title: The Content Storm Day
+    description:  Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
+    headline: One day → Months of content.
+    id: how-we-help
+    orientation: horizontal
+    reverse: true
+    features: 
+      - title: 1 Hero Interview Video
+        description: Your most common questions turned into engaging clips
+        icon: i-lucide-video
+      - title: 3 Short Cutdowns for social.
+        description: All FAQs stitched together for your site.
+        icon: i-lucide-clapperboard
+      - title: BONUS - PDF Case Study Companion ($500 value)
+        description: Done-for-you, optimized copy.
+        icon: i-lucide-search-code
+      - title: BONUS - 15-Second Teaser ($1,000 value)
+        description: Branded polish you can reuse forever.
+        icon: i-lucide-repeat-2
+      - title: Podcast Export ($300 Value)
+        description: Repurpose the audio for your podcast or blog.
+        icon: i-lucide-mic
+  - title: Video Growth Club
+    description: Ongoing video pipeline that feeds sales consistently.
+    headline: Monthly shoot days + Outreach Engine.
+    id: how-we-help
+    orientation: horizontal
+    reverse: false
+    features:
+      - title: Lite - $2,500/mo
+        description: 1 shoot day + 4 Shorts + 1 Strategy Call (BONUS Captioned versions, $750 value)
+        icon: i-lucide-video
+      - title: Pro - $4,500/mo
+        description: Lite + 1 Half-Day Shoot + Analytics Report (BONUS Fast-track delivery on 2 videos, $1,000 value)
+        icon: i-lucide-clapperboard
+      - title: Elite - $6,500/mo
+        description: Pro + 1 Full Shoot Day + Unlimited Edits (fair use cap) + Quarterly Workshop (BONUS VIP Priority Delivery, $2,500 value)
+        icon: i-lucide-repeat-2
+
+testimonials:
+  headline: Recent Work & Outcomes
+  title: Proof that moves serious buyers
+  description: A sampling of outcomes clients see when they pair video with a simple distribution plan and our Outreach Engine.
+  items:
+    - quote: Short, honest stories reduced the back‑and‑forth and helped prospects show up pre‑sold.
+      user:
+        title: Manufacturing Client
+        description: Operations‑led B2B company
+        avatar:
+          src: https://i.pravatar.cc/120?img=1
+    - quote: The FAQ library answered objections we used to handle on calls—sales cycles feel noticeably shorter.
+      user:
+        title: Professional Services Client
+        description: Boutique consulting firm
+        avatar:
+          src: https://i.pravatar.cc/120?img=7
+    - quote: Monthly shoot days kept us consistent. We finally have the assets sales has been asking for.
+      user:
+        title: Industrial Services Client
+        description: Regional contractor
+        avatar:
+          src: https://i.pravatar.cc/120?img=3
+cta:
+  title: Ready to show proof and get it in front of the right buyers?
+  description: Pick a package or book a strategy call. Done-for-you systems generate more pipeline, shorten sales cycles, and reduce burnout while your team focuses on closing deals.
+  links:
+    - label: Book a Call
+      to: /book
+      trailingIcon: i-lucide-arrow-right
+    - label: See Video + Outreach Packages
+      to: /
+      variant: subtle
+      icon: i-lucide-layers

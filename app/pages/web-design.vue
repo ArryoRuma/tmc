@@ -1,8 +1,9 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('outreachengine', () => queryCollection('outreachengine').first())
+const { data: page } = await useAsyncData('webdesign', () => queryCollection('webdesign').first())
 
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
+
 useSeoMeta({
   titleTemplate: '',
   title,
@@ -22,11 +23,11 @@ useSeoMeta({
     >
     <template #title>
         <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-          Turn
-          <span class="text-primary italic"> cold outreach</span>
-          into
-          <span class="text-secondary italic"> warm conversations</span>
-          with an outbound machine on autopilot.
+          Web Design that Turns
+          <span class="text-primary italic"> conversations</span>
+          into 
+          <span class="text-primary italic"> clients</span>
+          with a video growth engine.
         </h1>
       </template>
       <template #top>

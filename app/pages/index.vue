@@ -21,9 +21,9 @@ useSeoMeta({
 
       <template #title>
         <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-          Video-Led
+          A Video-Powered
           <span class="text-primary italic"> Growth Agency</span>
-          for Industrial &amp; Professional Services.
+          for Industrial, Financial &amp; Service Brands.
         </h1>
       </template>
       <template #top>
@@ -46,7 +46,7 @@ useSeoMeta({
           <img :src="client.logo" :alt="client.name"
             class="h-10 sm:h-50 md:h-50 object-contain opacity-80 grayscale hover:grayscale-0 transition"
             loading="lazy">
-        </div>``
+        </div>
       </UPageGrid>
     </UPageSection>
 

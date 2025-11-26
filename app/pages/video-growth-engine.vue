@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const { data: page } = await useAsyncData('video-growth-engine', () => queryCollection('videoengine').first())
-
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
 
