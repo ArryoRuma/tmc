@@ -1,0 +1,160 @@
+title: Turn [*cold outreach*]{class="text-primary"} into [*warm conversations*]{class="text-secondary"} with an outbound machine on autopilot.
+description: |
+  Outreach Engine is your cold-email and lead-gen system, built to solve the exact pain points most B2B teams struggle with.
+seo:
+  title: TruMedia Creative | Video‑Led Growth Agency for Industrial & Professional Services (NJ)
+  description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings. Book a strategy call.
+navigation: false
+hero:
+  headline: Outreach Engine
+  title: Turn [*conversations*]{class="text-primary"} into [*clients*]{class="text-primary"} with a video growth engine.
+  links:
+    - label: Industrial Growth Strategy Call
+      icon: i-lucide-calendar
+      trailing: true
+      to: /book
+      size: xl
+features:
+  title: Everything You Need to Win Deals
+  description: Productized packages + a clean process. We plan, film, edit, distribute, and help you publish—then reuse the content across sales and marketing while we measure what moves pipeline.
+  items:
+    - title: Targeting & Research
+      description: It pulls in company and contact data, enriches it with firmographic details, and builds highly qualified lists.
+      icon: i-lucide-search
+    - title: Personalized Messaging
+      description: It generates dynamic, role-specific email copy (with macros, enrichment fields, and AI-driven personalization) so every prospect feels the message was written for them.
+      icon: i-lucide-square-pen
+    - title: Sequencing & Automation
+      description: It runs proven outreach sequences through sending tools, managing follow-ups and replies without burning out the bizdev team.
+      icon: i-lucide-rocket
+    - title: Notifications & Handoff
+      description: It alerts sales/marketing teams via their preferred channels (HubSpot, WhatsApp, etc.) when a prospect replies or books a call.
+      icon: i-lucide-bell-dot
+    - title: Reporting & Feedback Loops
+      description: It tracks open/reply rates, conversions, and surfaces which offers/messaging angles actually move the needle.
+      icon: i-lucide-rotate-ccw
+    - title: Analytics & Reporting
+      description: Lightweight dashboards for publish cadence, views, watch %, replies, meetings, and CTA clicks.
+      icon: i-lucide-bar-chart-3
+sections:
+  - title: Outreach Engine Core
+    description: Our core program is $500/month. And includes the following
+    headline: Start building pipeline from day one.
+    id: how-we-help
+    orientation: horizontal
+    reverse: true
+    features: 
+      - title: 200 cold emails snipers pre-written for you
+        description: Dropped directly into your inbox, daily, in batches of 10.
+        icon: i-lucide-mail
+      - title: 100 suggested LinkedIn connections/month
+        description: Sent straight to your inbox on the 1st of each month.
+        icon: i-lucide-users
+      - title: 2 LinkedIn Posts/week
+        description: Grow your network and nurture connections with consistent thought leadership posts.
+        icon: i-lucide-linkedin
+      - title: Targeted direct message suggestions
+        description: Dropped directly into your inbox.
+        icon: i-lucide-message-circle
+      - title: Monthly strategy call
+        description: Review results, optimize messaging, and plan next steps.
+        icon: i-lucide-calendar
+      - title: Ongoing support
+        description: Email support and quarterly reviews to ensure your outreach is effective and aligned with your goals.
+        icon: i-lucide-headphones
+  - title: The Case Study Engine
+    description:  Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
+    headline: Showcase Client Success stories that sell while you sleep.
+    id: how-we-help
+    orientation: horizontal
+    reverse: false
+    features: 
+      - title: 1 Hero Interview Video
+        description: Your most common questions turned into engaging clips
+        icon: i-lucide-video
+      - title: 3 Short Cutdowns for social.
+        description: All FAQs stitched together for your site.
+        icon: i-lucide-clapperboard
+      - title: BONUS - PDF Case Study Companion ($500 value)
+        description: Done-for-you, optimized copy.
+        icon: i-lucide-search-code
+      - title: BONUS - 15-Second Teaser ($1,000 value)
+        description: Branded polish you can reuse forever.
+        icon: i-lucide-repeat-2
+      - title: Podcast Export ($300 Value)
+        description: Repurpose the audio for your podcast or blog.
+        icon: i-lucide-mic
+  - title: The Content Storm Day
+    description:  Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
+    headline: One day → Months of content.
+    id: how-we-help
+    orientation: horizontal
+    reverse: true
+    features: 
+      - title: 1 Hero Interview Video
+        description: Your most common questions turned into engaging clips
+        icon: i-lucide-video
+      - title: 3 Short Cutdowns for social.
+        description: All FAQs stitched together for your site.
+        icon: i-lucide-clapperboard
+      - title: BONUS - PDF Case Study Companion ($500 value)
+        description: Done-for-you, optimized copy.
+        icon: i-lucide-search-code
+      - title: BONUS - 15-Second Teaser ($1,000 value)
+        description: Branded polish you can reuse forever.
+        icon: i-lucide-repeat-2
+      - title: Podcast Export ($300 Value)
+        description: Repurpose the audio for your podcast or blog.
+        icon: i-lucide-mic
+  - title: Video Growth Club
+    description: Ongoing video pipeline that feeds sales consistently.
+    headline: Monthly shoot days + Outreach Engine.
+    id: how-we-help
+    orientation: horizontal
+    reverse: false
+    features:
+      - title: Lite - $2,500/mo
+        description: 1 shoot day + 4 Shorts + 1 Strategy Call (BONUS Captioned versions, $750 value)
+        icon: i-lucide-video
+      - title: Pro - $4,500/mo
+        description: Lite + 1 Half-Day Shoot + Analytics Report (BONUS Fast-track delivery on 2 videos, $1,000 value)
+        icon: i-lucide-clapperboard
+      - title: Elite - $6,500/mo
+        description: Pro + 1 Full Shoot Day + Unlimited Edits (fair use cap) + Quarterly Workshop (BONUS VIP Priority Delivery, $2,500 value)
+        icon: i-lucide-repeat-2
+
+testimonials:
+  headline: Recent Work & Outcomes
+  title: Proof that moves serious buyers
+  description: A sampling of outcomes clients see when they pair video with a simple distribution plan and our Outreach Engine.
+  items:
+    - quote: Short, honest stories reduced the back‑and‑forth and helped prospects show up pre‑sold.
+      user:
+        title: Manufacturing Client
+        description: Operations‑led B2B company
+        avatar:
+          src: https://i.pravatar.cc/120?img=1
+    - quote: The FAQ library answered objections we used to handle on calls—sales cycles feel noticeably shorter.
+      user:
+        title: Professional Services Client
+        description: Boutique consulting firm
+        avatar:
+          src: https://i.pravatar.cc/120?img=7
+    - quote: Monthly shoot days kept us consistent. We finally have the assets sales has been asking for.
+      user:
+        title: Industrial Services Client
+        description: Regional contractor
+        avatar:
+          src: https://i.pravatar.cc/120?img=3
+cta:
+  title: Ready to show proof and get it in front of the right buyers?
+  description: Pick a package or book a strategy call. Done-for-you systems generate more pipeline, shorten sales cycles, and reduce burnout while your team focuses on closing deals.
+  links:
+    - label: Book a Call
+      to: /book
+      trailingIcon: i-lucide-arrow-right
+    - label: See Video + Outreach Packages
+      to: /
+      variant: subtle
+      icon: i-lucide-layers
+image: /Users/larryontruman/Desktop/TruMedia-Creative-website/saas/public/images/OutReach-Engine.png

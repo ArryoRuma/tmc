@@ -1,0 +1,30 @@
+<template>
+  <div class="relative">
+    <UPageCard
+      variant="subtle"
+      class="rounded-2xl"
+    >
+      <video
+        class="rounded-xl"
+        data-v-baf90ddd=""
+        preload="none"
+        poster="https://res.cloudinary.com/nuxt/video/upload/so_3.3/v1708511800/ui-pro/video-nuxt-ui-pro_kwfbdh.jpg"
+        :controls="true"
+      ><source
+        data-v-baf90ddd=""
+        src="https://player.vimeo.com/video/693244644?h=2207c0ae59"
+        type="video/webm"
+      ><source
+        data-v-baf90ddd=""
+        src="https://player.vimeo.com/video/693244644?h=2207c0ae59"
+        type="video/mp4"
+      ><source
+        data-v-baf90ddd=""
+        src="https://player.vimeo.com/video/693244644?h=2207c0ae59"
+        type="video/ogg"
+      >
+      </video>
+    </UPageCard>
+  </div>
+</template>
+
