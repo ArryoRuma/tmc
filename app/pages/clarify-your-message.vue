@@ -29,19 +29,7 @@ useSeoMeta({
 
       <PromotionalVideo />
     </UPageHero>
-    <UPageSection
-      :title="page.features.title"
-      :description="page.features.description"
-    >
-      <UPageGrid>
-        <UPageCard
-          v-for="(item, index) in page.features.items"
-          :key="index"
-          v-bind="item"
-          spotlight
-        />
-      </UPageGrid>
-    </UPageSection>
+    
     <UPageSection
       v-for="(section, index) in page.sections"
       :key="index"
@@ -54,6 +42,19 @@ useSeoMeta({
       :price="section.price"
     >
       <ImagePlaceholder />
+    </UPageSection>
+    <UPageSection
+      :title="page.features.title"
+      :description="page.features.description"
+    >
+      <UPageGrid>
+        <UPageCard
+          v-for="(item, index) in page.features.items"
+          :key="index"
+          v-bind="item"
+          spotlight
+        />
+      </UPageGrid>
     </UPageSection>
     <USeparator />
     <UPageCTA

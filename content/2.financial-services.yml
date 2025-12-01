@@ -8,9 +8,9 @@ seo:
   description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings. Book a strategy call.
 navigation: false
 hero:
-  headline: Industrial & Manufacturing Marketing
+  headline: Financial Services Marketing
   links:
-    - label: Industrial Growth Strategy Call
+    - label: Financial Services Growth Strategy Call
       icon: i-lucide-calendar
       trailing: true
       to: /book

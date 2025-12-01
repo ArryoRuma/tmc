@@ -1,5 +1,50 @@
 <script setup lang="ts">
 const columns = [{
+  label: 'Solutions',
+  children: [{
+    label: 'Clarify Your Message', to: '/clarify-your-message'
+  }, {
+    label: 'Get More Leads', to: '/get-more-leads'
+  }, {
+    label: 'Speed Up Sales', to: '/speed-up-sales'
+  }, {
+    label: 'Reach More Buyers', to: '/reach-more-buyers'
+  }, {
+    label: 'Keep Customers Longer', to: '/keep-customers-longer'
+  }, {
+    label: 'Fix Your Live Stream', to: '/fix-your-live-stream-and-events'
+  }]
+}, {
+  label: 'Services',
+  children: [{
+    label: 'Video Production', to: '/video-growth-engine'
+  }, {
+    label: 'Outbound Marketing', to: '/outreach-engine'
+  }, {
+    label: 'Website Design', to: '/web-design'
+  }, {
+    label: 'SEO & Paid Ads', to: '/seo-and-paid-ads'
+  }, {
+    label: 'Marketing Automation', to: '/marketing-automation'
+  }, {
+    label: 'Content Creation', to: '/content-creation'
+  }]
+},
+{
+  label: 'Industries We Serve',
+  children: [{
+    label: 'Contractors & Manufacturers'
+  }, {
+    label: 'Financial Services'
+  }, {
+    label: 'Food Services'
+  }, {
+    label: 'Health & Wellness'
+  }, {
+    label: 'Non-Profits'
+  }]
+},
+{
   label: 'Resources',
   children: [{
     label: 'Guides'
@@ -12,30 +57,8 @@ const columns = [{
   },
 {    label: 'Media Kit'
   }]
-}, {
-  label: 'Solutions',
-  children: [{
-    label: 'Affiliates'
-  }, {
-    label: 'Portal'
-  }, {
-    label: 'Jobs'
-  }, {
-    label: 'Sponsors'
-  }]
-}, {
-  label: 'Services',
-  children: [{
-    label: 'About'
-  }, {
-    label: 'Pricing'
-  }, {
-    label: 'Careers'
-  }, {
-    label: 'Blog'
-  }]
-}]
-
+}, 
+]
 const toast = useToast()
 
 const email = ref('')
@@ -92,34 +115,28 @@ function onSubmit() {
 
     <template #left>
       <p class="text-muted text-sm">
-        Built with Nuxt UI • © {{ new Date().getFullYear() }}
+       TruMedia Creative • © {{ new Date().getFullYear() }}
       </p>
     </template>
 
     <template #right>
       <UButton
-        to="https://go.nuxt.com/discord"
+        to="https://www.linkedin.com/company/trumedia-creative/"
         target="_blank"
-        icon="i-simple-icons-discord"
-        aria-label="Nuxt on Discord"
+        icon="i-simple-icons-linkedin"
+        aria-label="TruMedia Creative on LinkedIn"
         color="neutral"
         variant="ghost"
+        size="lg"
       />
       <UButton
-        to="https://go.nuxt.com/x"
+        to="https://www.youtube.com/@TruMedia-Creative"
         target="_blank"
-        icon="i-simple-icons-x"
-        aria-label="Nuxt on X"
+        icon="i-simple-icons-youtube"
+        aria-label="TruMedia Creative on YouTube"
         color="neutral"
         variant="ghost"
-      />
-      <UButton
-        to="https://github.com/nuxt-ui-templates/saas"
-        target="_blank"
-        icon="i-simple-icons-github"
-        aria-label="Nuxt UI on GitHub"
-        color="neutral"
-        variant="ghost"
+        size="lg"
       />
     </template>
   </UFooter>

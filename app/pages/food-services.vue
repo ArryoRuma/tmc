@@ -1,0 +1,78 @@
+<script setup lang="ts">
+const { data: page } = await useAsyncData(() => queryCollection('foodservices').first())
+
+const title = page.value?.seo?.title || page.value?.title
+const description = page.value?.seo?.description || page.value?.description
+
+useSeoMeta({
+  titleTemplate: '',
+  title,
+  ogTitle: title,
+  description,
+  ogDescription: description
+})
+</script>
+
+<template>
+  <div v-if="page?.title">
+    <UPageHero :title="page.title" :description="page.description" :headline="page.hero.headline"
+      :links="page.hero.links">
+
+
+      <template #title>
+        <h1 class="text-5xl md:text-7xl font-bold leading-tight">
+          Video-Led
+          <span class="text-primary italic"> Growth Agency</span>
+          for Food Service Companies.
+        </h1>
+      </template>
+      <template #top>
+        <HeroBackground />
+      </template>
+
+      <PromotionalVideo />
+    </UPageHero>
+
+    <UPageSection v-for="(section, index) in page.sections" :key="index" :title="section.title"
+      :description="section.description" :headline="section.headline" :orientation="section.orientation"
+      :reverse="section.reverse" :features="section.features">
+      <ImagePlaceholder />
+    </UPageSection>
+
+    <UPageSection v-if="page.clients && page.clients.items && page.clients.items.length" :title="page.clients.title"
+      :description="page.clients.description">
+      <UPageGrid class="items-center">
+        <div v-for="(client, index) in page.clients.items" :key="index" class="flex items-center justify-center p-4">
+          <img :src="client.logo" :alt="client.name"
+            class="h-10 sm:h-50 md:h-50 object-contain opacity-80 grayscale hover:grayscale-0 transition"
+            loading="lazy">
+        </div>``
+      </UPageGrid>
+    </UPageSection>
+
+    <UPageSection :title="page.features.title" :description="page.features.description">
+      <UPageGrid>
+        <UPageCard v-for="(item, index) in page.features.items" :key="index" v-bind="item" spotlight />
+      </UPageGrid>
+    </UPageSection>
+
+    <UPageSection id="testimonials" :headline="page.testimonials.headline" :title="page.testimonials.title"
+      :description="page.testimonials.description">
+      <UPageColumns class="xl:columns-4">
+        <UPageCard v-for="(testimonial, index) in page.testimonials.items" :key="index" variant="subtle"
+          :description="testimonial.quote"
+          :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }">
+          <template #footer>
+            <UUser v-bind="testimonial.user" size="lg" />
+          </template>
+        </UPageCard>
+      </UPageColumns>
+    </UPageSection>
+
+    <USeparator />
+
+    <UPageCTA v-bind="page.cta" variant="naked" class="overflow-hidden">
+      <LazyStarsBg />
+    </UPageCTA>
+  </div>
+</template>

@@ -1,22 +1,22 @@
-title: Clarify Your Message with Video
+title: Is your marketing material confusing your buyers?
 description: |
-  We design, produce, and distribute sales-ready video that turns complex B2B offerings into closed-won deals.
+    We take what’s in your team’s head and turn it into a clear message delivered so your customers finally “get it” and move forward.
 seo:
   title: TruMedia Creative | Video‑Led Growth Agency for Industrial & Professional Services (NJ)
-  description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings. Book a strategy call.
+  description: TTurn confusing, complex B2B offers into a clear story with sales-ready video. TruMedia Creative helps industrial & professional services teams clarify their message, show proof, and feed a simple outbound system that books more meetings. Book a strategy call.
 navigation: false
 hero:
-  headline: Clarify Your Message with Video
+  headline: Clarify Your Message 
   title: Turn [*conversations*]{class="text-primary"} into [*clients*]{class="text-primary"} with a video growth engine.
   links:
-    - label: Industrial Growth Strategy Call
+    - label: Book a Strategy Call
       icon: i-lucide-calendar
       trailing: true
       to: /book
       size: xl
 features:
   title: Everything You Need to Win Deals
-  description: Productized packages + a clean process. We plan, film, edit, distribute, and help you publish—then reuse the content across sales and marketing while we measure what moves pipeline.
+  description: Clear message first, then media. We extract your best sales talking points, turn them into video, and plug that content into your website, email, and outbound so every touchpoint tells the same simple story.
   items:
     - title: Proof Over Promises
       description: Outcome‑focused stories and objection‑crushing FAQs that buyers actually believe.

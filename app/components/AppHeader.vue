@@ -35,7 +35,7 @@ const items = computed(() => [
       { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/financial-services' },
       { label: 'Food Services', icon: 'i-lucide-utensils', to: '/food-services' },
       { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/non-profits' },
-      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/health-wellness' }
+      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/health-and-wellness' }
     ]
   },
 

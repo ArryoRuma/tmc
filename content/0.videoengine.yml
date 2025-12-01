@@ -9,7 +9,7 @@ hero:
   headline: Video Growth Engine
   title: Turn [*conversations*]{class="text-primary"} into [*clients*]{class="text-primary"} with a video growth engine.
   links:
-    - label: Industrial Growth Strategy Call
+    - label: Book aVideo Growth Strategy Call
       icon: i-lucide-calendar
       trailing: true
       to: /book
