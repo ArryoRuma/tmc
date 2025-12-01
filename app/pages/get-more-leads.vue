@@ -20,12 +20,9 @@ useSeoMeta({
       :headline="page.hero.headline"
       :links="page.hero.links"
     >
-    
       <template #top>
         <HeroBackground />
       </template>
-
-      
 
       <PromotionalVideo />
     </UPageHero>

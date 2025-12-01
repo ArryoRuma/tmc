@@ -1,5 +1,5 @@
 <script setup lang="ts">
- // Adjust the path as necessary
+// Adjust the path as necessary
 const { data: page } = await useAsyncData('portfolio', () => queryCollection('portfolio').first())
 
 const title = page.value?.seo?.title || page.value?.title
@@ -13,61 +13,61 @@ useSeoMeta({
   ogDescription: description
 })
 </script>
+
 <template>
-    <div v-if="page">
-      <UPageHero
-        :title="page.title"
-        :description="page.description"
-        :headline="page.hero.headline"
-        :links="page.hero.links"
-      >
-        <template #top>
-          <HeroBackground />
-        </template>
-  
-        <template #title>
-          <MDC
-            :value="page.title"
-            unwrap="p"
-          />
-        </template>
-  
-        <PromotionalVideo />
-      </UPageHero>
-      <UPageSection
-        :title="page.features.title"
-        :description="page.features.description"
-      >
-        <UPageGrid>
-          <UPageCard
-            v-for="(item, index) in page.features.items"
-            :key="index"
-            v-bind="item"
-            spotlight
-          />
-        </UPageGrid>
-      </UPageSection>
-      <UPageSection
-        v-for="(section, index) in page.sections"
-        :key="index"
-        :title="section.title"
-        :description="section.description"
-        :headline="section.headline"
-        :orientation="section.orientation"
-        :reverse="section.reverse"
-        :features="section.features"
-        :price="section.price"
-      >
-        <ImagePlaceholder />
-      </UPageSection>
-      <USeparator />
-      <UPageCTA
-        v-bind="page.cta"
-        variant="naked"
-        class="overflow-hidden"
-      >
-        <LazyStarsBg />
-      </UPageCTA>
-    </div>
-  </template>
-  
+  <div v-if="page">
+    <UPageHero
+      :title="page.title"
+      :description="page.description"
+      :headline="page.hero.headline"
+      :links="page.hero.links"
+    >
+      <template #top>
+        <HeroBackground />
+      </template>
+
+      <template #title>
+        <MDC
+          :value="page.title"
+          unwrap="p"
+        />
+      </template>
+
+      <PromotionalVideo />
+    </UPageHero>
+    <UPageSection
+      :title="page.features.title"
+      :description="page.features.description"
+    >
+      <UPageGrid>
+        <UPageCard
+          v-for="(item, index) in page.features.items"
+          :key="index"
+          v-bind="item"
+          spotlight
+        />
+      </UPageGrid>
+    </UPageSection>
+    <UPageSection
+      v-for="(section, index) in page.sections"
+      :key="index"
+      :title="section.title"
+      :description="section.description"
+      :headline="section.headline"
+      :orientation="section.orientation"
+      :reverse="section.reverse"
+      :features="section.features"
+      :price="section.price"
+    >
+      <ImagePlaceholder />
+    </UPageSection>
+    <USeparator />
+    <UPageCTA
+      v-bind="page.cta"
+      variant="naked"
+      class="overflow-hidden"
+    >
+      <LazyStarsBg />
+    </UPageCTA>
+  </div>
+</template>

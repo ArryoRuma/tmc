@@ -128,14 +128,12 @@ export const collections = {
         })
         .optional(),
       navigation: z.boolean().optional(),
-       // Hero section
-       hero: z.object({
+      // Hero section
+      hero: z.object({
         headline: z.string().nonempty(),
         description: z.string().nonempty(),
         links: z.array(createLinkSchema())
       }),
-
-      
 
       sections: z.array(
         createBaseSchema().extend({
@@ -194,14 +192,12 @@ export const collections = {
         })
         .optional(),
       navigation: z.boolean().optional(),
-       // Hero section
-       hero: z.object({
+      // Hero section
+      hero: z.object({
         headline: z.string().nonempty(),
         description: z.string().nonempty(),
         links: z.array(createLinkSchema())
       }),
-
-      
 
       sections: z.array(
         createBaseSchema().extend({
@@ -260,14 +256,12 @@ export const collections = {
         })
         .optional(),
       navigation: z.boolean().optional(),
-       // Hero section
-       hero: z.object({
+      // Hero section
+      hero: z.object({
         headline: z.string().nonempty(),
         description: z.string().nonempty(),
         links: z.array(createLinkSchema())
       }),
-
-      
 
       sections: z.array(
         createBaseSchema().extend({
@@ -326,14 +320,12 @@ export const collections = {
         })
         .optional(),
       navigation: z.boolean().optional(),
-       // Hero section
-       hero: z.object({
+      // Hero section
+      hero: z.object({
         headline: z.string().nonempty(),
         description: z.string().nonempty(),
         links: z.array(createLinkSchema())
       }),
-
-      
 
       sections: z.array(
         createBaseSchema().extend({
@@ -392,14 +384,12 @@ export const collections = {
         })
         .optional(),
       navigation: z.boolean().optional(),
-       // Hero section
-       hero: z.object({
+      // Hero section
+      hero: z.object({
         headline: z.string().nonempty(),
         description: z.string().nonempty(),
         links: z.array(createLinkSchema())
       }),
-
-      
 
       sections: z.array(
         createBaseSchema().extend({
@@ -466,7 +456,6 @@ export const collections = {
         links: z.array(createLinkSchema())
       }),
 
-      
       sections: z.array(createBaseSchema().extend({
         id: z.string().nonempty(),
         headline: z.string().optional(),
@@ -529,7 +518,6 @@ export const collections = {
         links: z.array(createLinkSchema())
       }),
 
-      
       sections: z.array(createBaseSchema().extend({
         id: z.string().nonempty(),
         headline: z.string().optional(),
@@ -592,7 +580,6 @@ export const collections = {
         links: z.array(createLinkSchema())
       }),
 
-      
       sections: z.array(createBaseSchema().extend({
         id: z.string().nonempty(),
         headline: z.string().optional(),
@@ -655,7 +642,6 @@ export const collections = {
         links: z.array(createLinkSchema())
       }),
 
-      
       sections: z.array(createBaseSchema().extend({
         id: z.string().nonempty(),
         headline: z.string().optional(),
@@ -718,7 +704,6 @@ export const collections = {
         links: z.array(createLinkSchema())
       }),
 
-      
       sections: z.array(createBaseSchema().extend({
         id: z.string().nonempty(),
         headline: z.string().optional(),
@@ -781,7 +766,6 @@ export const collections = {
         links: z.array(createLinkSchema())
       }),
 
-      
       sections: z.array(createBaseSchema().extend({
         id: z.string().nonempty(),
         headline: z.string().optional(),
@@ -844,7 +828,6 @@ export const collections = {
         links: z.array(createLinkSchema())
       }),
 
-      
       sections: z.array(createBaseSchema().extend({
         id: z.string().nonempty(),
         headline: z.string().optional(),
@@ -907,7 +890,6 @@ export const collections = {
         links: z.array(createLinkSchema())
       }),
 
-      
       sections: z.array(createBaseSchema().extend({
         id: z.string().nonempty(),
         headline: z.string().optional(),
@@ -970,7 +952,6 @@ export const collections = {
         links: z.array(createLinkSchema())
       }),
 
-      
       sections: z.array(createBaseSchema().extend({
         id: z.string().nonempty(),
         headline: z.string().optional(),
@@ -1010,7 +991,7 @@ export const collections = {
       })
     })
   }),
-       
+
   videoengine: defineCollection({
     source: '0.videoengine.yml',
     type: 'page',
@@ -1034,7 +1015,6 @@ export const collections = {
         links: z.array(createLinkSchema())
       }),
 
-      
       sections: z.array(createBaseSchema().extend({
         id: z.string().nonempty(),
         headline: z.string().optional(),

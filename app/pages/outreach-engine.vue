@@ -20,7 +20,7 @@ useSeoMeta({
       :headline="page.hero.headline"
       :links="page.hero.links"
     >
-    <template #title>
+      <template #title>
         <h1 class="text-5xl md:text-7xl font-bold leading-tight">
           Turn
           <span class="text-primary italic"> cold outreach</span>
@@ -32,8 +32,6 @@ useSeoMeta({
       <template #top>
         <HeroBackground />
       </template>
-
-      
 
       <PromotionalVideo />
     </UPageHero>

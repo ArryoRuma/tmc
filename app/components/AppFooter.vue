@@ -55,9 +55,9 @@ const columns = [{
   }, {
     label: 'Blog'
   },
-{    label: 'Media Kit'
+  { label: 'Media Kit'
   }]
-}, 
+}
 ]
 const toast = useToast()
 
@@ -115,7 +115,7 @@ function onSubmit() {
 
     <template #left>
       <p class="text-muted text-sm">
-       TruMedia Creative • © {{ new Date().getFullYear() }}
+        TruMedia Creative • © {{ new Date().getFullYear() }}
       </p>
     </template>
 

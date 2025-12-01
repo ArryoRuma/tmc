@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 const { data: page } = await useAsyncData('speedupsales', () => queryCollection('speedupsales').first())
 const title = page.value?.seo?.title || page.value?.title
@@ -21,12 +20,9 @@ useSeoMeta({
       :headline="page.hero.headline"
       :links="page.hero.links"
     >
-    
       <template #top>
         <HeroBackground />
       </template>
-
-      
 
       <PromotionalVideo />
     </UPageHero>

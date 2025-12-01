@@ -20,16 +20,13 @@ useSeoMeta({
       :headline="page.hero.headline"
       :links="page.hero.links"
     >
-    
       <template #top>
         <HeroBackground />
       </template>
 
-      
-
       <PromotionalVideo />
     </UPageHero>
-    
+
     <UPageSection
       v-for="(section, index) in page.sections"
       :key="index"
