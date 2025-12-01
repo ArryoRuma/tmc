@@ -113,8 +113,8 @@ export const collections = {
       })
     })
   }),
-  industrial: defineCollection({
-    source: '0.industrial.yml',
+  contractorsmanufactures: defineCollection({
+    source: '2.contractors-manufactures.yml',
     type: 'page',
     schema: z.object({
       // Top-level meta used in content and SEO

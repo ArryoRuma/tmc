@@ -1,0 +1,135 @@
+title: Generate qualified leads without lifting a robot.
+description: |
+  More pipeline. Shorter sales cycles. Less burnout.
+  Our done-for-you systems run behind the scenes while your team focuses on closing deals.
+
+seo:
+  title: TruMedia Creative | Video‑Led Growth Agency for Industrial & Professional Services (NJ)
+  description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings. Book a strategy call.
+navigation: false
+hero:
+  headline: Industrial & Manufacturing Marketing
+  links:
+    - label: Industrial Growth Strategy Call
+      icon: i-lucide-calendar
+      trailing: true
+      to: /book
+      size: xl
+sections:
+  - title: Is this the only way to generate leads?
+    description: Whether you need proof points, a consistent publishing cadence, or a full outbound system, our productized packages and done‑for‑you processes make it easy to get started and see results.
+    headline: this is a headline
+    id: how-we-help
+    orientation: horizontal
+    features:
+      - name: Proof Points
+        description: Case study films and FAQ libraries that Marketing can publish everywhere and Sales can send 1:1 to answer objections before the call.
+        icon: i-lucide-video
+      - name: Consistent Publishing
+        description: Monthly shoot days with a fixed number of edits so you publish consistently and feed your outbound sequences.
+        icon: i-lucide-repeat-2
+      - name: Full Outbound System
+        description: Gravix‑powered cold email and LinkedIn sequences that get your videos in front of buying committees and turn interest into booked meetings for Sales.
+        icon: i-lucide-zap
+  - title: Built for Clarity. Made for Trust.
+    description: We turn your expertise into visible proof—and then we distribute it. Short films and FAQ libraries that Marketing can publish everywhere and Sales can send 1:1 to answer objections before the call.
+    id: features
+    orientation: horizontal
+    features:
+      - name: Case‑Study Films
+        description: 60–120s customer stories that show the challenge → approach → outcome—built with chapters and CTAs for sales follow‑ups and campaigns.
+        icon: i-lucide-film
+      - name: FAQ Video Library
+        description: 8–12 short answers to the questions that stall deals, embedded on key pages and packaged for cold email and social.
+        icon: i-lucide-message-square
+      - name: Video Subscription Retainers
+        description: Monthly shoot days with a fixed number of edits so you publish consistently and feed your outbound sequences.
+        icon: i-lucide-repeat-2
+  - title: Outreach Engine (Gravix)
+    description: When you’re ready to scale beyond word‑of‑mouth, our Gravix‑powered Outreach Engine gets your videos in front of buying committees and turns interest into scheduled meetings for Sales.
+    orientation: horizontal
+    reverse: true
+    features:
+      - name: Personalized Cold Email
+        description: Role‑based messaging, warmed domains, and multi‑touch cadences with video CTAs tailored to manufacturers and professional services.
+        icon: i-lucide-mail
+      - name: Lead Research & Booking
+        description: Targeting, enrichment, and scheduling glue so replies become meetings without back‑and‑forth.
+        icon: i-lucide-user-search
+      - name: Agency & Contractor Friendly
+        description: Plans for solo users, growing teams, and agencies who need repeatable pipeline.
+        icon: i-lucide-building-2
+clients:
+  title: Featured Clients
+  description: Trusted by leaders across manufacturing, logistics, and professional services.
+  items:
+    - name: Chick-fil-A
+      logo: /images/clients/chickfila.png
+    - name: BidChip
+      logo: /images/clients/bidchip.png
+    - name: pj polke
+      logo: /images/clients/pjpolke.png
+    - name: ICI Consulting
+      logo: /images/clients/ici.png
+    - name: Amazon
+      logo: /images/clients/amazon.png
+    - name: Nascar
+      logo: /images/clients/nascar.png
+    - name: Rita's
+      logo: /images/clients/ritas1.png
+features:
+  title: Everything You Need to Win Deals
+  description: Productized packages + a clean process. We plan, film, edit, distribute, and help you publish—then reuse the content across sales and marketing while we measure what moves pipeline.
+  items:
+    - title: Proof Over Promises
+      description: Outcome‑focused stories and objection‑crushing FAQs that buyers actually believe.
+      icon: i-lucide-badge-check
+    - title: Seamless Booking
+      description: Inline scheduling on every key page so interest becomes meetings, fast.
+      icon: i-lucide-calendar-check
+    - title: Fast Turnaround
+      description: Defined SLAs and rush options—most packages deliver in 7–10 business days.
+      icon: i-lucide-rocket
+    - title: SEO & Landing Pages (Add‑On)
+      description: Simple landing pages and video embeds that buyers and search engines can find.
+      icon: i-lucide-search
+    - title: Outreach Engine (Integrated)
+      description: Gravix‑powered outbound and LinkedIn steps to keep qualified conversations coming.
+      icon: i-lucide-zap
+    - title: Analytics & Reporting
+      description: Lightweight dashboards for publish cadence, views, watch %, replies, meetings, and CTA clicks.
+      icon: i-lucide-bar-chart-3
+testimonials:
+  headline: Recent Work & Outcomes
+  title: Proof that moves serious buyers
+  description: A sampling of outcomes clients see when they pair video with a simple distribution plan and our Outreach Engine.
+  items:
+    - quote: Short, honest stories reduced the back‑and‑forth and helped prospects show up pre‑sold.
+      user:
+        name: Manufacturing Client
+        description: Operations‑led B2B company
+        avatar:
+          src: https://i.pravatar.cc/120?img=1
+    - quote: The FAQ library answered objections we used to handle on calls—sales cycles feel noticeably shorter.
+      user:
+        name: Professional Services Client
+        description: Boutique consulting firm
+        avatar:
+          src: https://i.pravatar.cc/120?img=7
+    - quote: Monthly shoot days kept us consistent. We finally have the assets sales has been asking for.
+      user:
+        name: Industrial Services Client
+        description: Regional contractor
+        avatar:
+          src: https://i.pravatar.cc/120?img=3
+cta:
+  title: Ready to show proof and get it in front of the right buyers?
+  description: Pick a package or book a strategy call. Done-for-you systems generate more pipeline, shorten sales cycles, and reduce burnout while your team focuses on closing deals.
+  links:
+    - label: Book a Call
+      to: /book
+      trailingIcon: i-lucide-arrow-right
+    - label: See Video + Outreach Packages
+      to: /
+      variant: subtle
+      icon: i-lucide-layers

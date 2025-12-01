@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('industrial', () => queryCollection('industrial').first())
+const { data: page } = await useAsyncData(() => queryCollection('contractorsmanufactures').first())
 
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
