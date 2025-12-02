@@ -45,16 +45,24 @@ useSeoMeta({
     >
       <template #title>
         <div class="space-y-4">
-          <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">{{ section.title }}</h2>
-          <div v-if="section.price" class="flex justify-start">
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
+            {{ section.title }}
+          </h2>
+          <div
+            v-if="section.price"
+            class="flex justify-start"
+          >
             <div class="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm tracking-normal">
               {{ typeof section.price === 'string' ? section.price : section.price.display }}
             </div>
           </div>
         </div>
       </template>
-      <div v-if="section.video" class="relative overflow-hidden rounded-lg">
-        <video 
+      <div
+        v-if="section.video"
+        class="relative overflow-hidden rounded-lg"
+      >
+        <video
           :src="section.video.src"
           :poster="section.video.poster"
           controls
