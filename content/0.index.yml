@@ -15,9 +15,11 @@ hero:
       to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       size: xl
 sections:
-  - title: '"We have a great product, but no one knows about it."'
+  - title: '"I know we have a great product, but no one knows about it."'
     description: Whether you need proof points, a consistent publishing cadence, or a full outbound system, our productized packages and done‑for‑you processes make it easy to get started and see results.
     headline: Does this sound like you?
+    photo:
+      src: /images/home/frustration.jpg
     id: how-we-help
     orientation: horizontal
     features:
@@ -32,8 +34,10 @@ sections:
         icon: i-lucide-zap
   - title: Built for Clarity. Made for Trust.
     description: We turn your expertise into visible proof—and then we distribute it. Short films and FAQ libraries that Marketing can publish everywhere and Sales can send 1:1 to answer objections before the call.
+    headline: How We Help
     id: features
     orientation: horizontal
+    reverse: true
     features:
       - name: Case‑Study Films
         description: 60–120s customer stories that show the challenge → approach → outcome—built with chapters and CTAs for sales follow‑ups and campaigns.
@@ -45,9 +49,11 @@ sections:
         description: Monthly shoot days with a fixed number of edits so you publish consistently and feed your outbound sequences.
         icon: i-lucide-repeat-2
   - title: Outreach Engine (Gravix)
+    headline: Get Your Videos in Front of Buying Committees
+    id: outreach-engine
     description: When you’re ready to scale beyond word‑of‑mouth, our Gravix‑powered Outreach Engine gets your videos in front of buying committees and turns interest into scheduled meetings for Sales.
     orientation: horizontal
-    reverse: true
+    reverse: false
     features:
       - name: Personalized Cold Email
         description: Role‑based messaging, warmed domains, and multi‑touch cadences with video CTAs tailored to manufacturers and professional services.
@@ -62,20 +68,19 @@ clients:
   title: Featured Clients
   description: Trusted by leaders across manufacturing, logistics, and professional services.
   items:
-    - name: Chick-fil-A
-      logo: /images/clients/chickfila.png
-    - name: BidChip
-      logo: /images/clients/bidchip.png
-    - name: pj polke
-      logo: /images/clients/pjpolke.png
-    - name: ICI Consulting
-      logo: /images/clients/ici.png
     - name: Amazon
       logo: /images/clients/amazon.png
+    - name: Chick-fil-A
+      logo: /images/clients/chickfila.png
     - name: Nascar
       logo: /images/clients/nascar.png
+    - name: BidChip
+      logo: /images/clients/bidchip.svg
+    - name: pj polke
+      logo: /images/clients/pjpolke.png
     - name: Rita's
-      logo: /images/clients/ritas1.png
+      logo: /images/clients/ritas.png
+
 features:
   title: Everything You Need to Win Deals
   description: Productized packages + a clean process. We plan, film, edit, distribute, and help you publish—then reuse the content across sales and marketing while we measure what moves pipeline.
@@ -99,28 +104,28 @@ features:
       description: Lightweight dashboards for publish cadence, views, watch %, replies, meetings, and CTA clicks.
       icon: i-lucide-bar-chart-3
 testimonials:
-  headline: Recent Work & Outcomes
-  title: Proof that moves serious buyers
-  description: A sampling of outcomes clients see when they pair video with a simple distribution plan and our Outreach Engine.
+  headline: Hear From Our Clients
+  title: Recent Work & Outcomes
+  description: template testimonials description
   items:
-    - quote: Short, honest stories reduced the back‑and‑forth and helped prospects show up pre‑sold.
+    - quote: I’ve worked in communications for 25 years, and TruMedia Creative is one of the most creative and visionary partners I’ve had the pleasure of working with. They can see an end-product and work through the steps to get there, all the while being open to adjustments and input. They believe in the power of team and collaboration and are often the first to pull people together to make a project better and more robust.
       user:
-        name: Manufacturing Client
-        description: Operations‑led B2B company
+        name: Senior Communications Strategist
+        description: Strategic Communications Client
         avatar:
-          src: https://i.pravatar.cc/120?img=1
-    - quote: The FAQ library answered objections we used to handle on calls—sales cycles feel noticeably shorter.
+          src: https://media.licdn.com/dms/image/v2/C5603AQGc9S-8kH6wBA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516329003652?e=1766016000&v=beta&t=_2L8lqHwJMINvwBSoppe5nc_FISJ4Pw0RYWCI05uzFU
+    - quote: When the pandemic hit, we were in need of a simple yet effective solution that allowed us to both pre-record and live stream our services. TruMedia Creative helped us put together a setup that was affordable, easy to use, and produces high quality audio and video. TruMedia Creative was great to work with and we would absolutely recommend them to other churches and organizations.
       user:
-        name: Professional Services Client
-        description: Boutique consulting firm
+        name: Associate Director 
+        description: Non-Profit Organization
         avatar:
-          src: https://i.pravatar.cc/120?img=7
-    - quote: Monthly shoot days kept us consistent. We finally have the assets sales has been asking for.
+          src: 
+    - quote: TruMedia Creative consistently brings strong ideas, organized project management, and exceptional creative quality to every project. The team excels at crafting story-driven videos, truly listening to clients, and capturing their stories with care. On multi-deliverable campaigns, they’ve led concepting, scripting, production, and voiceover while keeping teams aligned and moving forward. Their blend of fresh perspective, attention to detail, and genuine humility makes TruMedia Creative a standout collaborator and an invaluable partner.
       user:
-        name: Industrial Services Client
-        description: Regional contractor
+        name: Creative Director
+        description: Large Non-Profit Client
         avatar:
-          src: https://i.pravatar.cc/120?img=3
+          src: 
 cta:
   title: Ready to show proof and get it in front of the right buyers?
   description: Pick a package or book a strategy call. Done-for-you systems generate more pipeline, shorten sales cycles, and reduce burnout while your team focuses on closing deals.

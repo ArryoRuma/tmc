@@ -12,7 +12,7 @@ hero:
     - label: Industrial Growth Strategy Call
       icon: i-lucide-calendar
       trailing: true
-      to: /book
+      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       size: xl
 features:
   title: Everything You Need to Win Deals
@@ -148,7 +148,7 @@ cta:
   description: Pick a package or book a strategy call. Done-for-you systems generate more pipeline, shorten sales cycles, and reduce burnout while your team focuses on closing deals.
   links:
     - label: Book a Call
-      to: /book
+      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       trailingIcon: i-lucide-arrow-right
     - label: See Video + Outreach Packages
       to: /

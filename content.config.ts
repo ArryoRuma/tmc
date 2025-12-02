@@ -69,7 +69,8 @@ export const collections = {
           headline: z.string().optional(),
           orientation: orientationEnum.optional(),
           reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema())
+          features: z.array(createFeatureItemSchema()),
+          photo: createImageSchema().optional()
         })
       ),
 

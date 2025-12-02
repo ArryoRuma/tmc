@@ -7,13 +7,14 @@
       <video
         class="rounded-xl"
         data-v-baf90ddd=""
-        preload="none"
+        preload="thumbnail"
+        onpause="pause"
         poster="/images/contractor plate.jpg"
         :controls="true"
       >
         <source
           data-v-baf90ddd=""
-          src="https://player.vimeo.com/progressive_redirect/playback/863697186/rendition/1080p/file.mp4?loc=external&log_user=0&signature=ace347a7ef2ae2c91e3efd8640f53115e73bdc49bb08c3e708613f404465b9d4"
+          src="https://player.vimeo.com/progressive_redirect/playback/1142469094/rendition/1080p/file.mp4?loc=external&log_user=0&signature=a5db52c8d5083188ec947c61b6594df01b31185ff39f1b6c7ff5550ad4fde1bb"
           type="video/mp4"
         >
       </video>

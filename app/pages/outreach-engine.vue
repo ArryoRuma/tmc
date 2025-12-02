@@ -20,6 +20,9 @@ useSeoMeta({
       :headline="page.hero.headline"
       :links="page.hero.links"
     >
+      <template #top>
+        <HeroBackground />
+      </template>
       <template #title>
         <h1 class="text-5xl md:text-7xl font-bold leading-tight">
           Turn
@@ -28,9 +31,6 @@ useSeoMeta({
           <span class="text-secondary italic"> warm conversations</span>
           with an outbound machine on autopilot.
         </h1>
-      </template>
-      <template #top>
-        <HeroBackground />
       </template>
 
       <PromotionalVideo />

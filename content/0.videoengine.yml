@@ -1,18 +1,18 @@
-title: Turn [*conversations*]{class="text-primary"} into [*clients*]{class="text-primary"} with a video growth engine.
+title: Videos that actually have an ROI.
 description: |
-  We design, produce, and distribute sales-ready video that turns complex B2B offerings into closed-won deals.
+  We design, produce, and distribute sales-ready video that turns expertise into won deals for Marketing & Sales Leaders.
 seo:
-  title: TruMedia Creative | Video‑Led Growth Agency for Industrial & Professional Services (NJ)
+  title: Video Production | TruMedia Creative | Video‑Led Growth Agency for Industrial, Financial & Professional Services (NJ)
   description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings. Book a strategy call.
 navigation: false
 hero:
   headline: Video Growth Engine
-  title: Turn [*conversations*]{class="text-primary"} into [*clients*]{class="text-primary"} with a video growth engine.
+  title: Video Production That Helps You Sell.
   links:
-    - label: Book aVideo Growth Strategy Call
+    - label: Book a Video Growth Strategy Call
       icon: i-lucide-calendar
       trailing: true
-      to: /book
+      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       size: xl
 features:
   title: Everything You Need to Win Deals
@@ -122,24 +122,24 @@ sections:
 
 testimonials:
   headline: Recent Work & Outcomes
-  title: Proof that moves serious buyers
+  title: Here what our clients are saying.
   description: A sampling of outcomes clients see when they pair video with a simple distribution plan and our Outreach Engine.
   items:
     - quote: Short, honest stories reduced the back‑and‑forth and helped prospects show up pre‑sold.
       user:
-        title: Manufacturing Client
+        name: Manufacturing Client
         description: Operations‑led B2B company
         avatar:
           src: https://i.pravatar.cc/120?img=1
     - quote: The FAQ library answered objections we used to handle on calls—sales cycles feel noticeably shorter.
       user:
-        title: Professional Services Client
+        name: Professional Services Client
         description: Boutique consulting firm
         avatar:
           src: https://i.pravatar.cc/120?img=7
     - quote: Monthly shoot days kept us consistent. We finally have the assets sales has been asking for.
       user:
-        title: Industrial Services Client
+        name: Industrial Services Client
         description: Regional contractor
         avatar:
           src: https://i.pravatar.cc/120?img=3
@@ -148,7 +148,7 @@ cta:
   description: Pick a package or book a strategy call. Done-for-you systems generate more pipeline, shorten sales cycles, and reduce burnout while your team focuses on closing deals.
   links:
     - label: Book a Call
-      to: /book
+      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       trailingIcon: i-lucide-arrow-right
     - label: See Video + Outreach Packages
       to: /

@@ -21,6 +21,9 @@ useSeoMeta({
       :headline="page.hero.headline"
       :links="page.hero.links"
     >
+      <template #top>
+        <HeroBackground />
+      </template>
       <template #title>
         <h1 class="text-5xl md:text-7xl font-bold leading-tight">
           A Video-Powered
@@ -28,46 +31,37 @@ useSeoMeta({
           for Industrial, Financial &amp; Service Brands.
         </h1>
       </template>
-      <template #top>
-        <HeroBackground />
-      </template>
 
       <PromotionalVideo />
     </UPageHero>
 
     <UPageSection
       v-for="(section, index) in page.sections"
+      :id="section.id"
       :key="index"
       :title="section.title"
       :description="section.description"
       :headline="section.headline"
+      :photo="section.photo"
       :orientation="section.orientation"
       :reverse="section.reverse"
       :features="section.features"
     >
-      <ImagePlaceholder />
+      <div
+        v-if="section.photo"
+        class="relative overflow-hidden rounded-lg"
+      >
+        <img
+          :src="section.photo.src"
+          :alt="section.photo.alt || section.title"
+          :loading="(section.photo.loading as 'lazy' | 'eager') || 'lazy'"
+          class="w-full h-auto object-cover aspect-video"
+        >
+      </div>
+      <ImagePlaceholder v-else />
     </UPageSection>
 
-    <UPageSection
-      v-if="page.clients && page.clients.items && page.clients.items.length"
-      :title="page.clients.title"
-      :description="page.clients.description"
-    >
-      <UPageGrid class="items-center">
-        <div
-          v-for="(client, index) in page.clients.items"
-          :key="index"
-          class="flex items-center justify-center p-4"
-        >
-          <img
-            :src="client.logo"
-            :alt="client.name"
-            class="h-10 sm:h-50 md:h-50 object-contain opacity-80 grayscale hover:grayscale-0 transition"
-            loading="lazy"
-          >
-        </div>
-      </UPageGrid>
-    </UPageSection>
+    <ClientLogos />
 
     <UPageSection
       :title="page.features.title"
@@ -89,7 +83,7 @@ useSeoMeta({
       :title="page.testimonials.title"
       :description="page.testimonials.description"
     >
-      <UPageColumns class="xl:columns-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         <UPageCard
           v-for="(testimonial, index) in page.testimonials.items"
           :key="index"
@@ -104,7 +98,7 @@ useSeoMeta({
             />
           </template>
         </UPageCard>
-      </UPageColumns>
+      </div>
     </UPageSection>
 
     <USeparator />
