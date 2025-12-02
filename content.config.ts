@@ -1252,5 +1252,18 @@ export const collections = {
       date: z.date(),
       image: z.string()
     })
+  }),
+
+  projects: defineCollection({
+    source: 'projects/*.md',
+    type: 'page',
+    schema: z.object({
+      title: z.string().nonempty(),
+      thumbnail: z.string().nonempty(),
+      hero: z.string().optional(),
+      tags: z.array(z.string()).optional(),
+      link: z.string().optional(),
+      year: z.number().optional()
+    })
   })
 }

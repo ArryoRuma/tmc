@@ -24,6 +24,7 @@
     "gsap": "^3.13.0",
     "nuxt": "^4.2.1",
     "nuxt-og-image": "^5.1.9",
+    "vue-compare-image": "^0.2.0",
     "zod": "^4.1.5"
   },
   "devDependencies": {

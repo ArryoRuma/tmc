@@ -1,0 +1,84 @@
+<script setup>
+// Temporary static data to test the page layout
+const projects = ref([
+  {
+    _path: '/projects/pjpolke',
+    title: 'PJ Polke',
+    to: '/projects/pjpolke',
+    thumbnail: '/images/web-design/pjpolke/pjpolke-hero.png',
+    tags: ['construction', 'web design', 'branding'],
+    year: 2024
+  },
+  {
+    _path: '/projects/pinetar',
+    title: 'PineTar Self Storage',
+    to: '/projects/pinetar',
+    thumbnail: '/images/web-design/pinetar/pinetar-hero.png',
+    tags: ['saas', 'platform', 'construction'],
+    year: 2024
+  },
+  {
+    _path: '/projects/zero-surge',
+    title: 'ZeroSurge',
+    to: '/projects/zero-surge',
+    thumbnail: '/images/web-design/zero-surge/zero-surge-hero.png',
+    tags: ['food service', 'franchise', 'marketing'],
+    year: 2023
+  }
+])
+
+console.log('Static projects data:', projects.value)
+</script>
+
+<template>
+  <div class="container mx-auto px-4 py-8">
+    <h1 class="text-3xl font-bold mb-8">
+      Projects
+    </h1>
+
+    <div
+      v-if="!projects || projects.length === 0"
+      class="text-center py-8"
+    >
+      <p class="text-gray-600">
+        No projects found.
+      </p>
+    </div>
+
+    <div
+      v-else
+      class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+    >
+      <NuxtLink
+        v-for="project in projects"
+        :key="project._path"
+        :to="project.to"
+        class="group block cursor-pointer"
+      >
+        <img
+          :src="project.thumbnail"
+          class="rounded-xl w-full h-56 object-cover object-top"
+        >
+        <h3 class="mt-4 font-bold text-xl group-hover:text-primary transition">
+          {{ project.title }}
+        </h3>
+        <p
+          v-if="project.year"
+          class="text-gray-600 text-sm"
+        >{{ project.year }}</p>
+        <div
+          v-if="project.tags"
+          class="flex flex-wrap gap-2 mt-2"
+        >
+          <span
+            v-for="tag in project.tags"
+            :key="tag"
+            class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs"
+          >
+            {{ tag }}
+          </span>
+        </div>
+      </NuxtLink>
+    </div>
+  </div>
+</template>

@@ -101,8 +101,7 @@ useSeoMeta({
       </div>
     </UPageSection>
 
-    <USeparator />
-
+    <ProjectsPortfolio />
     <UPageCTA
       v-bind="page.cta"
       variant="naked"
