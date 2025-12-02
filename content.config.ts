@@ -1022,6 +1022,11 @@ export const collections = {
         orientation: orientationEnum.optional(),
         reverse: z.boolean().optional(),
         features: z.array(createFeatureItemSchema()).optional(),
+        video: z.object({
+          src: z.string().nonempty(),
+          poster: z.string().optional(),
+          title: z.string().optional()
+        }).optional(),
         price: z.union([
           z.string(),
           z.object({

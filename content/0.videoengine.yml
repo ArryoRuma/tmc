@@ -40,6 +40,14 @@ sections:
   - title: The FAQ Authority Pack
     description: A set of FAQ videos that Marketing can publish everywhere and Sales can send 1:1 to answer the most common questions prospects have before the call.
     headline: Establish authority & eliminate objections 24/7.
+    video:
+      src: https://player.vimeo.com/progressive_redirect/playback/845303718/rendition/1080p/file.mp4?loc=external&log_user=0&signature=285263918096f4300978ed53e4246211f1b12ebd8daf6b8dc530ba7322ee2295
+      poster: /video-thumbnails/faq-demo-poster.png
+      title: FAQ Demo Video
+    price: 
+      display: Starting at $2,500
+      amount: 2500
+      billing: one-time
     id: how-we-help
     orientation: horizontal
     reverse: true
@@ -62,6 +70,8 @@ sections:
   - title: The Case Study Engine
     description:  Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
     headline: Showcase Client Success stories that sell while you sleep.
+    price: 
+      display: Starting at $2,500
     id: how-we-help
     orientation: horizontal
     reverse: false
@@ -84,6 +94,8 @@ sections:
   - title: The Content Storm Day
     description:  Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
     headline: One day → Months of content.
+    price: 
+      display: Starting at $2,500
     id: how-we-help
     orientation: horizontal
     reverse: true
