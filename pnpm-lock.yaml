@@ -47,6 +47,9 @@ importers:
       nuxt-og-image:
         specifier: ^5.1.9
         version: 5.1.9(@unhead/vue@2.0.19(vue@3.5.25(typescript@5.9.2)))(magicast@0.5.1)(unstorage@1.17.3(@netlify/blobs@9.1.2)(db0@0.3.4(better-sqlite3@12.2.0))(ioredis@5.8.2))(vite@7.2.4(@types/node@24.0.3)(jiti@2.6.1)(lightningcss@1.30.2)(terser@5.43.1)(yaml@2.8.1))(vue@3.5.25(typescript@5.9.2))
+      unhead:
+        specifier: ^2.0.19
+        version: 2.0.19
       vue-compare-image:
         specifier: ^0.2.0
         version: 0.2.0
