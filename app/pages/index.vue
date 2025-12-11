@@ -26,7 +26,7 @@ useSeoMeta({
       </template>
       <template #title>
         <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-          A 
+          A
           <span class="text-primary italic"> Modern Growth Agency</span>
           for the 21st Century.
         </h1>
