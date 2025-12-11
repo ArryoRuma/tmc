@@ -5,16 +5,17 @@ const activeTab = ref('after')
 
 // Static data for PJ Polke project
 const project = {
-  title: 'PJ Polke',
-  description: 'Complete branding and web design solution for a construction company',
+  title: 'How PJ Polke Went from Outdated and Bulky to a Boosting Online Presence and Inbound Leads',
+  description: 'Complete branding revamp and web design solution for a Manufacturing Representative Company.',
   year: 2024,
-  client: 'PJ Polke Construction',
+  client: 'PJ Polke ',
   services: ['Web Design', 'Photography', 'Marketing Materials', 'SEO'],
   heroImage: '/images/web-design/pjpolke/pjpolke-hero.png',
   beforeImage: '/images/web-design/pjpolke/pjpolke-before.png',
   afterImage: '/images/web-design/pjpolke/pjpolke-after.png',
   websiteUrl: 'https://pjpolke.com',
   challenge: 'PJ Polke needed a modern, professional online presence that would showcase their construction projects and establish trust with potential clients.',
+  approach: 'We focused on creating a clean, user-friendly website with high-quality images and clear calls to action to drive engagement.',
   solution: 'We created a comprehensive brand identity and responsive website that highlights their expertise and project portfolio.',
   results: ['50% increase in lead generation', 'Professional brand recognition', 'Mobile-optimized user experience']
 }
@@ -30,9 +31,9 @@ useSeoMeta({
 <template>
   <div class="min-h-screen">
     <!-- Hero Section -->
-    <div class="relative bg-gradient-to-br from-primary/10 to-blue-600/10 py-8">
+    <div class="relative bg-gradient-to-br from-blue/10 to-primary-600/10 py-16">
       <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
+        <div class="max-w-6xl mx-auto text-center">
           <h1 class="text-4xl md:text-6xl font-bold mb-6">
             {{ project.title }}
           </h1>
@@ -73,43 +74,29 @@ useSeoMeta({
         </div>
       </div>
     </div>
-
-    <!-- Project Image -->
-    <div class="container mx-auto px-4 py-16">
-      <div class="max-w-6xl mx-auto">
-        <a
-          :href="project.websiteUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="block group cursor-pointer"
-        >
-          <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-            <img
-              :src="project.heroImage"
-              :alt="project.title"
-              class="w-full h-128 object-cover object-top transition-transform duration-500 group-hover:scale-105"
-            >
-            <!-- Overlay on hover -->
-            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <div class="bg-white/90 dark:bg-gray-900/90 px-4 py-2 rounded-lg flex items-center space-x-2">
-                <span class="font-semibold">Visit Website</span>
-                <svg
-                  class="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </div>
+    <!-- Challenge & Solution -->
+    <div class="bg-primary-50 dark:bg-primary-900 py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-2xl font-bold mb-6">
+                The Challenge
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                {{ project.challenge }}
+              </p>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-6">
+                Our Solution
+              </h3>
+              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
+                {{ project.solution }}
+              </p>
             </div>
           </div>
-        </a>
+        </div>
       </div>
     </div>
 
@@ -150,30 +137,42 @@ useSeoMeta({
         </div>
       </div>
     </div>
-
-    <!-- Challenge & Solution -->
-    <div class="bg-gray-50 dark:bg-gray-900 py-16">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          <div class="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 class="text-2xl font-bold mb-6">
-                The Challenge
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {{ project.challenge }}
-              </p>
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold mb-6">
-                Our Solution
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {{ project.solution }}
-              </p>
+    <!-- Project Image -->
+    <div class="container mx-auto px-4 py-16">
+      <div class="max-w-6xl mx-auto">
+        <a
+          :href="project.websiteUrl"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block group cursor-pointer"
+        >
+          <div class="relative overflow-hidden rounded-2xl shadow-2xl">
+            <img
+              :src="project.heroImage"
+              :alt="project.title"
+              class="w-full h-128 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            >
+            <!-- Overlay on hover -->
+            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+              <div class="bg-white/90 dark:bg-gray-900/90 px-4 py-2 rounded-lg flex items-center space-x-2">
+                <span class="font-semibold">Visit Website</span>
+                <svg
+                  class="w-4 h-4"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
 

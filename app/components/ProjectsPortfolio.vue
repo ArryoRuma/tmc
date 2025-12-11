@@ -6,7 +6,8 @@ const projects = ref([
     title: 'PJ Polke',
     to: '/projects/pjpolke',
     thumbnail: '/images/web-design/pjpolke/pjpolke-hero.png',
-    tags: ['construction', 'web design', 'branding'],
+    tags: ['Web Design', 'Branding'],
+    client_type: 'Manufacturing Client',
     year: 2024
   },
   {
@@ -14,26 +15,26 @@ const projects = ref([
     title: 'PineTar Self Storage',
     to: '/projects/pinetar',
     thumbnail: '/images/web-design/pinetar/pinetar-hero.png',
-    tags: ['saas', 'platform', 'construction'],
-    year: 2024
+    tags: ['Web Design', 'Branding', 'Video', 'Photography'],
+    client_type: 'Real Estate Developer',
+    year: 2025
   },
   {
     _path: '/projects/zero-surge',
     title: 'ZeroSurge',
     to: '/projects/zero-surge',
     thumbnail: '/images/web-design/zero-surge/zero-surge-hero.png',
-    tags: ['food service', 'franchise', 'marketing'],
-    year: 2023
+    tags: ['Web Design', 'Branding', 'Photography', 'E-Commerce', 'SEO', 'Google Ads', 'Lead Generation'],
+    client_type: 'Electronics Manufacturing Client',
+    year: 2024
   }
 ])
-
-console.log('Static projects data:', projects.value)
 </script>
 
 <template>
   <div class="container mx-auto px-4 py-8">
     <h1 class="text-3xl font-bold mb-8">
-      Projects
+      Recent Projects
     </h1>
 
     <div
@@ -63,9 +64,9 @@ console.log('Static projects data:', projects.value)
           {{ project.title }}
         </h3>
         <p
-          v-if="project.year"
+          v-if="project.client_type"
           class="text-gray-600 text-sm"
-        >{{ project.year }}</p>
+        >{{ project.client_type }}</p>
         <div
           v-if="project.tags"
           class="flex flex-wrap gap-2 mt-2"

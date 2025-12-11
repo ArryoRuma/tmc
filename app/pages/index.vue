@@ -26,9 +26,9 @@ useSeoMeta({
       </template>
       <template #title>
         <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-          A Video-Powered
-          <span class="text-primary italic"> Growth Agency</span>
-          for Industrial, Financial &amp; Service Brands.
+          A 
+          <span class="text-primary italic"> Modern Growth Agency</span>
+          for the 21st Century.
         </h1>
       </template>
 
