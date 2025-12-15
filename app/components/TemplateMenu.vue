@@ -3,20 +3,21 @@
     v-slot="{ open }"
     :modal="true"
     :items="[{
-      label: 'Starter',
-      to: '/'
+      label: 'Home',
+      to: '/',
+      color: 'primary',
+      checked: true,
+      type: 'checkbox'
     }, {
-      label: 'Landing',
-      to: 'https://landing-template.nuxt.dev/'
+      label: 'Offer Creator',
+      to: '/offer-creator'
     }, {
       label: 'Docs',
       to: 'https://docs-template.nuxt.dev/'
     }, {
       label: 'Video',
       to: '/video-growth-engine',
-      color: 'primary',
-      checked: true,
-      type: 'checkbox'
+      
     }, {
       label: 'Dashboard',
       to: 'https://dashboard-template.nuxt.dev/'
@@ -30,11 +31,10 @@
       label: 'Changelog',
       to: 'https://changelog-template.nuxt.dev/'
     }]"
-    :ui="{ content: 'w-(--reka-dropdown-menu-trigger-width) min-w-0' }"
     size="xs"
   >
     <UButton
-      label="Services"
+      label="Tools"
       variant="subtle"
       trailing-icon="i-lucide-chevron-down"
       size="xs"
