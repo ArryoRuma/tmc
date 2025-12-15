@@ -34,7 +34,6 @@ export default defineNuxtConfig({
     }
   },
   debug: true,
-
   eslint: {
     config: {
       stylistic: {

@@ -8,7 +8,7 @@ const columns = [{
   }, {
     label: 'Speed Up Sales', to: '/solutions/speed-up-sales'
   }, {
-    label: 'Reach More Buyers', to: '/reach-more-buyers'
+    label: 'Reach More Buyers', to: '/solutions/reach-more-buyers'
   }, {
     label: 'Keep Customers Longer', to: '/solutions/keep-customers-longer'
   }, {
@@ -33,7 +33,7 @@ const columns = [{
 {
   label: 'Industries We Serve',
   children: [{
-    label: 'Industrial', to: '/industries/contractors-and-manufacturers'
+    label: 'Industrial', to: '/industries/contractors-manufactures'
   }, {
     label: 'Financial Services', to: '/industries/financial-services'
   }, {
