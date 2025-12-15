@@ -2,46 +2,46 @@
 const columns = [{
   label: 'Solutions',
   children: [{
-    label: 'Clarify Your Message', to: '/clarify-your-message'
+    label: 'Clarify Your Message', to: '/solutions/clarify-your-message'
   }, {
-    label: 'Get More Leads', to: '/get-more-leads'
+    label: 'Get More Leads', to: '/solutions/get-more-leads'
   }, {
-    label: 'Speed Up Sales', to: '/speed-up-sales'
+    label: 'Speed Up Sales', to: '/solutions/speed-up-sales'
   }, {
     label: 'Reach More Buyers', to: '/reach-more-buyers'
   }, {
-    label: 'Keep Customers Longer', to: '/keep-customers-longer'
+    label: 'Keep Customers Longer', to: '/solutions/keep-customers-longer'
   }, {
-    label: 'Fix Your Live Stream', to: '/fix-your-live-stream-and-events'
+    label: 'Fix Your Live Stream', to: '/solutions/fix-your-live-stream-and-events'
   }]
 }, {
   label: 'Services',
   children: [{
-    label: 'Video Production', to: '/video-growth-engine'
+    label: 'Video Production', to: '/services/video-growth-engine'
   }, {
-    label: 'Outbound Marketing', to: '/outreach-engine'
+    label: 'Outbound Marketing', to: '/services/outreach-engine'
   }, {
-    label: 'Website Design', to: '/web-design'
+    label: 'Website Design', to: '/services/web-design'
   }, {
-    label: 'SEO & Paid Ads', to: '/seo-and-paid-ads'
+    label: 'SEO & Paid Ads', to: '/services/seo-and-paid-ads'
   }, {
-    label: 'Marketing Automation', to: '/marketing-automation'
+    label: 'Marketing Automation', to: '/services/marketing-automation'
   }, {
-    label: 'Content Creation', to: '/content-creation'
+    label: 'Content Creation', to: '/services/content-creation'
   }]
 },
 {
   label: 'Industries We Serve',
   children: [{
-    label: 'Contractors & Manufacturers'
+    label: 'Industrial', to: '/industries/contractors-and-manufacturers'
   }, {
-    label: 'Financial Services'
+    label: 'Financial Services', to: '/industries/financial-services'
   }, {
-    label: 'Food Services'
+    label: 'Food Services', to: '/industries/food-services'
   }, {
-    label: 'Health & Wellness'
+    label: 'Health & Wellness', to: '/industries/health-and-wellness'
   }, {
-    label: 'Non-Profits'
+    label: 'Non-Profits', to: '/industries/non-profits'
   }]
 },
 {
@@ -59,19 +59,6 @@ const columns = [{
   }]
 }
 ]
-const toast = useToast()
-
-const email = ref('')
-const loading = ref(false)
-
-function onSubmit() {
-  loading.value = true
-
-  toast.add({
-    title: 'Subscribed!',
-    description: 'You\'ve been subscribed to our newsletter.'
-  })
-}
 </script>
 
 <template>
@@ -83,33 +70,7 @@ function onSubmit() {
   <UFooter :ui="{ top: 'border-b border-default' }">
     <template #top>
       <UContainer>
-        <UFooterColumns :columns="columns">
-          <template #right>
-            <form @submit.prevent="onSubmit">
-              <UFormField
-                name="email"
-                label="Subscribe to our newsletter"
-                size="lg"
-              >
-                <UInput
-                  v-model="email"
-                  type="email"
-                  class="w-full"
-                  placeholder="Enter your email"
-                >
-                  <template #trailing>
-                    <UButton
-                      type="submit"
-                      size="xs"
-                      color="neutral"
-                      label="Subscribe"
-                    />
-                  </template>
-                </UInput>
-              </UFormField>
-            </form>
-          </template>
-        </UFooterColumns>
+        <UFooterColumns :columns="columns" />
       </UContainer>
     </template>
 
