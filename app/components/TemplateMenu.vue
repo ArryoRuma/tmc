@@ -16,8 +16,8 @@
       to: 'https://docs-template.nuxt.dev/'
     }, {
       label: 'Video',
-      to: '/video-growth-engine',
-      
+      to: '/video-growth-engine'
+
     }, {
       label: 'Dashboard',
       to: 'https://dashboard-template.nuxt.dev/'

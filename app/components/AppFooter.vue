@@ -76,7 +76,7 @@ function onSubmit() {
 
 <template>
   <USeparator
-    icon="i-simple-icons-nuxtdotjs"
+    icon="i-lucide-play"
     class="h-px"
   />
 

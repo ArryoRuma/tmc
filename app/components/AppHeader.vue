@@ -87,7 +87,7 @@ const mobileItems = computed(() => [
       <NuxtLink to="/">
         <AppLogo class="w-auto h-6 shrink-0" />
       </NuxtLink>
-      <!-- <TemplateMenu />-->
+      <!-- <TemplateMenu /> -->
     </template>
 
     <UNavigationMenu
@@ -118,7 +118,7 @@ const mobileItems = computed(() => [
     <template #right>
       <UColorModeButton />
 
-      <!--<UButton
+      <!-- <UButton
         icon="i-lucide-log-in"
         color="neutral"
         variant="ghost"
@@ -140,7 +140,7 @@ const mobileItems = computed(() => [
         trailing-icon="i-lucide-arrow-right"
         class="hidden lg:inline-flex"
         to="/signup"
-      />-->
+      /> -->
     </template>
 
     <template #body>
@@ -153,7 +153,7 @@ const mobileItems = computed(() => [
 
       <USeparator class="my-6" />
 
-      <!--<UButton
+      <!-- <UButton
         label="Sign in"
         color="neutral"
         variant="subtle"
@@ -166,7 +166,7 @@ const mobileItems = computed(() => [
         color="neutral"
         to="/signup"
         block
-      />-->
+      /> -->
     </template>
   </UHeader>
 </template>

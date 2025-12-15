@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { reactive, ref, computed } from 'vue'
-import { marked } from 'marked'
+import { reactive, ref } from 'vue'
 
 const form = reactive({
   useWeLanguage: false,
@@ -71,8 +70,6 @@ const form = reactive({
   theme: 'light' as 'light' | 'dark'
 })
 
-const { $colorMode } = useNuxtApp()
-
 const generated = ref('')
 
 const getArticle = (word: string) => {
@@ -80,11 +77,6 @@ const getArticle = (word: string) => {
   const firstChar = word.toLowerCase().charAt(0)
   return ['a', 'e', 'i', 'o', 'u'].includes(firstChar) ? 'an' : 'a'
 }
-
-const renderedMarkdown = computed(() => {
-  if (!generated.value) return ''
-  return marked(generated.value)
-})
 
 const generateOffer = () => {
   const f = form
@@ -224,7 +216,7 @@ const copyToClipboard = async () => {
     await navigator.clipboard.writeText(generated.value)
     // simple UX; you can swap alerts for a toast if you plug into a UI library
     alert('Offer copied to clipboard')
-  } catch (error) {
+  } catch {
     alert('Unable to copy. Please select and copy manually.')
   }
 }
@@ -250,22 +242,29 @@ const resetForm = () => {
     </header>
     <!-- Toggle Options -->
     <section class="space-y-4 border-b pb-6">
-      <h2 class="text-lg font-semibold">Options</h2>
+      <h2 class="text-lg font-semibold">
+        Options
+      </h2>
       <div class="flex items-center gap-3">
         <label class="flex items-center gap-2 cursor-pointer">
           <input
             v-model="form.useWeLanguage"
             type="checkbox"
             class="rounded"
-          />
+          >
           <span class="text-sm">Use "We" instead of "I" language</span>
         </label>
       </div>
     </section>
-    <form @submit.prevent="generateOffer" class="space-y-8">
+    <form
+      class="space-y-8"
+      @submit.prevent="generateOffer"
+    >
       <!-- Basic Info -->
       <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Basics</h2>
+        <h2 class="text-xl font-semibold">
+          Basics
+        </h2>
         <div class="grid gap-4 md:grid-cols-2">
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Package Name</span>
@@ -274,7 +273,7 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="Outbound Growth Engine"
-            />
+            >
           </label>
 
           <label class="flex flex-col gap-1 text-sm">
@@ -284,7 +283,7 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="a consistent flow of qualified conversations"
-            />
+            >
           </label>
 
           <label class="flex flex-col gap-1 text-sm">
@@ -294,7 +293,7 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="B2B service businesses"
-            />
+            >
           </label>
 
           <label class="flex flex-col gap-1 text-sm">
@@ -304,53 +303,91 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="industrial and professional services"
-            />
+            >
           </label>
         </div>
       </section>
 
       <!-- Pain Points & Symptoms -->
       <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Pain Points &amp; Symptoms</h2>
+        <h2 class="text-xl font-semibold">
+          Pain Points &amp; Symptoms
+        </h2>
         <div class="grid gap-4 md:grid-cols-2">
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Pain Point 1</span>
-            <input v-model="form.painPoint1" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.painPoint1"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Pain Point 2</span>
-            <input v-model="form.painPoint2" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.painPoint2"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Pain Point 3</span>
-            <input v-model="form.painPoint3" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.painPoint3"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Pain Point 4</span>
-            <input v-model="form.painPoint4" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.painPoint4"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Pain Point 5</span>
-            <input v-model="form.painPoint5" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.painPoint5"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
         </div>
 
         <div class="grid gap-4 md:grid-cols-2">
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Symptom 1</span>
-            <input v-model="form.symptom1" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.symptom1"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Symptom 2</span>
-            <input v-model="form.symptom2" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.symptom2"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Symptom 3</span>
-            <input v-model="form.symptom3" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.symptom3"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Symptom 4</span>
-            <input v-model="form.symptom4" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.symptom4"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
         </div>
 
@@ -362,7 +399,7 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="sales, delivery, operations, and strategy all at once"
-            />
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm md:col-span-2">
             <span class="font-bold">Core Problem</span>
@@ -371,14 +408,16 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="inconsistent, unpredictable pipeline and sales"
-            />
+            >
           </label>
         </div>
       </section>
 
       <!-- Promise & Mechanism -->
       <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Promise &amp; Mechanism</h2>
+        <h2 class="text-xl font-semibold">
+          Promise &amp; Mechanism
+        </h2>
         <div class="grid gap-4 md:grid-cols-2">
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Core Mechanism</span>
@@ -387,7 +426,7 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="a simple, automated outbound system"
-            />
+            >
           </label>
 
           <label class="flex flex-col gap-1 text-sm">
@@ -397,7 +436,7 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="smart data, targeted messaging, and light automation"
-            />
+            >
           </label>
 
           <label class="flex flex-col gap-1 text-sm">
@@ -407,7 +446,7 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="booked meetings with real buyers"
-            />
+            >
           </label>
 
           <label class="flex flex-col gap-1 text-sm">
@@ -417,14 +456,16 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="spending all day chasing leads"
-            />
+            >
           </label>
         </div>
       </section>
 
       <!-- Process -->
       <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Process</h2>
+        <h2 class="text-xl font-semibold">
+          Process
+        </h2>
         <div class="grid gap-4 md:grid-cols-3">
           <label class="flex flex-col gap-1 text-sm md:col-span-1">
             <span class="font-bold">Onboarding Form Name</span>
@@ -433,7 +474,7 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="quick onboarding form"
-            />
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm md:col-span-1">
             <span class="font-bold">Workshop Length</span>
@@ -442,7 +483,7 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="60–90 minute"
-            />
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm md:col-span-1">
             <span class="font-bold">Build Style</span>
@@ -451,30 +492,48 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="live with you on the call"
-            />
+            >
           </label>
         </div>
       </section>
 
       <!-- Outcomes & Deliverables -->
       <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Outcomes &amp; Deliverables</h2>
+        <h2 class="text-xl font-semibold">
+          Outcomes &amp; Deliverables
+        </h2>
         <div class="grid gap-4 md:grid-cols-2">
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Deliverable 1</span>
-            <input v-model="form.deliverable1" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.deliverable1"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Deliverable 2</span>
-            <input v-model="form.deliverable2" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.deliverable2"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Deliverable 3</span>
-            <input v-model="form.deliverable3" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.deliverable3"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Deliverable 4 (Optional)</span>
-            <input v-model="form.optionalDeliverable4" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.optionalDeliverable4"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
         </div>
 
@@ -486,7 +545,7 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="the creative and strategic work you actually enjoy"
-            />
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Client Painful Work</span>
@@ -495,182 +554,329 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="manual follow-ups and chasing cold leads"
-            />
+            >
           </label>
         </div>
       </section>
 
       <!-- Goals -->
       <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Goals</h2>
+        <h2 class="text-xl font-semibold">
+          Goals
+        </h2>
         <div class="grid gap-4 md:grid-cols-2">
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Goal 1</span>
-            <input v-model="form.goal1" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.goal1"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Goal 2</span>
-            <input v-model="form.goal2" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.goal2"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Goal 3</span>
-            <input v-model="form.goal3" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.goal3"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Goal 4</span>
-            <input v-model="form.goal4" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.goal4"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
         </div>
       </section>
 
       <!-- Block 1 -->
       <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Deliverable Block 1</h2>
+        <h2 class="text-xl font-semibold">
+          Deliverable Block 1
+        </h2>
         <div class="grid gap-4 md:grid-cols-2">
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Block 1 Title</span>
-            <input v-model="form.deliverableBlock1Title" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.deliverableBlock1Title"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Action Verb 1</span>
-            <input v-model="form.actionVerb1" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.actionVerb1"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Component 1</span>
-            <input v-model="form.component1" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.component1"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Outcome 1</span>
-            <input v-model="form.outcome1" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.outcome1"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
         </div>
         <div class="grid gap-4 md:grid-cols-3">
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Sub Item A</span>
-            <input v-model="form.subItemA" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.subItemA"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Sub Item B</span>
-            <input v-model="form.subItemB" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.subItemB"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Sub Item C</span>
-            <input v-model="form.subItemC" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.subItemC"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
         </div>
         <label class="flex flex-col gap-1 text-sm">
           <span class="font-bold">Outcome Statement 1</span>
-          <input v-model="form.outcomeStatement1" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+          <input
+            v-model="form.outcomeStatement1"
+            type="text"
+            class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+          >
         </label>
       </section>
 
       <!-- Block 2 -->
       <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Deliverable Block 2</h2>
+        <h2 class="text-xl font-semibold">
+          Deliverable Block 2
+        </h2>
         <div class="grid gap-4 md:grid-cols-2">
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Block 2 Title</span>
-            <input v-model="form.deliverableBlock2Title" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.deliverableBlock2Title"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Action Verb 2</span>
-            <input v-model="form.actionVerb2" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.actionVerb2"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Component 2</span>
-            <input v-model="form.component2" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.component2"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Outcome 2</span>
-            <input v-model="form.outcome2" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.outcome2"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
         </div>
         <div class="grid gap-4 md:grid-cols-3">
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Sub Item D</span>
-            <input v-model="form.subItemD" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.subItemD"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Sub Item E</span>
-            <input v-model="form.subItemE" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.subItemE"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Sub Item F</span>
-            <input v-model="form.subItemF" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.subItemF"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
         </div>
         <label class="flex flex-col gap-1 text-sm">
           <span class="font-bold">Outcome Statement 2</span>
-          <input v-model="form.outcomeStatement2" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+          <input
+            v-model="form.outcomeStatement2"
+            type="text"
+            class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+          >
         </label>
       </section>
 
       <!-- Block 3 -->
       <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Deliverable Block 3</h2>
+        <h2 class="text-xl font-semibold">
+          Deliverable Block 3
+        </h2>
         <div class="grid gap-4 md:grid-cols-2">
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Block 3 Title</span>
-            <input v-model="form.deliverableBlock3Title" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.deliverableBlock3Title"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Action Verb 3</span>
-            <input v-model="form.actionVerb3" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.actionVerb3"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Component 3</span>
-            <input v-model="form.component3" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.component3"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Tools / Process</span>
-            <input v-model="form.toolsOrProcess" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.toolsOrProcess"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
         </div>
         <div class="grid gap-4 md:grid-cols-3">
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Sub Item G</span>
-            <input v-model="form.subItemG" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.subItemG"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Sub Item H</span>
-            <input v-model="form.subItemH" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.subItemH"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Sub Item I</span>
-            <input v-model="form.subItemI" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+            <input
+              v-model="form.subItemI"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+            >
           </label>
         </div>
         <label class="flex flex-col gap-1 text-sm">
           <span class="font-bold">Outcome Statement 3</span>
-          <input v-model="form.outcomeStatement3" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" />
+          <input
+            v-model="form.outcomeStatement3"
+            type="text"
+            class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+          >
         </label>
       </section>
 
       <!-- Pricing -->
       <section class="space-y-4">
-        <h2 class="text-xl font-semibold">Pricing &amp; CTA</h2>
+        <h2 class="text-xl font-semibold">
+          Pricing &amp; CTA
+        </h2>
         <div class="grid gap-4 md:grid-cols-3">
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Monthly Price</span>
-            <input v-model="form.monthlyPrice" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" placeholder="2500" />
+            <input
+              v-model="form.monthlyPrice"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              placeholder="2500"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Setup Price</span>
-            <input v-model="form.setupPrice" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" placeholder="3500" />
+            <input
+              v-model="form.setupPrice"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              placeholder="3500"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Management Price</span>
-            <input v-model="form.mgmtPrice" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" placeholder="1500" />
+            <input
+              v-model="form.mgmtPrice"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              placeholder="1500"
+            >
           </label>
         </div>
         <div class="grid gap-4 md:grid-cols-3">
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Base Price</span>
-            <input v-model="form.basePrice" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" placeholder="2000" />
+            <input
+              v-model="form.basePrice"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              placeholder="2000"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Commission %</span>
-            <input v-model="form.commissionPercent" type="text" class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900" placeholder="5" />
+            <input
+              v-model="form.commissionPercent"
+              type="text"
+              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              placeholder="5"
+            >
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Commission Trigger</span>
@@ -679,7 +885,7 @@ const resetForm = () => {
               type="text"
               class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
               placeholder="closed deals from booked meetings"
-            />
+            >
           </label>
         </div>
         <label class="flex flex-col gap-1 text-sm max-w-xs">
@@ -689,7 +895,7 @@ const resetForm = () => {
             type="text"
             class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
             placeholder="90 days"
-          />
+          >
         </label>
       </section>
 
@@ -710,10 +916,12 @@ const resetForm = () => {
       </div>
     </form>
 
-    <section v-if="generated" class="space-y-4">
-      
+    <section
+      v-if="generated"
+      class="space-y-4"
+    >
       <!-- Rendered markdown preview -->
-       <header class="flex items-center gap-4">
+      <header class="flex items-center gap-4">
         <h1 class="text-4xl font-semibold">
           TruMedia Creative Offer Generator Live Preview
         </h1>
@@ -726,14 +934,14 @@ const resetForm = () => {
         </button>
       </header>
       <section>
-      <LandingPreview 
-        v-bind="form" 
-      />
-    </section>
-  
-       <!-- NOTE: Original markdown display - keeping for reference
+        <LandingPreview
+          v-bind="form"
+        />
+      </section>
+
+      <!-- NOTE: Original markdown display - keeping for reference
       <div class="border rounded px-4 py-4 bg-white dark:bg-gray-900">
-    
+
     <div
       v-html="renderedMarkdown"
       class="markdown-content"
@@ -741,10 +949,8 @@ const resetForm = () => {
     />
     </div>
     -->
-    
     </section>
   </div>
-  
 </template>
 
 <style>
@@ -811,7 +1017,3 @@ const resetForm = () => {
   }
 }
 </style>
-
-
-
-
