@@ -41,6 +41,44 @@ const items = computed(() => [
   /// { label: 'Pricing', to: '/pricing'}
 
 ])
+
+const mobileItems = computed(() => [
+  {
+    label: 'Solutions',
+    open: true,
+    children: [
+      { label: 'Clarify Your Message', icon: 'i-lucide-award', to: '/solutions/clarify-your-message' },
+      { label: 'Get More Leads', icon: 'i-lucide-user-search', to: '/solutions/get-more-leads' },
+      { label: 'Speed Up Sales', icon: 'i-lucide-refresh-ccw', to: '/solutions/speed-up-sales' },
+      { label: 'Reach More Buyers', icon: 'i-lucide-expand', to: '/solutions/reach-more-buyers' },
+      { label: 'Keep Customers Longer', icon: 'i-lucide-chart-no-axes-combined', to: '/solutions/keep-customers-longer' },
+      { label: 'Fix Your Live Stream & Events', icon: 'i-lucide-video', to: '/solutions/fix-your-live-stream-and-events' }
+    ]
+  },
+  {
+    label: 'Services',
+    open: true,
+    children: [
+      { label: 'Video Production', icon: 'i-lucide-video', to: '/services/video-growth-engine' },
+      { label: 'Outbound Campaigns', icon: 'i-lucide-send', to: '/services/outreach-engine' },
+      { label: 'Web Design & Development', icon: 'i-lucide-layout-dashboard', to: '/services/web-design' },
+      { label: 'SEO & Paid Ads', icon: 'i-lucide-mouse-pointer-click', to: '/services/seo-and-paid-ads' },
+      { label: 'Marketing Automation', icon: 'i-lucide-bot', to: '/services/marketing-automation' },
+      { label: 'Content Creation', icon: 'i-lucide-edit-3', to: '/services/content-creation' }
+    ]
+  }, {
+    label: 'Industries',
+    open: true,
+    children: [
+      { label: 'Contractors & Manufacturing', icon: 'i-lucide-hammer', to: '/industries/contractors-manufactures' },
+      { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/industries/financial-services' },
+      { label: 'Food Services', icon: 'i-lucide-utensils', to: '/industries/food-services' },
+      { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/industries/non-profits' },
+      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness' }
+    ]
+  },
+  { label: 'Resources', to: '/resources' }
+])
 </script>
 
 <template>
@@ -49,7 +87,7 @@ const items = computed(() => [
       <NuxtLink to="/">
         <AppLogo class="w-auto h-6 shrink-0" />
       </NuxtLink>
-      <TemplateMenu />
+      <!-- <TemplateMenu />-->
     </template>
 
     <UNavigationMenu
@@ -80,7 +118,7 @@ const items = computed(() => [
     <template #right>
       <UColorModeButton />
 
-      <UButton
+      <!--<UButton
         icon="i-lucide-log-in"
         color="neutral"
         variant="ghost"
@@ -102,19 +140,20 @@ const items = computed(() => [
         trailing-icon="i-lucide-arrow-right"
         class="hidden lg:inline-flex"
         to="/signup"
-      />
+      />-->
     </template>
 
     <template #body>
       <UNavigationMenu
-        :items="items"
+        :items="mobileItems"
         orientation="vertical"
         class="-mx-2.5"
+        multiple
       />
 
       <USeparator class="my-6" />
 
-      <UButton
+      <!--<UButton
         label="Sign in"
         color="neutral"
         variant="subtle"
@@ -127,7 +166,7 @@ const items = computed(() => [
         color="neutral"
         to="/signup"
         block
-      />
+      />-->
     </template>
   </UHeader>
 </template>
