@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-ui-template-saas",
+  "name": "trumedia-creative",
   "private": true,
   "type": "module",
   "scripts": {
@@ -23,7 +23,7 @@
     "better-sqlite3": "^12.2.0",
     "gsap": "^3.13.0",
     "marked": "^17.0.1",
-    "nuxt": "^4.2.1",
+    "nuxt": "^4.2.2",
     "nuxt-og-image": "^5.1.9",
     "unhead": "^2.0.19",
     "vue-compare-image": "^0.2.0",
