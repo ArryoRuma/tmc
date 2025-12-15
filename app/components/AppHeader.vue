@@ -3,35 +3,35 @@ const items = computed(() => [
   {
     label: 'Solutions',
     children: [
-      { label: 'Clarify Your Message', icon: 'i-lucide-award', to: '/clarify-your-message' },
-      { label: 'Get More Leads', icon: 'i-lucide-user-search', to: '/get-more-leads' },
-      { label: 'Speed Up Sales', icon: 'i-lucide-refresh-ccw', to: '/speed-up-sales' },
-      { label: 'Reach More Buyers', icon: 'i-lucide-expand', to: '/reach-more-buyers' },
-      { label: 'Keep Customers Longer', icon: 'i-lucide-chart-no-axes-combined', to: '/keep-customers-longer' },
-      { label: 'Fix Your Live Stream & Events', icon: 'i-lucide-video', to: '/fix-your-live-stream-and-events' }
+      { label: 'Clarify Your Message', icon: 'i-lucide-award', to: '/solutions/clarify-your-message' },
+      { label: 'Get More Leads', icon: 'i-lucide-user-search', to: '/solutions/get-more-leads' },
+      { label: 'Speed Up Sales', icon: 'i-lucide-refresh-ccw', to: '/solutions/speed-up-sales' },
+      { label: 'Reach More Buyers', icon: 'i-lucide-expand', to: '/solutions/reach-more-buyers' },
+      { label: 'Keep Customers Longer', icon: 'i-lucide-chart-no-axes-combined', to: '/solutions/keep-customers-longer' },
+      { label: 'Fix Your Live Stream & Events', icon: 'i-lucide-video', to: '/solutions/fix-your-live-stream-and-events' }
 
     ]
   },
   {
     label: 'Services',
     children: [
-      { label: 'Video Production', icon: 'i-lucide-video', to: '/video-growth-engine' },
-      { label: 'Outbound Campaigns', icon: 'i-lucide-send', to: '/outreach-engine' },
-      { label: 'Web Design & Development', icon: 'i-lucide-layout-dashboard', to: '/web-design' },
-      { label: 'SEO & Paid Ads', icon: 'i-lucide-mouse-pointer-click', to: '/seo-and-paid-ads' },
-      { label: 'Marketing Automation', icon: 'i-lucide-bot', to: '/marketing-automation' },
-      { label: 'Content Creation', icon: 'i-lucide-edit-3', to: '/content-creation' }
+      { label: 'Video Production', icon: 'i-lucide-video', to: '/services/video-growth-engine' },
+      { label: 'Outbound Campaigns', icon: 'i-lucide-send', to: '/services/outreach-engine' },
+      { label: 'Web Design & Development', icon: 'i-lucide-layout-dashboard', to: '/services/web-design' },
+      { label: 'SEO & Paid Ads', icon: 'i-lucide-mouse-pointer-click', to: '/services/seo-and-paid-ads' },
+      { label: 'Marketing Automation', icon: 'i-lucide-bot', to: '/services/marketing-automation' },
+      { label: 'Content Creation', icon: 'i-lucide-edit-3', to: '/services/content-creation' }
 
     ]
 
   }, {
     label: 'Industries',
     children: [
-      { label: 'Contractors & Manufacturing', icon: 'i-lucide-hammer', to: '/contractors-manufactures' },
-      { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/financial-services' },
-      { label: 'Food Services', icon: 'i-lucide-utensils', to: '/food-services' },
-      { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/non-profits' },
-      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/health-and-wellness' }
+      { label: 'Contractors & Manufacturing', icon: 'i-lucide-hammer', to: '/industries/contractors-manufactures' },
+      { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/industries/financial-services' },
+      { label: 'Food Services', icon: 'i-lucide-utensils', to: '/industries/food-services' },
+      { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/industries/non-profits' },
+      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness' }
     ]
   },
 
