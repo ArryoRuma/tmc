@@ -280,7 +280,7 @@ useSeoMeta({
               src="/images/who-we-are-photos/Lar-headshot.png"
               alt="Lar - Founder / Strategist / Creative Lead"
               class="rounded-full h-96 w-76 mx-auto mb-4 object-cover"
-            />
+            >
             <h3 class="text-xl font-semibold mb-2">
               Lar
             </h3>
@@ -298,7 +298,6 @@ useSeoMeta({
                 size="sm"
                 to="https://www.linkedin.com/in/larryontrumanii"
               />
-              
             </div>
           </div>
 
@@ -308,7 +307,7 @@ useSeoMeta({
               src="/images/who-we-are-photos/HannahHeadshot29.jpg"
               alt="Han - Office Manager"
               class="rounded-full h-96 w-76 mx-auto mb-4 object-cover"
-            />
+            >
             <h3 class="text-xl font-semibold mb-2">
               Han
             </h3>
@@ -318,7 +317,6 @@ useSeoMeta({
             <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
               [Brief bio or description of their role and expertise]
             </p>
-            
           </div>
 
           <!-- Team Member 3 -->
@@ -327,7 +325,7 @@ useSeoMeta({
               src="/images/who-we-are-photos/Syd-headshot.jpg"
               alt="Syd - Business Development"
               class="rounded-full h-96 w-76 mx-auto mb-4 object-cover"
-            />
+            >
             <h3 class="text-xl font-semibold mb-2">
               Syd
             </h3>
@@ -344,7 +342,6 @@ useSeoMeta({
                 size="sm"
                 to="https://www.linkedin.com/in/sydney-truman-49058829b/"
               />
-            
             </div>
           </div>
 
@@ -415,7 +412,7 @@ useSeoMeta({
       </UContainer>
     </section>
 
-    <!-- Statistics/Achievements 
+    <!-- Statistics/Achievements
     <section class="py-16 lg:py-24 bg-primary-600 text-white">
       <UContainer>
         <div class="text-center mb-12">
