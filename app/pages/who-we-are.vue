@@ -276,11 +276,11 @@ useSeoMeta({
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           <!-- Team Member 1 -->
           <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
-            <img
+            <NuxtImg
               src="/images/who-we-are-photos/Lar-headshot.png"
               alt="Lar - Founder / Strategist / Creative Lead"
               class="rounded-full h-96 w-76 mx-auto mb-4 object-cover"
-            >
+            />
             <h3 class="text-xl font-semibold mb-2">
               Lar
             </h3>
@@ -303,11 +303,11 @@ useSeoMeta({
 
           <!-- Team Member 2 -->
           <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
-            <img
+            <NuxtImg
               src="/images/who-we-are-photos/HannahHeadshot29.jpg"
               alt="Han - Office Manager"
               class="rounded-full h-96 w-76 mx-auto mb-4 object-cover"
-            >
+            />
             <h3 class="text-xl font-semibold mb-2">
               Han
             </h3>
@@ -321,11 +321,11 @@ useSeoMeta({
 
           <!-- Team Member 3 -->
           <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
-            <img
+            <NuxtImg
               src="/images/who-we-are-photos/Syd-headshot.jpg"
               alt="Syd - Business Development"
               class="rounded-full h-96 w-76 mx-auto mb-4 object-cover"
-            >
+            />
             <h3 class="text-xl font-semibold mb-2">
               Syd
             </h3>
