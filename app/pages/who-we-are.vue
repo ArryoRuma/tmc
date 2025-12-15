@@ -322,7 +322,7 @@ useSeoMeta({
           <!-- Team Member 3 -->
           <div class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg">
             <NuxtImg
-              src="/images/who-we-are-photos/Syd-headshot.jpg"
+              src="/images/who-we-are-photos/Syd-headshot1.jpg"
               alt="Syd - Business Development"
               class="rounded-full h-96 w-76 mx-auto mb-4 object-cover"
             />
@@ -482,7 +482,7 @@ useSeoMeta({
             <UButton
               size="lg"
               variant="outline"
-              to="/portfolio"
+              to="/projects"
             >
               View Our Work
             </UButton>
