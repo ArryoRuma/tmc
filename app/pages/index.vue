@@ -11,7 +11,7 @@ const currentWordIndex = ref(0)
 onMounted(() => {
   setInterval(() => {
     currentWordIndex.value = (currentWordIndex.value + 1) % rotatingWords.length
-  }, 1500) // Change word every 2 seconds
+  }, 1200) // Change word every 1 second
 })
 
 useSeoMeta({
