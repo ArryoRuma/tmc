@@ -93,7 +93,7 @@ export default defineAppConfig({
         container: '',
         wrapper: '',
         header: 'mb-8 sm:mb-12',
-        headline: 'mb-4',
+        headline: 'mb-4 text-3xl',
         title: 'text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-highlighted',
         description: 'text-lg sm:text-xl/8 text-muted mt-6',
         body: 'mt-8',

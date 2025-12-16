@@ -52,14 +52,19 @@ useSeoMeta({
           </span>
         </h1>
       </template>
+
       <NuxtImg
         v-if="page.hero?.photo"
         :src="page.hero?.photo?.src"
         :alt="page.hero?.photo?.alt || page.title"
         loading="lazy"
-        class="w-full h-auto object-cover aspect-video rounded-lg shadow-lg"
-      /><PromotionalVideo />
+        class="w-full h-auto object-cover aspect-square rounded-lg shadow-lg"
+      />
     </UPageHero>
+
+    <UContainer >
+      <PromotionalVideo class="rounded-lg shadow-md" />
+    </UContainer>
 
     <template
       v-for="(section, index) in page.sections"
