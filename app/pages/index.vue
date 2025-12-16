@@ -4,6 +4,16 @@ const { data: page } = await useAsyncData('index', () => queryCollection('index'
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
 
+// Rotating text for the hero title
+const rotatingWords = ['Contracts', 'Products', 'Appointments', 'Services', 'Solutions', 'Deals', 'Projects', 'Retainers', 'Accounts', 'Work']
+const currentWordIndex = ref(0)
+
+onMounted(() => {
+  setInterval(() => {
+    currentWordIndex.value = (currentWordIndex.value + 1) % rotatingWords.length
+  }, 2000) // Change word every 2 seconds
+})
+
 useSeoMeta({
   titleTemplate: '',
   title,
@@ -16,20 +26,28 @@ useSeoMeta({
 <template>
   <div v-if="page?.title">
     <UPageHero
-      :title="page.title"
       :description="page.description"
       :headline="page.hero.headline"
       :links="page.hero.links"
-      orientation="vertical"
     >
       <template #top>
         <HeroBackground />
       </template>
+
       <template #title>
-        <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-          A
-          <span class="text-primary italic"> Modern Growth Agency</span>
-          for the 21st Century.
+        <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white">
+          We Fix Your Marketing, <br>So You Can Sell More
+          <span class="block">
+            <Transition
+              name="slide"
+              mode="out-in"
+            >
+              <span
+                :key="currentWordIndex"
+                class="text-primary"
+              >{{ rotatingWords[currentWordIndex] }}</span>
+            </Transition>
+          </span>
         </h1>
       </template>
 
@@ -52,12 +70,12 @@ useSeoMeta({
         v-if="section.photo"
         class="relative overflow-hidden rounded-lg"
       >
-        <img
+        <NuxtImg
           :src="section.photo.src"
           :alt="section.photo.alt || section.title"
           :loading="(section.photo.loading as 'lazy' | 'eager') || 'lazy'"
           class="w-full h-auto object-cover aspect-video"
-        >
+        />
       </div>
       <ImagePlaceholder v-else />
     </UPageSection>

@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     '@nuxt/content',
     '@vueuse/nuxt',
     'nuxt-og-image',
-    '@nuxt/fonts'
+    '@nuxt/fonts',
+    '@nuxt/hints'
   ],
   devtools: {
     enabled: true,
@@ -16,7 +17,6 @@ export default defineNuxtConfig({
       enabled: false
     }
   },
-
   css: ['~/assets/css/main.css'],
 
   routeRules: {
@@ -40,6 +40,11 @@ export default defineNuxtConfig({
         commaDangle: 'never',
         braceStyle: '1tbs'
       }
+    }
+  },
+  fonts: {
+    adobe: {
+      id: 'orr3dhh'
     }
   }
 })
