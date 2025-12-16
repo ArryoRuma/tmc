@@ -7,6 +7,31 @@
   --font-sans: 'new-spirit', sans-serif;
 }
 
+/* Apply fonts and styles */
+body {
+  font-family: 'Public Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* Apply New Spirit to headings, navigation, and logo */
+h1, h2, h3, h4, h5, h6,
+.app-logo, .logo,
+.page-title,
+.hero-title,
+.font-heading {
+  font-family: 'new-spirit', serif;
+  font-display: swap;
+}
+
+/* Make navigation items New Spirit medium weight */
+nav, nav a, nav button,
+nav [role="menuitem"] > button,
+nav [role="menuitem"] > a,
+.navigation-menu-trigger {
+  font-family: 'new-spirit', serif;
+  font-weight: 600;  font-display: swap;}
+
 /* Light theme (default) */
 :root {
   --ui-text: var(--ui-color-neutral-900);
