@@ -30,7 +30,7 @@ useSeoMeta({
       </template>
       <!-- <template #top>
         <HeroBackground />
-      </template>-->
+      </template> -->
 
       <PromotionalVideo />
     </UPageHero>
@@ -47,8 +47,6 @@ useSeoMeta({
     >
       <ImagePlaceholder />
     </UPageSection>
-
-  
 
     <UPageSection
       :title="page.features.title"

@@ -22,7 +22,7 @@ useSeoMeta({
     >
       <!-- <template #top>
         <HeroBackground />
-      </template>-->
+      </template> -->
 
       <PromotionalVideo />
     </UPageHero>

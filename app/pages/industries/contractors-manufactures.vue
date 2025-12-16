@@ -30,7 +30,7 @@ useSeoMeta({
       </template>
       <!-- <template #top>
         <HeroBackground />
-      </template>-->
+      </template> -->
 
       <ContractorReel />
     </UPageHero>

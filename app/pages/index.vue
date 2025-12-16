@@ -11,7 +11,7 @@ const currentWordIndex = ref(0)
 onMounted(() => {
   setInterval(() => {
     currentWordIndex.value = (currentWordIndex.value + 1) % rotatingWords.length
-  }, 2000) // Change word every 2 seconds
+  }, 1500) // Change word every 2 seconds
 })
 
 useSeoMeta({
@@ -30,12 +30,12 @@ useSeoMeta({
       :headline="page.hero.headline"
       :links="page.hero.links"
     >
-     <!-- <template #top>
+      <!-- <template #top>
         <HeroBackground />
-      </template>-->
+      </template> -->
 
       <template #title>
-        <h1 class="page-hero-headline text-5xl sm:text-7xl text-pretty tracking-tight text-highlighted" >
+        <h1 class="page-hero-headline text-5xl sm:text-7xl text-pretty tracking-tight text-highlighted">
           We Fix Your Marketing, <br>So You Can Sell More
           <span class="block">
             <Transition
@@ -44,7 +44,8 @@ useSeoMeta({
             >
               <span
                 :key="currentWordIndex"
-                class="text-primary" style="font-family: 'new-spirit', serif !important; font-weight: 700 !important;"
+                class="text-primary"
+                style="font-family: 'new-spirit', serif !important; font-weight: 700 !important;"
               >{{ rotatingWords[currentWordIndex] }}</span>
             </Transition>
           </span>
@@ -54,7 +55,10 @@ useSeoMeta({
       <PromotionalVideo />
     </UPageHero>
 
-    <template v-for="(section, index) in page.sections" :key="index">
+    <template
+      v-for="(section, index) in page.sections"
+      :key="index"
+    >
       <UPageSection
         :id="section.id"
         :title="section.title"
@@ -63,10 +67,13 @@ useSeoMeta({
         :orientation="section.orientation"
         :reverse="section.reverse"
       >
-        <UPageGrid v-if="section.features" :class="[
-          'grid-cols-1 md:grid-cols-2 lg:grid-cols-4',
-          section.features.length < 4 ? 'lg:grid-cols-3 max-w-5xl mx-auto' : ''
-        ]">
+        <UPageGrid
+          v-if="section.features"
+          :class="[
+            'grid-cols-1 md:grid-cols-2 lg:grid-cols-4',
+            section.features.length < 4 ? 'lg:grid-cols-3 max-w-5xl mx-auto' : ''
+          ]"
+        >
           <UPageCard
             v-for="(feature, featureIndex) in section.features"
             :key="featureIndex"

@@ -22,7 +22,7 @@ useSeoMeta({
     >
       <!-- <template #top>
         <HeroBackground />
-      </template>-->
+      </template> -->
       <template #title>
         <h1 class="text-5xl md:text-7xl font-bold leading-tight">
           Turn
