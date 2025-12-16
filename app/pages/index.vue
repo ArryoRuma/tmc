@@ -30,12 +30,12 @@ useSeoMeta({
       :headline="page.hero.headline"
       :links="page.hero.links"
     >
-      <template #top>
+     <!-- <template #top>
         <HeroBackground />
-      </template>
+      </template>-->
 
       <template #title>
-        <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 dark:text-white">
+        <h1 class="text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white">
           We Fix Your Marketing, <br>So You Can Sell More
           <span class="block">
             <Transition

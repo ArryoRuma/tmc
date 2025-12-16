@@ -102,7 +102,7 @@ const mobileItems = computed(() => [
         /* Force dropdown width to match trigger & prevent autosizing */
         content: 'w-(--reka-navigation-menu-trigger-width) min-w-0',
 
-        linkLabel: 'whitespace-normal break-words',
+        linkLabel: 'whitespace-normal break-words text-base',
 
         /* Force consistent 2-column layout across all groups */
 

@@ -1,9 +1,22 @@
 export default defineAppConfig({
   ui: {
     colors: {
-      primary: 'cyan',
-      secondary: 'red',
-      neutral: 'stone'
+      primary: 'brand',
+      secondary: 'blue',
+      neutral: 'stone',
+      brand: {
+        50: '#eff6ff',
+        100: '#dbeafe',
+        200: '#bfdbfe',
+        300: '#da7422',
+        400: '#da7422',
+        500: '#235789',
+        600: '#1e4d75',
+        700: '#1a4061',
+        800: '#15334d',
+        900: '#0f2639',
+        950: '#081926'
+      }
     },
     header: {
       slots: {

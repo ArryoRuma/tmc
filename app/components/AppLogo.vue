@@ -1,7 +1,7 @@
 <template>
   <div
-    class="app-logo"
-    style="font-size:1.5rem; font-weight:bold; color:currentColor;"
+    class="app-logo text-primary"
+    style="font-size:1.5rem; font-weight:bold;"
   >
     TruMedia Creative
   </div>

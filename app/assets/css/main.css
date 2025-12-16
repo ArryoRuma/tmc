@@ -5,6 +5,19 @@
 
 @theme static {
   --font-sans: 'new-spirit', sans-serif;
+  
+  /* Custom brand color palette */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-300: #F06101;
+  --color-brand-400: #da7422;
+  --color-brand-500: #da7422;
+  --color-brand-600: #1e4d75;
+  --color-brand-700: #1a4061;
+  --color-brand-800: #15334d;
+  --color-brand-900: #0f2639;
+  --color-brand-950: #081926;
 }
 
 /* Apply fonts and styles */
@@ -12,6 +25,12 @@ body {
   font-family: 'Public Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
+}
+.page-hero-headline {
+  font-family: 'Bebas Neue', sans-serif;
+  font-weight: 700;
+  font-display: swap;
+
 }
 
 /* Apply New Spirit to headings, navigation, and logo */
@@ -32,14 +51,20 @@ nav [role="menuitem"] > a,
   font-family: 'new-spirit', serif;
   font-weight: 600;  font-display: swap;}
 
+/* Make navigation icons primary color */
+nav [class*="i-lucide"] {
+  @apply text-primary;
+}
+
 /* Light theme (default) */
 :root {
+  --ui-bg: #F5FBFF;
   --ui-text: var(--ui-color-neutral-900);
-  --ui-text-muted: var(--ui-color-neutral-600);
+  --ui-text-muted: var(--ui-color-neutral-800);
 }
 
 .dark {
-  --ui-bg: var(--ui-color-neutral-950);
+  --ui-bg: #1b262e;
   --ui-bg-muted: var(--ui-color-neutral-900);
   --ui-bg-elevated: var(--ui-color-neutral-900);
   --ui-bg-accented: var(--ui-color-neutral-800);
