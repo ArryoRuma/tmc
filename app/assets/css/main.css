@@ -26,21 +26,25 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-.page-hero-headline {
-  font-family: 'Bebas Neue', sans-serif;
-  font-weight: 700;
-  font-display: swap;
 
-}
 
 /* Apply New Spirit to headings, navigation, and logo */
 h1, h2, h3, h4, h5, h6,
 .app-logo, .logo,
-.page-title,
-.hero-title,
+.page-title, 
+.page-headline,
 .font-heading {
-  font-family: 'new-spirit', serif;
+  font-family: "new-spirit", serif !important;
   font-display: swap;
+  font-weight: 600;
+}
+
+/* Specifically target UPageHero headline */
+.text-primary.font-semibold,
+[class*="headline"] {
+  font-family: "new-spirit", serif !important;
+  font-display: swap;
+  font-weight: 600;
 }
 
 /* Make navigation items New Spirit medium weight */

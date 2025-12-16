@@ -30,9 +30,9 @@ useSeoMeta({
           with a video growth engine.
         </h1>
       </template>
-      <template #top>
+      <!-- <template #top>
         <HeroBackground />
-      </template>
+      </template>-->
 
       <PromotionalVideo />
     </UPageHero>

@@ -28,9 +28,9 @@ useSeoMeta({
           for Food Service Companies.
         </h1>
       </template>
-      <template #top>
+      <!-- <template #top>
         <HeroBackground />
-      </template>
+      </template>-->
 
       <PromotionalVideo />
     </UPageHero>

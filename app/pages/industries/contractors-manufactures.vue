@@ -28,9 +28,9 @@ useSeoMeta({
           for Industrial &amp; Manufacturing Companies.
         </h1>
       </template>
-      <template #top>
+      <!-- <template #top>
         <HeroBackground />
-      </template>
+      </template>-->
 
       <ContractorReel />
     </UPageHero>

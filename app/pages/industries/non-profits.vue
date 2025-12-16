@@ -28,9 +28,9 @@ useSeoMeta({
           for Non-Profit Organizations.
         </h1>
       </template>
-      <template #top>
+      <!-- <template #top>
         <HeroBackground />
-      </template>
+      </template>-->
 
       <PromotionalVideo />
     </UPageHero>

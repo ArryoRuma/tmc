@@ -35,7 +35,7 @@ useSeoMeta({
       </template>-->
 
       <template #title>
-        <h1 class="text-5xl lg:text-7xl font-bold text-gray-900 dark:text-white">
+        <h1 class="page-hero-headline text-5xl sm:text-7xl text-pretty tracking-tight text-highlighted" >
           We Fix Your Marketing, <br>So You Can Sell More
           <span class="block">
             <Transition
@@ -44,7 +44,7 @@ useSeoMeta({
             >
               <span
                 :key="currentWordIndex"
-                class="text-primary"
+                class="text-primary" style="font-family: 'new-spirit', serif !important; font-weight: 700 !important;"
               >{{ rotatingWords[currentWordIndex] }}</span>
             </Transition>
           </span>

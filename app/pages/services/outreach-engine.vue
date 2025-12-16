@@ -20,9 +20,9 @@ useSeoMeta({
       :headline="page.hero.headline"
       :links="page.hero.links"
     >
-      <template #top>
+      <!-- <template #top>
         <HeroBackground />
-      </template>
+      </template>-->
       <template #title>
         <h1 class="text-5xl md:text-7xl font-bold leading-tight">
           Turn

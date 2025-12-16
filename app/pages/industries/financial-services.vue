@@ -28,9 +28,9 @@ useSeoMeta({
           for Financial Services Companies.
         </h1>
       </template>
-      <template #top>
+      <!-- <template #top>
         <HeroBackground />
-      </template>
+      </template>-->
 
       <PromotionalVideo />
     </UPageHero>
