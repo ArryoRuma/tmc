@@ -14,25 +14,25 @@ export default defineNuxtConfig({
     enabled: true,
 
     timeline: {
-      enabled: false
+      enabled: true
     }
   },
   app: {
     head: {
       link: [
         {
-          rel: "preconnect",
-          href: "https://use.typekit.net",
-          crossorigin: ""
+          rel: 'preconnect',
+          href: 'https://use.typekit.net',
+          crossorigin: ''
         },
         {
-          rel: "preconnect",
-          href: "https://p.typekit.net",
-          crossorigin: ""
+          rel: 'preconnect',
+          href: 'https://p.typekit.net',
+          crossorigin: ''
         },
         {
-          rel: "stylesheet",
-          href: "https://use.typekit.net/orr3dhh.css"
+          rel: 'stylesheet',
+          href: 'https://use.typekit.net/orr3dhh.css'
         }
       ]
     }
@@ -67,5 +67,5 @@ export default defineNuxtConfig({
       id: 'orr3dhh'
     }
   }
-  
+
 })
