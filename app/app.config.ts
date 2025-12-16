@@ -46,7 +46,7 @@ export default defineAppConfig({
     pageHero: {
       slots: {
         root: 'relative isolate',
-        container: 'flex flex-col lg:grid py-24 sm:py-32 lg:py-40 gap-16 sm:gap-y-24',
+        container: 'flex flex-col lg:grid pt-24 sm:pt-32 lg:pt-40 pb-12 sm:pb-16 lg:pb-20 gap-16 sm:gap-y-24',
         wrapper: '',
         header: '',
         headline: 'mb-4',
@@ -85,6 +85,19 @@ export default defineAppConfig({
             description: 'mt-6'
           }
         }
+      }
+    },
+    pageSection: {
+      slots: {
+        root: 'py-0',
+        container: '',
+        wrapper: '',
+        header: 'mb-8 sm:mb-12',
+        headline: 'mb-4',
+        title: 'text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-highlighted',
+        description: 'text-lg sm:text-xl/8 text-muted mt-6',
+        body: 'mt-8',
+        footer: 'mt-8',
       }
     }
   }

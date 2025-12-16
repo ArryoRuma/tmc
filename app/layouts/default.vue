@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-r from-primary-400/30 via-transparent to-primary-400/30 dark:from-transparent dark:via-primary-200/10 dark:to-transparent">
+  <div class="min-h-screen bg-gradient-to-r from-primary-400/20 via-transparent to-primary-400/20 dark:from-transparent dark:via-primary-200/10 dark:to-transparent">
     <AppHeader />
 
     <UMain>

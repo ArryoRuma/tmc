@@ -54,31 +54,45 @@ useSeoMeta({
       <PromotionalVideo />
     </UPageHero>
 
-    <UPageSection
-      v-for="(section, index) in page.sections"
-      :id="section.id"
-      :key="index"
-      :title="section.title"
-      :description="section.description"
-      :headline="section.headline"
-      :photo="section.photo"
-      :orientation="section.orientation"
-      :reverse="section.reverse"
-      :features="section.features"
-    >
+    <template v-for="(section, index) in page.sections" :key="index">
+      <UPageSection
+        :id="section.id"
+        :title="section.title"
+        :description="section.description"
+        :headline="section.headline"
+        :orientation="section.orientation"
+        :reverse="section.reverse"
+      >
+        <UPageGrid v-if="section.features" :class="[
+          'grid-cols-1 md:grid-cols-2 lg:grid-cols-4',
+          section.features.length < 4 ? 'lg:grid-cols-3 max-w-5xl mx-auto' : ''
+        ]">
+          <UPageCard
+            v-for="(feature, featureIndex) in section.features"
+            :key="featureIndex"
+            :title="feature.name"
+            :description="feature.description"
+            :icon="feature.icon"
+            spotlight
+          />
+        </UPageGrid>
+        <ImagePlaceholder v-else-if="!section.photo" />
+      </UPageSection>
+
       <div
         v-if="section.photo"
-        class="relative overflow-hidden rounded-lg"
+        class="flex justify-center px-6 mb-8"
       >
-        <NuxtImg
-          :src="section.photo.src"
-          :alt="section.photo.alt || section.title"
-          :loading="(section.photo.loading as 'lazy' | 'eager') || 'lazy'"
-          class="w-full h-auto object-cover aspect-video"
-        />
+        <div class="relative overflow-hidden rounded-lg max-w-4xl w-2/3">
+          <NuxtImg
+            :src="section.photo.src"
+            :alt="section.photo.alt || section.title"
+            loading="lazy"
+            class="w-full h-auto object-cover aspect-video"
+          />
+        </div>
       </div>
-      <ImagePlaceholder v-else />
-    </UPageSection>
+    </template>
 
     <ClientLogos />
 

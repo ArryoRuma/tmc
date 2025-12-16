@@ -1,5 +1,5 @@
 title: We Fix Your Marketing So You Can Sell More Stuff.
-description: We take your outdated 90's marketing and replace them with clarity-focused videos and content systems that shorten sales cycles, build trust, and turn expertise into booked meetings.
+description: We take your brand's outdated 90's marketing and replace it with clarity-focused messaging and video content systems that shorten sales cycles, build trust, and turn your expertise into booked meetings.
 seo:
   title: TruMedia Creative | Video‑Powered Growth Agency for Industrial, Financial & Service Brands (NJ)
   description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings. Book a strategy call.
@@ -14,54 +14,57 @@ hero:
       to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       size: xl
 sections:
-  - title: '"I know we have a great product, but no one knows about it."'
-    description: Whether you need proof points, a consistent publishing cadence, or a full outbound system, our productized packages and done‑for‑you processes make it easy to get started and see results.
+  - title: '“Our marketing feels stale. How do we modernize it without losing who we are?”'
+    description: Your marketing isn’t broken — it’s just speaking a language your people stopped listening to. Today's buyers want clarity, credibility, and relevance. We help brands cut through the noise with modern messaging, smarter content workflows, and distribution that actually moves people toward action — not just likes or empty clicks.
     headline: Does this sound like you?
     photo:
       src: /images/home/frustration.jpg
-    id: how-we-help
-    orientation: horizontal
+    id: outdated-marketing
+    orientation: vertical
     features:
-      - name: Proof Points
-        description: Case study films and FAQ libraries that Marketing can publish everywhere and Sales can send 1:1 to answer objections before the call.
+      - name: Message Clarity
+        description: If your message makes people squint in confusion, you're losing money. We help you cut the fluff and craft language that speaks directly to the people who need what you do.
         icon: i-lucide-video
-      - name: Consistent Publishing
-        description: Monthly shoot days with a fixed number of edits so you publish consistently and feed your outbound sequences.
+      - name: Content That Pulls Its Weight
+        description: Pretty posts don't pay bills. Strategic content does. We build proof and drive interest—from web copy to scroll-stoppers.
         icon: i-lucide-repeat-2
-      - name: Full Outbound System
-        description: Gravix‑powered cold email and LinkedIn sequences that get your videos in front of buying committees and turn interest into booked meetings for Sales.
+      - name: Distribution That Delivers
+        description: You need the right content in the right places. We map where your audience spends time and build a system to meet them there—on platforms they trust, in formats they prefer, with messages that land.
         icon: i-lucide-zap
-  - title: Built for Clarity. Made for Trust.
-    description: We turn your expertise into visible proof—and then we distribute it. Short films and FAQ libraries that Marketing can publish everywhere and Sales can send 1:1 to answer objections before the call.
-    headline: How We Help
-    id: features
-    orientation: horizontal
-    reverse: true
-    features:
-      - name: Case‑Study Films
-        description: 60–120s customer stories that show the challenge → approach → outcome—built with chapters and CTAs for sales follow‑ups and campaigns.
-        icon: i-lucide-film
-      - name: FAQ Video Library
-        description: 8–12 short answers to the questions that stall deals, embedded on key pages and packaged for cold email and social.
-        icon: i-lucide-message-square
-      - name: Video Subscription Retainers
-        description: Monthly shoot days with a fixed number of edits so you publish consistently and feed your outbound sequences.
+      - name: Optimization Rooted in Results
+        description: “Set it and forget it” is for crockpots, not your marketing. We keep refining, testing, and elevating your content based on real-time performance. Because what worked last quarter won’t always work next.
         icon: i-lucide-repeat-2
-  - title: Outreach Engine (Gravix)
-    headline: Get Your Videos in Front of Buying Committees
-    id: outreach-engine
-    description: When you’re ready to scale beyond word‑of‑mouth, our Gravix‑powered Outreach Engine gets your videos in front of buying committees and turns interest into scheduled meetings for Sales.
-    orientation: horizontal
+  - title: '“We have a great product that no one knows about. How do we get more people to see it?”'
+    description: A great product hidden in the shadows won’t sell — no matter how “game-changing” it is. Visibility isn’t a vanity metric. It’s a growth engine. In today’s market, people don’t just stumble across brands. They’re guided there — through compelling positioning, consistency that compounds, and messaging that makes them lean in, not scroll past. We help you become known — to the right people, in the right places — with a visibility strategy designed to turn heads and build pipelines. Because when your marketing shows up with purpose, your product doesn’t just get seen. It gets sought out.
+    headline: Or maybe this sounds more like you …
+    id: no-one-knows
+    orientation: vertical
     reverse: false
     features:
-      - name: Personalized Cold Email
-        description: Role‑based messaging, warmed domains, and multi‑touch cadences with video CTAs tailored to manufacturers and professional services.
+      - name: Audience-First Video Strategy
+        description: We build short-form video that hits pain points fast. Built to educate, entertain, and get shared.
+        icon: i-lucide-film
+      - name: Clarity That Captures Attention
+        description: Being "great" is nice. Being understood is better. We fine-tune your positioning so it says exactly what it is, who it's for, and why it matters — fast. Clear messaging drives interest. Unclear messaging? Gone in a thumb-flick.
+        icon: i-lucide-message-square
+      - name: Demand-Driven Visibility
+        description: This isn't "post and pray." We build a repeatable system that meets your audience where they are—search, social, inboxes—turning cold traffic into warm leads and warm leads into eager buyers.
+        icon: i-lucide-repeat-2
+  - title: '“We need more customers... but we’re not sure how to reach them.”'
+    headline: Does this resonate at all?
+    id: need-customers
+    description: If you're putting in effort but getting silence, the issue isn't demand—it's reach. Modern acquisition means showing up where buyers look, answering questions early, and nurturing interest into action. We build predictable systems that expand reach, attract the right people, and turn curiosity into customers. No guesswork. Just measurable momentum.
+    orientation: vertical
+    reverse: false
+    features:
+      - name: Targeted Outreach & Email Activation
+        description: Your offer can't convert if it's never opened. We design permission-based email and outreach systems that feel personal, timely, and worth reading — the kind that earn replies and move people to act.
         icon: i-lucide-mail
-      - name: Lead Research & Booking
-        description: Targeting, enrichment, and scheduling glue so replies become meetings without back‑and‑forth.
+      - name: Audience Profiling & Precision Targeting
+        description: If you market to everyone, you dilute everything. We help you dial in on who your customers actually are — how they think, where they spend time, and what drives decisions — so your messaging lands with relevance.
         icon: i-lucide-user-search
-      - name: Agency & Contractor Friendly
-        description: Plans for solo users, growing teams, and agencies who need repeatable pipeline.
+      - name: A Predictable Lead & Demand Engine
+        description: Attention is great. Customers are better. We build a multi-touch acquisition system that connects awareness to engagement to conversion — so interest doesn't just spike… it compounds.
         icon: i-lucide-building-2
 clients:
   title: Featured Clients
@@ -93,10 +96,10 @@ features:
     - title: Fast Turnaround
       description: Defined SLAs and rush options—most packages deliver in 7–10 business days.
       icon: i-lucide-rocket
-    - title: SEO & Landing Pages (Add‑On)
+    - title: SEO & Landing Pages 
       description: Simple landing pages and video embeds that buyers and search engines can find.
       icon: i-lucide-search
-    - title: Outreach Engine (Integrated)
+    - title: Outreach Engine 
       description: Gravix‑powered outbound and LinkedIn steps to keep qualified conversations coming.
       icon: i-lucide-zap
     - title: Analytics & Reporting
@@ -105,7 +108,7 @@ features:
 testimonials:
   headline: Hear From Our Clients
   title: Recent Work & Outcomes
-  description: template testimonials description
+  description: 
   items:
     - quote: I’ve worked in communications for 25 years, and TruMedia Creative is one of the most creative and visionary partners I’ve had the pleasure of working with. They can see an end-product and work through the steps to get there, all the while being open to adjustments and input. They believe in the power of team and collaboration and are often the first to pull people together to make a project better and more robust.
       user:

@@ -65,7 +65,7 @@ const projects = ref([
         </h3>
         <p
           v-if="project.client_type"
-          class="text-gray-600 text-sm"
+          class="text-primary-400 text-sm"
         >{{ project.client_type }}</p>
         <div
           v-if="project.tags"
