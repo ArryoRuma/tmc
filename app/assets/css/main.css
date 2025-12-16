@@ -17,12 +17,12 @@ body {
 
 /* Apply New Spirit to headings, navigation, and logo */
 h1, h2, h3, h4, h5, h6,
-nav, nav a, nav button,
 .app-logo, .logo,
 .page-title,
 .hero-title,
 .font-heading {
   font-family: 'New Spirit', serif;
+  font-display: swap;
 }
 
 /* Make navigation items New Spirit medium weight */
@@ -31,8 +31,7 @@ nav [role="menuitem"] > button,
 nav [role="menuitem"] > a,
 .navigation-menu-trigger {
   font-family: 'New Spirit', serif;
-  font-weight: 600;
-}
+  font-weight: 600;  font-display: swap;}
 
 /* Light theme (default) */
 :root {

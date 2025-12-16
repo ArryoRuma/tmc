@@ -17,6 +17,26 @@ export default defineNuxtConfig({
       enabled: false
     }
   },
+  app: {
+    head: {
+      link: [
+        {
+          rel: "preconnect",
+          href: "https://use.typekit.net",
+          crossorigin: ""
+        },
+        {
+          rel: "preconnect",
+          href: "https://p.typekit.net",
+          crossorigin: ""
+        },
+        {
+          rel: "stylesheet",
+          href: "https://use.typekit.net/orr3dhh.css"
+        }
+      ]
+    }
+  },
   css: ['~/assets/css/main.css'],
 
   routeRules: {
@@ -47,4 +67,5 @@ export default defineNuxtConfig({
       id: 'orr3dhh'
     }
   }
+  
 })
