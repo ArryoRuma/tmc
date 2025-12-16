@@ -11,8 +11,8 @@
   --color-brand-100: #dbeafe;
   --color-brand-200: #bfdbfe;
   --color-brand-300: #F06101;
-  --color-brand-400: #da7422;
-  --color-brand-500: #da7422;
+  --color-brand-400: #fb8500;
+  --color-brand-500: #fb8500;
   --color-brand-600: #1e4d75;
   --color-brand-700: #1a4061;
   --color-brand-800: #15334d;
@@ -65,6 +65,7 @@ nav [class*="i-lucide"] {
   --ui-bg: #F5FBFF;
   --ui-text: var(--ui-color-neutral-900);
   --ui-text-muted: var(--ui-color-neutral-800);
+  --ui-header-height: --spacing(30);
 }
 
 .dark {
@@ -80,16 +81,20 @@ nav [class*="i-lucide"] {
 /* Rotating text transitions */
 .slide-enter-active,
 .slide-leave-active {
-  transition: all 0.25s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .slide-enter-from {
-  opacity: 0;
-  transform: translateY(30px);
+  transform: translateY(-100%);
+}
+.slide-enter-to {
+  transform: translateY(0%);
 }
 
+.slide-leave-from {
+  transform: translateY(0%);
+}
 .slide-leave-to {
-  opacity: 0;
-  transform: translateY(-30px);
+  transform: translateY(100%);
 }
 

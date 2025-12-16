@@ -36,7 +36,8 @@ const items = computed(() => [
   },
 
   /// {label: 'Docs', to: '/docs', active: route.path.startsWith('/docs')},
-  { label: 'Resources', to: '/resources' }
+  { label: 'Resources', to: '/resources' },
+  { label: 'About', to: '/who-we-are' }
   // { label: 'Resources', to: '/portfolio' },
   /// { label: 'Pricing', to: '/pricing'}
 
@@ -77,7 +78,8 @@ const mobileItems = computed(() => [
       { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness' }
     ]
   },
-  { label: 'Resources', to: '/resources' }
+  { label: 'Resources', to: '/resources' },
+  { label: 'About', to: '/who-we-are' }
 ])
 </script>
 
@@ -85,7 +87,7 @@ const mobileItems = computed(() => [
   <UHeader>
     <template #left>
       <NuxtLink to="/">
-        <AppLogo class="w-auto h-6 shrink-0" />
+        <AppLogo class="w-full" />
       </NuxtLink>
       <!-- <TemplateMenu /> -->
     </template>
@@ -98,11 +100,9 @@ const mobileItems = computed(() => [
       :ui="{
         viewport: 'w-full',
         viewportWrapper: 'absolute top-full left-0 flex w-full',
+        link: 'hover:bg-gray-100 hover:text-primary-400 dark:hover:bg-gray-800 dark:hover:text-primary-400',
 
-        /* Force dropdown width to match trigger & prevent autosizing */
-        content: 'w-(--reka-navigation-menu-trigger-width) min-w-0',
-
-        linkLabel: 'whitespace-normal break-words text-base',
+        linkLabel: 'whitespace-normal break-words text-lg font-medium',
 
         /* Force consistent 2-column layout across all groups */
 
@@ -110,8 +110,9 @@ const mobileItems = computed(() => [
         childItem: 'w-full',
 
         /* Ensure the clickable link spans the entire column */
-        childLink: 'w-full flex items-center px-3 py-2 rounded-md',
-        childLinkLabel: 'flex-1 whitespace-normal'
+        childLink: 'w-full flex items-center px-3 py-2 rounded-md hover:bg-gray-100 hover:text-primary-400',
+        childLinkLabel: 'flex-1 whitespace-normal text-base font-normal'
+
       }"
     />
 

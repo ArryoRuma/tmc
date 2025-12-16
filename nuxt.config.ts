@@ -11,7 +11,7 @@ export default defineNuxtConfig({
     '@nuxt/hints'
   ],
   devtools: {
-    enabled: true,
+    enabled: false,
 
     timeline: {
       enabled: true
