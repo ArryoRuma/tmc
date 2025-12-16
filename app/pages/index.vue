@@ -29,6 +29,7 @@ useSeoMeta({
       :description="page.description"
       :headline="page.hero.headline"
       :links="page.hero.links"
+      :orientation="page.hero.orientation"
     >
       <!-- <template #top>
         <HeroBackground />
@@ -51,8 +52,13 @@ useSeoMeta({
           </span>
         </h1>
       </template>
-
-      <PromotionalVideo />
+      <NuxtImg
+        v-if="page.hero?.photo"
+        :src="page.hero?.photo?.src"
+        :alt="page.hero?.photo?.alt || page.title"
+        loading="lazy"
+        class="w-full h-auto object-cover aspect-video rounded-lg shadow-lg"
+      /><PromotionalVideo />
     </UPageHero>
 
     <template

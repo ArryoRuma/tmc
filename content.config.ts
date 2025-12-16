@@ -59,7 +59,9 @@ export const collections = {
       hero: z.object({
         headline: z.string().nonempty(),
         description: z.string().nonempty(),
-        links: z.array(createLinkSchema())
+        links: z.array(createLinkSchema()),
+        photo: createImageSchema().optional(),
+        orientation: orientationEnum.optional()
       }),
 
       // Sections

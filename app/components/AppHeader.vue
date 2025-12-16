@@ -148,7 +148,8 @@ const mobileItems = computed(() => [
       <UNavigationMenu
         :items="mobileItems"
         orientation="vertical"
-        class="-mx-2.5"
+        color="primary"
+        class="-mx-2.5 "
         multiple
       />
 
