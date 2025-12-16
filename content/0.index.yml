@@ -21,8 +21,6 @@ sections:
   - title: '“Our marketing feels stale. How do we modernize it without losing who we are?”'
     description: Your marketing isn’t broken — it’s just speaking a language your people stopped listening to. Today's buyers want clarity, credibility, and relevance. We help brands cut through the noise with modern messaging, smarter content workflows, and distribution that actually moves people toward action — not just likes or empty clicks.
     headline: Does this sound like you?
-    photo:
-      src: /images/home/frustration.jpg
     id: outdated-marketing
     orientation: vertical
     features:

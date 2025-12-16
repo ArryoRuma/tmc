@@ -77,7 +77,7 @@ useSeoMeta({
           :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
         >
           <template #footer>
-            <UUser
+            <UAvatar
               v-bind="testimonial.user"
               size="lg"
             />

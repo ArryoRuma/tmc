@@ -1,4 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { defineNuxtConfig } from 'nuxt/config'
+
 export default defineNuxtConfig({
   modules: [
     '@nuxt/eslint',
@@ -11,7 +13,7 @@ export default defineNuxtConfig({
     '@nuxt/hints'
   ],
   devtools: {
-    enabled: false,
+    enabled: true,
 
     timeline: {
       enabled: true

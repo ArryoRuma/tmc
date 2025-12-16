@@ -23,7 +23,6 @@ useSeoMeta({
   twitterImage: 'https://ui4.nuxt.com/assets/templates/nuxt/saas-light.png',
   twitterCard: 'summary_large_image'
 })
-
 const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'), {
   transform: data => data.find(item => item.path === '/docs')?.children || []
 })

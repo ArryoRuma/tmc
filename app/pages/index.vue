@@ -62,7 +62,7 @@ useSeoMeta({
       />
     </UPageHero>
 
-    <UContainer >
+    <UContainer>
       <PromotionalVideo class="rounded-lg shadow-md" />
     </UContainer>
 
@@ -94,7 +94,6 @@ useSeoMeta({
             spotlight
           />
         </UPageGrid>
-        <ImagePlaceholder v-else-if="!section.photo" />
       </UPageSection>
 
       <div
@@ -143,7 +142,7 @@ useSeoMeta({
           :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
         >
           <template #footer>
-            <UUser
+            <UAvatar
               v-bind="testimonial.user"
               size="lg"
             />
