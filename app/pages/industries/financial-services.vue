@@ -48,26 +48,6 @@ useSeoMeta({
       <ImagePlaceholder />
     </UPageSection>
 
-    <UPageSection
-      v-if="page.clients && page.clients.items && page.clients.items.length"
-      :title="page.clients.title"
-      :description="page.clients.description"
-    >
-      <UPageGrid class="items-center">
-        <div
-          v-for="(client, index) in page.clients.items"
-          :key="index"
-          class="flex items-center justify-center p-4"
-        >
-          <img
-            :src="client.logo"
-            :alt="client.name"
-            class="h-10 sm:h-50 md:h-50 object-contain opacity-80 grayscale hover:grayscale-0 transition"
-            loading="lazy"
-          >
-        </div>``
-      </UPageGrid>
-    </UPageSection>
 
     <UPageSection
       :title="page.features.title"

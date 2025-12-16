@@ -26,9 +26,9 @@ useSeoMeta({
       <template #title>
         <h1 class="text-5xl md:text-7xl font-bold leading-tight">
           Turn
-          <span class="text-primary italic"> cold outreach</span>
+          <span class="text-secondary italic"> cold outreach</span>
           into
-          <span class="text-secondary italic"> warm conversations</span>
+          <span class="text-primary italic"> warm conversations</span>
           with an outbound machine on autopilot.
         </h1>
       </template>

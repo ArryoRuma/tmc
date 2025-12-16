@@ -63,19 +63,20 @@ const columns = [{
 
 <template>
   <USeparator
-    icon="i-lucide-play"
     class="h-px"
+    color="primary"
   />
 
-  <UFooter :ui="{ top: 'border-b border-default' }">
+  <UFooter :ui="{ top: 'border-b border-default' }" class="bg-primary-900 text-primary-50 dark:bg-primary-900 dark:text-primary-400">
     <template #top>
-      <UContainer>
-        <UFooterColumns :columns="columns" />
+      <UContainer class="text-primary-500">
+        <UFooterColumns :columns="columns" :ui="{ link: 'text-primary-50 hover:text-primary-400' }"
+       />
       </UContainer>
     </template>
 
     <template #left>
-      <p class="text-muted text-sm">
+      <p class="font-semibold text-sm">
         TruMedia Creative • © {{ new Date().getFullYear() }}
       </p>
     </template>
@@ -86,7 +87,7 @@ const columns = [{
         target="_blank"
         icon="i-simple-icons-linkedin"
         aria-label="TruMedia Creative on LinkedIn"
-        color="neutral"
+        color="primary"
         variant="ghost"
         size="lg"
       />
@@ -95,7 +96,7 @@ const columns = [{
         target="_blank"
         icon="i-simple-icons-youtube"
         aria-label="TruMedia Creative on YouTube"
-        color="neutral"
+        color="primary"
         variant="ghost"
         size="lg"
       />
