@@ -46,7 +46,7 @@ export default defineAppConfig({
     pageHero: {
       slots: {
         root: 'relative isolate',
-        container: 'flex flex-col lg:grid pt-24 sm:pt-32 lg:pt-40 pb-12 sm:pb-16 lg:pb-20 gap-16 sm:gap-y-24',
+        container: 'flex flex-col lg:grid pt-8 sm:pt-12 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 gap-16 sm:gap-y-24',
         wrapper: '',
         header: '',
         headline: 'mb-4',

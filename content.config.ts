@@ -30,6 +30,11 @@ const createLinkSchema = () => z.object({
   headline: z.string().optional()
 
 })
+const createVideoSchema = () => z.object({
+  src: z.string().nonempty().editor({ input: 'media' }),
+  poster: z.string().optional().editor({ input: 'media' }),
+  title: z.string().optional()
+})
 
 const createImageSchema = () => z.object({
   src: z.string().nonempty().editor({ input: 'media' }),
@@ -72,7 +77,8 @@ export const collections = {
           orientation: orientationEnum.optional(),
           reverse: z.boolean().optional(),
           features: z.array(createFeatureItemSchema()),
-          photo: createImageSchema().optional()
+          photo: createImageSchema().optional(),
+          video: createVideoSchema().optional()
         })
       ),
 

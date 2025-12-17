@@ -37,7 +37,7 @@ useSeoMeta({
 
       <template #title>
         <h1 class="page-hero-headline text-5xl sm:text-7xl text-pretty tracking-tight text-highlighted">
-          We Fix Your Marketing, <br>So You Can Sell More
+          We Help Brands Sell More
           <span class="block">
             <Transition
               name="slide"
@@ -52,64 +52,46 @@ useSeoMeta({
           </span>
         </h1>
       </template>
-
-      <NuxtImg
-        v-if="page.hero?.photo"
-        :src="page.hero?.photo?.src"
-        :alt="page.hero?.photo?.alt || page.title"
-        loading="lazy"
-        class="w-full h-auto object-cover aspect-square rounded-lg shadow-lg"
-      />
+      <HomeMarquee />
     </UPageHero>
 
-    <UContainer>
+    <!-- <UContainer>
       <PromotionalVideo class="rounded-lg shadow-md" />
-    </UContainer>
+    </UContainer> -->
 
-    <template
+    <UPageSection
       v-for="(section, index) in page.sections"
       :key="index"
+      :title="section.title"
+      :description="section.description"
+      :headline="section.headline"
+      :orientation="section.orientation"
+      :reverse="section.reverse"
+      :features="section.features"
     >
-      <UPageSection
-        :id="section.id"
-        :title="section.title"
-        :description="section.description"
-        :headline="section.headline"
-        :orientation="section.orientation"
-        :reverse="section.reverse"
-      >
-        <UPageGrid
-          v-if="section.features"
-          :class="[
-            'grid-cols-1 md:grid-cols-2 lg:grid-cols-4',
-            section.features.length < 4 ? 'lg:grid-cols-3 max-w-5xl mx-auto' : ''
-          ]"
-        >
-          <UPageCard
-            v-for="(feature, featureIndex) in section.features"
-            :key="featureIndex"
-            :title="feature.name"
-            :description="feature.description"
-            :icon="feature.icon"
-            spotlight
-          />
-        </UPageGrid>
-      </UPageSection>
-
-      <div
-        v-if="section.photo"
-        class="flex justify-center px-6 mb-8"
-      >
-        <div class="relative overflow-hidden rounded-lg max-w-4xl w-2/3">
-          <NuxtImg
-            :src="section.photo.src"
-            :alt="section.photo.alt || section.title"
-            loading="lazy"
-            class="w-full h-auto object-cover aspect-video"
-          />
+      <template #title>
+        <div class="space-y-4">
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
+            {{ section.title }}
+          </h2>
         </div>
+      </template>
+      <div
+        v-if="section.video"
+        class="relative overflow-hidden rounded-lg"
+      >
+        <video
+          :src="section.video.src"
+          :poster="section.video.poster"
+          controls
+          class="w-full h-auto aspect-video"
+          preload="metadata"
+        >
+          <p>Your browser doesn't support video playback.</p>
+        </video>
       </div>
-    </template>
+      <ImagePlaceholder v-else />
+    </UPageSection>
 
     <ClientLogos />
 
@@ -147,9 +129,9 @@ useSeoMeta({
               :description="testimonial.user.description"
               :to="testimonial.user.to"
               :target="testimonial.user.target"
-              :avatar="{ 
-                ...testimonial.user.avatar, 
-                loading: testimonial.user.avatar.loading as 'lazy' | 'eager' | undefined 
+              :avatar="{
+                ...testimonial.user.avatar,
+                loading: testimonial.user.avatar.loading as 'lazy' | 'eager' | undefined
               }"
             />
           </template>
