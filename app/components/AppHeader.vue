@@ -3,7 +3,17 @@ import { computed } from 'vue'
 
 const items = computed(() => [
   {
-    label: 'Solutions',
+    label: 'Who We Help',
+    children: [
+      { label: 'Contractors & Manufacturing', icon: 'i-lucide-hammer', to: '/industries/contractors-manufactures' },
+      { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/industries/financial-services' },
+      { label: 'Food Services', icon: 'i-lucide-utensils', to: '/industries/food-services' },
+      { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/industries/non-profits' },
+      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness' }
+    ]
+  },
+  {
+    label: 'How We Help',
     children: [
       { label: 'Clarify Your Message', icon: 'i-lucide-award', to: '/solutions/clarify-your-message' },
       { label: 'Get More Leads', icon: 'i-lucide-user-search', to: '/solutions/get-more-leads' },
@@ -15,7 +25,7 @@ const items = computed(() => [
     ]
   },
   {
-    label: 'Services',
+    label: 'Ways We Work Together',
     children: [
       { label: 'Video Production', icon: 'i-lucide-video', to: '/services/video-growth-engine' },
       { label: 'Outbound Campaigns', icon: 'i-lucide-send', to: '/services/outreach-engine' },
@@ -26,15 +36,6 @@ const items = computed(() => [
 
     ]
 
-  }, {
-    label: 'Industries',
-    children: [
-      { label: 'Contractors & Manufacturing', icon: 'i-lucide-hammer', to: '/industries/contractors-manufactures' },
-      { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/industries/financial-services' },
-      { label: 'Food Services', icon: 'i-lucide-utensils', to: '/industries/food-services' },
-      { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/industries/non-profits' },
-      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness' }
-    ]
   },
 
   /// {label: 'Docs', to: '/docs', active: route.path.startsWith('/docs')},
@@ -47,7 +48,18 @@ const items = computed(() => [
 
 const mobileItems = computed(() => [
   {
-    label: 'Solutions',
+    label: 'Who We Help',
+    open: true,
+    children: [
+      { label: 'Contractors & Manufacturing', icon: 'i-lucide-hammer', to: '/industries/contractors-manufactures' },
+      { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/industries/financial-services' },
+      { label: 'Food Services', icon: 'i-lucide-utensils', to: '/industries/food-services' },
+      { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/industries/non-profits' },
+      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness' }
+    ]
+  },
+  {
+    label: 'How We Help',
     open: true,
     children: [
       { label: 'Clarify Your Message', icon: 'i-lucide-award', to: '/solutions/clarify-your-message' },
@@ -59,7 +71,7 @@ const mobileItems = computed(() => [
     ]
   },
   {
-    label: 'Services',
+    label: 'Ways We Work Together',
     open: true,
     children: [
       { label: 'Video Production', icon: 'i-lucide-video', to: '/services/video-growth-engine' },
@@ -68,16 +80,6 @@ const mobileItems = computed(() => [
       { label: 'SEO & Paid Ads', icon: 'i-lucide-mouse-pointer-click', to: '/services/seo-and-paid-ads' },
       { label: 'Marketing Automation', icon: 'i-lucide-bot', to: '/services/marketing-automation' },
       { label: 'Content Creation', icon: 'i-lucide-edit-3', to: '/services/content-creation' }
-    ]
-  }, {
-    label: 'Industries',
-    open: true,
-    children: [
-      { label: 'Contractors & Manufacturing', icon: 'i-lucide-hammer', to: '/industries/contractors-manufactures' },
-      { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/industries/financial-services' },
-      { label: 'Food Services', icon: 'i-lucide-utensils', to: '/industries/food-services' },
-      { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/industries/non-profits' },
-      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness' }
     ]
   },
   { label: 'Resources', to: '/resources' },
@@ -119,25 +121,26 @@ const mobileItems = computed(() => [
     />
 
     <template #right>
-      <UColorModeButton />
+      
 
-      <!-- <UButton
-        icon="i-lucide-log-in"
-        color="neutral"
-        variant="ghost"
-        to="/login"
+       <UButton
+        icon="i-lucide-phone-call"
+        color="primary"
+        variant="solid"
+        to="/contact"
         class="lg:hidden"
       />
 
       <UButton
-        label="Sign in"
-        color="neutral"
-        variant="outline"
-        to="/login"
-        class="hidden lg:inline-flex"
+        label="Contact Us"
+        color="primary"
+        variant="solid"
+        to="/contact"
+        class="hidden lg:inline-flex text-lg"
+        style="font-family: 'new-spirit', serif !important; font-weight: 600 !important;"
       />
-
-      <UButton
+      <UColorModeButton />
+      <!-- <UButton
         label="Sign up"
         color="neutral"
         trailing-icon="i-lucide-arrow-right"
