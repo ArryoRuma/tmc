@@ -59,7 +59,7 @@ export default defineAppConfig({
       variants: {
         orientation: {
           horizontal: {
-            container: 'lg:grid-cols-2 lg:items-center',
+            container: 'lg:grid-cols-2 lg:items-center sm:items-center',
             description: 'text-pretty'
           },
           vertical: {
