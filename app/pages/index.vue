@@ -107,7 +107,8 @@ useSeoMeta({
         />
       </UPageGrid>
     </UPageSection>
-
+    <ClientLogos />
+    <ProjectsPortfolio />
     <UPageSection
       id="testimonials"
       :headline="page.testimonials.headline"
@@ -137,8 +138,7 @@ useSeoMeta({
         </UPageCard>
       </div>
     </UPageSection>
-    <ClientLogos />
-    <ProjectsPortfolio />
+
     <UPageCTA
       v-bind="page.cta"
       variant="naked"
