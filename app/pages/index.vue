@@ -143,8 +143,14 @@ useSeoMeta({
         >
           <template #footer>
             <UUser
-              v-bind="testimonial.user"
-              size="lg"
+              :name="testimonial.user.name"
+              :description="testimonial.user.description"
+              :to="testimonial.user.to"
+              :target="testimonial.user.target"
+              :avatar="{ 
+                ...testimonial.user.avatar, 
+                loading: testimonial.user.avatar.loading as 'lazy' | 'eager' | undefined 
+              }"
             />
           </template>
         </UPageCard>
