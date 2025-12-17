@@ -36,7 +36,7 @@ useSeoMeta({
       </template> -->
 
       <template #title>
-        <h1 class="page-hero-headline text-5xl sm:text-7xl text-pretty tracking-tight text-highlighted">
+        <div class="page-hero-headline text-5xl sm:text-7xl text-pretty tracking-tight text-highlighted">
           We Help Brands Sell More
           <span class="block">
             <Transition
@@ -50,7 +50,7 @@ useSeoMeta({
               >{{ rotatingWords[currentWordIndex] }}</span>
             </Transition>
           </span>
-        </h1>
+        </div>
       </template>
       <HomeMarquee />
     </UPageHero>
@@ -146,7 +146,7 @@ useSeoMeta({
       variant="naked"
       class="overflow-hidden"
     >
-      <LazyStarsBg />
+      <!-- <LazyStarsBg /> -->
     </UPageCTA>
   </div>
 </template>

@@ -121,13 +121,11 @@ const mobileItems = computed(() => [
     />
 
     <template #right>
-      
-
-       <UButton
+      <UButton
         icon="i-lucide-phone-call"
         color="primary"
         variant="solid"
-        to="/contact"
+        to="https://trumediacreative.hbportal.co/public/6500b138434e3d0025b0e595"
         class="lg:hidden"
       />
 
@@ -135,7 +133,7 @@ const mobileItems = computed(() => [
         label="Contact Us"
         color="primary"
         variant="solid"
-        to="/contact"
+        to="https://trumediacreative.hbportal.co/public/6500b138434e3d0025b0e595"
         class="hidden lg:inline-flex text-lg"
         style="font-family: 'new-spirit', serif !important; font-weight: 600 !important;"
       />

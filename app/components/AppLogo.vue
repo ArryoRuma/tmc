@@ -6,4 +6,3 @@
     TruMedia Creative
   </div>
 </template>
-  

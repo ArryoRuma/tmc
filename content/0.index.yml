@@ -5,9 +5,8 @@ seo:
   description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings.
 navigation: true
 hero:
-  headline:
   title: We Help Brands Sell More Stuff.
-  description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings.
+  description:
   photo:
     src: /images/home/clicky.png
     alt: Team collaborating on video marketing strategy
