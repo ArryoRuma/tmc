@@ -5,7 +5,7 @@ const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
 
 // Rotating text for the hero title
-const rotatingWords = ['Contracts', 'Products', 'Appointments', 'Services', 'Solutions', 'Deals', 'Projects', 'Retainers', 'Accounts', 'Work']
+const rotatingWords = ['Services', 'Products', 'Appointments', 'Contracts', 'Solutions', 'Deals', 'Projects', 'Retainers', 'Accounts', 'Work']
 const currentWordIndex = ref(0)
 
 onMounted(() => {
@@ -77,23 +77,24 @@ useSeoMeta({
         </div>
       </template>
       <div
-        v-if="section.video"
-        class="relative overflow-hidden rounded-lg"
+        v-if="section.photo"
+        class="flex justify-center px-6 mb-8"
       >
-        <video
-          :src="section.video.src"
-          :poster="section.video.poster"
-          controls
-          class="w-full h-auto aspect-video"
-          preload="metadata"
-        >
-          <p>Your browser doesn't support video playback.</p>
-        </video>
+        <div class="relative overflow-hidden rounded-lg w-full h-full max-w-4xl shadow-lg">
+          <NuxtImg
+            :src="section.photo.src"
+            :alt="section.photo.alt || section.title"
+            loading="lazy"
+            class="w-full h-full object-cover"
+          />
+        </div>
       </div>
-      <ImagePlaceholder v-else />
     </UPageSection>
-
-    <ClientLogos />
+    <UPageCTA
+      title="Title CTA"
+      description="Description CTA"
+      variant="naked"
+    />
 
     <UPageSection
       :title="page.features.title"
@@ -138,7 +139,7 @@ useSeoMeta({
         </UPageCard>
       </div>
     </UPageSection>
-
+    <ClientLogos />
     <ProjectsPortfolio />
     <UPageCTA
       v-bind="page.cta"

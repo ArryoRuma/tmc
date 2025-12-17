@@ -1,11 +1,11 @@
 title: We Fix Your Marketing So You Can Sell More Stuff.
-description: We take your brand's outdated 90's marketing and replace it with clarity-focused messaging and video content systems that shorten sales cycles, build trust, and turn your expertise into booked meetings.
+description: Helping industrial, financial, and service brands explain what they do, prove it works, and get in front of the right people.
 seo:
-  title: TruMedia Creative | Video‑Powered Growth Agency for Industrial, Financial & Service Brands (NJ)
-  description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings. Book a strategy call.
+  title: Video‑Powered Growth for Industrial, Financial & Service Brands
+  description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings.
 navigation: true
 hero:
-  headline: 
+  headline:
   title: We Help Brands Sell More Stuff.
   description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings.
   photo:
@@ -22,15 +22,17 @@ hero:
       variant: subtle
       to: /
 sections:
-  - title: Does this sound like you?
+  - title: Any of these sound familiar?
     description: You’re not alone — and you don’t need louder marketing. You need clarity, proof, and a system that works together.
-    headline: Stuff
     id: outdated-marketing
     orientation: horizontal
     video: 
       src: https://player.vimeo.com/progressive_redirect/playback/863697186/rendition/1080p/file.mp4?loc=external&log_user=0&signature=ace347a7ef2ae2c91e3efd8640f53115e73bdc49bb08c3e708613f404465b9d4
       poster: /images/home/clicky.png
       title: Outdated Marketing Video
+    photo:
+      src: /images/home/frustrated-icon.png
+      alt: Frustrated business owner looking at a computer screen
     features:
       - title: Our marketing feels stale.
         description: How do we modernize it without losing who we are?

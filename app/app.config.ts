@@ -89,15 +89,15 @@ export default defineAppConfig({
     },
     pageSection: {
       slots: {
-        root: 'py-0',
-        container: '',
+        root: 'py-0 mb-4',
+        container: 'pb-8',
         wrapper: '',
         header: 'mb-8 sm:mb-12',
         headline: 'mb-4 text xl flex items-center',
         title: 'text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-highlighted',
         description: 'text-lg sm:text-xl/8 text-muted mt-6',
         body: 'mt-8',
-        footer: 'mt-8'
+        footer: 'mt-2'
       }
     }
   }
