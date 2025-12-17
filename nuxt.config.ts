@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-og-image',
     '@nuxt/fonts',
-    '@nuxt/hints'
+    '@nuxt/hints',
+    '@nuxtjs/seo'
   ],
   devtools: {
     enabled: true,
@@ -68,6 +69,12 @@ export default defineNuxtConfig({
     adobe: {
       id: 'orr3dhh'
     }
+  },
+  robots: {
+    disallow: ['/admin', '/private'],
+    groups: [
+      { userAgent: ['GPTBot', 'ChatGPT-User'], disallow: ['/'] }
+    ]
   }
 
 })

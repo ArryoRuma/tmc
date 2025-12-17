@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useSeoMeta({
-  title: 'Who We Are - TruMedia Creative',
+  title: 'Who We Are',
   description: 'Learn about TruMedia Creative\'s mission, values, and the team behind our marketing and creative solutions.'
 })
 </script>

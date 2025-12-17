@@ -10,7 +10,6 @@ const items = ref([
 ])
 
 useSeoMeta({
-  titleTemplate: '',
   title,
   ogTitle: title,
   description,

@@ -2,9 +2,13 @@
 const { data: page } = await useAsyncData('clarifyyourmessage', () => queryCollection('clarifyyourmessage').first())
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
-
+useHead({
+  title: title,
+  meta: [
+    { name: 'description', content: description }
+  ]
+})
 useSeoMeta({
-  titleTemplate: '',
   title,
   ogTitle: title,
   description,
@@ -56,7 +60,7 @@ useSeoMeta({
     <USeparator />
     <UPageCTA
       v-bind="page.cta"
-      variant="naked"
+      variant="solid"
       class="overflow-hidden"
     >
       <LazyStarsBg />

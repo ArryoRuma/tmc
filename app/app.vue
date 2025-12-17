@@ -18,10 +18,12 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: 'TruMedia Creative - %s',
-  ogImage: 'https://ui4.nuxt.com/assets/templates/nuxt/saas-light.png',
-  twitterImage: 'https://ui4.nuxt.com/assets/templates/nuxt/saas-light.png',
-  twitterCard: 'summary_large_image'
+  titleTemplate: '%s | TruMedia Creative | New Jersey Based Digital Marketing Agency',
+  ogSiteName: 'TruMedia Creative',
+  ogImage: '/ogimage.png',
+  twitterImage: '/ogimage.png',
+  twitterCard: 'summary_large_image',
+  ogType: 'website'
 })
 const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'), {
   transform: data => data.find(item => item.path === '/docs')?.children || []

@@ -13,9 +13,7 @@ onMounted(() => {
     currentWordIndex.value = (currentWordIndex.value + 1) % rotatingWords.length
   }, 1200) // Change word every 1 second
 })
-
 useSeoMeta({
-  titleTemplate: '',
   title,
   ogTitle: title,
   description,
