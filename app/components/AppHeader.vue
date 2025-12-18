@@ -5,42 +5,42 @@ const items = computed(() => [
   {
     label: 'Who We Help',
     children: [
-      { label: 'Contractors & Manufacturing', icon: 'i-lucide-hammer', to: '/industries/contractors-manufactures' },
-      { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/industries/financial-services' },
-      { label: 'Food Services', icon: 'i-lucide-utensils', to: '/industries/food-services' },
-      { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/industries/non-profits' },
-      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness' }
+      { label: 'Contractors & Manufacturing', icon: 'i-lucide-hammer', to: '/industries/contractors-manufactures', disabled: true },
+      { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/industries/financial-services', disabled: true },
+      { label: 'Food Services', icon: 'i-lucide-utensils', to: '/industries/food-services', disabled: true },
+      { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/industries/non-profits', disabled: true },
+      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness', disabled: true }
     ]
   },
   {
     label: 'How We Help',
     children: [
-      { label: 'Clarify Your Message', icon: 'i-lucide-award', to: '/solutions/clarify-your-message' },
-      { label: 'Get More Leads', icon: 'i-lucide-user-search', to: '/solutions/get-more-leads' },
-      { label: 'Speed Up Sales', icon: 'i-lucide-refresh-ccw', to: '/solutions/speed-up-sales' },
-      { label: 'Reach More Buyers', icon: 'i-lucide-expand', to: '/solutions/reach-more-buyers' },
-      { label: 'Keep Customers Longer', icon: 'i-lucide-chart-no-axes-combined', to: '/solutions/keep-customers-longer' },
-      { label: 'Fix Your Live Stream & Events', icon: 'i-lucide-video', to: '/solutions/fix-your-live-stream-and-events' }
+      { label: 'Clarify Your Message', icon: 'i-lucide-award', to: '/solutions/clarify-your-message', disabled: true },
+      { label: 'Get More Leads', icon: 'i-lucide-user-search', to: '/solutions/get-more-leads', disabled: true },
+      { label: 'Speed Up Sales', icon: 'i-lucide-refresh-ccw', to: '/solutions/speed-up-sales', disabled: true },
+      { label: 'Reach More Buyers', icon: 'i-lucide-expand', to: '/solutions/reach-more-buyers', disabled: true },
+      { label: 'Keep Customers Longer', icon: 'i-lucide-chart-no-axes-combined', to: '/solutions/keep-customers-longer', disabled: true },
+      { label: 'Fix Your Live Stream & Events', icon: 'i-lucide-video', to: '/solutions/fix-your-live-stream-and-events', disabled: true }
 
     ]
   },
   {
     label: 'Ways We Work Together',
     children: [
-      { label: 'Video Production', icon: 'i-lucide-video', to: '/services/video-growth-engine' },
-      { label: 'Outbound Campaigns', icon: 'i-lucide-send', to: '/services/outreach-engine' },
-      { label: 'Web Design & Development', icon: 'i-lucide-layout-dashboard', to: '/services/web-design' },
-      { label: 'SEO & Paid Ads', icon: 'i-lucide-mouse-pointer-click', to: '/services/seo-and-paid-ads' },
-      { label: 'Marketing Automation', icon: 'i-lucide-bot', to: '/services/marketing-automation' },
-      { label: 'Content Creation', icon: 'i-lucide-edit-3', to: '/services/content-creation' }
+      { label: 'Video Production', icon: 'i-lucide-video', to: '/services/video-growth-engine', disabled: true },
+      { label: 'Outbound Campaigns', icon: 'i-lucide-send', to: '/services/outreach-engine', disabled: true },
+      { label: 'Web Design & Development', icon: 'i-lucide-layout-dashboard', to: '/services/web-design', disabled: true },
+      { label: 'SEO & Paid Ads', icon: 'i-lucide-mouse-pointer-click', to: '/services/seo-and-paid-ads', disabled: true },
+      { label: 'Marketing Automation', icon: 'i-lucide-bot', to: '/services/marketing-automation', disabled: true },
+      { label: 'Content Creation', icon: 'i-lucide-edit-3', to: '/services/content-creation', disabled: true }
 
     ]
 
-  },
+  }
 
   /// {label: 'Docs', to: '/docs', active: route.path.startsWith('/docs')},
-  { label: 'Resources', to: '/resources' },
-  { label: 'About', to: '/who-we-are' }
+  /// { label: 'Resources', to: '/resources' },
+  /// { label: 'About', to: '/who-we-are' }
   // { label: 'Resources', to: '/portfolio' },
   /// { label: 'Pricing', to: '/pricing'}
 
@@ -51,39 +51,39 @@ const mobileItems = computed(() => [
     label: 'Who We Help',
     open: true,
     children: [
-      { label: 'Contractors & Manufacturing', icon: 'i-lucide-hammer', to: '/industries/contractors-manufactures' },
-      { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/industries/financial-services' },
-      { label: 'Food Services', icon: 'i-lucide-utensils', to: '/industries/food-services' },
-      { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/industries/non-profits' },
-      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness' }
+      { label: 'Contractors & Manufacturing', icon: 'i-lucide-hammer', to: '/industries/contractors-manufactures', disabled: true },
+      { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/industries/financial-services', disabled: true },
+      { label: 'Food Services', icon: 'i-lucide-utensils', to: '/industries/food-services', disabled: true },
+      { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/industries/non-profits', disabled: true },
+      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness', disabled: true }
     ]
   },
   {
     label: 'How We Help',
     open: true,
     children: [
-      { label: 'Clarify Your Message', icon: 'i-lucide-award', to: '/solutions/clarify-your-message' },
-      { label: 'Get More Leads', icon: 'i-lucide-user-search', to: '/solutions/get-more-leads' },
-      { label: 'Speed Up Sales', icon: 'i-lucide-refresh-ccw', to: '/solutions/speed-up-sales' },
-      { label: 'Reach More Buyers', icon: 'i-lucide-expand', to: '/solutions/reach-more-buyers' },
-      { label: 'Keep Customers Longer', icon: 'i-lucide-chart-no-axes-combined', to: '/solutions/keep-customers-longer' },
-      { label: 'Fix Your Live Stream & Events', icon: 'i-lucide-video', to: '/solutions/fix-your-live-stream-and-events' }
+      { label: 'Clarify Your Message', icon: 'i-lucide-award', to: '/solutions/clarify-your-message', disabled: true },
+      { label: 'Get More Leads', icon: 'i-lucide-user-search', to: '/solutions/get-more-leads', disabled: true },
+      { label: 'Speed Up Sales', icon: 'i-lucide-refresh-ccw', to: '/solutions/speed-up-sales', disabled: true },
+      { label: 'Reach More Buyers', icon: 'i-lucide-expand', to: '/solutions/reach-more-buyers', disabled: true },
+      { label: 'Keep Customers Longer', icon: 'i-lucide-chart-no-axes-combined', to: '/solutions/keep-customers-longer', disabled: true },
+      { label: 'Fix Your Live Stream & Events', icon: 'i-lucide-video', to: '/solutions/fix-your-live-stream-and-events', disabled: true }
     ]
   },
   {
     label: 'Ways We Work Together',
     open: true,
     children: [
-      { label: 'Video Production', icon: 'i-lucide-video', to: '/services/video-growth-engine' },
-      { label: 'Outbound Campaigns', icon: 'i-lucide-send', to: '/services/outreach-engine' },
-      { label: 'Web Design & Development', icon: 'i-lucide-layout-dashboard', to: '/services/web-design' },
-      { label: 'SEO & Paid Ads', icon: 'i-lucide-mouse-pointer-click', to: '/services/seo-and-paid-ads' },
-      { label: 'Marketing Automation', icon: 'i-lucide-bot', to: '/services/marketing-automation' },
-      { label: 'Content Creation', icon: 'i-lucide-edit-3', to: '/services/content-creation' }
+      { label: 'Video Production', icon: 'i-lucide-video', to: '/services/video-growth-engine', disabled: true },
+      { label: 'Outbound Campaigns', icon: 'i-lucide-send', to: '/services/outreach-engine', disabled: true },
+      { label: 'Web Design & Development', icon: 'i-lucide-layout-dashboard', to: '/services/web-design', disabled: true },
+      { label: 'SEO & Paid Ads', icon: 'i-lucide-mouse-pointer-click', to: '/services/seo-and-paid-ads', disabled: true },
+      { label: 'Marketing Automation', icon: 'i-lucide-bot', to: '/services/marketing-automation', disabled: true },
+      { label: 'Content Creation', icon: 'i-lucide-edit-3', to: '/services/content-creation', disabled: true }
     ]
-  },
-  { label: 'Resources', to: '/resources' },
-  { label: 'About', to: '/who-we-are' }
+  }
+  /// { label: 'Resources', to: '/resources' },
+  /// { label: 'About', to: '/who-we-are' }
 ])
 </script>
 

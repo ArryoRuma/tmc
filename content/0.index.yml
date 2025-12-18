@@ -16,10 +16,6 @@ hero:
       trailing: true
       to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       size: xl
-    - label: Show Me Results
-      icon: i-lucide-layers
-      variant: subtle
-      to: /
 sections:
   - title: Any of these sound familiar?
     description: You’re not alone — and you don’t need louder marketing. You need clarity, proof, and a system that works together.
