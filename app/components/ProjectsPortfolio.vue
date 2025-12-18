@@ -31,7 +31,7 @@ const projects = ref([
   {
     _path: '/projects/nourish-to-heal',
     title: 'Nourish To Heal',
-    to: 'https://cw6cbq-yp.myshopify.com',
+    to: '/projects/nourish-to-heal',
     thumbnail: '/images/web-design/nourish-to-heal/nourish-to-heal-hero.png',
     tags: ['Web Design', 'Branding', 'Photography', 'SEO', 'E-Commerce'],
     client_type: 'Food Services Client',
