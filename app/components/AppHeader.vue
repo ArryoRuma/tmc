@@ -9,7 +9,8 @@ const items = computed(() => [
       { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/industries/financial-services', disabled: true },
       { label: 'Food Services', icon: 'i-lucide-utensils', to: '/industries/food-services', disabled: true },
       { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/industries/non-profits', disabled: true },
-      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness', disabled: true }
+      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness', disabled: true },
+      { label: 'Live Events & Entertainment', icon: 'i-lucide-music', to: '/industries/live-events-and-entertainment', disabled: true }
     ]
   },
   {
@@ -55,7 +56,8 @@ const mobileItems = computed(() => [
       { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/industries/financial-services', disabled: true },
       { label: 'Food Services', icon: 'i-lucide-utensils', to: '/industries/food-services', disabled: true },
       { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/industries/non-profits', disabled: true },
-      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness', disabled: true }
+      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness', disabled: true },
+      { label: 'Live Events & Entertainment', icon: 'i-lucide-music', to: '/industries/live-events-and-entertainment', disabled: true }
     ]
   },
   {
