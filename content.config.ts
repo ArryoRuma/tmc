@@ -78,7 +78,8 @@ export const collections = {
           reverse: z.boolean().optional(),
           features: z.array(createFeatureItemSchema()),
           photo: createImageSchema().optional(),
-          video: createVideoSchema().optional()
+          video: createVideoSchema().optional(),
+          links: z.array(createLinkSchema()).optional()
         })
       ),
 

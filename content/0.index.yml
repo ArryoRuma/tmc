@@ -25,6 +25,12 @@ sections:
     description: You’re not alone — and you don’t need louder marketing. You need clarity, proof, and a system that works together.
     id: outdated-marketing
     orientation: horizontal
+    links:
+      - label: We can help.
+        to: https://trumediacreative.hbportal.co/public/6500b138434e3d0025b0e595/1-Inquiry_form
+        variant: subtle
+        icon: i-lucide-smile
+        headline: Let's chat about your marketing challenges.
     video: 
       src: https://player.vimeo.com/progressive_redirect/playback/863697186/rendition/1080p/file.mp4?loc=external&log_user=0&signature=ace347a7ef2ae2c91e3efd8640f53115e73bdc49bb08c3e708613f404465b9d4
       poster: /images/home/clicky.png

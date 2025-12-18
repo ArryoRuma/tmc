@@ -61,11 +61,11 @@ useSeoMeta({
       v-for="(section, index) in page.sections"
       :key="index"
       :title="section.title"
-      :description="section.description"
       :headline="section.headline"
       :orientation="section.orientation"
       :reverse="section.reverse"
       :features="section.features"
+      :links="section.links"
     >
       <template #title>
         <div class="space-y-4">
@@ -74,6 +74,22 @@ useSeoMeta({
           </h2>
         </div>
       </template>
+
+      <template #footer>
+        <div v-if="section.description" class="text-lg sm:text-xl/8 text-muted mt-8 mb-6">
+          {{ section.description }}
+        </div>
+        
+        <div v-if="section.links" class="flex flex-wrap gap-x-6 gap-y-3">
+          <UButton
+            v-for="(link, linkIndex) in section.links"
+            :key="linkIndex"
+            v-bind="link"
+            :headline="link.headline"
+          />
+        </div>
+      </template>
+      
       <div
         v-if="section.photo"
         class="flex justify-center px-6 mb-8"
@@ -88,12 +104,7 @@ useSeoMeta({
         </div>
       </div>
     </UPageSection>
-    <UPageCTA
-      title="Title CTA"
-      description="Description CTA"
-      variant="naked"
-    />
-
+  
     <UPageSection
       :title="page.features.title"
       :description="page.features.description"
