@@ -8,15 +8,14 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/content',
     '@vueuse/nuxt',
-    // Conditionally load og-image based on environment
-    ...(process.env.DISABLE_OG_IMAGE ? [] : ['nuxt-og-image']),
+    // OG Image module completely disabled for production builds
+    // 'nuxt-og-image',
     '@nuxt/fonts',
     '@nuxt/hints',
     '@nuxtjs/seo'
   ],
   devtools: {
-    enabled: true,
-
+    enabled: process.env.NODE_ENV !== 'production',
     timeline: {
       enabled: true
     }
@@ -46,6 +45,11 @@ export default defineNuxtConfig({
     url: 'https://outreach.trumediacreative.com'
   },
 
+  // Optimize module loading
+  build: {
+    transpile: ['@headlessui/vue']
+  },
+
   routeRules: {
     '/docs': { redirect: '/docs/getting-started', prerender: false },
     // Skip og-image routes during prerendering
@@ -53,15 +57,19 @@ export default defineNuxtConfig({
     '/api/__og-image__/**': { prerender: false }
   },
 
+  // Aggressive optimizations for memory-constrained environments
+  experimental: {
+    payloadExtraction: false,
+    inlineRouteRules: true,
+    typedPages: false
+  },
+
   compatibilityDate: '2024-07-11',
 
   nitro: {
     prerender: {
-      routes: [
-        '/'
-      ],
-      crawlLinks: true,
-      // Aggressive memory optimization
+      routes: ['/'],
+      crawlLinks: false, // Disable crawling to prevent og-image routes
       concurrency: 1,
       interval: 100
     },
@@ -73,8 +81,7 @@ export default defineNuxtConfig({
           if (id.includes('node_modules')) {
             // Split large libraries
             if (id.includes('@nuxt/ui')) return 'nuxt-ui'
-            if (id.includes('@nuxt/content')) return 'nuxt-content' 
-            if (id.includes('nuxt-og-image')) return 'og-image'
+            if (id.includes('@nuxt/content')) return 'nuxt-content'
             if (id.includes('@nuxtjs/seo')) return 'seo'
             if (id.includes('vue')) return 'vue'
             if (id.includes('@vue')) return 'vue-ecosystem'
@@ -92,28 +99,10 @@ export default defineNuxtConfig({
     }
   },
 
-  // Aggressive optimizations for memory-constrained environments
-  experimental: {
-    payloadExtraction: false,
-    inlineRouteRules: true,
-    typedPages: false
-  },
-
-  // Disable features that consume memory during build
-  devtools: {
-    enabled: process.env.NODE_ENV !== 'production'
-  },
-  
-  debug: false,
-
-  // Optimize module loading
-  build: {
-    transpile: ['@headlessui/vue'],
-    extractCSS: process.env.NODE_ENV === 'production'
-  },
-
   // Reduce telemetry and debugging overhead
   telemetry: false,
+
+  debug: false,
   eslint: {
     config: {
       stylistic: {

@@ -8,9 +8,9 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxtjs/seo'
   ],
-  
+
   css: ['~/assets/css/main.css'],
-  
+
   site: {
     url: 'https://outreach.trumediacreative.com'
   },
@@ -39,7 +39,6 @@ export default defineNuxtConfig({
     typedPages: false
   },
 
-  devtools: false,
   debug: false,
   telemetry: false,
 
