@@ -437,7 +437,7 @@ const contactInfo = {
         <UButton
           size="lg"
           variant="outline"
-          to="/portfolio"
+          to="/"
         >
           See Our Work
         </UButton>
