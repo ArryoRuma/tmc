@@ -38,7 +38,7 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
   site: {
-    url: 'https://outreach.trumediacreative.com'
+    url: 'https://trumediacreative.com'
   },
 
   // Optimize module loading
