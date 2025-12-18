@@ -9,13 +9,13 @@ const activeTab = ref<'before' | 'after'>('after')
 </script>
 
 <template>
-  <div class="bg-gray-50 dark:bg-gray-900 py-16">
+  <div class="bg-gray-50 dark:bg-gray-900 py-8">
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto">
-        <h3 class="text-2xl font-bold mb-8 text-center">
+        <h3 class="text-3xl font-bold mb-2 text-center">
           Before & After
         </h3>
-        <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
+        <p class="text-center text-gray-600 dark:text-gray-300 mb-4">
           See the transformation from the old website to our modern design
         </p>
 
