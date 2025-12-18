@@ -51,8 +51,9 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
+    '/': { prerender: false },
     '/docs': { redirect: '/docs/getting-started', prerender: false },
-    // Skip og-image routes during prerendering
+    '/**': { prerender: false }, // Disable all prerendering
     '/__og-image__/**': { prerender: false },
     '/api/__og-image__/**': { prerender: false }
   },
@@ -68,10 +69,8 @@ export default defineNuxtConfig({
 
   nitro: {
     prerender: {
-      routes: ['/'],
-      crawlLinks: false, // Disable crawling to prevent og-image routes
-      concurrency: 1,
-      interval: 100
+      routes: [],
+      crawlLinks: false // Completely disable prerendering to avoid initialization errors
     },
     rollupConfig: {
       cache: false, // Disable cache to reduce memory usage

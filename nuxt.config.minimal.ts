@@ -16,16 +16,17 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/docs': { redirect: '/docs/getting-started', prerender: false }
+    '/': { prerender: false },
+    '/docs': { redirect: '/docs/getting-started', prerender: false },
+    '/**': { prerender: false } // Disable all prerendering
   },
 
   compatibilityDate: '2024-07-11',
 
   nitro: {
     prerender: {
-      routes: ['/'],
-      crawlLinks: false, // Disable crawling to save memory
-      concurrency: 1
+      routes: [],
+      crawlLinks: false // Completely disable prerendering
     },
     minify: true,
     experimental: {
