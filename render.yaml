@@ -5,11 +5,11 @@ services:
     plan: starter # You may need to upgrade to 'standard' for more memory
     buildCommand: |
       NODE_OPTIONS='--max-old-space-size=3072' pnpm install --frozen-lockfile &&
-      NUXT_TELEMETRY_DISABLED=1 NODE_OPTIONS='--max-old-space-size=3072 --no-warnings' pnpm build:minimal ||
+      DISABLE_OG_IMAGE=1 NUXT_TELEMETRY_DISABLED=1 NODE_OPTIONS='--max-old-space-size=3072 --no-warnings' pnpm build:minimal ||
       (echo "First build failed, trying safer build..." && 
-       NUXT_TELEMETRY_DISABLED=1 NODE_OPTIONS='--max-old-space-size=2560' pnpm build:safe) ||
+       DISABLE_OG_IMAGE=1 NUXT_TELEMETRY_DISABLED=1 NODE_OPTIONS='--max-old-space-size=2560' pnpm build:safe) ||
       (echo "Safe build failed, trying emergency build..." && 
-       NUXT_TELEMETRY_DISABLED=1 NODE_OPTIONS='--max-old-space-size=2048' pnpm build:emergency)
+       DISABLE_OG_IMAGE=1 NUXT_TELEMETRY_DISABLED=1 NODE_OPTIONS='--max-old-space-size=2048' pnpm build:emergency)
     startCommand: node .output/server/index.mjs
     envVars:
       - key: NODE_OPTIONS
@@ -19,4 +19,6 @@ services:
       - key: NODE_ENV
         value: production
       - key: NUXT_TELEMETRY_DISABLED
+        value: "1"
+      - key: DISABLE_OG_IMAGE
         value: "1"

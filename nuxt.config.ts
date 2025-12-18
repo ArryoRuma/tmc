@@ -8,7 +8,8 @@ export default defineNuxtConfig({
     '@nuxt/ui',
     '@nuxt/content',
     '@vueuse/nuxt',
-    'nuxt-og-image',
+    // Conditionally load og-image based on environment
+    ...(process.env.DISABLE_OG_IMAGE ? [] : ['nuxt-og-image']),
     '@nuxt/fonts',
     '@nuxt/hints',
     '@nuxtjs/seo'
@@ -46,7 +47,10 @@ export default defineNuxtConfig({
   },
 
   routeRules: {
-    '/docs': { redirect: '/docs/getting-started', prerender: false }
+    '/docs': { redirect: '/docs/getting-started', prerender: false },
+    // Skip og-image routes during prerendering
+    '/__og-image__/**': { prerender: false },
+    '/api/__og-image__/**': { prerender: false }
   },
 
   compatibilityDate: '2024-07-11',
