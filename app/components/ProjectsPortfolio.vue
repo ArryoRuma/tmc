@@ -13,7 +13,7 @@ const projects = ref([
   {
     _path: '/projects/pinetar',
     title: 'PineTar Self Storage',
-    to: '/projects/pinetar',
+    to: 'https://www.pinetarselfstorage.com',
     thumbnail: '/images/web-design/pinetar/pinetar-hero.png',
     tags: ['Web Design', 'Branding', 'Video', 'Photography'],
     client_type: 'Real Estate Developer',
@@ -22,11 +22,38 @@ const projects = ref([
   {
     _path: '/projects/zero-surge',
     title: 'ZeroSurge',
-    to: '/projects/zero-surge',
+    to: 'https://zerosurge.com',
     thumbnail: '/images/web-design/zero-surge/zero-surge-hero.png',
     tags: ['Web Design', 'Branding', 'Photography', 'E-Commerce', 'SEO', 'Google Ads', 'Lead Generation'],
     client_type: 'Electronics Manufacturing Client',
     year: 2024
+  },
+  {
+    _path: '/projects/nourish-to-heal',
+    title: 'Nourish To Heal',
+    to: 'https://cw6cbq-yp.myshopify.com',
+    thumbnail: '/images/web-design/nourish-to-heal/nourish-to-heal-hero.png',
+    tags: ['Web Design', 'Branding', 'Photography', 'SEO', 'E-Commerce'],
+    client_type: 'Food Services Client',
+    year: 2025
+  },
+  {
+    _path: '/projects/nascar-cody-ware', disabled: true,
+    title: 'NASCAR Cody Ware',
+    to: 'https://vimeo.com/812175432/1d898d2c46?share=copy&fl=sv&fe=ci',
+    thumbnail: '/images/video/nascar-cody-ware/nascar-cody-ware-hero.png',
+    tags: ['Brand Video', 'Social Media Videos', 'Photography'],
+    client_type: 'Brand Activation Client',
+    year: 2023
+  },
+  {
+    _path: '/projects/tree-staple',
+    title: 'Tree Staple',
+    to: 'https://www.youtube.com/watch?v=K8UacQUK0Ik',
+    thumbnail: '/images/video/tree-staple/tree-staple-hero.png',
+    tags: ['Video', 'Marketing Materials', 'Photography'],
+    client_type: 'Manufacturing Client',
+    year: 2023
   }
 ])
 </script>

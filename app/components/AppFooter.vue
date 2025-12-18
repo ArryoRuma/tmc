@@ -2,60 +2,60 @@
 const columns = [{
   label: 'Solutions',
   children: [{
-    label: 'Clarify Your Message', to: '/solutions/clarify-your-message'
+    label: 'Clarify Your Message', to: '/solutions/clarify-your-message', disabled: true
   }, {
-    label: 'Get More Leads', to: '/solutions/get-more-leads'
+    label: 'Get More Leads', to: '/solutions/get-more-leads', disabled: true
   }, {
-    label: 'Speed Up Sales', to: '/solutions/speed-up-sales'
+    label: 'Speed Up Sales', to: '/solutions/speed-up-sales', disabled: true
   }, {
-    label: 'Reach More Buyers', to: '/solutions/reach-more-buyers'
+    label: 'Reach More Buyers', to: '/solutions/reach-more-buyers', disabled: true
   }, {
-    label: 'Keep Customers Longer', to: '/solutions/keep-customers-longer'
+    label: 'Keep Customers Longer', to: '/solutions/keep-customers-longer', disabled: true
   }, {
-    label: 'Fix Your Live Stream', to: '/solutions/fix-your-live-stream-and-events'
+    label: 'Fix Your Live Stream', to: '/solutions/fix-your-live-stream-and-events', disabled: true
   }]
 }, {
   label: 'Services',
   children: [{
-    label: 'Video Production', to: '/services/video-growth-engine'
+    label: 'Video Production', to: '/services/video-growth-engine', disabled: true
   }, {
-    label: 'Outbound Marketing', to: '/services/outreach-engine'
+    label: 'Outbound Marketing', to: '/services/outreach-engine', disabled: true
   }, {
-    label: 'Website Design', to: '/services/web-design'
+    label: 'Website Design', to: '/services/web-design', disabled: true
   }, {
-    label: 'SEO & Paid Ads', to: '/services/seo-and-paid-ads'
+    label: 'SEO & Paid Ads', to: '/services/seo-and-paid-ads', disabled: true
   }, {
-    label: 'Marketing Automation', to: '/services/marketing-automation'
+    label: 'Marketing Automation', to: '/services/marketing-automation', disabled: true
   }, {
-    label: 'Content Creation', to: '/services/content-creation'
+    label: 'Content Creation', to: '/services/content-creation', disabled: true
   }]
 },
 {
   label: 'Industries We Serve',
   children: [{
-    label: 'Industrial', to: '/industries/contractors-manufactures'
+    label: 'Industrial', to: '/industries/contractors-manufactures', disabled: true
   }, {
-    label: 'Financial Services', to: '/industries/financial-services'
+    label: 'Financial Services', to: '/industries/financial-services', disabled: true
   }, {
-    label: 'Food Services', to: '/industries/food-services'
+    label: 'Food Services', to: '/industries/food-services', disabled: true
   }, {
-    label: 'Health & Wellness', to: '/industries/health-and-wellness'
+    label: 'Health & Wellness', to: '/industries/health-and-wellness', disabled: true
   }, {
-    label: 'Non-Profits', to: '/industries/non-profits'
+    label: 'Non-Profits', to: '/industries/non-profits', disabled: true
   }]
 },
 {
   label: 'Resources',
   children: [{
-    label: 'Guides'
+    label: 'Guides', disabled: true
   }, {
-    label: 'Tutorials'
+    label: 'Tutorials', disabled: true
   }, {
-    label: 'Case Studies'
+    label: 'Case Studies', disabled: true
   }, {
-    label: 'Blog'
+    label: 'Blog', disabled: true
   },
-  { label: 'Media Kit'
+  { label: 'Media Kit', disabled: true
   }]
 }
 ]
