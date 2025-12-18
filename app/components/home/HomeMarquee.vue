@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-[400px] bg-muted overflow-hidden">
+  <div class="relative w-full h-[400px] bg-muted overflow-hidden shadow-2xl drop-shadow-2xl">
     <UMarquee
       reverse
       orientation="vertical"
@@ -15,7 +15,7 @@
         width="460"
         height="258"
         :alt="`Nuxt UI Screenshot ${i}`"
-        class="aspect-video border border-default rounded-lg bg-white"
+        class="aspect-video border border-default rounded-lg bg-white shadow-lg drop-shadow-lg"
       >
     </UMarquee>
     <UMarquee
@@ -32,7 +32,7 @@
         width="460"
         height="258"
         :alt="`Nuxt UI Screenshot ${i}`"
-        class="aspect-video border border-default rounded-lg bg-white"
+        class="aspect-video border border-default rounded-lg bg-white shadow-lg drop-shadow-lg"
       >
     </UMarquee>
     <UMarquee
@@ -50,7 +50,7 @@
         width="460"
         height="258"
         :alt="`Nuxt UI Screenshot ${i}`"
-        class="aspect-video border border-default rounded-lg bg-white"
+        class="aspect-video border border-default rounded-lg bg-white shadow-lg drop-shadow-lg"
       >
     </UMarquee>
   </div>
