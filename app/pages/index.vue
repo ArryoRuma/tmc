@@ -3,7 +3,12 @@ const { data: page } = await useAsyncData('index', () => queryCollection('index'
 
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
-
+const fourStep = ref([
+  { title: 'Discover', description: 'First, we dive in to what problems your facing and determine what types of videos will best address those challenges.', icon: 'i-lucide-target' },
+  { title: 'Define', description: 'Next, we outline a clear messaging framework that your clients will understand and connect with.', icon: 'i-lucide-video' },
+  { title: 'Develop', description: 'Then, we produce high-quality marketing assets that resonate with your audience.', icon: 'i-lucide-globe' },
+  { title: 'Deploy', description: 'Last, we distribute the marketing assets and analyze performance to optimize results.', icon: 'i-lucide-bar-chart-2' }
+])
 useSeoMeta({
   title,
   ogTitle: title,
@@ -27,7 +32,18 @@ useSeoMeta({
     </UPageHero>
 
     <HomeSections :sections="page.sections" />
-
+    <UPageSection
+      title="We've Got You Covered... Here's How."
+      description="Our proven 4-step approach to creating marketing content that converts prospects into clients"
+    >
+      <UStepper
+        :items="fourStep"
+        orientation="vertical"
+        :active="-1"
+        class="max-w-4xl mx-auto"
+        size="xl"
+      />
+    </UPageSection>
     <HomeFeatures
       :title="page.features.title"
       :description="page.features.description"
@@ -35,6 +51,9 @@ useSeoMeta({
     />
 
     <ClientLogos />
+    <UContainer>
+      <PromotionalVideo class="rounded-lg shadow-md" />
+    </UContainer>
     <ProjectsPortfolio />
 
     <HomeTestimonials

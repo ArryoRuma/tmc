@@ -1,9 +1,23 @@
 <script setup lang="ts">
+interface Testimonial {
+  quote: string
+  user: {
+    name: string
+    description: string
+    to?: string
+    target?: string
+    avatar: {
+      src?: string
+      loading?: string
+    }
+  }
+}
+
 interface Props {
   headline?: string
   title?: string
   description?: string
-  items?: any[]
+  items?: Testimonial[]
 }
 
 defineProps<Props>()

@@ -2,7 +2,7 @@
 interface Props {
   title?: string
   description?: string
-  items?: any[]
+  items?: Record<string, unknown>[]
 }
 
 defineProps<Props>()

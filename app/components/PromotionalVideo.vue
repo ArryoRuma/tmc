@@ -8,7 +8,7 @@
         class="rounded-xl"
         data-v-baf90ddd=""
         preload="none"
-        poster="/images/contractor plate.jpg"
+        poster="/images/reel.png"
         :controls="true"
       >
         <source

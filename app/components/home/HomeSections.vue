@@ -1,6 +1,22 @@
 <script setup lang="ts">
+import type { ButtonProps } from '#ui/types'
+
+interface Section {
+  title?: string
+  headline?: string
+  orientation?: 'vertical' | 'horizontal'
+  reverse?: boolean
+  features?: Record<string, unknown>[]
+  links?: ButtonProps[]
+  description?: string
+  photo?: {
+    src: string
+    alt?: string
+  }
+}
+
 interface Props {
-  sections: any[]
+  sections: Section[]
 }
 
 defineProps<Props>()
@@ -41,7 +57,6 @@ defineProps<Props>()
           v-for="(link, linkIndex) in section.links"
           :key="linkIndex"
           v-bind="link"
-          :headline="link.headline"
           size="xl"
           variant="solid"
           style="font-family: 'new-spirit', serif !important; font-weight: 600 !important;"

@@ -76,27 +76,32 @@ clients:
       logo: /images/clients/ritas.png
 
 features:
-  title: Don't Worry, We've Got You Covered
-  description: We fix those issues — starting with your message, then turning it into sales-ready assets, and deploying them through repeatable outreach and growth systems. No need to choose between thoughtful storytelling and performance-driven marketing. With us, you get both.
+  title: Here Are Some Results You Can Expect.
+  description: 
   items:
-    - title: Proof Over Promises
-      description: Outcome‑focused stories and objection‑crushing FAQs that buyers actually believe.
-      icon: i-lucide-badge-check
-    - title: Seamless Booking
-      description: Inline scheduling on every key page so interest becomes meetings, fast.
-      icon: i-lucide-calendar-check
-    - title: Fast Turnaround
-      description: Defined SLAs and rush options—most packages deliver in 7–10 business days.
-      icon: i-lucide-rocket
-    - title: SEO & Landing Pages 
-      description: Simple landing pages and video embeds that buyers and search engines can find.
-      icon: i-lucide-search
-    - title: Outreach Engine 
-      description: Gravix‑powered outbound and LinkedIn steps to keep qualified conversations coming.
-      icon: i-lucide-zap
-    - title: Analytics & Reporting
-      description: Lightweight dashboards for publish cadence, views, watch %, replies, meetings, and CTA clicks.
-      icon: i-lucide-bar-chart-3
+    - title: Clear Messaging
+      description: We turn complex offerings into simple, believable stories buyers instantly understand and trust.
+      icon: i-lucide-layers
+
+    - title: Sped Up Sales Cycles
+      description: We remove friction between interest and action so serious buyers can move forward without delays.
+      icon: i-lucide-fast-forward
+
+    - title: Keep Customers Longer
+      description: Consistent delivery, clear expectations, and fast execution that keeps momentum high after launch.
+      icon: i-lucide-shield-check
+
+    - title: Get More Leads
+      description: Pages, videos, and structure designed to be found, clicked, and acted on by the right people.
+      icon: i-lucide-mouse-pointer-click
+
+    - title: Reach More Buyers
+      description: Systems that extend your reach beyond your website and keep qualified conversations coming in.
+      icon: i-lucide-radar
+
+    - title: Dynamic Brand Activations
+      description: Clear visibility into what’s live, what’s working, and where attention is turning into action.
+      icon: i-lucide-activity
 testimonials:
   headline: Hear From Our Clients
   title: Recent Work & Outcomes
@@ -122,12 +127,12 @@ testimonials:
           src: 
 cta:
   title: Ready to show proof and get it in front of the right buyers?
-  description: Pick a package or book a strategy call. Done-for-you systems generate more pipeline, shorten sales cycles, and reduce burnout while your team focuses on closing deals.
+  description: Want to find out how done-for-you systems generate more pipeline, shorten sales cycles, and reduce burnout while your team focuses on closing deals? Book a strategy call today.
   links:
     - label: Book a Call
       to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       trailingIcon: i-lucide-arrow-right
-    - label: See Video + Outreach Packages
-      to: /
-      variant: subtle
-      icon: i-lucide-layers
+    - label: 
+      to: 
+      variant: 
+      icon: 
