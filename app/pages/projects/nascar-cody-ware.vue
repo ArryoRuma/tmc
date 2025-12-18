@@ -22,19 +22,19 @@ interface Project {
 }
 
 const project: Project = {
-  title: 'How PJ Polke Went from Outdated and Bulky to a Boosting Online Presence and Inbound Leads',
-  description: 'Complete branding revamp and web design solution for a Manufacturing Representative Company.',
+  title: 'Nascar Driver Cody Ware Boosts Fan Engagement with Dynamic Video Content',
+  description: 'Video production and digital marketing strategy for NASCAR driver Cody Ware to enhance fan engagement and brand visibility.',
   year: 2024,
-  client: 'PJ Polke ',
-  services: ['Web Design', 'Photography', 'Marketing Materials', 'SEO'],
-  heroImage: '/images/web-design/pjpolke/pjpolke-hero.png',
-  beforeImage: '/images/web-design/pjpolke/pjpolke-before.png',
-  afterImage: '/images/web-design/pjpolke/pjpolke-after.png',
-  websiteUrl: 'https://pjpolke.com',
-  challenge: 'PJ Polke needed a modern, professional online presence that would showcase their construction projects and establish trust with potential clients.',
-  approach: 'We focused on creating a clean, user-friendly website with high-quality images and clear calls to action to drive engagement.',
-  solution: 'We created a comprehensive brand identity and responsive website that highlights their expertise and project portfolio.',
-  results: ['50% increase in lead generation', 'Professional brand recognition', 'Mobile-optimized user experience']
+  client: 'Cody Ware',
+  services: ['Video Production', 'Digital Marketing', 'Content Strategy', 'Social Media Management'],
+  heroImage: '/images/projects/nascar-cody-ware/nascar-cody-ware-hero.png',
+  beforeImage: '/images/projects/nascar-cody-ware/nascar-cody-ware-before.png',
+  afterImage: '/images/projects/nascar-cody-ware/nascar-cody-ware-after.png',
+  websiteUrl: 'https://vimeo.com/812175432/1d898d2c46?fl=pl&fe=sh',
+  challenge: 'Cody Ware needed dynamic video content and a digital marketing strategy to boost fan engagement and increase brand visibility in the competitive NASCAR environment.',
+  approach: 'We focused on creating engaging video content tailored to Cody Ware’s fan base, leveraging social media platforms and targeted digital campaigns to maximize reach and interaction.',
+  solution: 'We produced high-quality videos and implemented a comprehensive digital marketing plan that included content strategy and social media management to enhance fan connection and brand presence.',
+  results: ['Professional brand recognition', 'Increased fan engagement', 'Enhanced social media presence', 'Higher visibility in the NASCAR community']
 }
 
 useSeoMeta({
