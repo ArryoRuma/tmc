@@ -41,6 +41,9 @@ export default defineNuxtConfig({
     }
   },
   css: ['~/assets/css/main.css'],
+  site: {
+    url: 'https://outreach.trumediacreative.com'
+  },
 
   routeRules: {
     '/docs': { redirect: '/docs/getting-started', prerender: false }
@@ -75,8 +78,5 @@ export default defineNuxtConfig({
     groups: [
       { userAgent: ['GPTBot', 'ChatGPT-User'], disallow: ['/'] }
     ]
-  },
-  site: {
-    url: 'https://outreach.trumediacreative.com'
   }
 })
