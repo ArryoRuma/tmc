@@ -58,7 +58,7 @@ const projects = ref([
       >
         <img
           :src="project.thumbnail"
-          class="rounded-xl w-full h-56 object-cover object-top"
+          class="rounded-xl w-full h-56 object-cover object-top shadow-lg drop-shadow-lg group-hover:shadow-xl group-hover:drop-shadow-xl transition-all duration-300"
         >
         <h3 class="mt-4 font-bold text-xl group-hover:text-primary transition">
           {{ project.title }}
