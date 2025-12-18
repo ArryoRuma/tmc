@@ -89,8 +89,8 @@ export default defineAppConfig({
     },
     pageSection: {
       slots: {
-        root: 'py-0 mb-4',
-        container: 'pb-8',
+        root: 'py-4 mb-4',
+        container: 'w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:grid py-4 sm:py-6 lg:py-10 gap-8 sm:gap-16 pb-4',
         wrapper: '',
         header: 'mb-8 sm:mb-12',
         headline: 'mb-4 text xl flex items-center',
