@@ -1,23 +1,30 @@
-<script setup>
-import { ref } from 'vue'
-
-const activeTab = ref('after')
+<script setup lang="ts">
+import ProjectHero from '~/components/projects/ProjectHero.vue'
+import BeforeAfter from '~/components/projects/BeforeAfter.vue'
+import ProjectImage from '~/components/projects/ProjectImage.vue'
+import ProjectResults from '~/components/projects/ProjectResults.vue'
+import ProjectDetails from '~/components/projects/ProjectDetails.vue'
 
 // Static data for zerosurge
 const project = {
-  title: 'Zero Surge',
-  description: 'Complete branding and web design solution for a construction company',
-  year: 2024,
-  client: 'Zero Surge',
-  services: ['Web Design', 'Branding', 'Logo Design', 'Marketing Materials'],
-  technologies: ['Vue.js', 'Nuxt.js', 'Tailwind CSS'],
+  title: 'How ZeroSurge Turned Complex Surge Protection into a Sales-Ready Education Engine',
+  description: 'Video-led messaging and positioning system for a surge protection manufacturer with multiple buyer audiences.',
+  year: 2025,
+  client: 'ZeroSurge',
+  services: ['Messaging Strategy', 'Video Production', 'Sales Enablement', 'Website Strategy'],
   heroImage: '/images/web-design/zero-surge/zero-surge-hero.png',
   beforeImage: '/images/web-design/zero-surge/zero-surge-before.png',
   afterImage: '/images/web-design/zero-surge/zero-surge-after.png',
-  websiteUrl: 'http://zerosurge.com',
-  challenge: 'Zero Surge needed a modern, professional online presence that would showcase their services and establish trust with potential clients.',
-  solution: 'We created a comprehensive brand identity and responsive website that highlights their expertise and service offerings.',
-  results: ['50% increase in lead generation', 'Professional brand recognition', 'Mobile-optimized user experience']
+  websiteUrl: 'https://zerosurge.com',
+  challenge: 'ZeroSurge’s products served multiple audiences with very different needs, but their website and messaging treated everything the same. Prospects struggled to understand which solutions applied to them, why ZeroSurge was different from traditional surge protectors, and how to justify the higher upfront cost internally.',
+  approach: 'We separated audiences and product lines, clarified ZeroSurge’s core differentiator, and used educational video to answer the most common pre-sales questions before prospects ever spoke to sales.',
+  solution: 'We developed a sales-ready video and messaging system that explains series-mode surge protection, addresses common objections, and guides buyers to the right solution. Content was designed to be deployable by sales teams during live deals and paired with a clear bridge between educational content and the e-commerce experience.',
+  results: [
+    'Reduced time spent on basic product education during sales calls',
+    'Clearer differentiation between product lines and buyer use cases',
+    'Stronger internal buy-in from multi-stakeholder buying committees',
+    'Content that actively supports deals instead of sitting unused'
+  ]
 }
 
 useSeoMeta({
@@ -30,267 +37,27 @@ useSeoMeta({
 
 <template>
   <div class="min-h-screen">
-    <!-- Hero Section -->
-    <div class="relative bg-gradient-to-br from-primary/10 to-blue-600/10 py-8">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-4xl md:text-6xl font-bold mb-6">
-            {{ project.title }}
-          </h1>
-          <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">
-            {{ project.description }}
-          </p>
-          <div class="flex flex-wrap justify-center gap-4 text-sm mb-8">
-            <span class="bg-white dark:bg-gray-800 px-4 py-2 rounded-full shadow">
-              <strong>Year:</strong> {{ project.year }}
-            </span>
-            <span class="bg-white dark:bg-gray-800 px-4 py-2 rounded-full shadow">
-              <strong>Client:</strong> {{ project.client }}
-            </span>
-          </div>
-
-          <!-- View Live Website Button -->
-          <a
-            :href="project.websiteUrl"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-flex items-center space-x-2 bg-primary hover:bg-primary/90 text-white px-6 py-3 rounded-lg font-semibold transition"
-          >
-            <span>View Live Website</span>
-            <svg
-              class="w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-              />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- Project Image -->
-    <div class="container mx-auto px-4 py-16">
-      <div class="max-w-6xl mx-auto">
-        <a
-          :href="project.websiteUrl"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="block group cursor-pointer"
-        >
-          <div class="relative overflow-hidden rounded-2xl shadow-2xl">
-            <img
-              :src="project.heroImage"
-              :alt="project.title"
-              class="w-full h-108 object-cover object-top transition-transform duration-500 group-hover:scale-105"
-            >
-            <!-- Overlay on hover -->
-            <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-              <div class="bg-white/90 dark:bg-gray-900/90 px-4 py-2 rounded-lg flex items-center space-x-2">
-                <span class="font-semibold">Visit Website</span>
-                <svg
-                  class="w-4 h-4"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-
-    <!-- Project Details -->
-    <div class="container mx-auto px-4 py-16">
-      <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-12">
-        <!-- Services -->
-        <div>
-          <h3 class="text-2xl font-bold mb-6">
-            Services Provided
-          </h3>
-          <div class="space-y-3">
-            <div
-              v-for="service in project.services"
-              :key="service"
-              class="flex items-center space-x-3"
-            >
-              <div class="w-2 h-2 bg-primary rounded-full" />
-              <span>{{ service }}</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Technologies -->
-        <div>
-          <h3 class="text-2xl font-bold mb-6">
-            Technologies Used
-          </h3>
-          <div class="flex flex-wrap gap-2">
-            <span
-              v-for="tech in project.technologies"
-              :key="tech"
-              class="px-3 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm"
-            >
-              {{ tech }}
-            </span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Challenge & Solution -->
-    <div class="bg-gray-50 dark:bg-gray-900 py-16">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          <div class="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 class="text-2xl font-bold mb-6">
-                The Challenge
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {{ project.challenge }}
-              </p>
-            </div>
-            <div>
-              <h3 class="text-2xl font-bold mb-6">
-                Our Solution
-              </h3>
-              <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
-                {{ project.solution }}
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Results -->
-    <div class="container mx-auto px-4 py-16">
-      <div class="max-w-4xl mx-auto">
-        <h3 class="text-2xl font-bold mb-8 text-center">
-          Results Achieved
-        </h3>
-        <div class="grid md:grid-cols-3 gap-8">
-          <div
-            v-for="result in project.results"
-            :key="result"
-            class="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg"
-          >
-            <div class="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg
-                class="w-6 h-6 text-primary"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M5 13l4 4L19 7"
-                />
-              </svg>
-            </div>
-            <p class="font-semibold">
-              {{ result }}
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <ProjectHero :project="project" />
     <!-- Before/After Comparison -->
-    <div class="bg-gray-50 dark:bg-gray-900 py-16">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          <h3 class="text-2xl font-bold mb-8 text-center">
-            Before & After
-          </h3>
-          <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
-            See the transformation from the old website to our modern design
-          </p>
-
-          <!-- Tab Navigation -->
-          <div class="flex justify-center mb-8">
-            <div class="bg-white dark:bg-gray-800 p-1 rounded-lg shadow-md">
-              <button
-                :class="[
-                  'px-6 py-3 rounded-md font-semibold transition-all duration-200',
-                  activeTab === 'before'
-                    ? 'bg-primary text-white shadow-sm'
-                    : 'text-gray-600 dark:text-gray-300 hover:text-primary'
-                ]"
-                @click="activeTab = 'before'"
-              >
-                Before
-              </button>
-              <button
-                :class="[
-                  'px-6 py-3 rounded-md font-semibold transition-all duration-200',
-                  activeTab === 'after'
-                    ? 'bg-primary text-white shadow-sm'
-                    : 'text-gray-600 dark:text-gray-300 hover:text-primary'
-                ]"
-                @click="activeTab = 'after'"
-              >
-                After
-              </button>
-            </div>
-          </div>
-
-          <!-- Image Display -->
-          <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[16/9]">
-            <transition
-              name="fade"
-              mode="out-in"
-            >
-              <div
-                v-if="activeTab === 'before'"
-                key="before"
-                class="absolute inset-0 overflow-auto"
-              >
-                <img
-                  :src="project.beforeImage"
-                  alt="Before - Old Website"
-                  class="w-full min-h-full object-cover object-top"
-                >
-                <div class="absolute bottom-4 left-4 bg-red-500 text-white px-3 py-1 rounded-md text-sm font-semibold">
-                  Before
-                </div>
-              </div>
-              <div
-                v-else
-                key="after"
-                class="absolute inset-0 overflow-auto"
-              >
-                <img
-                  :src="project.afterImage"
-                  alt="After - New Website"
-                  class="w-full min-h-full object-cover object-top"
-                >
-                <div class="absolute bottom-4 left-4 bg-green-500 text-white px-3 py-1 rounded-md text-sm font-semibold">
-                  After
-                </div>
-              </div>
-            </transition>
-          </div>
-        </div>
-      </div>
+    <div class="bg-gray-50 dark:bg-gray-900 py-2">
+      <BeforeAfter
+        :before-image="project.beforeImage"
+        :after-image="project.afterImage"
+      />
     </div>
+    <ProjectDetails
+      :challenge="project.challenge"
+      :solution="project.solution"
+      :services="project.services"
+    />
+
+    <ProjectImage
+      :image="project.heroImage"
+      :title="project.title"
+      :website-url="project.websiteUrl"
+    />
+
+    <ProjectResults :results="project.results" />
 
     <!-- Back to Projects -->
     <div class="container mx-auto px-4 pb-16">
