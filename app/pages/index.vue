@@ -76,11 +76,17 @@ useSeoMeta({
       </template>
 
       <template #footer>
-        <div v-if="section.description" class="text-lg sm:text-xl/8 text-muted mt-8 mb-6">
+        <div
+          v-if="section.description"
+          class="text-lg sm:text-xl/8 text-muted mt-8 mb-6"
+        >
           {{ section.description }}
         </div>
-        
-        <div v-if="section.links" class="flex flex-wrap gap-x-6 gap-y-3">
+
+        <div
+          v-if="section.links"
+          class="flex flex-wrap gap-x-6 gap-y-3"
+        >
           <UButton
             v-for="(link, linkIndex) in section.links"
             :key="linkIndex"
@@ -89,7 +95,7 @@ useSeoMeta({
           />
         </div>
       </template>
-      
+
       <div
         v-if="section.photo"
         class="flex justify-center px-6 mb-8"
@@ -104,7 +110,7 @@ useSeoMeta({
         </div>
       </div>
     </UPageSection>
-  
+
     <UPageSection
       :title="page.features.title"
       :description="page.features.description"
