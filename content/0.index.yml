@@ -26,7 +26,7 @@ sections:
     id: outdated-marketing
     orientation: horizontal
     links:
-      - label: We can help.
+      - label: Don't Worry. We can help.
         to: https://trumediacreative.hbportal.co/public/6500b138434e3d0025b0e595/1-Inquiry_form
         variant: subtle
         icon: i-lucide-smile
