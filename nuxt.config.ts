@@ -42,8 +42,22 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
 
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'https://outreach.trumediacreative.com'
+  },
+
+  build: {
+    transpile: ['@headlessui/vue']
+  },
+
   routeRules: {
     '/docs': { redirect: '/docs/getting-started', prerender: false }
+  },
+
+  // Optimize build performance
+  experimental: {
+    payloadExtraction: false,
+    inlineRouteRules: true
   },
 
   compatibilityDate: '2024-07-11',
@@ -53,10 +67,30 @@ export default defineNuxtConfig({
       routes: [
         '/'
       ],
-      crawlLinks: true
-    }
+      crawlLinks: true,
+      // Limit concurrent routes to reduce memory usage
+      concurrency: 1
+    },
+    rollupConfig: {
+      output: {
+        manualChunks: (id) => {
+          // Split vendor chunks to reduce memory usage
+          if (id.includes('node_modules')) {
+            if (id.includes('@nuxt') || id.includes('nuxt')) {
+              return 'nuxt-vendor'
+            }
+            if (id.includes('vue')) {
+              return 'vue-vendor'
+            }
+            return 'vendor'
+          }
+        }
+      }
+    },
+    // Reduce build memory usage
+    minify: process.env.NODE_ENV === 'production'
   },
-  debug: true,
+  debug: false,
   eslint: {
     config: {
       stylistic: {
@@ -69,6 +103,10 @@ export default defineNuxtConfig({
     adobe: {
       id: 'orr3dhh'
     }
+  },
+
+  linkChecker: {
+    enabled: false // Disable in production to save memory
   },
   robots: {
     disallow: ['/admin', '/private'],

@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: trumedia-creative
+    env: node
+    plan: starter # You may need to upgrade to 'standard' for more memory
+    buildCommand: NODE_OPTIONS='--max-old-space-size=4096' pnpm install && NODE_OPTIONS='--max-old-space-size=4096' pnpm build
+    startCommand: node .output/server/index.mjs
+    envVars:
+      - key: NODE_OPTIONS
+        value: --max-old-space-size=4096
+      - key: NUXT_PUBLIC_SITE_URL
+        value: https://outreach.trumediacreative.com
+      - key: NODE_ENV
+        value: production

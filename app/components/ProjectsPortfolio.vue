@@ -74,7 +74,7 @@ const projects = ref([
           <span
             v-for="tag in project.tags"
             :key="tag"
-            class="px-2 py-1 bg-red-500 dark:bg-gray-800 rounded text-xs"
+            class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs"
           >
             {{ tag }}
           </span>
