@@ -56,10 +56,60 @@ export default defineNuxtConfig({
       routes: [
         '/'
       ],
-      crawlLinks: true
+      crawlLinks: true,
+      // Aggressive memory optimization
+      concurrency: 1,
+      interval: 100
+    },
+    rollupConfig: {
+      cache: false, // Disable cache to reduce memory usage
+      output: {
+        manualChunks: (id) => {
+          // More aggressive chunking
+          if (id.includes('node_modules')) {
+            // Split large libraries
+            if (id.includes('@nuxt/ui')) return 'nuxt-ui'
+            if (id.includes('@nuxt/content')) return 'nuxt-content' 
+            if (id.includes('nuxt-og-image')) return 'og-image'
+            if (id.includes('@nuxtjs/seo')) return 'seo'
+            if (id.includes('vue')) return 'vue'
+            if (id.includes('@vue')) return 'vue-ecosystem'
+            if (id.includes('@iconify')) return 'icons'
+            if (id.includes('marked')) return 'markdown'
+            return 'vendor'
+          }
+        }
+      }
+    },
+    minify: process.env.NODE_ENV === 'production',
+    // Reduce memory usage during build
+    experimental: {
+      wasm: false
     }
   },
-  debug: true,
+
+  // Aggressive optimizations for memory-constrained environments
+  experimental: {
+    payloadExtraction: false,
+    inlineRouteRules: true,
+    typedPages: false
+  },
+
+  // Disable features that consume memory during build
+  devtools: {
+    enabled: process.env.NODE_ENV !== 'production'
+  },
+  
+  debug: false,
+
+  // Optimize module loading
+  build: {
+    transpile: ['@headlessui/vue'],
+    extractCSS: process.env.NODE_ENV === 'production'
+  },
+
+  // Reduce telemetry and debugging overhead
+  telemetry: false,
   eslint: {
     config: {
       stylistic: {

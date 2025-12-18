@@ -3,12 +3,18 @@ services:
     name: trumedia-creative
     env: node
     plan: starter # You may need to upgrade to 'standard' for more memory
-    buildCommand: NODE_OPTIONS='--max-old-space-size=4096' pnpm install && NODE_OPTIONS='--max-old-space-size=4096' pnpm build
+    buildCommand: |
+      NODE_OPTIONS='--max-old-space-size=3072 --stack-size=2048' pnpm install --frozen-lockfile &&
+      NUXT_TELEMETRY_DISABLED=1 NODE_OPTIONS='--max-old-space-size=3072 --no-warnings --stack-size=2048' pnpm build:minimal ||
+      (echo "First build failed, trying safer build..." && 
+       NUXT_TELEMETRY_DISABLED=1 NODE_OPTIONS='--max-old-space-size=2560 --stack-size=1024' pnpm build:safe)
     startCommand: node .output/server/index.mjs
     envVars:
       - key: NODE_OPTIONS
-        value: --max-old-space-size=4096
+        value: --max-old-space-size=2048
       - key: NUXT_PUBLIC_SITE_URL
         value: https://outreach.trumediacreative.com
       - key: NODE_ENV
         value: production
+      - key: NUXT_TELEMETRY_DISABLED
+        value: "1"
