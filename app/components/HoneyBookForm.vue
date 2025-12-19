@@ -1,20 +1,29 @@
 <script setup lang="ts">
+// Extend Window interface for HoneyBook
+declare global {
+  interface Window {
+    _HB_?: {
+      pid?: string
+    }
+  }
+}
+
 const honeyBookLoaded = ref(false)
 
 onMounted(async () => {
-  if (process.client && !honeyBookLoaded.value) {
+  if (import.meta.client && !honeyBookLoaded.value) {
     // Clear any existing HoneyBook instances
-    if ((window as any)._HB_) {
-      delete (window as any)._HB_
+    if (window._HB_) {
+      delete window._HB_
     }
-    
+
     // Remove any existing HoneyBook scripts
     const existingScripts = document.querySelectorAll('script[src*="honeybook.com"]')
     existingScripts.forEach(script => script.remove())
-    
+
     // Wait a bit then reinitialize
     await new Promise(resolve => setTimeout(resolve, 100))
-    
+
     // Load and initialize HoneyBook
     const script = document.createElement('script')
     script.src = 'https://widget.honeybook.com/assets_users_production/websiteplacements/placement-controller.min.js'
@@ -22,17 +31,17 @@ onMounted(async () => {
     script.onload = () => {
       // Initialize after script loads
       setTimeout(() => {
-        if ((window as any)._HB_) {
-          (window as any)._HB_.pid = '62f67000c557950007e38acd'
+        if (window._HB_) {
+          window._HB_.pid = '62f67000c557950007e38acd'
         }
         honeyBookLoaded.value = true
       }, 200)
     }
     document.head.appendChild(script)
-    
+
     // Also set up the global initialization
-    ;(window as any)._HB_ = (window as any)._HB_ || {};
-    (window as any)._HB_.pid = '62f67000c557950007e38acd'
+    window._HB_ = window._HB_ || {}
+    window._HB_.pid = '62f67000c557950007e38acd'
   }
 })
 </script>
