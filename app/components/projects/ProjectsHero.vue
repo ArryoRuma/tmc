@@ -15,7 +15,7 @@ const { project } = defineProps<{ project: Project }>()
   <div class="relative bg-gradient-to-br from-blue/10 to-primary-600/10 py-16">
     <div class="container mx-auto px-4">
       <div class="max-w-6xl mx-auto text-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">
+        <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold mb-6">
           {{ project.title }}
         </h1>
         <p class="text-xl text-gray-600 dark:text-gray-300 mb-8">

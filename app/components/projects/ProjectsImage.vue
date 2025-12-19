@@ -21,7 +21,7 @@ const props = defineProps<{
             v-if="props.image"
             :src="props.image"
             :alt="props.title || 'Project image'"
-            class="w-full h-128 object-cover object-top transition-transform duration-500 group-hover:scale-105"
+            class="w-full aspect-video object-cover object-top transition-transform duration-500 group-hover:scale-105"
           >
           <div class="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
             <div class="bg-white/90 dark:bg-gray-900/90 px-4 py-2 rounded-lg flex items-center space-x-2">
@@ -51,7 +51,7 @@ const props = defineProps<{
           v-if="props.image"
           :src="props.image"
           :alt="props.title || 'Project image'"
-          class="w-full h-128 object-cover object-top"
+          class="w-full aspect-video object-cover object-top"
         >
       </div>
     </div>
