@@ -22,7 +22,7 @@ const projects = ref([
   {
     _path: '/projects/zero-surge',
     title: 'ZeroSurge',
-    to: 'https://zerosurge.com',
+    to: '/projects/zero-surge',
     thumbnail: '/images/web-design/zero-surge/zero-surge-hero.png',
     tags: ['Web Design', 'Branding', 'Photography', 'E-Commerce', 'SEO', 'Google Ads', 'Lead Generation'],
     client_type: 'Electronics Manufacturing Client',

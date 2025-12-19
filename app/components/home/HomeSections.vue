@@ -60,6 +60,7 @@ defineProps<Props>()
           size="xl"
           variant="solid"
           style="font-family: 'new-spirit', serif !important; font-weight: 600 !important;"
+          class="shadow-xl"
         />
       </div>
     </template>
