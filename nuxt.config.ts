@@ -42,7 +42,8 @@ export default defineNuxtConfig({
   },
   css: ['~/assets/css/main.css'],
   site: {
-    url: 'https://trumediacreative.com'
+    url: 'https://trumediacreative.com',
+    name: 'TruMedia Creative'
   },
 
   // Optimize module loading
@@ -76,15 +77,41 @@ export default defineNuxtConfig({
   },
   robots: {
     disallow: ['/admin', '/private'],
-    groups: [
-      { userAgent: ['GPTBot', 'ChatGPT-User'], disallow: ['/'] }
-    ]
+    allow: ['/']
   },
   scripts: {
     registry: {
       googleAnalytics: {
         id: 'G-G22P0WJNVM'
       }
+    }
+  },
+  seo: {
+    meta: {
+      // Basic SEO
+      description: 'TruMedia Creative is a New Jersey-based digital marketing agency helping expert-led and B2B companies clarify their message, create sales-ready content, and deploy repeatable growth systems.',
+      author: 'Larryon Truman',
+      title: 'TruMedia Creative | Video-Led Growth for B2B & Expert-Led Companies',
+      titleTemplate: '%s · TruMedia Creative',
+      // Theme & Color
+      themeColor: [
+        { content: '#18181b', media: '(prefers-color-scheme: dark)' },
+        { content: 'white', media: '(prefers-color-scheme: light)' }
+      ],
+      colorScheme: 'dark light',
+
+      // App Info
+      applicationName: 'TruMedia Creative',
+
+      // Nuxt SEO Utils already sets the below tags for you
+      ogSiteName: 'TruMedia Creative',
+      ogLocale: 'en_US',
+      ogType: 'website',
+      ogUrl: 'https://trumediacreative.com',
+      ogTitle: 'TruMedia Creative',
+      // Other Nuxt SEO modules handle these
+      ogImage: 'https://www.trumediacreative.com/ogimage.png',
+      robots: 'index, follow'
     }
   }
 })
