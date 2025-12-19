@@ -1,10 +1,4 @@
 <script setup lang="ts">
-import ProjectHero from '~/components/projects/ProjectHero.vue'
-import BeforeAfter from '~/components/projects/BeforeAfter.vue'
-import ProjectImage from '~/components/projects/ProjectImage.vue'
-import ProjectResults from '~/components/projects/ProjectResults.vue'
-import ProjectDetails from '~/components/projects/ProjectDetails.vue'
-
 // Static data for zerosurge
 const project = {
   title: 'How ZeroSurge Turned Complex Surge Protection into a Sales-Ready Education Engine',
@@ -26,7 +20,9 @@ const project = {
     'Content that actively supports deals instead of sitting unused'
   ]
 }
-
+definePageMeta({
+  layout: 'projects'
+})
 useSeoMeta({
   title: `${project.title} - TruMedia Creative Portfolio`,
   description: project.description,
@@ -36,64 +32,24 @@ useSeoMeta({
 </script>
 
 <template>
-  <div class="min-h-screen">
-    <ProjectHero :project="project" />
-    <!-- Before/After Comparison -->
+  <div>
+    <ProjectsHero :project="project" />
     <div class="bg-gray-50 dark:bg-gray-900 py-2">
-      <BeforeAfter
+      <ProjectsBeforeAfter
         :before-image="project.beforeImage"
         :after-image="project.afterImage"
       />
     </div>
-    <ProjectDetails
+    <ProjectsDetails
       :challenge="project.challenge"
       :solution="project.solution"
       :services="project.services"
     />
-
-    <ProjectImage
+    <ProjectsImage
       :image="project.heroImage"
       :title="project.title"
       :website-url="project.websiteUrl"
     />
-
-    <ProjectResults :results="project.results" />
-
-    <!-- Back to Projects -->
-    <div class="container mx-auto px-4 pb-16">
-      <div class="text-center">
-        <NuxtLink
-          to="/projects"
-          class="inline-flex items-center space-x-2 text-primary hover:text-primary/80 transition"
-        >
-          <svg
-            class="w-5 h-5"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M10 19l-7-7m0 0l7-7m-7 7h18"
-            />
-          </svg>
-          <span>Back to All Projects</span>
-        </NuxtLink>
-      </div>
-    </div>
+    <ProjectsResults :results="project.results" />
   </div>
 </template>
-
-<style scoped>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.3s ease;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-  opacity: 0;
-}
-</style>
