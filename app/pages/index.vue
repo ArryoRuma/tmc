@@ -19,54 +19,76 @@ useSeoMeta({
 
 <template>
   <div v-if="page?.title">
-    <UPageHero
-      :description="page.description"
-      :headline="page.hero.headline"
-      :links="page.hero.links"
-      :orientation="page.hero.orientation"
-    >
-      <template #title>
-        <HomeHeroTitle />
-      </template>
-      <HomeMarquee />
-    </UPageHero>
+    <FadeInUp :delay=".3">
+      <UPageHero
+        :description="page.description"
+        :headline="page.hero.headline"
+        :links="page.hero.links"
+        :orientation="page.hero.orientation"
+      >
+        <template #title>
+          <HomeHeroTitle />
+        </template>
+        <HomeMarquee />
+      </UPageHero>
+    </FadeInUp>
 
-    <HomeSections :sections="page.sections" />
-    <UPageSection
-      title="We've Got You Covered... Here's How."
-      description="Our proven 4-step approach to creating marketing content that converts prospects into clients"
-    >
-      <UStepper
-        :items="fourStep"
-        orientation="vertical"
-        :active="-1"
-        class="max-w-4xl mx-auto"
-        size="xl"
+    <FadeInUp :delay="0.2">
+      <HomeSections :sections="page.sections" />
+    </FadeInUp>
+
+    <FadeInUp :delay="0.2">
+      <UPageSection
+        title="We've Got You Covered... Here's How."
+        description="Our proven 4-step approach to creating marketing content that converts prospects into clients"
+      >
+        <UStepper
+          :items="fourStep"
+          orientation="vertical"
+          :active="-1"
+          class="max-w-4xl mx-auto"
+          size="xl"
+        />
+      </UPageSection>
+    </FadeInUp>
+
+    <FadeInUp :delay="0.2">
+      <HomeFeatures
+        :title="page.features.title"
+        :description="page.features.description"
+        :items="page.features.items"
       />
-    </UPageSection>
-    <HomeFeatures
-      :title="page.features.title"
-      :description="page.features.description"
-      :items="page.features.items"
-    />
+    </FadeInUp>
 
-    <ClientLogos />
-    <UContainer>
-      <PromotionalVideo class="rounded-lg shadow-md" />
-    </UContainer>
-    <ProjectsPortfolio />
+    <FadeInUp :delay="0.2">
+      <ClientLogos />
+    </FadeInUp>
 
-    <HomeTestimonials
-      :headline="page.testimonials.headline"
-      :title="page.testimonials.title"
-      :description="page.testimonials.description"
-      :items="page.testimonials.items"
-    />
+    <FadeInUp :delay="0.2">
+      <UContainer>
+        <PromotionalVideo class="rounded-lg shadow-md" />
+      </UContainer>
+    </FadeInUp>
 
-    <UPageCTA
-      v-bind="page.cta"
-      variant="naked"
-      class="overflow-hidden"
-    />
+    <FadeInUp :delay="0.2">
+      <ProjectsPortfolio />
+    </FadeInUp>
+
+    <FadeInUp :delay="0.2">
+      <HomeTestimonials
+        :headline="page.testimonials.headline"
+        :title="page.testimonials.title"
+        :description="page.testimonials.description"
+        :items="page.testimonials.items"
+      />
+    </FadeInUp>
+
+    <FadeInUp :delay="0.2">
+      <UPageCTA
+        v-bind="page.cta"
+        variant="naked"
+        class="overflow-hidden"
+      />
+    </FadeInUp>
   </div>
 </template>

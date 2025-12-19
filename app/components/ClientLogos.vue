@@ -25,18 +25,20 @@ const logos = [
 </script>
 
 <template>
-  <UPageLogos
-    title="Who We've Served"
-    :marquee="{ pauseOnHover: true }"
-    class="py-10 sm:py-12"
-  >
-    <img
-      v-for="(logo, index) in logos"
-      :key="index"
-      :src="logo.src"
-      :alt="logo.alt"
-      class="h-20 sm:h-28 md:h-32 object-contain brightness-0 dark:brightness-0 dark:invert transition"
-      loading="lazy"
+  <FadeInUp>
+    <UPageLogos
+      title="Who We've Served"
+      :marquee="{ pauseOnHover: true }"
+      class="py-10 sm:py-12"
     >
-  </UPageLogos>
+      <img
+        v-for="(logo, index) in logos"
+        :key="index"
+        :src="logo.src"
+        :alt="logo.alt"
+        class="h-20 sm:h-28 md:h-32 object-contain brightness-0 dark:brightness-0 dark:invert transition"
+        loading="lazy"
+      >
+    </UPageLogos>
+  </FadeInUp>
 </template>
