@@ -11,7 +11,8 @@ export default defineNuxtConfig({
     'nuxt-og-image',
     '@nuxt/fonts',
     '@nuxt/hints',
-    '@nuxtjs/seo'
+    '@nuxtjs/seo',
+    'nuxt-gtag'
   ],
   devtools: {
     enabled: true
@@ -69,6 +70,9 @@ export default defineNuxtConfig({
     adobe: {
       id: 'orr3dhh'
     }
+  },
+  gtag: {
+    id: 'G-EG22P0WJNVM'
   },
   robots: {
     disallow: ['/admin', '/private'],
