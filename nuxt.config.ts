@@ -83,7 +83,7 @@ export default defineNuxtConfig({
   scripts: {
     registry: {
       googleAnalytics: {
-        id: 'G-EG22P0WJNVM'
+        id: 'G-G22P0WJNVM'
       }
     }
   }
