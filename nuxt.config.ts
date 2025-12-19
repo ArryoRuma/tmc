@@ -13,7 +13,8 @@ export default defineNuxtConfig({
     '@nuxt/hints',
     '@nuxtjs/seo',
     'nuxt-gtag',
-    'motion-v/nuxt'
+    'motion-v/nuxt',
+    '@nuxt/scripts'
   ],
   components: true,
   devtools: {
@@ -73,13 +74,17 @@ export default defineNuxtConfig({
       id: 'orr3dhh'
     }
   },
-  gtag: {
-    id: 'G-EG22P0WJNVM'
-  },
   robots: {
     disallow: ['/admin', '/private'],
     groups: [
       { userAgent: ['GPTBot', 'ChatGPT-User'], disallow: ['/'] }
     ]
+  },
+  scripts: {
+    registry: {
+      googleAnalytics: {
+        id: 'G-EG22P0WJNVM'
+      }
+    }
   }
 })
