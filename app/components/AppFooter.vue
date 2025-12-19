@@ -70,7 +70,7 @@ const columns = [{
 
   <UFooter
     :ui="{ top: 'border-b border-default' }"
-    class="bg-primary-900 text-primary-50 dark:bg-primary-900 dark:text-primary-400 "
+    class="bg-zinc-900"
   >
     <template #top>
       <UContainer class="text-primary-500 w-full">
@@ -87,9 +87,19 @@ const columns = [{
     </template>
 
     <template #left>
-      <p class="font-semibold text-sm">
-        TruMedia Creative • © {{ new Date().getFullYear() }}
-      </p>
+      <div class="flex items-center space-x-4">
+        <p class="font-semibold text-sm text-white">
+          TruMedia Creative • © {{ new Date().getFullYear() }}
+        </p>
+        <UButton
+          to="/privacy"
+          variant="link"
+          size="sm"
+          class="text-sm text-white hover:text-primary"
+        >
+          Privacy Policy
+        </UButton>
+      </div>
     </template>
 
     <template #right>
@@ -100,7 +110,7 @@ const columns = [{
         aria-label="TruMedia Creative on LinkedIn"
         color="primary"
         variant="ghost"
-        size="lg"
+        size="xl"
       />
       <UButton
         to="https://www.youtube.com/@TruMedia-Creative"
@@ -109,7 +119,7 @@ const columns = [{
         aria-label="TruMedia Creative on YouTube"
         color="primary"
         variant="ghost"
-        size="lg"
+        size="xl"
       />
     </template>
   </UFooter>
