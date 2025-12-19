@@ -18,7 +18,8 @@ useHead({
 })
 
 useSeoMeta({
-  titleTemplate: '%s | TruMedia Creative | New Jersey Based Digital Marketing Agency',
+  title: 'TruMedia Creative | Video-Led Growth for B2B & Expert-Led Companies',
+  titleTemplate: '%s · TruMedia Creative',
   ogSiteName: 'TruMedia Creative',
   ogImage: '/ogimage.png',
   twitterImage: '/ogimage.png',
