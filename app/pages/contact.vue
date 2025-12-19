@@ -7,77 +7,18 @@ useSeoMeta({
   ogDescription: 'Ready to grow your business? Contact TruMedia Creative today. We help brands sell more through video production, web design, and marketing automation.'
 })
 
-// Form state
-const form = ref({
-  name: '',
-  email: '',
-  company: '',
-  phone: '',
-  service: '',
-  budget: '',
-  message: '',
-  timeline: ''
-})
-
-const isSubmitting = ref(false)
-const isSubmitted = ref(false)
-
-// Service options
-const services = [
-  'Video Production',
-  'Web Design & Development',
-  'Marketing Automation',
-  'SEO & Paid Ads',
-  'Outbound Campaigns',
-  'Content Creation',
-  'Not Sure Yet'
-]
-
-const budgetRanges = [
-  'Under $5,000',
-  '$5,000 - $15,000',
-  '$15,000 - $30,000',
-  '$30,000 - $50,000',
-  '$50,000+',
-  'I need to discuss this'
-]
-
-const timelines = [
-  'ASAP',
-  'Within 1 month',
-  '1-3 months',
-  '3-6 months',
-  '6+ months',
-  'Just exploring options'
-]
-
-// Form submission
-const submitForm = async () => {
-  isSubmitting.value = true
-
-  try {
-    // Here you would normally submit to your backend/API
-    await new Promise(resolve => setTimeout(resolve, 1500)) // Simulate API call
-    isSubmitted.value = true
-  } catch (error) {
-    console.error('Error submitting form:', error)
-  } finally {
-    isSubmitting.value = false
-  }
-}
-
 // Contact information
 const contactInfo = {
-  email: 'hello@trumedicacreative.com',
-  phone: '+1 (555) 123-4567',
+  email: 'hello@trumediacreative.com',
+  phone: '+1 (908) 356-0321',
   address: {
-    street: '123 Creative Ave',
-    city: 'Los Angeles',
-    state: 'CA',
-    zip: '90210'
+    street: '21 Main St.',
+    city: 'Clinton Township',
+    state: 'NJ',
+    zip: '08801'
   },
   hours: {
-    weekdays: 'Monday - Friday: 9:00 AM - 6:00 PM PST',
+    weekdays: 'Monday - Friday: 8:00 AM - 4:00 PM EST',
     weekend: 'Weekend: By appointment only'
   }
 }
@@ -109,134 +50,17 @@ const contactInfo = {
     <!-- Main Contact Section -->
     <UPageSection class="py-16">
       <div class="grid lg:grid-cols-2 gap-16">
-        <!-- Contact Form -->
         <div>
-          <div class="mb-8">
-            <h2 class="text-3xl font-bold text-highlighted mb-4">
-              Get In Touch
-            </h2>
-            <p class="text-muted">
-              Fill out the form below and we'll get back to you within 24 hours. The more details you provide, the better we can help you.
-            </p>
-          </div>
-
-          <div
-            v-if="isSubmitted"
-            class="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg p-6"
-          >
-            <div class="flex items-center gap-3">
-              <UIcon
-                name="i-lucide-check-circle"
-                class="text-green-600 text-xl"
-              />
-              <div>
-                <h3 class="font-semibold text-green-800 dark:text-green-200">
-                  Thank you!
-                </h3>
-                <p class="text-green-700 dark:text-green-300 text-sm">
-                  We've received your message and will get back to you within 24 hours.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <form
-            v-else
-            class="space-y-6"
-            @submit.prevent="submitForm"
-          >
-            <div class="grid sm:grid-cols-2 gap-4">
-              <UFormGroup
-                label="Name"
-                required
-              >
-                <UInput
-                  v-model="form.name"
-                  placeholder="Your full name"
-                  required
-                />
-              </UFormGroup>
-
-              <UFormGroup
-                label="Email"
-                required
-              >
-                <UInput
-                  v-model="form.email"
-                  type="email"
-                  placeholder="your@email.com"
-                  required
-                />
-              </UFormGroup>
-            </div>
-
-            <div class="grid sm:grid-cols-2 gap-4">
-              <UFormGroup label="Company">
-                <UInput
-                  v-model="form.company"
-                  placeholder="Your company name"
-                />
-              </UFormGroup>
-
-              <UFormGroup label="Phone">
-                <UInput
-                  v-model="form.phone"
-                  type="tel"
-                  placeholder="(555) 123-4567"
-                />
-              </UFormGroup>
-            </div>
-
-            <UFormGroup label="Service Interest">
-              <USelect
-                v-model="form.service"
-                :options="services"
-                placeholder="Select a service"
-              />
-            </UFormGroup>
-
-            <div class="grid sm:grid-cols-2 gap-4">
-              <UFormGroup label="Budget Range">
-                <USelect
-                  v-model="form.budget"
-                  :options="budgetRanges"
-                  placeholder="Select budget range"
-                />
-              </UFormGroup>
-
-              <UFormGroup label="Timeline">
-                <USelect
-                  v-model="form.timeline"
-                  :options="timelines"
-                  placeholder="When do you need this?"
-                />
-              </UFormGroup>
-            </div>
-
-            <UFormGroup
-              label="Message"
-              required
-            >
-              <UTextarea
-                v-model="form.message"
-                placeholder="Tell us about your project, goals, and how we can help..."
-                row="5"
-                required
-              />
-            </UFormGroup>
-
-            <UButton
-              type="submit"
-              size="lg"
-              :loading="isSubmitting"
-              :disabled="isSubmitting"
-              class="w-full sm:w-auto"
-            >
-              {{ isSubmitting ? 'Sending...' : 'Send Message' }}
-            </UButton>
-          </form>
+          <h2 class="text-3xl font-bold text-highlighted mb-6">
+            Get in Touch
+          </h2>
+          <p class="text-muted mb-8">
+            Whether you have questions about our services, need a custom quote, or want to discuss your project, we're here to help. Fill out the form below and a member of our team will get back to you shortly.
+          </p>
+        
+          <!-- Contact Form -->
+        <HoneyBookForm />
         </div>
-
         <!-- Contact Information -->
         <div class="space-y-8">
           <div>
@@ -353,72 +177,20 @@ const contactInfo = {
                 variant="ghost"
                 size="sm"
                 icon="i-lucide-linkedin"
-                to="https://linkedin.com"
+                to="https://www.linkedin.com/company/trumedia-creative"
                 target="_blank"
               />
-              <UButton
-                variant="ghost"
-                size="sm"
-                icon="i-lucide-twitter"
-                to="https://twitter.com"
-                target="_blank"
-              />
-              <UButton
-                variant="ghost"
-                size="sm"
-                icon="i-lucide-instagram"
-                to="https://instagram.com"
-                target="_blank"
-              />
+              
               <UButton
                 variant="ghost"
                 size="sm"
                 icon="i-lucide-youtube"
-                to="https://youtube.com"
+                to="https://www.linkedin.com/company/trumedia-creative/"
                 target="_blank"
               />
             </div>
           </div>
         </div>
-      </div>
-    </UPageSection>
-
-    <!-- FAQ Section -->
-    <UPageSection class="bg-gray-50 dark:bg-gray-900/50">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl sm:text-4xl font-bold text-highlighted mb-4">
-          Frequently Asked Questions
-        </h2>
-        <p class="text-muted text-lg">
-          Get quick answers to common questions about working with us.
-        </p>
-      </div>
-
-      <div class="max-w-3xl mx-auto">
-        <UAccordion
-          :items="[
-            {
-              label: 'How quickly can you start my project?',
-              content: 'Most projects can begin within 1-2 weeks of contract signing. Rush projects may be accommodated based on our current workload and your specific needs.'
-            },
-            {
-              label: 'Do you work with businesses outside your listed industries?',
-              content: 'Absolutely! While we specialize in certain industries, we work with businesses of all types. Our proven strategies can be adapted to virtually any industry.'
-            },
-            {
-              label: 'What\'s included in your initial consultation?',
-              content: 'Our initial consultation includes a thorough analysis of your current marketing, discussion of your goals, and a customized strategy recommendation. This consultation is complimentary for qualified prospects.'
-            },
-            {
-              label: 'Do you offer ongoing support after project completion?',
-              content: 'Yes! We offer various ongoing support packages including monthly retainers, quarterly check-ins, and on-demand support. We believe in long-term partnerships with our clients.'
-            },
-            {
-              label: 'Can you work with our existing marketing team?',
-              content: 'Definitely! We often collaborate with in-house marketing teams, providing specialized expertise and additional capacity. We\'re flexible and can adapt to your preferred working style.'
-            }
-          ]"
-        />
       </div>
     </UPageSection>
 
