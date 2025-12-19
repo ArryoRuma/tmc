@@ -12,7 +12,8 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/hints',
     '@nuxtjs/seo',
-    'nuxt-gtag'
+    'nuxt-gtag',
+    'motion-v/nuxt'
   ],
   components: true,
   devtools: {
