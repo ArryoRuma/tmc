@@ -57,9 +57,9 @@ const contactInfo = {
           <p class="text-muted mb-8">
             Whether you have questions about our services, need a custom quote, or want to discuss your project, we're here to help. Fill out the form below and a member of our team will get back to you shortly.
           </p>
-        
+
           <!-- Contact Form -->
-        <HoneyBookForm />
+          <HoneyBookForm />
         </div>
         <!-- Contact Information -->
         <div class="space-y-8">
@@ -180,7 +180,7 @@ const contactInfo = {
                 to="https://www.linkedin.com/company/trumedia-creative"
                 target="_blank"
               />
-              
+
               <UButton
                 variant="ghost"
                 size="sm"
