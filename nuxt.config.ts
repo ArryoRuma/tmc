@@ -14,6 +14,7 @@ export default defineNuxtConfig({
     '@nuxtjs/seo',
     'nuxt-gtag'
   ],
+  components: true,
   devtools: {
     enabled: true
   },
