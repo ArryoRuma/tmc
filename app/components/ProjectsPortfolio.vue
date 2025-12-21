@@ -78,36 +78,40 @@ const projects = ref([
         v-else
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
       >
-        <NuxtLink
-          v-for="project in projects"
+        <FadeInUp
+          v-for="(project, index) in projects"
           :key="project._path"
-          :to="project.to"
-          class="group block cursor-pointer"
+          :delay="index * 0.2"
         >
-          <img
-            :src="project.thumbnail"
-            class="rounded-xl w-full h-56 object-cover object-top shadow-lg drop-shadow-lg group-hover:shadow-xl group-hover:drop-shadow-xl transition-all duration-300"
+          <NuxtLink
+            :to="project.to"
+            class="group block cursor-pointer"
           >
-          <h3 class="mt-4 font-bold text-xl group-hover:text-primary transition">
-            {{ project.title }}
-          </h3>
-          <p
-            v-if="project.client_type"
-            class="text-primary-400 text-sm"
-          >{{ project.client_type }}</p>
-          <div
-            v-if="project.tags"
-            class="flex flex-wrap gap-2 mt-2"
-          >
-            <span
-              v-for="tag in project.tags"
-              :key="tag"
-              class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs"
+            <img
+              :src="project.thumbnail"
+              class="rounded-xl w-full h-56 object-cover object-top shadow-lg drop-shadow-lg group-hover:shadow-xl group-hover:drop-shadow-xl transition-all duration-300"
             >
-              {{ tag }}
-            </span>
-          </div>
-        </NuxtLink>
+            <h3 class="mt-4 font-bold text-xl group-hover:text-primary transition">
+              {{ project.title }}
+            </h3>
+            <p
+              v-if="project.client_type"
+              class="text-primary-400 text-sm"
+            >{{ project.client_type }}</p>
+            <div
+              v-if="project.tags"
+              class="flex flex-wrap gap-2 mt-2"
+            >
+              <span
+                v-for="tag in project.tags"
+                :key="tag"
+                class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded text-xs"
+              >
+                {{ tag }}
+              </span>
+            </div>
+          </NuxtLink>
+        </FadeInUp>
       </div>
     </div>
   </FadeInUp>
