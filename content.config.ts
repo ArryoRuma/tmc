@@ -1268,11 +1268,18 @@ export const collections = {
     type: 'page',
     schema: z.object({
       title: z.string().nonempty(),
-      thumbnail: z.string().nonempty(),
-      hero: z.string().optional(),
-      tags: z.array(z.string()).optional(),
-      link: z.string().optional(),
-      year: z.number().optional()
+      description: z.string().nonempty(),
+      year: z.number().optional(),
+      client: z.string().optional(),
+      services: z.array(z.string()).optional(),
+      heroImage: z.string().optional(),
+      beforeImage: z.string().optional(),
+      afterImage: z.string().optional(),
+      websiteUrl: z.string().optional(),
+      challenge: z.string().optional(),
+      approach: z.string().optional(),
+      solution: z.string().optional(),
+      results: z.array(z.string()).optional()
     })
   })
 }
