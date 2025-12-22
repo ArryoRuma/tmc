@@ -133,7 +133,7 @@ useSeoMeta({
         />
       </UPageGrid>
     </UPageSection>
-    <UPageSection
+    <!-- <UPageSection
       id="testimonials"
       :headline="page.testimonials.headline"
       :title="page.testimonials.title"
@@ -156,7 +156,7 @@ useSeoMeta({
         </UPageCard>
       </div>
     </UPageSection>
-    <USeparator />
+    <USeparator /> -->
     <UPageCTA
       v-bind="page.cta"
       variant="naked"
