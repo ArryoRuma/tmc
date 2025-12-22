@@ -60,6 +60,55 @@ nav [class*="i-lucide"] {
   @apply text-primary;
 }
 
+/* Page section links styling */
+.page-section a,
+.page-section [role="link"],
+.page-section .nuxt-link,
+[class*="page-section"] a,
+[class*="page-section"] [role="link"],
+[class*="page-section"] .nuxt-link,
+[data-page-section] a,
+[data-page-section] [role="link"],
+[data-page-section] .nuxt-link {
+  font-family: 'new-spirit', serif !important;
+  font-weight: 700 !important;
+  font-display: swap;
+}
+
+/* Target UPageSection component links specifically */
+[class*="UPageSection"] a,
+[class*="UPageSection"] [role="link"],
+[class*="UPageSection"] .nuxt-link,
+.u-page-section a,
+.u-page-section [role="link"],
+.u-page-section .nuxt-link {
+  font-family: 'new-spirit', serif !important;
+  font-weight: 700 !important;
+  font-display: swap;
+}
+
+/* Target buttons and links within page sections */
+section a,
+section button[role="link"],
+section .nuxt-link,
+[class*="section"] a,
+[class*="section"] button[role="link"],
+[class*="section"] .nuxt-link {
+  font-family: 'new-spirit', serif !important;
+  font-weight: 600 !important;
+  font-display: swap;
+}
+
+/* Target UButton components in sections */
+section .u-button,
+section [class*="UButton"],
+[class*="section"] .u-button,
+[class*="section"] [class*="UButton"] {
+  font-family: 'new-spirit', serif !important;
+  font-weight: 700 !important;
+  font-display: swap;
+}
+
 /* Light theme (default) */
 :root {
   --ui-bg: #F5FBFF;
