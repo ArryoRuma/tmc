@@ -15,9 +15,16 @@ const createFeatureItemSchema = () => z.object({
   title: z.string().optional(),
   description: z.string().nonempty(),
   icon: z.string().nonempty().editor({ input: 'icon' }),
-  price: z.string().optional()
+  price: createPriceSchema().optional()
 })
-
+const createPriceSchema = () => z.union([
+  z.string(),
+  z.object({
+    display: z.string().optional(),
+    amount: z.number().optional(),
+    billing: z.string().optional()
+  })
+])
 const createLinkSchema = () => z.object({
   label: z.string().nonempty(),
   to: z.string().nonempty(),
@@ -1036,6 +1043,7 @@ export const collections = {
           poster: z.string().optional(),
           title: z.string().optional()
         }).optional(),
+        links: z.array(createLinkSchema()).optional(),
         price: z.union([
           z.string(),
           z.object({
