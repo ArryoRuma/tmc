@@ -9,6 +9,16 @@ const items = ref([
   { title: 'Deploy', description: 'Last, we distribute the videos and analyze performance to optimize results.', icon: 'i-lucide-bar-chart-2' }
 ])
 
+// Handle smooth scrolling for anchor links
+onMounted(() => {
+  // Add smooth scrolling behavior to the document
+  if (process.client) {
+    document.documentElement.style.scrollBehavior = 'smooth'
+    // Add scroll offset to account for sticky header
+    document.documentElement.style.scrollPaddingTop = '80px'
+  }
+})
+
 useSeoMeta({
   title,
   ogTitle: title,
@@ -87,6 +97,7 @@ useSeoMeta({
     </UPageSection>
     <USeparator />
     <UPageSection
+      id="our-process"
       title="Our Process"
       description="Our proven 4-step approach to creating video content that converts prospects into clients"
     >
