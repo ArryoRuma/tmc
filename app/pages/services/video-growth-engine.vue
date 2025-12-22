@@ -36,17 +36,25 @@ useSeoMeta({
       v-for="(section, index) in page.sections"
       :key="index"
       :title="section.title"
-      :description="section.description"
       :headline="section.headline"
       :orientation="section.orientation"
       :reverse="section.reverse"
+      :links="section.links"
       :features="section.features"
+      :price="section.price"
     >
       <template #title>
         <div class="space-y-4">
           <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
             {{ section.title }}
           </h2>
+          <div>
+            <p
+              class="text-lg text-gray-900 dark:text-white font-normal tracking-normal"
+            >
+              {{ section.description }}
+            </p>
+          </div>
           <div
             v-if="section.price"
             class="flex justify-start"
@@ -57,6 +65,7 @@ useSeoMeta({
           </div>
         </div>
       </template>
+
       <div
         v-if="section.video"
         class="relative overflow-hidden rounded-lg"
@@ -71,7 +80,10 @@ useSeoMeta({
           <p>Your browser doesn't support video playback.</p>
         </video>
       </div>
-      <ImagePlaceholder v-else />
+      <ImagePlaceholder
+        v-else
+        class="aspect-video"
+      />
     </UPageSection>
     <USeparator />
     <UPageSection
