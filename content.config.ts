@@ -15,7 +15,8 @@ const createFeatureItemSchema = () => z.object({
   title: z.string().optional(),
   description: z.string().nonempty(),
   icon: z.string().nonempty().editor({ input: 'icon' }),
-  price: createPriceSchema().optional()
+  price: createPriceSchema().optional(),
+  link: createLinkSchema().optional()
 })
 const createPriceSchema = () => z.union([
   z.string(),
