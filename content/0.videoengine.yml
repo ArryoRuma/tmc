@@ -30,7 +30,7 @@ sections:
       - label: Fix the Gaps in Your Current Video Strategy.
         to: /contact
         trailingIcon: i-lucide-arrow-right
-        icon: i-lucide-layers
+        icon: i-lucide-video
     features: 
       - title: Created as one-off assets instead of part of a sales system
         description: No clear purpose tied to buyer needs, videos become expensive
@@ -50,11 +50,6 @@ sections:
         icon: i-lucide-eye-off
   - id: solution
     orientation : horizontal
-    links: 
-      - label: Book a Call to Map This to Your Sales Process.
-        to: /contact
-        trailingIcon: i-lucide-arrow-right
-        icon: i-lucide-video
     reverse: true
     headline: The Solution to Drive Revenue with Video
     title: What’s Required for Video to Actually Drive Revenue
@@ -85,10 +80,10 @@ sections:
         Success is measured by sales usage, deal velocity, and pipeline impact.
       icon: i-lucide-line-chart
     links:
-      - label: Ready to Drive Revenue with Video? Book a Strategy Call.
+      - label: Book a Call to Map This to Your Sales Process
         to: /contact
         trailingIcon: i-lucide-arrow-right
-        icon: i-lucide-layers
+        icon: i-lucide-video
   - id: how-we-help
     orientation : horizontal
     reverse: false
@@ -120,6 +115,16 @@ sections:
         We help integrate video into your outreach, follow-ups, proposals, and
         sales conversations so it actively supports deals.
       icon: i-lucide-plug
+    links:
+      - label: See How the Video Growth Engine Works
+        to: /contact
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-video
+      - label: See Our Process for Creating Sales-Ready Video
+        to: "#our-process"
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-calendar
+        variant: subtle
   - id: proof
     orientation : horizontal
     reverse: true
@@ -151,10 +156,19 @@ sections:
         Clear messaging and visible proof help buyers make decisions with less
         friction and fewer internal delays.
       icon: i-lucide-shield-check
+    links:
+      - label: See If This Would Work for Your Team
+        to: /contact
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-video
   - id: includes
     orientation : horizontal
     reverse: false
-    
+    links:
+      - label: Explore Video Growth Engine Packages
+        to: /contact
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-video
     headline: What’s Included in the Video Growth Engine
     title: What’s Included in the Video Growth Engine
     description: >
@@ -197,6 +211,11 @@ sections:
     orientation : horizontal
     reverse: true
     headline: Who the Video Growth Engine™ Is Not For
+    links:
+      - label: See If You’re a Good Fit
+        to: /contact
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-video
     title: Who This Is Not For
     description: >
       The Video Growth Engine is intentionally not designed for every situation.
@@ -217,100 +236,7 @@ sections:
         Organizations unwilling to align marketing and sales or adopt new ways
         of using content in real workflows.
       icon: i-lucide-user-round-x
-  - title: The FAQ Authority Pack
-    description: A set of FAQ videos that Marketing can publish everywhere and Sales can send 1:1 to answer the most common questions prospects have before the call.
-    headline: Establish authority & eliminate objections 24/7.
-    video:
-      src: https://player.vimeo.com/progressive_redirect/playback/845303718/rendition/1080p/file.mp4?loc=external&log_user=0&signature=285263918096f4300978ed53e4246211f1b12ebd8daf6b8dc530ba7322ee2295
-      poster: /video-thumbnails/faq-demo-poster.png
-      title: FAQ Demo Video
-    price: 
-      display: Starting at $2,500
-      amount: 2500
-      billing: one-time
-    id: how-we-help
-    orientation: horizontal
-    reverse: true
-    features: 
-      - title: 8 Polished FAQ Videos
-        description: Your most common questions turned into engaging clips
-        icon: i-lucide-video
-      - title: Master Compilation Video ($750 Value)
-        description: All FAQs stitched together for your site.
-        icon: i-lucide-clapperboard
-      - title: SEO Titles & Descriptions ($500 value)
-        description: Done-for-you, optimized copy.
-        icon: i-lucide-search-code
-      - title: Aimated Intro/Outro ($1,000 value)
-        description: Branded polish you can reuse forever.
-        icon: i-lucide-repeat-2
-      - title: Podcast Export ($300 Value)
-        description: Repurpose the audio for your podcast or blog.
-        icon: i-lucide-mic
-  - title: The Case Study Engine
-    description:  Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
-    headline: Showcase Client Success stories that sell while you sleep.
-    price: 
-      display: Starting at $2,500
-    id: how-we-help
-    orientation: horizontal
-    reverse: false
-    features: 
-      - title: 1 Hero Interview Video
-        description: Your most common questions turned into engaging clips
-        icon: i-lucide-video
-      - title: 3 Short Cutdowns for social.
-        description: All FAQs stitched together for your site.
-        icon: i-lucide-clapperboard
-      - title: BONUS - PDF Case Study Companion ($500 value)
-        description: Done-for-you, optimized copy.
-        icon: i-lucide-search-code
-      - title: BONUS - 15-Second Teaser ($1,000 value)
-        description: Branded polish you can reuse forever.
-        icon: i-lucide-repeat-2
-      - title: Podcast Export ($300 Value)
-        description: Repurpose the audio for your podcast or blog.
-        icon: i-lucide-mic
-  - title: The Content Storm Day
-    description:  Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
-    headline: One day → Months of content.
-    price: 
-      display: Starting at $2,500
-    id: how-we-help
-    orientation: horizontal
-    reverse: true
-    features: 
-      - title: 1 Hero Interview Video
-        description: Your most common questions turned into engaging clips
-        icon: i-lucide-video
-      - title: 3 Short Cutdowns for social.
-        description: All FAQs stitched together for your site.
-        icon: i-lucide-clapperboard
-      - title: BONUS - PDF Case Study Companion ($500 value)
-        description: Done-for-you, optimized copy.
-        icon: i-lucide-search-code
-      - title: BONUS - 15-Second Teaser ($1,000 value)
-        description: Branded polish you can reuse forever.
-        icon: i-lucide-repeat-2
-      - title: Podcast Export ($300 Value)
-        description: Repurpose the audio for your podcast or blog.
-        icon: i-lucide-mic
-  - title: Video Growth Club
-    description: Ongoing video pipeline that feeds sales consistently.
-    headline: Monthly shoot days + Outreach Engine.
-    id: how-we-help
-    orientation: horizontal
-    reverse: false
-    features:
-      - title: Lite - $2,500/mo
-        description: 1 shoot day + 4 Shorts + 1 Strategy Call (BONUS Captioned versions, $750 value)
-        icon: i-lucide-video
-      - title: Pro - $4,500/mo
-        description: Lite + 1 Half-Day Shoot + Analytics Report (BONUS Fast-track delivery on 2 videos, $1,000 value)
-        icon: i-lucide-clapperboard
-      - title: Elite - $6,500/mo
-        description: Pro + 1 Full Shoot Day + Unlimited Edits (fair use cap) + Quarterly Workshop (BONUS VIP Priority Delivery, $2,500 value)
-        icon: i-lucide-repeat-2
+
 features:
   title: Everything You Need to Win Deals
   description: Productized packages + a clean process. We plan, film, edit, distribute, and help you publish—then reuse the content across sales and marketing while we measure what moves pipeline.
@@ -360,7 +286,7 @@ cta:
   title: Ready to show proof and get it in front of the right buyers?
   description: Pick a package or book a strategy call. Done-for-you systems generate more pipeline, shorten sales cycles, and reduce burnout while your team focuses on closing deals.
   links:
-    - label: Book a Call
+    - label: Book a Video Growth Strategy Call
       to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       trailingIcon: i-lucide-arrow-right
     - label: See Video + Outreach Packages
