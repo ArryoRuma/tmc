@@ -13,9 +13,17 @@ hero:
   links:
     - label: Book a Video Growth Strategy Call
       icon: i-lucide-calendar
-      trailing: true
+      
       to: /contact
+      trailingIcon: i-lucide-arrow-right
       size: xl
+    - label: See How It Works
+      variant: subtle
+      icon: i-lucide-play
+      size: xl
+      trailingIcon: i-lucide-arrow-right
+      
+      to: '#our-process'
 
 sections:
   - id: problem 
@@ -80,7 +88,7 @@ sections:
         Success is measured by sales usage, deal velocity, and pipeline impact.
       icon: i-lucide-line-chart
     links:
-      - label: Book a Call to Map This to Your Sales Process
+      - label: Want to See How This Would Work in Your Sales Process?
         to: /contact
         trailingIcon: i-lucide-arrow-right
         icon: i-lucide-video
@@ -157,18 +165,23 @@ sections:
         friction and fewer internal delays.
       icon: i-lucide-shield-check
     links:
-      - label: See If This Would Work for Your Team
-        to: /contact
+      - label: Explore Proof Clips from Clients
+        to: / #TODO: update link and create video showcase page
         trailingIcon: i-lucide-arrow-right
         icon: i-lucide-video
   - id: includes
     orientation : horizontal
     reverse: false
     links:
-      - label: Explore Video Growth Engine Packages
-        to: /contact
+      - label: Compare What's Included vs Traditional Video Production
+        to: /contact #TODO: update link and create comparison page
         trailingIcon: i-lucide-arrow-right
         icon: i-lucide-video
+      - label: See Our Full Video Growth Packages
+        to: / #TODO: update link and create packages page
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-video
+        variant: subtle
     headline: What’s Included in the Video Growth Engine
     title: What’s Included in the Video Growth Engine
     description: >
@@ -221,17 +234,17 @@ sections:
       The Video Growth Engine is intentionally not designed for every situation.
       It works best for teams that want video to support revenue, not just branding.
     features:
-    - title: One-Off Video Requests
+    - title: Not Designed for One-Off Videos
       description: >
         Teams looking for a single promotional or brand video without a broader
         strategy or system in place.
       icon: i-lucide-x-circle
-    - title: Pure Awareness Campaigns
+    - title: Not for Pure Awareness Campaigns
       description: >
         Companies focused only on impressions, views, or social engagement rather
         than sales impact or buyer movement.
       icon: i-lucide-eye-off
-    - title: Low-Commitment Teams
+    - title: Not for Low-Commitment Teams
       description: >
         Organizations unwilling to align marketing and sales or adopt new ways
         of using content in real workflows.
