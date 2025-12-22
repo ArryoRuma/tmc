@@ -59,9 +59,7 @@ useSeoMeta({
             {{ section.title }}
           </h2>
           <div>
-            <p
-              class="text-lg text-gray-900 dark:text-white font-normal tracking-normal"
-            >
+            <p class="text-lg text-gray-900 dark:text-white font-normal tracking-normal">
               {{ section.description }}
             </p>
           </div>
@@ -69,13 +67,15 @@ useSeoMeta({
             v-if="section.price"
             class="flex justify-start"
           >
-            <div class="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm tracking-normal">
+            <div
+              class="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm tracking-normal"
+            >
               {{ typeof section.price === 'string' ? section.price : section.price.display }}
             </div>
           </div>
         </div>
       </template>
-      
+
       <div
         v-if="section.video"
         class="relative overflow-hidden shadow-xl rounded-lg"
@@ -93,12 +93,12 @@ useSeoMeta({
       <div
         v-else-if="section.image"
         class="relative overflow-hidden shadow-xl rounded-lg"
-      > 
+      >
         <img
           :src="section.image.src"
           :alt="section.image.alt || section.title || 'Section Image'"
           class="w-full h-auto aspect-auto object-cover rounded-lg"
-        />
+        >
       </div>
       <ImagePlaceholder
         v-else
