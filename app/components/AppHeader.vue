@@ -28,7 +28,7 @@ const items = computed(() => [
   {
     label: 'Ways We Work Together',
     children: [
-      { label: 'Video Production', icon: 'i-lucide-video', to: '/services/video-growth-engine', disabled: true },
+      { label: 'Video Production', icon: 'i-lucide-video', to: '/services/video-growth-engine', disabled: false },
       { label: 'Outbound Campaigns', icon: 'i-lucide-send', to: '/services/outreach-engine', disabled: true },
       { label: 'Web Design & Development', icon: 'i-lucide-layout-dashboard', to: '/services/web-design', disabled: true },
       { label: 'SEO & Paid Ads', icon: 'i-lucide-mouse-pointer-click', to: '/services/seo-and-paid-ads', disabled: true },
@@ -76,7 +76,7 @@ const mobileItems = computed(() => [
     label: 'Ways We Work Together',
     open: true,
     children: [
-      { label: 'Video Production', icon: 'i-lucide-video', to: '/services/video-growth-engine', disabled: true },
+      { label: 'Video Production', icon: 'i-lucide-video', to: '/services/video-growth-engine', disabled: false },
       { label: 'Outbound Campaigns', icon: 'i-lucide-send', to: '/services/outreach-engine', disabled: true },
       { label: 'Web Design & Development', icon: 'i-lucide-layout-dashboard', to: '/services/web-design', disabled: true },
       { label: 'SEO & Paid Ads', icon: 'i-lucide-mouse-pointer-click', to: '/services/seo-and-paid-ads', disabled: true },
