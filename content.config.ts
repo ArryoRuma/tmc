@@ -1044,6 +1044,7 @@ export const collections = {
           title: z.string().optional()
         }).optional(),
         links: z.array(createLinkSchema()).optional(),
+        image: createImageSchema().optional(),
         price: z.union([
           z.string(),
           z.object({

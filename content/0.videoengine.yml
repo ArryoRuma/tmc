@@ -31,6 +31,9 @@ sections:
     headline: The Problem with Most B2B Marketing Videos
     orientation: horizontal
     reverse: false
+    image:
+      src: /images/services/video-growth-engine/video-engine-problem.png
+      alt: Problem with Most Marketing Videos
     description:  Most marketing videos look good but fail to move the needle. They live on a
       website or YouTube channel, disconnected from sales conversations and buyer
       decision-making. Here are the common pitfalls we see in B2B marketing videos.
@@ -57,6 +60,9 @@ sections:
         description: Focusing on vanity metrics overlooks the true value of videos in driving sales and growth.
         icon: i-lucide-eye-off
   - id: solution
+    image:
+      src: /images/services/video-growth-engine/video-engine-solution.png
+      alt: Solution to Drive Revenue with Video
     orientation : horizontal
     reverse: true
     headline: The Solution to Drive Revenue with Video
@@ -93,6 +99,9 @@ sections:
         trailingIcon: i-lucide-arrow-right
         icon: i-lucide-video
   - id: how-we-help
+    image:
+      src: /images/services/video-growth-engine/video-engine-process.png
+      alt: How We Help You Win More Deals with Video
     orientation : horizontal
     reverse: false
     headline: How We Help You Win More Deals with Video
@@ -134,6 +143,9 @@ sections:
         icon: i-lucide-calendar
         variant: subtle
   - id: proof
+    image:
+      src: /images/services/video-growth-engine/video-engine-proof.png
+      alt: Proof That the Video Growth Engine Works
     orientation : horizontal
     reverse: true
     headline: Real Results from the Video Growth Engine™
@@ -170,6 +182,9 @@ sections:
         trailingIcon: i-lucide-arrow-right
         icon: i-lucide-video
   - id: includes
+    image:
+      src: /images/services/video-growth-engine/video-engine-included.png
+      alt: What's Included in the Video Growth Engine
     orientation : horizontal
     reverse: false
     links:
@@ -223,6 +238,9 @@ sections:
   - id: not-for
     orientation : horizontal
     reverse: true
+    image:
+      src: /images/services/video-growth-engine/video-engine-not-for.png
+      alt: Who the Video Growth Engine Is Not For
     headline: Who the Video Growth Engine™ Is Not For
     links:
       - label: See If You’re a Good Fit
@@ -298,6 +316,9 @@ testimonials:
 cta:
   title: Ready to show proof and get it in front of the right buyers?
   description: Pick a package or book a strategy call. Done-for-you systems generate more pipeline, shorten sales cycles, and reduce burnout while your team focuses on closing deals.
+  image:
+    src: /images/services/video-growth-engine/video-engine-cta.png
+    alt: Book a Video Growth Strategy Call
   links:
     - label: Book a Video Growth Strategy Call
       to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a

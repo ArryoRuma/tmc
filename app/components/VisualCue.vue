@@ -1,6 +1,9 @@
 <template>
   <div class="flex justify-center items-center">
-    <UIcon name="i-lucide-arrow-down" class="w-6 h-6" />
+    <UIcon
+      name="i-lucide-arrow-down"
+      class="w-6 h-6"
+    />
   </div>
 </template>
 

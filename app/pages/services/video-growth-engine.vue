@@ -12,7 +12,7 @@ const items = ref([
 // Handle smooth scrolling for anchor links
 onMounted(() => {
   // Add smooth scrolling behavior to the document
-  if (process.client) {
+  if (import.meta.client) {
     document.documentElement.style.scrollBehavior = 'smooth'
     // Add scroll offset to account for sticky header
     document.documentElement.style.scrollPaddingTop = '80px'
@@ -75,10 +75,10 @@ useSeoMeta({
           </div>
         </div>
       </template>
-
+      
       <div
         v-if="section.video"
-        class="relative overflow-hidden rounded-lg"
+        class="relative overflow-hidden shadow-xl rounded-lg"
       >
         <video
           :src="section.video.src"
@@ -89,6 +89,16 @@ useSeoMeta({
         >
           <p>Your browser doesn't support video playback.</p>
         </video>
+      </div>
+      <div
+        v-else-if="section.image"
+        class="relative overflow-hidden shadow-xl rounded-lg"
+      > 
+        <img
+          :src="section.image.src"
+          :alt="section.image.alt || section.title || 'Section Image'"
+          class="w-full h-auto aspect-auto object-cover rounded-lg"
+        />
       </div>
       <ImagePlaceholder
         v-else
