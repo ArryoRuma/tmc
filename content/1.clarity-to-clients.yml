@@ -1,0 +1,177 @@
+title: Clarity to Clients™ Workshop
+description: A 90-minute live workshop that clarifies your message so buyers understand what you do and actually respond.
+headline: From Confusing Messaging to Client-Ready Clarity
+
+seo:
+  title: Clarity to Clients™ Workshop | TruMedia Creative
+  description: Clarify what you do, who it’s for, and why it matters — in 90 minutes. Built live. Paste-ready messaging.
+
+navigation: false
+
+hero:
+  headline: From Confusing Messaging to Client-Ready Clarity — in 90 Minutes
+  description: |
+    Clarify what you do, who it’s for, and why it matters — so the right buyers “get it” in seconds and respond.
+    Built live. Delivered before the call ends.
+  links:
+    - label: Book the Workshop
+      to: https://trumediacreative.hbportal.co/schedule/clarity-to-clients
+      icon: i-lucide-calendar
+      size: xl
+      trailing: true
+
+sections:
+  - id: problem
+    title: Why This Exists
+    description: Great companies lose deals to unclear messaging.
+    headline: Clarity is the bottleneck.
+    orientation: vertical
+    features:
+      - title: Websites Talk About Themselves
+        description: Buyers can’t quickly tell if you’re relevant to their problem.
+        icon: i-lucide-message-circle-off
+      - title: Content Amplifies Confusion
+        description: More content makes things worse when the message isn’t clear.
+        icon: i-lucide-volume-x
+      - title: Sales Cycles Stall
+        description: Prospects need explanations instead of understanding.
+        icon: i-lucide-clock
+
+  - id: reframe
+    title: The Reframe
+    description: You are not the hero.
+    headline: Your customer is the hero. You are the guide.
+    orientation: horizontal
+    reverse: true
+    features:
+      - title: A Clear Story
+        description: Buyers instantly recognize themselves in the message.
+        icon: i-lucide-book-open
+      - title: Reduced Cognitive Load
+        description: Your message respects how the brain actually makes decisions.
+        icon: i-lucide-brain
+      - title: Faster Yes or No
+        description: Clarity repels bad fits and attracts the right ones.
+        icon: i-lucide-filter
+
+  - id: workshop
+    title: The Workshop
+    description: A live, working session — not a lecture.
+    headline: Built live. Paste-ready.
+    orientation: horizontal
+    features:
+      - title: 90-Minute Live Sprint
+        description: We build everything together, on screen.
+        icon: i-lucide-timer
+      - title: No Homework After
+        description: Assets are delivered before the call ends.
+        icon: i-lucide-check-circle
+      - title: Buyer-First Messaging
+        description: Structured using a proven narrative buyers understand instantly.
+        icon: i-lucide-target
+
+  - id: deliverables
+    title: What You Walk Away With
+    description: Everything you need to sound clear everywhere.
+    headline: Use it immediately.
+    orientation: vertical
+    features:
+      - title: Completed BrandScript
+        description: Your full customer-centric story (PDF + Google Doc).
+        icon: i-lucide-file-text
+      - title: One-Liner (3 Variations)
+        description: For LinkedIn, email, and conversations.
+        icon: i-lucide-align-left
+      - title: Website Hero Copy
+        description: Headline, subhead, and CTA buyers understand in seconds.
+        icon: i-lucide-layout
+      - title: Outreach Copy
+        description: Cold openers and follow-ups, paste-ready.
+        icon: i-lucide-mail
+      - title: ICP Snapshot
+        description: Primary buyer with pain → payoff clarity.
+        icon: i-lucide-user-check
+      - title: Voice & Tone Cheat Sheet
+        description: What to say, what to avoid, and phrases that trigger replies.
+        icon: i-lucide-sliders
+
+  - id: runofshow
+    title: How the 90 Minutes Work
+    description: Fast, focused, and decisive.
+    headline: The sprint agenda.
+    orientation: vertical
+    features:
+      - title: 0–10 Minutes
+        description: Intake review and target buyer alignment.
+        icon: i-lucide-play
+      - title: 10–45 Minutes
+        description: Story build — problem, positioning, proof.
+        icon: i-lucide-wrench
+      - title: 45–70 Minutes
+        description: One-liners, website hero, LinkedIn copy.
+        icon: i-lucide-edit
+      - title: 70–85 Minutes
+        description: Outreach messaging and CTAs.
+        icon: i-lucide-send
+      - title: 85–90 Minutes
+        description: Export everything and define next steps.
+        icon: i-lucide-download
+
+pricing:
+  title: Pricing
+  description: Simple. Transparent. Outcome-focused.
+  orientation: horizontal
+  items:
+    - title: Clarity to Clients Workshop
+      description: 90-minute live messaging sprint
+      icon: i-lucide-video
+      price:
+        display: $1,500 
+        unit: one-time
+      features:
+        - Live, 90-minute working session
+        - Completed BrandScript (PDF + Google Doc)
+        - One-liner (3 variations)
+        - Website hero copy (headline, subhead, CTA)
+        - Outreach copy (cold openers + follow-ups)
+        - ICP snapshot (pain → payoff clarity)
+        - Voice & tone cheat sheet
+      links:
+        - label: Book the Workshop
+          to: https://trumediacreative.hbportal.co/schedule/clarity-to-clients
+          icon: i-lucide-arrow-right
+          trailing: true
+      highlight: true
+    - title: Bonuses
+      description: Added value to supercharge your clarity.
+      icon: i-lucide-gift
+      price:
+        display: Free
+        unit: with workshop
+      features:
+        - Pre-workshop intake form
+        - Post-workshop follow-up email template
+        - 30-minute clarity review call (optional)
+      links: []
+      tagline: More ways to ensure clarity.
+      highlight: true
+
+testimonials:
+  title: What Clients Say
+  description: Clarity changes conversations.
+  items:
+    - quote: Buyers finally understood what we do without us explaining it.
+      user:
+        name: Advisory Client
+        description: Financial Services
+        avatar:
+          src: https://i.pravatar.cc/120?img=12
+
+cta:
+  title: Stop Explaining Yourself
+  description: Start being understood.
+  links:
+    - label: Book the Workshop
+      to: https://trumediacreative.hbportal.co/schedule/clarity-to-clients
+      icon: i-lucide-arrow-right
+      trailing: true

@@ -51,6 +51,54 @@ const createImageSchema = () => z.object({
   srcset: z.string().optional()
 })
 
+const createPricingSchema = () => z.object({
+  title: z.string().nonempty(),
+  description: z.string().nonempty(),
+  items: z.array(
+    z.object({
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      price: z.union([
+        z.string(),
+        z.object({
+          display: z.string().optional(),
+          amount: z.number().optional(),
+          billing: z.string().optional()
+        })
+      ]),
+      discount: z.string().optional(),
+      billingPeriod: z.string().optional(),
+      billingCycle: z.string().optional(),
+      tagline: z.string().optional(),
+      terms: z.string().optional(),
+      badge: z.union([
+        z.string(),
+        z.object({
+          label: z.string().nonempty(),
+          color: colorEnum.optional(),
+          variant: variantEnum.optional()
+        })
+      ]).optional(),
+      button: createLinkSchema().optional(),
+      features: z.array(
+        z.union([
+          z.string().nonempty(),
+          z.object({
+            title: z.string().nonempty(),
+            icon: z.string().optional().editor({ input: 'icon' })
+          })
+        ])
+      ).optional(),
+      variant: z.enum(['soft', 'solid', 'outline', 'subtle']).optional(),
+      orientation: orientationEnum.optional(),
+      highlight: z.boolean().optional(),
+      scale: z.boolean().optional(),
+      icon: z.string().optional().editor({ input: 'icon' }),
+      links: z.array(createLinkSchema()).optional()
+    })
+  )
+})
+
 export const collections = {
   index: defineCollection({
     source: '0.index.yml',
@@ -1192,15 +1240,34 @@ export const collections = {
         z.object({
           title: z.string().nonempty(),
           description: z.string().nonempty(),
-          price: z.object({
-            month: z.string().nonempty(),
-            year: z.string().nonempty()
-          }),
-          billing_period: z.string().nonempty(),
-          billing_cycle: z.string().nonempty(),
+          price: z.string().nonempty(),
+          discount: z.string().optional(),
+          billingPeriod: z.string().optional(),
+          billingCycle: z.string().optional(),
+          tagline: z.string().optional(),
+          terms: z.string().optional(),
+          badge: z.union([
+            z.string(),
+            z.object({
+              label: z.string().nonempty(),
+              color: colorEnum.optional(),
+              variant: variantEnum.optional()
+            })
+          ]).optional(),
           button: createLinkSchema(),
-          features: z.array(z.string().nonempty()),
-          highlight: z.boolean().optional()
+          features: z.array(
+            z.union([
+              z.string().nonempty(),
+              z.object({
+                title: z.string().nonempty(),
+                icon: z.string().optional().editor({ input: 'icon' })
+              })
+            ])
+          ),
+          variant: z.enum(['soft', 'solid', 'outline', 'subtle']).optional(),
+          orientation: orientationEnum.optional(),
+          highlight: z.boolean().optional(),
+          scale: z.boolean().optional()
         })
       ),
       logos: z.object({
@@ -1290,6 +1357,59 @@ export const collections = {
       approach: z.string().optional(),
       solution: z.string().optional(),
       results: z.array(z.string()).optional()
+    })
+  }),
+  claritytoclients: defineCollection({
+    source: '1.clarity-to-clients.yml',
+    type: 'page',
+    schema: z.object({
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      headline: z.string().optional(),
+      seo: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty()
+      }).optional(),
+      navigation: z.boolean().optional(),
+
+      hero: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        links: z.array(createLinkSchema())
+      }),
+
+      sections: z.array(
+        createBaseSchema().extend({
+          id: z.string().nonempty(),
+          headline: z.string().optional(),
+          orientation: orientationEnum.optional(),
+          reverse: z.boolean().optional(),
+          features: z.array(createFeatureItemSchema())
+        })
+      ),
+
+      features: createBaseSchema().extend({
+        items: z.array(createFeatureItemSchema())
+      }),
+
+      pricing: createPricingSchema(),
+
+      testimonials: createBaseSchema().extend({
+        items: z.array(
+          z.object({
+            quote: z.string().nonempty(),
+            user: z.object({
+              name: z.string().nonempty(),
+              description: z.string().nonempty(),
+              avatar: createImageSchema()
+            })
+          })
+        )
+      }),
+
+      cta: createBaseSchema().extend({
+        links: z.array(createLinkSchema())
+      })
     })
   })
 }
