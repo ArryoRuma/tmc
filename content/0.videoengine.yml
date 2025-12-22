@@ -234,7 +234,6 @@ sections:
         Direction on how to integrate videos into CRM workflows, sales processes,
         and outreach sequences so they get used consistently.
       icon: i-lucide-settings
-
   - id: not-for
     orientation : horizontal
     reverse: true
@@ -267,29 +266,46 @@ sections:
         Organizations unwilling to align marketing and sales or adopt new ways
         of using content in real workflows.
       icon: i-lucide-user-round-x
-
 features:
-  title: Everything You Need to Win Deals
-  description: Productized packages + a clean process. We plan, film, edit, distribute, and help you publish—then reuse the content across sales and marketing while we measure what moves pipeline.
+  title: Video Growth Engine Packages
+  description: >
+    Choose the right way to start with the Video Growth Engine. Each package
+    is designed to turn your expertise into sales-ready video assets your team
+    can use across marketing, sales, and outreach.
   items:
-    - title: Proof Over Promises
-      description: Outcome‑focused stories and objection‑crushing FAQs that buyers actually believe.
-      icon: i-lucide-badge-check
-    - title: Seamless Booking
-      description: Inline scheduling on every key page so interest becomes meetings, fast.
-      icon: i-lucide-calendar-check
-    - title: Fast Turnaround
-      description: Defined SLAs and rush options—most packages deliver in 7–10 business days.
-      icon: i-lucide-rocket
-    - title: SEO & Landing Pages (Add‑On)
-      description: Simple landing pages and video embeds that buyers and search engines can find.
-      icon: i-lucide-search
-    - title: Outreach Engine (Integrated)
-      description: Gravix‑powered outbound and LinkedIn steps to keep qualified conversations coming.
-      icon: i-lucide-zap
-    - title: Analytics & Reporting
-      description: Lightweight dashboards for publish cadence, views, watch %, replies, meetings, and CTA clicks.
-      icon: i-lucide-bar-chart-3
+    - title: FAQ Authority Pack
+      description: >
+          Turn your most common questions into engaging, trust-building videos
+          Marketing publishes and Sales sends before the call.
+      icon: i-lucide-circle-question-mark
+      to: /contact
+      price:
+        display: Starting at $5,000
+    - title: Case Study Engine
+      description: >
+          Transform client success into proof that shortens cycles and boosts
+          credibility across email, proposals, and conversations.
+      icon: i-lucide-award
+      to: /contact
+    - title: Content Storm Day
+      description: >
+          One focused shoot that delivers months worth of high-impact video
+          content for sales, outreach, and social.
+      icon: i-lucide-camera
+      to: /contact
+    - title: Video Growth Club
+      description: >
+          Ongoing monthly video pipeline with shoot days, edits, and strategy
+          that feeds your sales and marketing consistently.
+      icon: i-lucide-repeat
+      to: /contact
+          
+    - title: Strategic Fit Session
+      description: >
+          Not sure where to start? Get a tailored session to map your message
+          and gap areas for revenue-focused video.
+      icon: i-lucide-calendar
+      to: /contact
 testimonials:
   headline: Recent Work & Outcomes
   title: Here what our clients are saying.
