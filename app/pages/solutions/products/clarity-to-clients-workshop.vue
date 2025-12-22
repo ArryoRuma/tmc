@@ -5,7 +5,7 @@ const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
 
 // Helper function to normalize features for UPricingPlan
-const normalizeFeatures = (features?: any[]) => {
+const normalizeFeatures = (features?: (string | { title: string, icon?: string })[]) => {
   if (!features) return []
   return features.map(feature =>
     typeof feature === 'string'
