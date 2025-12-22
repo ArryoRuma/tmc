@@ -25,11 +25,13 @@ export default defineAppConfig({
         left: 'lg:flex-1 flex items-center gap-1.5',
         center: 'hidden lg:flex',
         right: 'flex items-center justify-end lg:flex-1 gap-1.5',
-        title: 'shrink-0 font-bold text-xl text-highlighted flex items-center gap-1.5',
+        title:
+          'shrink-0 font-bold text-xl text-highlighted flex items-center gap-1.5',
         toggle: 'lg:hidden',
         content: 'lg:hidden',
         overlay: 'lg:hidden',
-        header: 'px-4 sm:px-6 h-(--ui-header-height) shrink-0 flex items-center justify-between gap-3',
+        header:
+          'px-4 sm:px-6 h-(--ui-header-height) shrink-0 flex items-center justify-between gap-3',
         body: 'p-4 sm:p-6 overflow-y-auto'
       },
       variants: {
@@ -46,11 +48,13 @@ export default defineAppConfig({
     pageHero: {
       slots: {
         root: 'relative isolate',
-        container: 'flex flex-col lg:grid pt-8 sm:pt-12 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 gap-16 sm:gap-y-24',
+        container:
+          'flex flex-col lg:grid pt-8 sm:pt-12 lg:pt-16 pb-12 sm:pb-16 lg:pb-20 gap-16 sm:gap-y-24',
         wrapper: '',
         header: '',
         headline: 'mb-4',
-        title: 'text-5xl sm:text-7xl text-pretty tracking-tight font-bold text-highlighted',
+        title:
+          'text-5xl sm:text-7xl text-pretty tracking-tight font-bold text-highlighted',
         description: 'text-lg sm:text-xl/8 text-muted',
         body: 'mt-10',
         footer: 'mt-10',
@@ -89,14 +93,16 @@ export default defineAppConfig({
     },
     pageSection: {
       slots: {
-        root: 'py-4 mb-4',
-        container: 'w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:grid py-4 sm:py-6 lg:py-10 gap-8 sm:gap-16 pb-4',
+        root: 'py-4 ',
+        container:
+          'w-full max-w-(--ui-container) mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:grid py-4 sm:py-6 lg:py-10 gap-8 sm:gap-16 pb-4',
         wrapper: '',
         header: 'mb-8 sm:mb-12',
         headline: 'mb-4 text xl flex items-center',
-        title: 'text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-highlighted',
+        title:
+          'text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-highlighted',
         description: 'text-lg sm:text-xl/8 text-muted mt-6',
-        body: 'mt-8',
+        body: 'mt-8 mb-6',
         footer: 'mt-2'
       }
     }
