@@ -1,18 +1,20 @@
-title: Videos that actually have an ROI.
+title: Video-Led Growth Systems for B2B and Expert-Led Companies
 description: |
-  We design, produce, and distribute sales-ready video that turns expertise into won deals for Marketing & Sales Leaders.
+  A video-led growth system that clarifies your message, builds trust with buyers,
+  and turns your expertise into sales-ready assets your team can actually use. 
 seo:
-  title: Video Production | TruMedia Creative | Video‑Led Growth Agency for Industrial, Financial & Professional Services (NJ)
-  description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings. Book a strategy call.
+  title: Video Growth Engine for B2B & Expert-Led Companies | TruMedia Creative | Video‑Led Growth Agency for Industrial, Financial & Professional Services (NJ)
+  description: A video-led growth system that clarifies your message, builds trust, and turns
+    content into booked meetings. Built for B2B and expert-led companies.
 navigation: false
 hero:
   headline: Video Growth Engine
-  title: Video Production That Helps You Sell.
+  title: Video-Led Growth Systems for B2B and Expert-Led Companies
   links:
     - label: Book a Video Growth Strategy Call
       icon: i-lucide-calendar
       trailing: true
-      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+      to: /contact
       size: xl
 features:
   title: Everything You Need to Win Deals
@@ -37,6 +39,32 @@ features:
       description: Lightweight dashboards for publish cadence, views, watch %, replies, meetings, and CTA clicks.
       icon: i-lucide-bar-chart-3
 sections:
+  - title: Why Most Marketing Videos Don't Drive Revenue
+    headline: The Problem with Most B2B Marketing Videos
+    id: problem
+    orientation: horizontal
+    reverse: false
+    description:  Most marketing videos look good but fail to move the needle. They live on a
+      website or YouTube channel, disconnected from sales conversations and buyer
+      decision-making.
+    features: 
+      - title: Created as one-off assets instead of part of a sales system
+        description: Without a clear purpose tied to buyer needs, videos become expensive
+          decorations that don’t drive action.
+        icon: i-lucide-video-off
+      - title: Lives on websites or YouTube without driving conversations or follow-ups
+        description: Videos often sit idle on platforms without generating meaningful engagement or leads.
+        icon: i-lucide-youtube
+      - title: Not aligned with buyer questions, objections, or decision stages
+        description: Videos that don’t address specific buyer concerns fail to build trust and credibility.
+        icon: i-lucide-circle-question-mark
+      - title: Rarely used by sales teams during real deals
+        description: Sales teams often overlook videos that could enhance their pitches and close deals faster.
+        icon: i-lucide-user-x
+      - title: Measured by views and likes instead of pipeline and revenue impact
+        description: Focusing on vanity metrics overlooks the true value of videos in driving sales and growth.
+        icon: i-lucide-eye-off
+
   - title: The FAQ Authority Pack
     description: A set of FAQ videos that Marketing can publish everywhere and Sales can send 1:1 to answer the most common questions prospects have before the call.
     headline: Establish authority & eliminate objections 24/7.
