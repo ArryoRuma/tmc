@@ -108,9 +108,11 @@ useSeoMeta({
       />
     </UPageSection>
     <USeparator />
+    
+   <!-- TODO: Re-add ProcessTab component when ready and remove UStepper and related code
     <div class="my-16 flex justify-center">
       <ServicesProcessTab />
-    </div>
+    </div>-->
     <UPageSection
       id="our-process"
       title="Our Process"
