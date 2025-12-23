@@ -5,7 +5,7 @@ interface Step {
   subtitle: string
   description: string
   icon?: string
-  image?:  {
+  image?: {
     src: string
   }
   content?: string
@@ -173,12 +173,12 @@ const _currentStep = computed(() =>
                   class="w-full h-64 object-cover rounded-lg shadow-md"
                 />
                 <v-else>
-                <div class="mb-6 aspect-video bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
-                  <UIcon
-                    name="i-lucide-image-off"
-                    class="w-12 h-12 text-gray-400 dark:text-gray-600"
-                  />
-                </div>  
+                  <div class="mb-6 aspect-video bg-gray-200 dark:bg-gray-800 rounded-lg flex items-center justify-center">
+                    <UIcon
+                      name="i-lucide-image-off"
+                      class="w-12 h-12 text-gray-400 dark:text-gray-600"
+                    />
+                  </div>
                 </v-else>
               </div>
 
