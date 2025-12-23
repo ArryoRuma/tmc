@@ -50,15 +50,7 @@ const items = ref([
     </UPageHero>
 
     <UContainer>
-      <UPricingPlans scale>
-        <UPricingPlan
-          v-for="(plan, index) in page.plans"
-          :key="index"
-          v-bind="plan"
-          :price="isYearly === '1' ? plan.price.year : plan.price.month"
-          :billing-cycle="isYearly === '1' ? '/year' : '/month'"
-        />
-      </UPricingPlans>
+     
     </UContainer>
 
     <UPageSection>

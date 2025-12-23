@@ -4,16 +4,6 @@ const { data: page } = await useAsyncData('clarity-to-clients-workshop', () => q
 const title = page.value?.seo?.title || page.value?.title
 const description = page.value?.seo?.description || page.value?.description
 
-// Helper function to normalize features for UPricingPlan
-const normalizeFeatures = (features?: (string | { title: string, icon?: string })[]) => {
-  if (!features) return []
-  return features.map(feature =>
-    typeof feature === 'string'
-      ? { title: feature }
-      : feature
-  )
-}
-
 useSeoMeta({
   title,
   ogTitle: title,
@@ -43,32 +33,6 @@ useSeoMeta({
       <ImagePlaceholder v-if="section.orientation === 'horizontal'" />
     </UPageSection>
 
-    <UPageSection
-      v-if="page.pricing"
-      :title="page.pricing.title"
-      :description="page.pricing.description"
-    >
-      <div class="max-w-md mx-auto grid gap-6 md:max-w-none md:grid-cols-2 lg:grid-cols-3">
-        <UPricingPlan
-          v-for="(item, i) in page.pricing.items"
-          :key="i"
-          :title="item.title"
-          :description="item.description"
-          :price="typeof item.price === 'string' ? item.price : item.price.display"
-          :discount="item.discount"
-          :billing-period="item.billingPeriod"
-          :billing-cycle="item.billingCycle"
-          :tagline="item.tagline"
-          :terms="item.terms"
-          :button="item.links?.[0] || item.button"
-          :features="normalizeFeatures(item.features)"
-          :variant="item.variant"
-          :orientation="item.orientation"
-          :highlight="item.highlight"
-          :scale="item.scale"
-        />
-      </div>
-    </UPageSection>
     <UPageSection
       v-if="page.testimonials"
       :title="page.testimonials.title"
