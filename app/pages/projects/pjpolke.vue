@@ -57,11 +57,11 @@ useSeoMeta({
       :solution="project.solution"
       :services="project.services"
     />
+    <ProjectsResults :results="project.results" />
     <ProjectsImage
       :image="project.heroImage"
       :title="project.title"
       :website-url="project.websiteUrl"
     />
-    <ProjectsResults :results="project.results" />
   </div>
 </template>
