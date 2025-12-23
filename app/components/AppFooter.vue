@@ -151,7 +151,7 @@ const columns = [
 </script>
 
 <!-- TODO: update footer links and icons when ready
-TODO: create coming soon pages and link to them where applicable
+TODO: create coming soon pages for each of the resources pages
 -->
 <template>
   <USeparator class="h-px" color="primary" />
