@@ -49,9 +49,7 @@ const items = ref([
       </template>
     </UPageHero>
 
-    <UContainer>
-     
-    </UContainer>
+    <UContainer />
 
     <UPageSection>
       <UPageLogos>
