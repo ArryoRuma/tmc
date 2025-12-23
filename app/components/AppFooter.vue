@@ -122,26 +122,31 @@ const columns = [
     children: [
       {
         label: "Guides",
+        to: "/resources/guides",
         icon: "i-lucide-book-open",
         disabled: true,
       },
       {
         label: "Tutorials",
+        to: "/resources/tutorials",
         icon: "i-lucide-video",
         disabled: true,
       },
       {
         label: "Case Studies",
+        to: "/resources/case-studies",
         icon: "i-lucide-file-text",
         disabled: true,
       },
       {
         label: "Blog",
+        to: "/resources/blog",
         icon: "i-lucide-edit-3",
         disabled: true,
       },
       {
         label: "Media Kit",
+        to: "/resources/media-kit",
         icon: "i-lucide-download",
         disabled: true,
       },
@@ -150,9 +155,7 @@ const columns = [
 ];
 </script>
 
-<!-- TODO: update footer links and icons when ready
-TODO: create coming soon pages and link to them where applicable
--->
+<!-- TODO: update footer links and icons when ready -->
 <template>
   <USeparator class="h-px" color="primary" />
 
