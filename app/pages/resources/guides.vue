@@ -1,9 +1,6 @@
 <template>
-  <main class="prose mx-auto py-16">
-    <h1>Guides</h1>
-    <p>
-      This page is coming soon. If you're seeing this in production, it means
-      Lar is still cooking up something good 🍳.
-    </p>
-  </main>
+  <ComingSoon
+    title="Guides Coming Soon"
+    description="Our guides are coming soon. Stay tuned for helpful resources and step-by-step instructions."
+  />
 </template>

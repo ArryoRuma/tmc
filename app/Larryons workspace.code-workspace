@@ -1,12 +1,10 @@
 {
-	"folders": [
-		{
-			"path": ".."
-		}
-	],
-	"settings": {
-		"terminal.integrated.automationProfile.osx": {
-			
-		}
-	}
+  "folders": [
+    {
+      "path": "..",
+    },
+  ],
+  "settings": {
+    "terminal.integrated.automationProfile.osx": {},
+  },
 }

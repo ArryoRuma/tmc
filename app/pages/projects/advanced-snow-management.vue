@@ -47,7 +47,9 @@ const project: Project = {
     "Stronger positioning as an enterprise-capable snow management partner",
   ],
 };
-
+definePageMeta({
+  layout: "projects",
+});
 useSeoMeta({
   title: `${project.title} - TruMedia Creative Portfolio`,
   description: project.description,

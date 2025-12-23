@@ -6,5 +6,5 @@ export default withNuxt([
   // Your custom configs here
 
   // Disable all ESLint rules that conflict with Prettier
-  eslintConfigPrettier
+  eslintConfigPrettier,
 ]);

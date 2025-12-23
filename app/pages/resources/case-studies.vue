@@ -1,9 +1,6 @@
 <template>
-  <main class="prose mx-auto py-16">
-    <h1>Case Studies</h1>
-    <p>
-      This page is coming soon. If you're seeing this in production, it means
-      Lar is still cooking up something good 🍳.
-    </p>
-  </main>
+  <ComingSoon
+    title="Case Studies Coming Soon"
+    description="Our case studies are coming soon. Stay tuned for success stories and in-depth analyses of our projects."
+  />
 </template>
