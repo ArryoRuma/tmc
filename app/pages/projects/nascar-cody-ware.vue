@@ -39,6 +39,8 @@ useSeoMeta({
 })
 </script>
 
+<!-- TODO: verify this page is consistent with other project pages
+TODO: replace the before and after with an embedded video from the project -->
 <template>
   <div>
     <ProjectsHero :project="project" />

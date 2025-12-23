@@ -62,6 +62,9 @@ const columns = [{
 ]
 </script>
 
+<!-- TODO: update footer links and icons when ready
+TODO: create coming soon pages and link to them where applicable
+-->
 <template>
   <USeparator
     class="h-px"

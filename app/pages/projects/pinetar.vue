@@ -22,6 +22,8 @@ useSeoMeta({
 })
 </script>
 
+<!-- TODO: Make Pinetar link go to this page, and not the old external site
+TODO: verify this page is consistent with other project pages -->
 <template>
   <div>
     <ProjectsHero :project="project" />

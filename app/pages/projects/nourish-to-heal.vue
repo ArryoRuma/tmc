@@ -52,6 +52,8 @@ useSeoMeta({
 })
 </script>
 
+<!-- TODO: verify this page is consistent with other project pages
+TODO: add photo gallery from photoshoot -->
 <template>
   <div>
     <ProjectsHero :project="project" />

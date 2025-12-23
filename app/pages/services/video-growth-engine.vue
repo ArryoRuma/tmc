@@ -27,6 +27,8 @@ useSeoMeta({
 })
 </script>
 
+<!-- TODO: fix items data structure to match ProcessTab component's steps prop
+ TODO: decide on whether to use video or image for each section and be consistent -->
 <template>
   <div v-if="page?.title">
     <UPageHero
