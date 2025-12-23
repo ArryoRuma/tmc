@@ -106,6 +106,9 @@ useSeoMeta({
       />
     </UPageSection>
     <USeparator />
+    <div class="my-16 flex justify-center">
+      <ServicesProcessTab />
+    </div>
     <UPageSection
       id="our-process"
       title="Our Process"
