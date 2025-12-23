@@ -60,5 +60,5 @@ useSeoMeta({
 <!-- TODO: verify this page is consistent with other project pages
 TODO: add photo gallery from photoshoot -->
 <template>
-  <ProjectsProjectSpotlightLayout2 :project="project" />
+  <ProjectsSpotlightLayout2 :project="project" />
 </template>

@@ -35,8 +35,8 @@ const props = defineProps<{ project: Project2 }>();
 
     <UContainer class="relative py-20 sm:py-28">
       <div class="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
-        <ProjectsProjectSpotlightOverview2 :project="props.project" />
-        <ProjectsProjectSpotlightDetails2 :project="props.project" />
+        <ProjectsSpotlightOverview2 :project="props.project" />
+        <ProjectsSpotlightDetails2 :project="props.project" />
       </div>
     </UContainer>
   </section>

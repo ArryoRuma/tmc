@@ -49,12 +49,12 @@ const props = defineProps<{ project: Project2 }>();
       </p>
     </div>
 
-    <ProjectsProjectSpotlightBeforeAfter2
+    <ProjectsSpotlightBeforeAfter2
       :before-image="props.project.beforeImage"
       :after-image="props.project.afterImage"
       :client="props.project.client"
     />
 
-    <ProjectsProjectSpotlightResults2 :results="props.project.results" />
+    <ProjectsSpotlightResults2 :results="props.project.results" />
   </div>
 </template>
