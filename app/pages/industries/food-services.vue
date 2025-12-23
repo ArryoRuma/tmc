@@ -1,15 +1,17 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData(() => queryCollection('foodservices').first())
+const { data: page } = await useAsyncData(() =>
+  queryCollection("foodservices").first(),
+);
 
-const title = page.value?.seo?.title || page.value?.title
-const description = page.value?.seo?.description || page.value?.description
+const title = page.value?.seo?.title || page.value?.title;
+const description = page.value?.seo?.description || page.value?.description;
 
 useSeoMeta({
   title,
   ogTitle: title,
   description,
-  ogDescription: description
-})
+  ogDescription: description,
+});
 </script>
 
 <template>
@@ -73,13 +75,13 @@ useSeoMeta({
           :key="index"
           variant="subtle"
           :description="testimonial.quote"
-          :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
+          :ui="{
+            description:
+              'before:content-[open-quote] after:content-[close-quote]',
+          }"
         >
           <template #footer>
-            <UAvatar
-              v-bind="testimonial.user"
-              size="lg"
-            />
+            <UAvatar v-bind="testimonial.user" size="lg" />
           </template>
         </UPageCard>
       </UPageColumns>
@@ -87,11 +89,7 @@ useSeoMeta({
 
     <USeparator />
 
-    <UPageCTA
-      v-bind="page.cta"
-      variant="naked"
-      class="overflow-hidden"
-    >
+    <UPageCTA v-bind="page.cta" variant="naked" class="overflow-hidden">
       <LazyStarsBg />
     </UPageCTA>
   </div>

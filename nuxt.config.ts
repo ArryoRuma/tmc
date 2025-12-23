@@ -1,117 +1,119 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-import { defineNuxtConfig } from 'nuxt/config'
+import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
   modules: [
-    '@nuxt/eslint',
-    '@nuxt/image',
-    '@nuxt/ui',
-    '@nuxt/content',
-    '@vueuse/nuxt',
-    'nuxt-og-image',
-    '@nuxt/fonts',
-    '@nuxt/hints',
-    '@nuxtjs/seo',
-    'nuxt-gtag',
-    'motion-v/nuxt',
-    '@nuxt/scripts'
+    "@nuxt/eslint",
+    "@nuxt/image",
+    "@nuxt/ui",
+    "@nuxt/content",
+    "@vueuse/nuxt",
+    "nuxt-og-image",
+    "@nuxt/fonts",
+    "@nuxt/hints",
+    "@nuxtjs/seo",
+    "nuxt-gtag",
+    "motion-v/nuxt",
+    "@nuxt/scripts",
   ],
   components: true,
   devtools: {
-    enabled: true
+    enabled: true,
   },
   app: {
     head: {
       link: [
         {
-          rel: 'preconnect',
-          href: 'https://use.typekit.net',
-          crossorigin: ''
+          rel: "preconnect",
+          href: "https://use.typekit.net",
+          crossorigin: "",
         },
         {
-          rel: 'preconnect',
-          href: 'https://p.typekit.net',
-          crossorigin: ''
+          rel: "preconnect",
+          href: "https://p.typekit.net",
+          crossorigin: "",
         },
         {
-          rel: 'stylesheet',
-          href: 'https://use.typekit.net/orr3dhh.css'
-        }
-      ]
-    }
+          rel: "stylesheet",
+          href: "https://use.typekit.net/orr3dhh.css",
+        },
+      ],
+    },
   },
-  css: ['~/assets/css/main.css'],
+  css: ["~/assets/css/main.css"],
   site: {
-    url: 'https://trumediacreative.com',
-    name: 'TruMedia Creative'
+    url: "https://trumediacreative.com",
+    name: "TruMedia Creative",
   },
 
   // Optimize module loading
   build: {
-    transpile: ['@headlessui/vue']
+    transpile: ["@headlessui/vue"],
   },
   routeRules: {
-    '/docs': { redirect: '/docs/getting-started' }
+    "/docs": { redirect: "/docs/getting-started" },
   },
-  compatibilityDate: '2024-07-11',
+  compatibilityDate: "2024-07-11",
   nitro: {
     prerender: {
-      routes: ['/'],
-      crawlLinks: true
-    }
+      routes: ["/"],
+      crawlLinks: true,
+    },
   },
   debug: true,
 
   eslint: {
     config: {
       stylistic: {
-        commaDangle: 'never',
-        braceStyle: '1tbs'
-      }
-    }
+        commaDangle: "never",
+        braceStyle: "1tbs",
+      },
+    },
   },
   fonts: {
     adobe: {
-      id: 'orr3dhh'
-    }
+      id: "orr3dhh",
+    },
   },
   robots: {
-    disallow: ['/admin', '/private'],
-    allow: ['/']
+    disallow: ["/admin", "/private"],
+    allow: ["/"],
   },
   scripts: {
     registry: {
       googleAnalytics: {
-        id: 'G-G22P0WJNVM'
-      }
-    }
+        id: "G-G22P0WJNVM",
+      },
+    },
   },
   seo: {
     meta: {
       // Basic SEO
-      description: 'TruMedia Creative is a New Jersey-based digital marketing agency helping expert-led and B2B companies clarify their message, create sales-ready content, and deploy repeatable growth systems.',
-      author: 'Larryon Truman',
-      title: 'TruMedia Creative | Video-Led Growth for B2B & Expert-Led Companies',
-      titleTemplate: '%s · TruMedia Creative',
+      description:
+        "TruMedia Creative is a New Jersey-based digital marketing agency helping expert-led and B2B companies clarify their message, create sales-ready content, and deploy repeatable growth systems.",
+      author: "Larryon Truman",
+      title:
+        "TruMedia Creative | Video-Led Growth for B2B & Expert-Led Companies",
+      titleTemplate: "%s · TruMedia Creative",
       // Theme & Color
       themeColor: [
-        { content: '#18181b', media: '(prefers-color-scheme: dark)' },
-        { content: 'white', media: '(prefers-color-scheme: light)' }
+        { content: "#18181b", media: "(prefers-color-scheme: dark)" },
+        { content: "white", media: "(prefers-color-scheme: light)" },
       ],
-      colorScheme: 'dark light',
+      colorScheme: "dark light",
 
       // App Info
-      applicationName: 'TruMedia Creative',
+      applicationName: "TruMedia Creative",
 
       // Nuxt SEO Utils already sets the below tags for you
-      ogSiteName: 'TruMedia Creative',
-      ogLocale: 'en_US',
-      ogType: 'website',
-      ogUrl: 'https://trumediacreative.com',
-      ogTitle: 'TruMedia Creative',
+      ogSiteName: "TruMedia Creative",
+      ogLocale: "en_US",
+      ogType: "website",
+      ogUrl: "https://trumediacreative.com",
+      ogTitle: "TruMedia Creative",
       // Other Nuxt SEO modules handle these
-      ogImage: 'https://www.trumediacreative.com/ogimage.png',
-      robots: 'index, follow'
-    }
-  }
-})
+      ogImage: "https://www.trumediacreative.com/ogimage.png",
+      robots: "index, follow",
+    },
+  },
+});

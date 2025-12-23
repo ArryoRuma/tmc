@@ -1,27 +1,49 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('index', () => queryCollection('index').first())
+const { data: page } = await useAsyncData("index", () =>
+  queryCollection("index").first(),
+);
 
-const title = page.value?.seo?.title || page.value?.title
-const description = page.value?.seo?.description || page.value?.description
+const title = page.value?.seo?.title || page.value?.title;
+const description = page.value?.seo?.description || page.value?.description;
 const fourStep = ref([
-  { title: 'Discover', description: 'First, we dive in to what problems your facing and determine what types of videos will best address those challenges.', icon: 'i-lucide-target' },
-  { title: 'Define', description: 'Next, we outline a clear messaging framework that your clients will understand and connect with.', icon: 'i-lucide-video' },
-  { title: 'Develop', description: 'Then, we produce high-quality marketing assets that resonate with your audience.', icon: 'i-lucide-globe' },
-  { title: 'Deploy', description: 'Last, we distribute the marketing assets and analyze performance to optimize results.', icon: 'i-lucide-bar-chart-2' }
-])
+  {
+    title: "Discover",
+    description:
+      "First, we dive in to what problems your facing and determine what types of videos will best address those challenges.",
+    icon: "i-lucide-target",
+  },
+  {
+    title: "Define",
+    description:
+      "Next, we outline a clear messaging framework that your clients will understand and connect with.",
+    icon: "i-lucide-video",
+  },
+  {
+    title: "Develop",
+    description:
+      "Then, we produce high-quality marketing assets that resonate with your audience.",
+    icon: "i-lucide-globe",
+  },
+  {
+    title: "Deploy",
+    description:
+      "Last, we distribute the marketing assets and analyze performance to optimize results.",
+    icon: "i-lucide-bar-chart-2",
+  },
+]);
 useSeoMeta({
   title,
   ogTitle: title,
   description,
-  ogDescription: description
-})
+  ogDescription: description,
+});
 </script>
 
 <!-- TODO: fix fourStep data structure to match ProcessTab component's steps prop
 TODO: add in secondary call to action in hero and CTA footer -->
 <template>
   <div v-if="page?.title">
-    <FadeInUp :delay=".3">
+    <FadeInUp :delay="0.3">
       <UPageHero
         :description="page.description"
         :headline="page.hero.headline"
@@ -86,11 +108,7 @@ TODO: add in secondary call to action in hero and CTA footer -->
     </FadeInUp>
 
     <FadeInUp :delay="0.2">
-      <UPageCTA
-        v-bind="page.cta"
-        variant="naked"
-        class="overflow-hidden"
-      />
+      <UPageCTA v-bind="page.cta" variant="naked" class="overflow-hidden" />
     </FadeInUp>
   </div>
 </template>

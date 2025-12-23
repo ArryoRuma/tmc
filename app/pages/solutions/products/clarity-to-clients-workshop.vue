@@ -1,15 +1,17 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('clarity-to-clients-workshop', () => queryCollection('claritytoclients').first())
+const { data: page } = await useAsyncData("clarity-to-clients-workshop", () =>
+  queryCollection("claritytoclients").first(),
+);
 
-const title = page.value?.seo?.title || page.value?.title
-const description = page.value?.seo?.description || page.value?.description
+const title = page.value?.seo?.title || page.value?.title;
+const description = page.value?.seo?.description || page.value?.description;
 
 useSeoMeta({
   title,
   ogTitle: title,
   description,
-  ogDescription: description
-})
+  ogDescription: description,
+});
 </script>
 
 <template>
@@ -63,9 +65,7 @@ useSeoMeta({
             </div>
           </template>
 
-          <blockquote class="italic">
-            "{{ item.quote }}"
-          </blockquote>
+          <blockquote class="italic">"{{ item.quote }}"</blockquote>
         </UCard>
       </div>
     </UPageSection>

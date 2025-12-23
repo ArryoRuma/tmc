@@ -1,60 +1,66 @@
 <script setup lang="ts">
 interface Step {
-  id: string
-  title: string
-  subtitle: string
-  description: string
-  image?: string
-  content?: string
+  id: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  image?: string;
+  content?: string;
   link?: {
-    url: string
-    text: string
-  }
+    url: string;
+    text: string;
+  };
 }
 
 interface Props {
-  title?: string
-  subtitle?: string
-  steps?: Step[]
+  title?: string;
+  subtitle?: string;
+  steps?: Step[];
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  title: 'Our Process',
-  subtitle: 'A systematic approach to delivering exceptional results',
+  title: "Our Process",
+  subtitle: "A systematic approach to delivering exceptional results",
   steps: () => [
     {
-      id: '1',
-      title: 'Step 1',
-      subtitle: 'Discovery & Strategy',
-      description: 'We understand your business goals and create a tailored strategy',
-      content: 'Our discovery process involves deep research into your market, competitors, and audience to create a foundation for success.'
+      id: "1",
+      title: "Step 1",
+      subtitle: "Discovery & Strategy",
+      description:
+        "We understand your business goals and create a tailored strategy",
+      content:
+        "Our discovery process involves deep research into your market, competitors, and audience to create a foundation for success.",
     },
     {
-      id: '2',
-      title: 'Step 2',
-      subtitle: 'Implementation',
-      description: 'Execute the strategy with precision and attention to detail',
-      content: 'We implement your strategy using best practices and cutting-edge tools, ensuring every detail aligns with your objectives.'
+      id: "2",
+      title: "Step 2",
+      subtitle: "Implementation",
+      description:
+        "Execute the strategy with precision and attention to detail",
+      content:
+        "We implement your strategy using best practices and cutting-edge tools, ensuring every detail aligns with your objectives.",
     },
     {
-      id: '3',
-      title: 'Step 3',
-      subtitle: 'Optimization & Results',
-      description: 'Measure, analyze, and optimize for maximum performance',
-      content: 'Continuous monitoring and optimization ensure your investment delivers measurable results and long-term success.'
-    }
-  ]
-})
+      id: "3",
+      title: "Step 3",
+      subtitle: "Optimization & Results",
+      description: "Measure, analyze, and optimize for maximum performance",
+      content:
+        "Continuous monitoring and optimization ensure your investment delivers measurable results and long-term success.",
+    },
+  ],
+});
 
-const activeStep = ref(props.steps[0]?.id || '1')
+const activeStep = ref(props.steps[0]?.id || "1");
 
 const setActiveStep = (stepId: string) => {
-  activeStep.value = stepId
-}
+  activeStep.value = stepId;
+};
 
-const _currentStep = computed(() =>
-  props.steps.find(step => step.id === activeStep.value) || props.steps[0]
-)
+const _currentStep = computed(
+  () =>
+    props.steps.find((step) => step.id === activeStep.value) || props.steps[0],
+);
 </script>
 
 <template>
@@ -75,23 +81,18 @@ const _currentStep = computed(() =>
         <!-- Step Navigation -->
         <div class="lg:col-span-4">
           <div class="lg:sticky lg:top-20">
-            <nav class="bg-white dark:bg-gray-900 shadow-lg dark:shadow-gray-700/25 rounded-xl p-6">
-              <ul
-                class="space-y-4"
-                role="tablist"
-              >
-                <li
-                  v-for="step in steps"
-                  :key="step.id"
-                  role="presentation"
-                >
+            <nav
+              class="bg-white dark:bg-gray-900 shadow-lg dark:shadow-gray-700/25 rounded-xl p-6"
+            >
+              <ul class="space-y-4" role="tablist">
+                <li v-for="step in steps" :key="step.id" role="presentation">
                   <button
                     :id="`tab-${step.id}`"
                     class="w-full text-left p-4 rounded-lg transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500"
                     :class="[
                       activeStep === step.id
                         ? 'bg-primary-500 text-white shadow-md'
-                        : 'hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-white'
+                        : 'hover:bg-gray-50 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300 hover:text-primary-500 dark:hover:text-white',
                     ]"
                     :aria-selected="activeStep === step.id"
                     :aria-controls="`panel-${step.id}`"
@@ -118,7 +119,9 @@ const _currentStep = computed(() =>
 
         <!-- Content Panel -->
         <div class="lg:col-span-8">
-          <div class="bg-white dark:bg-gray-900 shadow-lg dark:shadow-gray-700/25 rounded-xl overflow-hidden">
+          <div
+            class="bg-white dark:bg-gray-900 shadow-lg dark:shadow-gray-700/25 rounded-xl overflow-hidden"
+          >
             <div
               v-for="step in steps"
               v-show="activeStep === step.id"
@@ -129,15 +132,12 @@ const _currentStep = computed(() =>
               :aria-labelledby="`tab-${step.id}`"
             >
               <!-- Image -->
-              <div
-                v-if="step.image"
-                class="mb-6"
-              >
+              <div v-if="step.image" class="mb-6">
                 <img
                   :src="step.image"
                   :alt="step.subtitle"
                   class="w-full h-64 object-cover rounded-lg shadow-md"
-                >
+                />
               </div>
 
               <!-- Content -->
@@ -151,10 +151,7 @@ const _currentStep = computed(() =>
                 </p>
 
                 <!-- Optional Link -->
-                <div
-                  v-if="step.link"
-                  class="pt-4"
-                >
+                <div v-if="step.link" class="pt-4">
                   <UButton
                     :to="step.link.url"
                     variant="ghost"

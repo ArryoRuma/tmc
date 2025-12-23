@@ -1,12 +1,12 @@
 title: Is your marketing material confusing your buyers?
 description: |
-    We take what’s in your team’s head and turn it into a clear message delivered so your customers finally “get it” and move forward.
+  We take what’s in your team’s head and turn it into a clear message delivered so your customers finally “get it” and move forward.
 seo:
   title: Clarify Your Message
   description: TTurn confusing, complex B2B offers into a clear story with sales-ready video. TruMedia Creative helps industrial & professional services teams clarify their message, show proof, and feed a simple outbound system that books more meetings. Book a strategy call.
 navigation: false
 hero:
-  headline: Clarify Your Message 
+  headline: Clarify Your Message
   title: Turn [*conversations*]{class="text-primary"} into [*clients*]{class="text-primary"} with a video growth engine.
   links:
     - label: Book a Strategy Call
@@ -43,7 +43,7 @@ sections:
     id: how-we-help
     orientation: horizontal
     reverse: true
-    features: 
+    features:
       - title: 8 Polished FAQ Videos
         description: Your most common questions turned into engaging clips
         icon: i-lucide-video
@@ -60,12 +60,12 @@ sections:
         description: Repurpose the audio for your podcast or blog.
         icon: i-lucide-mic
   - title: The Case Study Engine
-    description:  Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
+    description: Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
     headline: Showcase Client Success stories that sell while you sleep.
     id: how-we-help
     orientation: horizontal
     reverse: false
-    features: 
+    features:
       - title: 1 Hero Interview Video
         description: Your most common questions turned into engaging clips
         icon: i-lucide-video
@@ -82,12 +82,12 @@ sections:
         description: Repurpose the audio for your podcast or blog.
         icon: i-lucide-mic
   - title: The Content Storm Day
-    description:  Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
+    description: Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
     headline: One day → Months of content.
     id: how-we-help
     orientation: horizontal
     reverse: true
-    features: 
+    features:
       - title: 1 Hero Interview Video
         description: Your most common questions turned into engaging clips
         icon: i-lucide-video

@@ -1,20 +1,18 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref } from "vue";
 
 const props = defineProps<{
-  beforeImage?: string
-  afterImage?: string
-}>()
-const activeTab = ref<'before' | 'after'>('after')
+  beforeImage?: string;
+  afterImage?: string;
+}>();
+const activeTab = ref<"before" | "after">("after");
 </script>
 
 <template>
   <div class="bg-gray-50 dark:bg-gray-900 py-8">
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto">
-        <h3 class="text-3xl font-bold mb-2 text-center">
-          Before & After
-        </h3>
+        <h3 class="text-3xl font-bold mb-2 text-center">Before & After</h3>
         <p class="text-center text-gray-600 dark:text-gray-300 mb-4">
           See the transformation from the old website to our modern design
         </p>
@@ -26,7 +24,7 @@ const activeTab = ref<'before' | 'after'>('after')
                 'px-6 py-3 rounded-md font-semibold transition-all duration-200',
                 activeTab === 'before'
                   ? 'bg-primary text-white shadow-sm'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-primary'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-primary',
               ]"
               @click="activeTab = 'before'"
             >
@@ -37,7 +35,7 @@ const activeTab = ref<'before' | 'after'>('after')
                 'px-6 py-3 rounded-md font-semibold transition-all duration-200',
                 activeTab === 'after'
                   ? 'bg-primary text-white shadow-sm'
-                  : 'text-gray-600 dark:text-gray-300 hover:text-primary'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-primary',
               ]"
               @click="activeTab = 'after'"
             >
@@ -46,11 +44,10 @@ const activeTab = ref<'before' | 'after'>('after')
           </div>
         </div>
 
-        <div class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[16/9]">
-          <transition
-            name="fade"
-            mode="out-in"
-          >
+        <div
+          class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[16/9]"
+        >
+          <transition name="fade" mode="out-in">
             <div
               v-if="activeTab === 'before'"
               key="before"
@@ -61,23 +58,23 @@ const activeTab = ref<'before' | 'after'>('after')
                 :src="props.beforeImage"
                 alt="Before - Old Website"
                 class="w-full min-h-full object-cover object-top"
+              />
+              <div
+                class="absolute bottom-4 left-4 bg-red-500 text-white px-3 py-1 rounded-md text-sm font-semibold"
               >
-              <div class="absolute bottom-4 left-4 bg-red-500 text-white px-3 py-1 rounded-md text-sm font-semibold">
                 Before
               </div>
             </div>
-            <div
-              v-else
-              key="after"
-              class="absolute inset-0 overflow-auto"
-            >
+            <div v-else key="after" class="absolute inset-0 overflow-auto">
               <img
                 v-if="props.afterImage"
                 :src="props.afterImage"
                 alt="After - New Website"
                 class="w-full min-h-full object-cover object-top"
+              />
+              <div
+                class="absolute bottom-4 left-4 bg-green-500 text-white px-3 py-1 rounded-md text-sm font-semibold"
               >
-              <div class="absolute bottom-4 left-4 bg-green-500 text-white px-3 py-1 rounded-md text-sm font-semibold">
                 After
               </div>
             </div>

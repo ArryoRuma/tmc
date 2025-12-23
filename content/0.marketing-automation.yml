@@ -1,8 +1,8 @@
-title: 
+title:
 description: |
   We design, produce, and distribute sales-ready video that turns complex B2B offerings into closed-won deals.
 seo:
-  title: 
+  title:
   description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings. Book a strategy call.
 navigation: false
 hero:
@@ -43,7 +43,7 @@ sections:
     id: how-we-help
     orientation: horizontal
     reverse: true
-    features: 
+    features:
       - title: 8 Polished FAQ Videos
         description: Your most common questions turned into engaging clips
         icon: i-lucide-video
@@ -60,12 +60,12 @@ sections:
         description: Repurpose the audio for your podcast or blog.
         icon: i-lucide-mic
   - title: The Case Study Engine
-    description:  Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
+    description: Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
     headline: Showcase Client Success stories that sell while you sleep.
     id: how-we-help
     orientation: horizontal
     reverse: false
-    features: 
+    features:
       - title: 1 Hero Interview Video
         description: Your most common questions turned into engaging clips
         icon: i-lucide-video
@@ -82,12 +82,12 @@ sections:
         description: Repurpose the audio for your podcast or blog.
         icon: i-lucide-mic
   - title: The Content Storm Day
-    description:  Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
+    description: Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
     headline: One day → Months of content.
     id: how-we-help
     orientation: horizontal
     reverse: true
-    features: 
+    features:
       - title: 1 Hero Interview Video
         description: Your most common questions turned into engaging clips
         icon: i-lucide-video

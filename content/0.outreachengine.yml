@@ -43,7 +43,7 @@ sections:
     id: how-we-help
     orientation: horizontal
     reverse: true
-    features: 
+    features:
       - title: 200 cold emails snipers pre-written for you
         description: Dropped directly into your inbox, daily, in batches of 10.
         icon: i-lucide-mail
@@ -63,12 +63,12 @@ sections:
         description: Email support and quarterly reviews to ensure your outreach is effective and aligned with your goals.
         icon: i-lucide-headphones
   - title: The Case Study Engine
-    description:  Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
+    description: Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
     headline: Showcase Client Success stories that sell while you sleep.
     id: how-we-help
     orientation: horizontal
     reverse: false
-    features: 
+    features:
       - title: 1 Hero Interview Video
         description: Your most common questions turned into engaging clips
         icon: i-lucide-video
@@ -85,12 +85,12 @@ sections:
         description: Repurpose the audio for your podcast or blog.
         icon: i-lucide-mic
   - title: The Content Storm Day
-    description:  Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
+    description: Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
     headline: One day → Months of content.
     id: how-we-help
     orientation: horizontal
     reverse: true
-    features: 
+    features:
       - title: 1 Hero Interview Video
         description: Your most common questions turned into engaging clips
         icon: i-lucide-video

@@ -1,15 +1,15 @@
 <script setup lang="ts">
-import { motion } from 'motion-v'
+import { motion } from "motion-v";
 
 interface Props {
-  delay?: number
-  duration?: number
+  delay?: number;
+  duration?: number;
 }
 
 const props = withDefaults(defineProps<Props>(), {
   delay: 0.2,
-  duration: 0.7
-})
+  duration: 0.7,
+});
 </script>
 
 <template>

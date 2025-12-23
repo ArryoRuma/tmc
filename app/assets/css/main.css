@@ -1,16 +1,14 @@
 @import "tailwindcss";
 @import "@nuxt/ui";
 
-
-
 @theme static {
-  --font-sans: 'new-spirit', sans-serif;
-  
+  --font-sans: "new-spirit", sans-serif;
+
   /* Custom brand color palette */
   --color-brand-50: #eff6ff;
   --color-brand-100: #dbeafe;
   --color-brand-200: #bfdbfe;
-  --color-brand-300: #F06101;
+  --color-brand-300: #f06101;
   --color-brand-400: #fb8500;
   --color-brand-500: #fb8500;
   --color-brand-600: #1e4d75;
@@ -22,16 +20,21 @@
 
 /* Apply fonts and styles */
 body {
-  font-family: 'Public Sans', sans-serif;
+  font-family: "Public Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
 
-
 /* Apply New Spirit to headings, navigation, and logo */
-h1, h2, h3, h4, h5, h6,
-.app-logo, .logo,
-.page-title, 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.app-logo,
+.logo,
+.page-title,
 .page-headline,
 .font-heading {
   font-family: "new-spirit", serif !important;
@@ -48,12 +51,16 @@ h1, h2, h3, h4, h5, h6,
 }
 
 /* Make navigation items New Spirit medium weight */
-nav, nav a, nav button,
+nav,
+nav a,
+nav button,
 nav [role="menuitem"] > button,
 nav [role="menuitem"] > a,
 .navigation-menu-trigger {
-  font-family: 'new-spirit', serif;
-  font-weight: 600;  font-display: swap;}
+  font-family: "new-spirit", serif;
+  font-weight: 600;
+  font-display: swap;
+}
 
 /* Make navigation icons primary color */
 nav [class*="i-lucide"] {
@@ -70,7 +77,7 @@ nav [class*="i-lucide"] {
 [data-page-section] a,
 [data-page-section] [role="link"],
 [data-page-section] .nuxt-link {
-  font-family: 'new-spirit', serif !important;
+  font-family: "new-spirit", serif !important;
   font-weight: 700 !important;
   font-display: swap;
 }
@@ -82,7 +89,7 @@ nav [class*="i-lucide"] {
 .u-page-section a,
 .u-page-section [role="link"],
 .u-page-section .nuxt-link {
-  font-family: 'new-spirit', serif !important;
+  font-family: "new-spirit", serif !important;
   font-weight: 700 !important;
   font-display: swap;
 }
@@ -94,7 +101,7 @@ section .nuxt-link,
 [class*="section"] a,
 [class*="section"] button[role="link"],
 [class*="section"] .nuxt-link {
-  font-family: 'new-spirit', serif !important;
+  font-family: "new-spirit", serif !important;
   font-weight: 600 !important;
   font-display: swap;
 }
@@ -104,14 +111,14 @@ section .u-button,
 section [class*="UButton"],
 [class*="section"] .u-button,
 [class*="section"] [class*="UButton"] {
-  font-family: 'new-spirit', serif !important;
+  font-family: "new-spirit", serif !important;
   font-weight: 700 !important;
   font-display: swap;
 }
 
 /* Light theme (default) */
 :root {
-  --ui-bg: #F5FBFF;
+  --ui-bg: #f5fbff;
   --ui-text: var(--ui-color-neutral-900);
   --ui-text-muted: var(--ui-color-neutral-800);
   --ui-header-height: --spacing(30);
@@ -146,4 +153,3 @@ section [class*="UButton"],
 .slide-leave-to {
   transform: translateY(100%);
 }
-

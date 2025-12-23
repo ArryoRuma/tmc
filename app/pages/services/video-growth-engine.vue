@@ -1,30 +1,52 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('video-growth-engine', () => queryCollection('videoengine').first())
-const title = page.value?.seo?.title || page.value?.title
-const description = page.value?.seo?.description || page.value?.description
+const { data: page } = await useAsyncData("video-growth-engine", () =>
+  queryCollection("videoengine").first(),
+);
+const title = page.value?.seo?.title || page.value?.title;
+const description = page.value?.seo?.description || page.value?.description;
 const items = ref([
-  { title: 'Discover', description: 'First, we dive in to what problems your facing and determine what types of videos will best address those challenges.', icon: 'i-lucide-target' },
-  { title: 'Define', description: 'Next, we outline a clear video strategy tailored to your goals.', icon: 'i-lucide-video' },
-  { title: 'Develop', description: 'Then, we film and produce high-quality videos that resonate with your audience.', icon: 'i-lucide-globe' },
-  { title: 'Deploy', description: 'Last, we distribute the videos and analyze performance to optimize results.', icon: 'i-lucide-bar-chart-2' }
-])
+  {
+    title: "Discover",
+    description:
+      "First, we dive in to what problems your facing and determine what types of videos will best address those challenges.",
+    icon: "i-lucide-target",
+  },
+  {
+    title: "Define",
+    description:
+      "Next, we outline a clear video strategy tailored to your goals.",
+    icon: "i-lucide-video",
+  },
+  {
+    title: "Develop",
+    description:
+      "Then, we film and produce high-quality videos that resonate with your audience.",
+    icon: "i-lucide-globe",
+  },
+  {
+    title: "Deploy",
+    description:
+      "Last, we distribute the videos and analyze performance to optimize results.",
+    icon: "i-lucide-bar-chart-2",
+  },
+]);
 
 // Handle smooth scrolling for anchor links
 onMounted(() => {
   // Add smooth scrolling behavior to the document
   if (import.meta.client) {
-    document.documentElement.style.scrollBehavior = 'smooth'
+    document.documentElement.style.scrollBehavior = "smooth";
     // Add scroll offset to account for sticky header
-    document.documentElement.style.scrollPaddingTop = '80px'
+    document.documentElement.style.scrollPaddingTop = "80px";
   }
-})
+});
 
 useSeoMeta({
   title,
   ogTitle: title,
   description,
-  ogDescription: description
-})
+  ogDescription: description,
+});
 </script>
 
 <!-- TODO: fix items data structure to match ProcessTab component's steps prop
@@ -57,22 +79,27 @@ useSeoMeta({
     >
       <template #title>
         <div class="space-y-4">
-          <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white">
+          <h2
+            class="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white"
+          >
             {{ section.title }}
           </h2>
           <div>
-            <p class="text-lg text-gray-900 dark:text-white font-normal tracking-normal">
+            <p
+              class="text-lg text-gray-900 dark:text-white font-normal tracking-normal"
+            >
               {{ section.description }}
             </p>
           </div>
-          <div
-            v-if="section.price"
-            class="flex justify-start"
-          >
+          <div v-if="section.price" class="flex justify-start">
             <div
               class="inline-flex items-center px-4 py-2 rounded-full bg-primary/10 text-primary font-semibold text-sm tracking-normal"
             >
-              {{ typeof section.price === 'string' ? section.price : section.price.display }}
+              {{
+                typeof section.price === "string"
+                  ? section.price
+                  : section.price.display
+              }}
             </div>
           </div>
         </div>
@@ -100,19 +127,16 @@ useSeoMeta({
           :src="section.image.src"
           :alt="section.image.alt || section.title || 'Section Image'"
           class="w-full h-auto aspect-auto object-cover rounded-lg"
-        >
+        />
       </div>
-      <ImagePlaceholder
-        v-else
-        class="aspect-video"
-      />
+      <ImagePlaceholder v-else class="aspect-video" />
     </UPageSection>
     <USeparator />
-    
-   <!-- TODO: Re-add ProcessTab component when ready and remove UStepper and related code
+
+    <!-- TODO: Re-add ProcessTab component when ready and remove UStepper and related code
     <div class="my-16 flex justify-center">
       <ServicesProcessTab />
-    </div>-->
+    </div> -->
     <UPageSection
       id="our-process"
       title="Our Process"
@@ -164,11 +188,7 @@ useSeoMeta({
       </div>
     </UPageSection>
     <USeparator /> -->
-    <UPageCTA
-      v-bind="page.cta"
-      variant="naked"
-      class="overflow-hidden"
-    >
+    <UPageCTA v-bind="page.cta" variant="naked" class="overflow-hidden">
       <LazyStarsBg />
     </UPageCTA>
   </div>

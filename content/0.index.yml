@@ -27,7 +27,7 @@ sections:
         variant: subtle
         icon: i-lucide-smile
         headline: Let's chat about your marketing challenges.
-    video: 
+    video:
       src: https://player.vimeo.com/progressive_redirect/playback/863697186/rendition/1080p/file.mp4?loc=external&log_user=0&signature=ace347a7ef2ae2c91e3efd8640f53115e73bdc49bb08c3e708613f404465b9d4
       poster: /images/home/clicky.png
       title: Outdated Marketing Video
@@ -38,10 +38,10 @@ sections:
       - title: Our marketing feels stale.
         description: How do we modernize it without losing who we are?
         icon: i-lucide-arrow-right-circle
-      - title: We have a great product that no one knows about. 
+      - title: We have a great product that no one knows about.
         description: How do we get more people to see it?
         icon: i-lucide-arrow-right-circle
-      - title: We need more customers... 
+      - title: We need more customers...
         description: ...but we’re not sure how to reach them.
         icon: i-lucide-arrow-right-circle
       - title: People love us AFTER they've talked to us.
@@ -52,8 +52,8 @@ sections:
         icon: i-lucide-arrow-right-circle
       - title: We're ready to grow.
         description: We just need a smarter way to do it.
-        icon: i-lucide-arrow-right-circle 
-      
+        icon: i-lucide-arrow-right-circle
+
 clients:
   title: Featured Clients
   description: Trusted by leaders across manufacturing, logistics, and professional services.
@@ -73,7 +73,7 @@ clients:
 
 features:
   title: Here Are Some Results You Can Expect.
-  description: 
+  description:
   items:
     - title: Clear Messaging
       description: We turn complex offerings into simple, believable stories buyers instantly understand and trust.
@@ -101,7 +101,7 @@ features:
 testimonials:
   headline: Hear From Our Clients
   title: Recent Work & Outcomes
-  description: 
+  description:
   items:
     - quote: I’ve worked in communications for 25 years, and TruMedia Creative is one of the most creative and visionary partners I’ve had the pleasure of working with. They can see an end-product and work through the steps to get there, all the while being open to adjustments and input. They believe in the power of team and collaboration and are often the first to pull people together to make a project better and more robust.
       user:
@@ -111,16 +111,16 @@ testimonials:
           src:
     - quote: When the pandemic hit, we were in need of a simple yet effective solution that allowed us to both pre-record and live stream our services. TruMedia Creative helped us put together a setup that was affordable, easy to use, and produces high quality audio and video. TruMedia Creative was great to work with and we would absolutely recommend them to other churches and organizations.
       user:
-        name: Associate Director 
+        name: Associate Director
         description: Non-Profit Organization
         avatar:
-          src: 
+          src:
     - quote: TruMedia Creative consistently brings strong ideas, organized project management, and exceptional creative quality to every project. The team excels at crafting story-driven videos, truly listening to clients, and capturing their stories with care. On multi-deliverable campaigns, they’ve led concepting, scripting, production, and voiceover while keeping teams aligned and moving forward. Their blend of fresh perspective, attention to detail, and genuine humility makes TruMedia Creative a standout collaborator and an invaluable partner.
       user:
         name: Creative Director
         description: Large Non-Profit Client
         avatar:
-          src: 
+          src:
 cta:
   title: Ready to show proof and get it in front of the right buyers?
   description: Want to find out how done-for-you systems generate more pipeline, shorten sales cycles, and reduce burnout while your team focuses on closing deals? Book a strategy call today.
@@ -128,7 +128,7 @@ cta:
     - label: Book a Call
       to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       trailingIcon: i-lucide-arrow-right
-    - label: 
-      to: 
-      variant: 
-      icon: 
+    - label:
+      to:
+      variant:
+      icon:

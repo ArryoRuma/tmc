@@ -1,92 +1,268 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed } from "vue";
 
 const items = computed(() => [
   {
-    label: 'Who We Help',
+    label: "Who We Help",
     children: [
-      { label: 'Contractors & Manufacturing', icon: 'i-lucide-hammer', to: '/industries/contractors-manufactures', disabled: true },
-      { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/industries/financial-services', disabled: true },
-      { label: 'Food Services', icon: 'i-lucide-utensils', to: '/industries/food-services', disabled: true },
-      { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/industries/non-profits', disabled: true },
-      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness', disabled: true },
-      { label: 'Live Events & Entertainment', icon: 'i-lucide-music', to: '/industries/live-events-and-entertainment', disabled: true }
-    ]
+      {
+        label: "Contractors & Manufacturing",
+        icon: "i-lucide-hammer",
+        to: "/industries/contractors-manufactures",
+        disabled: true,
+      },
+      {
+        label: "Financial Services",
+        icon: "i-lucide-banknote",
+        to: "/industries/financial-services",
+        disabled: true,
+      },
+      {
+        label: "Food Services",
+        icon: "i-lucide-utensils",
+        to: "/industries/food-services",
+        disabled: true,
+      },
+      {
+        label: "Non-Profits",
+        icon: "i-lucide-heart",
+        to: "/industries/non-profits",
+        disabled: true,
+      },
+      {
+        label: "Health & Wellness",
+        icon: "i-lucide-heart-pulse",
+        to: "/industries/health-and-wellness",
+        disabled: true,
+      },
+      {
+        label: "Live Events & Entertainment",
+        icon: "i-lucide-music",
+        to: "/industries/live-events-and-entertainment",
+        disabled: true,
+      },
+    ],
   },
   {
-    label: 'How We Help',
+    label: "How We Help",
     children: [
-      { label: 'Clarify Your Message', icon: 'i-lucide-award', to: '/solutions/clarify-your-message', disabled: true },
-      { label: 'Get More Leads', icon: 'i-lucide-user-search', to: '/solutions/get-more-leads', disabled: true },
-      { label: 'Speed Up Sales', icon: 'i-lucide-refresh-ccw', to: '/solutions/speed-up-sales', disabled: true },
-      { label: 'Reach More Buyers', icon: 'i-lucide-expand', to: '/solutions/reach-more-buyers', disabled: true },
-      { label: 'Keep Customers Longer', icon: 'i-lucide-chart-no-axes-combined', to: '/solutions/keep-customers-longer', disabled: true },
-      { label: 'Fix Your Live Stream & Events', icon: 'i-lucide-video', to: '/solutions/fix-your-live-stream-and-events', disabled: true }
-
-    ]
+      {
+        label: "Clarify Your Message",
+        icon: "i-lucide-award",
+        to: "/solutions/clarify-your-message",
+        disabled: true,
+      },
+      {
+        label: "Get More Leads",
+        icon: "i-lucide-user-search",
+        to: "/solutions/get-more-leads",
+        disabled: true,
+      },
+      {
+        label: "Speed Up Sales",
+        icon: "i-lucide-refresh-ccw",
+        to: "/solutions/speed-up-sales",
+        disabled: true,
+      },
+      {
+        label: "Reach More Buyers",
+        icon: "i-lucide-expand",
+        to: "/solutions/reach-more-buyers",
+        disabled: true,
+      },
+      {
+        label: "Keep Customers Longer",
+        icon: "i-lucide-chart-no-axes-combined",
+        to: "/solutions/keep-customers-longer",
+        disabled: true,
+      },
+      {
+        label: "Fix Your Live Stream & Events",
+        icon: "i-lucide-video",
+        to: "/solutions/fix-your-live-stream-and-events",
+        disabled: true,
+      },
+    ],
   },
   {
-    label: 'Ways We Work Together',
+    label: "Ways We Work Together",
     children: [
-      { label: 'Video Production', icon: 'i-lucide-video', to: '/services/video-growth-engine', disabled: false },
-      { label: 'Outbound Campaigns', icon: 'i-lucide-send', to: '/services/outreach-engine', disabled: true },
-      { label: 'Web Design & Development', icon: 'i-lucide-layout-dashboard', to: '/services/web-design', disabled: true },
-      { label: 'SEO & Paid Ads', icon: 'i-lucide-mouse-pointer-click', to: '/services/seo-and-paid-ads', disabled: true },
-      { label: 'Marketing Automation', icon: 'i-lucide-bot', to: '/services/marketing-automation', disabled: true },
-      { label: 'Content Creation', icon: 'i-lucide-edit-3', to: '/services/content-creation', disabled: true }
-
-    ]
-
-  }
+      {
+        label: "Video Production",
+        icon: "i-lucide-video",
+        to: "/services/video-growth-engine",
+        disabled: false,
+      },
+      {
+        label: "Outbound Campaigns",
+        icon: "i-lucide-send",
+        to: "/services/outreach-engine",
+        disabled: true,
+      },
+      {
+        label: "Web Design & Development",
+        icon: "i-lucide-layout-dashboard",
+        to: "/services/web-design",
+        disabled: true,
+      },
+      {
+        label: "SEO & Paid Ads",
+        icon: "i-lucide-mouse-pointer-click",
+        to: "/services/seo-and-paid-ads",
+        disabled: true,
+      },
+      {
+        label: "Marketing Automation",
+        icon: "i-lucide-bot",
+        to: "/services/marketing-automation",
+        disabled: true,
+      },
+      {
+        label: "Content Creation",
+        icon: "i-lucide-edit-3",
+        to: "/services/content-creation",
+        disabled: true,
+      },
+    ],
+  },
 
   /// {label: 'Docs', to: '/docs', active: route.path.startsWith('/docs')},
   /// { label: 'Resources', to: '/resources' },
   /// { label: 'About', to: '/who-we-are' }
   // { label: 'Resources', to: '/portfolio' },
   /// { label: 'Pricing', to: '/pricing'}
-
-])
+]);
 
 const mobileItems = computed(() => [
   {
-    label: 'Who We Help',
+    label: "Who We Help",
     open: true,
     children: [
-      { label: 'Contractors & Manufacturing', icon: 'i-lucide-hammer', to: '/industries/contractors-manufactures', disabled: true },
-      { label: 'Financial Services', icon: 'i-lucide-banknote', to: '/industries/financial-services', disabled: true },
-      { label: 'Food Services', icon: 'i-lucide-utensils', to: '/industries/food-services', disabled: true },
-      { label: 'Non-Profits', icon: 'i-lucide-heart', to: '/industries/non-profits', disabled: true },
-      { label: 'Health & Wellness', icon: 'i-lucide-heart-pulse', to: '/industries/health-and-wellness', disabled: true },
-      { label: 'Live Events & Entertainment', icon: 'i-lucide-music', to: '/industries/live-events-and-entertainment', disabled: true }
-    ]
+      {
+        label: "Contractors & Manufacturing",
+        icon: "i-lucide-hammer",
+        to: "/industries/contractors-manufactures",
+        disabled: true,
+      },
+      {
+        label: "Financial Services",
+        icon: "i-lucide-banknote",
+        to: "/industries/financial-services",
+        disabled: true,
+      },
+      {
+        label: "Food Services",
+        icon: "i-lucide-utensils",
+        to: "/industries/food-services",
+        disabled: true,
+      },
+      {
+        label: "Non-Profits",
+        icon: "i-lucide-heart",
+        to: "/industries/non-profits",
+        disabled: true,
+      },
+      {
+        label: "Health & Wellness",
+        icon: "i-lucide-heart-pulse",
+        to: "/industries/health-and-wellness",
+        disabled: true,
+      },
+      {
+        label: "Live Events & Entertainment",
+        icon: "i-lucide-music",
+        to: "/industries/live-events-and-entertainment",
+        disabled: true,
+      },
+    ],
   },
   {
-    label: 'How We Help',
+    label: "How We Help",
     open: true,
     children: [
-      { label: 'Clarify Your Message', icon: 'i-lucide-award', to: '/solutions/clarify-your-message', disabled: true },
-      { label: 'Get More Leads', icon: 'i-lucide-user-search', to: '/solutions/get-more-leads', disabled: true },
-      { label: 'Speed Up Sales', icon: 'i-lucide-refresh-ccw', to: '/solutions/speed-up-sales', disabled: true },
-      { label: 'Reach More Buyers', icon: 'i-lucide-expand', to: '/solutions/reach-more-buyers', disabled: true },
-      { label: 'Keep Customers Longer', icon: 'i-lucide-chart-no-axes-combined', to: '/solutions/keep-customers-longer', disabled: true },
-      { label: 'Fix Your Live Stream & Events', icon: 'i-lucide-video', to: '/solutions/fix-your-live-stream-and-events', disabled: true }
-    ]
+      {
+        label: "Clarify Your Message",
+        icon: "i-lucide-award",
+        to: "/solutions/clarify-your-message",
+        disabled: true,
+      },
+      {
+        label: "Get More Leads",
+        icon: "i-lucide-user-search",
+        to: "/solutions/get-more-leads",
+        disabled: true,
+      },
+      {
+        label: "Speed Up Sales",
+        icon: "i-lucide-refresh-ccw",
+        to: "/solutions/speed-up-sales",
+        disabled: true,
+      },
+      {
+        label: "Reach More Buyers",
+        icon: "i-lucide-expand",
+        to: "/solutions/reach-more-buyers",
+        disabled: true,
+      },
+      {
+        label: "Keep Customers Longer",
+        icon: "i-lucide-chart-no-axes-combined",
+        to: "/solutions/keep-customers-longer",
+        disabled: true,
+      },
+      {
+        label: "Fix Your Live Stream & Events",
+        icon: "i-lucide-video",
+        to: "/solutions/fix-your-live-stream-and-events",
+        disabled: true,
+      },
+    ],
   },
   {
-    label: 'Ways We Work Together',
+    label: "Ways We Work Together",
     open: true,
     children: [
-      { label: 'Video Production', icon: 'i-lucide-video', to: '/services/video-growth-engine', disabled: false },
-      { label: 'Outbound Campaigns', icon: 'i-lucide-send', to: '/services/outreach-engine', disabled: true },
-      { label: 'Web Design & Development', icon: 'i-lucide-layout-dashboard', to: '/services/web-design', disabled: true },
-      { label: 'SEO & Paid Ads', icon: 'i-lucide-mouse-pointer-click', to: '/services/seo-and-paid-ads', disabled: true },
-      { label: 'Marketing Automation', icon: 'i-lucide-bot', to: '/services/marketing-automation', disabled: true },
-      { label: 'Content Creation', icon: 'i-lucide-edit-3', to: '/services/content-creation', disabled: true }
-    ]
-  }
+      {
+        label: "Video Production",
+        icon: "i-lucide-video",
+        to: "/services/video-growth-engine",
+        disabled: false,
+      },
+      {
+        label: "Outbound Campaigns",
+        icon: "i-lucide-send",
+        to: "/services/outreach-engine",
+        disabled: true,
+      },
+      {
+        label: "Web Design & Development",
+        icon: "i-lucide-layout-dashboard",
+        to: "/services/web-design",
+        disabled: true,
+      },
+      {
+        label: "SEO & Paid Ads",
+        icon: "i-lucide-mouse-pointer-click",
+        to: "/services/seo-and-paid-ads",
+        disabled: true,
+      },
+      {
+        label: "Marketing Automation",
+        icon: "i-lucide-bot",
+        to: "/services/marketing-automation",
+        disabled: true,
+      },
+      {
+        label: "Content Creation",
+        icon: "i-lucide-edit-3",
+        to: "/services/content-creation",
+        disabled: true,
+      },
+    ],
+  },
   /// { label: 'Resources', to: '/resources' },
   /// { label: 'About', to: '/who-we-are' }
-])
+]);
 </script>
 
 <template>
@@ -116,9 +292,9 @@ const mobileItems = computed(() => [
         childItem: 'w-full',
 
         /* Ensure the clickable link spans the entire column */
-        childLink: 'w-full flex items-center px-3 py-2 rounded-md hover:bg-gray-100 hover:text-primary-400',
-        childLinkLabel: 'flex-1 whitespace-normal text-base font-normal'
-
+        childLink:
+          'w-full flex items-center px-3 py-2 rounded-md hover:bg-gray-100 hover:text-primary-400',
+        childLinkLabel: 'flex-1 whitespace-normal text-base font-normal',
       }"
     />
 
@@ -137,7 +313,10 @@ const mobileItems = computed(() => [
         variant="solid"
         to="/contact"
         class="hidden lg:inline-flex text-lg"
-        style="font-family: 'new-spirit', serif !important; font-weight: 600 !important;"
+        style="
+          font-family: &quot;new-spirit&quot;, serif !important;
+          font-weight: 600 !important;
+        "
       />
       <UColorModeButton />
       <!-- <UButton
@@ -154,7 +333,7 @@ const mobileItems = computed(() => [
         :items="mobileItems"
         orientation="vertical"
         color="primary"
-        class="-mx-2.5 "
+        class="-mx-2.5"
         multiple
       />
 

@@ -1,14 +1,14 @@
 <script setup lang="ts">
 interface Project {
-  title: string
-  description: string
-  year?: number
-  client?: string
-  services?: string[]
-  websiteUrl?: string
+  title: string;
+  description: string;
+  year?: number;
+  client?: string;
+  services?: string[];
+  websiteUrl?: string;
 }
 
-const { project } = defineProps<{ project: Project }>()
+const { project } = defineProps<{ project: Project }>();
 </script>
 
 <template>

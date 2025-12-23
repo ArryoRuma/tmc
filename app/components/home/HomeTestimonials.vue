@@ -1,26 +1,26 @@
 <script setup lang="ts">
 interface Testimonial {
-  quote: string
+  quote: string;
   user: {
-    name: string
-    description: string
-    to?: string
-    target?: string
+    name: string;
+    description: string;
+    to?: string;
+    target?: string;
     avatar: {
-      src?: string
-      loading?: string
-    }
-  }
+      src?: string;
+      loading?: string;
+    };
+  };
 }
 
 interface Props {
-  headline?: string
-  title?: string
-  description?: string
-  items?: Testimonial[]
+  headline?: string;
+  title?: string;
+  description?: string;
+  items?: Testimonial[];
 }
 
-defineProps<Props>()
+defineProps<Props>();
 </script>
 
 <template>
@@ -37,7 +37,10 @@ defineProps<Props>()
           :key="index"
           variant="subtle"
           :description="testimonial.quote"
-          :ui="{ description: 'before:content-[open-quote] after:content-[close-quote]' }"
+          :ui="{
+            description:
+              'before:content-[open-quote] after:content-[close-quote]',
+          }"
         >
           <template #footer>
             <UUser
@@ -47,7 +50,10 @@ defineProps<Props>()
               :target="testimonial.user.target"
               :avatar="{
                 ...testimonial.user.avatar,
-                loading: testimonial.user.avatar.loading as 'lazy' | 'eager' | undefined
+                loading: testimonial.user.avatar.loading as
+                  | 'lazy'
+                  | 'eager'
+                  | undefined,
               }"
             />
           </template>

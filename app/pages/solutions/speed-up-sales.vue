@@ -1,14 +1,16 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('speedupsales', () => queryCollection('speedupsales').first())
-const title = page.value?.seo?.title || page.value?.title
-const description = page.value?.seo?.description || page.value?.description
+const { data: page } = await useAsyncData("speedupsales", () =>
+  queryCollection("speedupsales").first(),
+);
+const title = page.value?.seo?.title || page.value?.title;
+const description = page.value?.seo?.description || page.value?.description;
 
 useSeoMeta({
   title,
   ogTitle: title,
   description,
-  ogDescription: description
-})
+  ogDescription: description,
+});
 </script>
 
 <template>
@@ -52,11 +54,7 @@ useSeoMeta({
       <ImagePlaceholder />
     </UPageSection>
     <USeparator />
-    <UPageCTA
-      v-bind="page.cta"
-      variant="naked"
-      class="overflow-hidden"
-    >
+    <UPageCTA v-bind="page.cta" variant="naked" class="overflow-hidden">
       <LazyStarsBg />
     </UPageCTA>
   </div>

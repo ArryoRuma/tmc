@@ -1,19 +1,19 @@
 <script setup lang="ts">
-const { data: page } = await useAsyncData('clarifyyourmessage', () => queryCollection('clarifyyourmessage').first())
-const title = page.value?.seo?.title || page.value?.title
-const description = page.value?.seo?.description || page.value?.description
+const { data: page } = await useAsyncData("clarifyyourmessage", () =>
+  queryCollection("clarifyyourmessage").first(),
+);
+const title = page.value?.seo?.title || page.value?.title;
+const description = page.value?.seo?.description || page.value?.description;
 useHead({
   title: title,
-  meta: [
-    { name: 'description', content: description }
-  ]
-})
+  meta: [{ name: "description", content: description }],
+});
 useSeoMeta({
   title,
   ogTitle: title,
   description,
-  ogDescription: description
-})
+  ogDescription: description,
+});
 </script>
 
 <template>
@@ -58,11 +58,7 @@ useSeoMeta({
       </UPageGrid>
     </UPageSection>
     <USeparator />
-    <UPageCTA
-      v-bind="page.cta"
-      variant="solid"
-      class="overflow-hidden"
-    >
+    <UPageCTA v-bind="page.cta" variant="solid" class="overflow-hidden">
       <LazyStarsBg />
     </UPageCTA>
   </div>

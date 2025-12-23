@@ -1,65 +1,77 @@
 <script setup lang="ts">
-const colorMode = useColorMode()
+const colorMode = useColorMode();
 
-const color = computed(() => colorMode.value === 'dark' ? '#021218' : 'white')
+const color = computed(() =>
+  colorMode.value === "dark" ? "#021218" : "white",
+);
 
 useHead({
   meta: [
-    { charset: 'utf-8' },
-    { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    { key: 'theme-color', name: 'theme-color', content: color }
+    { charset: "utf-8" },
+    { name: "viewport", content: "width=device-width, initial-scale=1" },
+    { key: "theme-color", name: "theme-color", content: color },
   ],
-  link: [
-    { rel: 'icon', href: '/favicon.png' }
-  ],
+  link: [{ rel: "icon", href: "/favicon.png" }],
   htmlAttrs: {
-    lang: 'en'
-  }
-})
+    lang: "en",
+  },
+});
 
 useSeoMeta({
-  title: 'TruMedia Creative | Video-Led Growth for B2B & Expert-Led Companies',
-  titleTemplate: '%s · TruMedia Creative',
-  ogSiteName: 'TruMedia Creative',
-  ogImage: '/ogimage.png',
-  twitterImage: '/ogimage.png',
-  twitterCard: 'summary_large_image',
-  ogType: 'website'
-})
-const { data: navigation } = await useAsyncData('navigation', () => queryCollectionNavigation('docs'), {
-  transform: data => data.find(item => item.path === '/docs')?.children || []
-})
-const { data: files } = useLazyAsyncData('search', () => queryCollectionSearchSections('docs'), {
-  server: false
-})
+  title: "TruMedia Creative | Video-Led Growth for B2B & Expert-Led Companies",
+  titleTemplate: "%s · TruMedia Creative",
+  ogSiteName: "TruMedia Creative",
+  ogImage: "/ogimage.png",
+  twitterImage: "/ogimage.png",
+  twitterCard: "summary_large_image",
+  ogType: "website",
+});
+const { data: navigation } = await useAsyncData(
+  "navigation",
+  () => queryCollectionNavigation("docs"),
+  {
+    transform: (data) =>
+      data.find((item) => item.path === "/docs")?.children || [],
+  },
+);
+const { data: files } = useLazyAsyncData(
+  "search",
+  () => queryCollectionSearchSections("docs"),
+  {
+    server: false,
+  },
+);
 
-const links = [{
-  label: 'Docs',
-  icon: 'i-lucide-book',
-  to: '/docs/getting-started'
-}, {
-  label: 'Pricing',
-  icon: 'i-lucide-credit-card',
-  to: '/pricing'
-},
-{ label: 'Video Growth Engine ',
-  icon: 'i-lucide-building-warehouse',
-  to: '/video-growth-engine'
-},
-{ label: 'Industrial',
-  icon: 'i-lucide-factory',
-  to: '/industrial'
-}, {
-  label: 'Blog',
-  icon: 'i-lucide-pencil',
-  to: '/blog'
-}, {
-  label: 'Changelog',
-  icon: 'i-lucide-history',
-  to: '/changelog'
-}]
+const links = [
+  {
+    label: "Docs",
+    icon: "i-lucide-book",
+    to: "/docs/getting-started",
+  },
+  {
+    label: "Pricing",
+    icon: "i-lucide-credit-card",
+    to: "/pricing",
+  },
+  {
+    label: "Video Growth Engine ",
+    icon: "i-lucide-building-warehouse",
+    to: "/video-growth-engine",
+  },
+  { label: "Industrial", icon: "i-lucide-factory", to: "/industrial" },
+  {
+    label: "Blog",
+    icon: "i-lucide-pencil",
+    to: "/blog",
+  },
+  {
+    label: "Changelog",
+    icon: "i-lucide-history",
+    to: "/changelog",
+  },
+];
 
-provide('navigation', navigation)
+provide("navigation", navigation);
 </script>
 
 <template>

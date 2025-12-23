@@ -126,7 +126,7 @@ pricing:
       description: 90-minute live messaging sprint
       icon: i-lucide-video
       price:
-        display: $1,500 
+        display: $1,500
         unit: one-time
       features:
         - Live, 90-minute working session
