@@ -16,6 +16,11 @@ hero:
       trailing: true
       to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       size: xl
+    - label: See Our Work
+      to: /projects
+      variant: subtle
+      icon: i-lucide-eye
+      size: xl
 sections:
   - title: Any of these sound familiar?
     description: You’re not alone — and you don’t need louder marketing. You need clarity, proof, and a system that works together.
@@ -128,7 +133,7 @@ cta:
     - label: Book a Call
       to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       trailingIcon: i-lucide-arrow-right
-    - label:
-      to:
-      variant:
-      icon:
+    - label: View Our Services
+      to: /services/video-growth-engine
+      variant: subtle
+      icon: i-lucide-layers
