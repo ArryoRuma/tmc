@@ -2,48 +2,41 @@
 const props = defineProps<{
   videoUrl?: string;
   title?: string;
-  description?: string;
   posterImage?: string;
 }>();
 </script>
 
 <template>
-  <div class="bg-gray-50 dark:bg-gray-950 py-16">
+  <div class="bg-white dark:bg-gray-950 py-16">
     <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto">
+      <div class="max-w-6xl mx-auto">
         <h3 class="text-3xl font-bold mb-2 text-center">
           {{ props.title || "Project Video" }}
         </h3>
-        <p
-          v-if="props.description"
-          class="text-center text-gray-600 dark:text-gray-300 mb-12"
-        >
-          {{ props.description }}
-        </p>
-        <p
-          v-else
-          class="text-center text-gray-600 dark:text-gray-300 mb-12"
-        >
-          See the project in action
+        <p class="text-center text-gray-600 dark:text-gray-300 mb-12">
+          Watch the project highlights and results
         </p>
 
-        <!-- Display actual video if URL is provided -->
-        <div v-if="props.videoUrl" class="relative rounded-xl overflow-hidden shadow-2xl">
+        <!-- Video Player if URL is provided -->
+        <div
+          v-if="props.videoUrl"
+          class="relative overflow-hidden rounded-2xl shadow-2xl"
+        >
           <video
-            class="w-full"
+            class="w-full aspect-video rounded-xl"
+            preload="none"
             :poster="props.posterImage"
-            controls
-            preload="metadata"
+            :controls="true"
           >
             <source :src="props.videoUrl" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
 
-        <!-- Show placeholder if no video URL -->
+        <!-- Placeholder if no video URL -->
         <div
           v-else
-          class="relative overflow-hidden rounded-xl border-2 border-dashed border-gray-300 dark:border-gray-700 aspect-video"
+          class="relative overflow-hidden rounded-2xl border-2 border-dashed border-gray-300 dark:border-gray-700 aspect-video"
         >
           <div
             class="absolute inset-0 flex items-center justify-center bg-gray-50 dark:bg-gray-900"
@@ -71,9 +64,9 @@ const props = defineProps<{
                 height="100%"
               />
             </svg>
-            <div class="relative z-10 text-center p-4">
+            <div class="relative z-10 text-center p-8">
               <svg
-                class="w-16 h-16 mx-auto mb-3 text-gray-400 dark:text-gray-600"
+                class="w-20 h-20 mx-auto mb-4 text-gray-400 dark:text-gray-600"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -91,8 +84,11 @@ const props = defineProps<{
                   d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <p class="text-sm font-medium text-gray-500 dark:text-gray-400">
-                Video Coming Soon
+              <p class="text-lg font-medium text-gray-500 dark:text-gray-400">
+                Video Placeholder
+              </p>
+              <p class="text-sm text-gray-400 dark:text-gray-500 mt-2">
+                Project video will be added here
               </p>
             </div>
           </div>
