@@ -76,11 +76,7 @@ TODO:add in the video placeholder
       :approach="project.approach"
       :solution="project.solution"
     />
-    <ProjectsDetails
-      :challenge="project.challenge"
-      :solution="project.solution"
-      :services="project.services"
-    />
+    <ProjectsDetails :services="project.services" />
     <ProjectsImage
       :image="project.heroImage"
       :title="project.title"

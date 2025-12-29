@@ -10,20 +10,27 @@ const props = defineProps<{
   <div class="bg-primary-50 dark:bg-primary-900 py-16">
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto">
-        <div class="grid md:grid-cols-3 gap-12">
-          <div>
+        <div
+          class="grid gap-12"
+          :class="{
+            'md:grid-cols-3': props.challenge && props.solution && props.services,
+            'md:grid-cols-2': (props.challenge || props.solution) && props.services && !(props.challenge && props.solution),
+            'md:grid-cols-1': !props.challenge && !props.solution && props.services,
+          }"
+        >
+          <div v-if="props.challenge">
             <h3 class="text-2xl font-bold mb-6">The Challenge</h3>
             <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
               {{ props.challenge }}
             </p>
           </div>
-          <div>
+          <div v-if="props.solution">
             <h3 class="text-2xl font-bold mb-6">Our Solution</h3>
             <p class="text-gray-600 dark:text-gray-300 leading-relaxed">
               {{ props.solution }}
             </p>
           </div>
-          <div>
+          <div v-if="props.services">
             <h3 class="text-2xl font-bold mb-6">Services Provided</h3>
             <div class="space-y-3">
               <div
