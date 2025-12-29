@@ -7,28 +7,44 @@ const title = page.value?.seo?.title || page.value?.title;
 const description = page.value?.seo?.description || page.value?.description;
 const fourStep = ref([
   {
-    title: "Discover",
+    id: "1",
+    title: "Step 1",
+    subtitle: "Discover",
     description:
       "First, we dive in to what problems your facing and determine what types of videos will best address those challenges.",
     icon: "i-lucide-target",
+    content:
+      "Our discovery process involves deep research into your market, competitors, and audience to create a foundation for success.",
   },
   {
-    title: "Define",
+    id: "2",
+    title: "Step 2",
+    subtitle: "Define",
     description:
       "Next, we outline a clear messaging framework that your clients will understand and connect with.",
     icon: "i-lucide-video",
+    content:
+      "We implement your strategy using best practices and cutting-edge tools, ensuring every detail aligns with your objectives.",
   },
   {
-    title: "Develop",
+    id: "3",
+    title: "Step 3",
+    subtitle: "Develop",
     description:
       "Then, we produce high-quality marketing assets that resonate with your audience.",
     icon: "i-lucide-globe",
+    content:
+      "Our production team creates compelling content that captures your brand's essence and engages your target audience effectively.",
   },
   {
-    title: "Deploy",
+    id: "4",
+    title: "Step 4",
+    subtitle: "Deploy",
     description:
       "Last, we distribute the marketing assets and analyze performance to optimize results.",
     icon: "i-lucide-bar-chart-2",
+    content:
+      "Continuous monitoring and optimization ensure your investment delivers measurable results and long-term success.",
   },
 ]);
 useSeoMeta({
@@ -39,8 +55,7 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: fix fourStep data structure to match ProcessTab component's steps prop
-TODO: add in secondary call to action in hero and CTA footer -->
+<!-- TODO: add in secondary call to action in hero and CTA footer -->
 <template>
   <div v-if="page?.title">
     <FadeInUp :delay="0.3">
