@@ -60,7 +60,6 @@ useSeoMeta({
 
 <!-- TODO: verify this page is consistent with other project pages
 TODO: add photo gallery placeholder
-TODO: add in case study placeholder
 TODO:add in the video placeholder
  -->
 <template>
@@ -72,6 +71,11 @@ TODO:add in the video placeholder
         :after-image="project.afterImage"
       />
     </div>
+    <ProjectsCaseStudy
+      :challenge="project.challenge"
+      :approach="project.approach"
+      :solution="project.solution"
+    />
     <ProjectsDetails
       :challenge="project.challenge"
       :solution="project.solution"
