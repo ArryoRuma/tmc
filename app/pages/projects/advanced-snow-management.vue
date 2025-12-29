@@ -13,6 +13,7 @@ interface Project {
   approach?: string;
   solution?: string;
   results?: string[];
+  galleryImages?: string[];
 }
 
 const project: Project = {
@@ -46,6 +47,7 @@ const project: Project = {
     "Reduced friction during late-stage sales and contract discussions",
     "Stronger positioning as an enterprise-capable snow management partner",
   ],
+  galleryImages: [],
 };
 definePageMeta({
   layout: "projects",
@@ -59,7 +61,6 @@ useSeoMeta({
 </script>
 
 <!-- TODO: verify this page is consistent with other project pages
-TODO: add photo gallery placeholder
 TODO: add in case study placeholder
 TODO:add in the video placeholder
  -->
@@ -81,6 +82,10 @@ TODO:add in the video placeholder
       :image="project.heroImage"
       :title="project.title"
       :website-url="project.websiteUrl"
+    />
+    <ProjectsGallery
+      :images="project.galleryImages"
+      :title="`${project.client} Photo Gallery`"
     />
     <ProjectsResults :results="project.results" />
   </div>
