@@ -9,6 +9,8 @@ interface Project {
   beforeImage?: string;
   afterImage?: string;
   websiteUrl?: string;
+  videoUrl?: string;
+  videoPoster?: string;
   challenge?: string;
   approach?: string;
   solution?: string;
@@ -33,6 +35,8 @@ const project: Project = {
   beforeImage: "",
   afterImage: "",
   websiteUrl: "",
+  videoUrl: "",
+  videoPoster: "",
   challenge:
     "Advanced Snow Management was pursuing large industrial and enterprise snow removal contracts with long sales cycles, complex scopes, and multiple decision-makers. Winning required more than competitive pricing—it required clarity, credibility, and confidence at every stage of the buying process.",
   approach:
@@ -61,7 +65,6 @@ useSeoMeta({
 <!-- TODO: verify this page is consistent with other project pages
 TODO: add photo gallery placeholder
 TODO: add in case study placeholder
-TODO:add in the video placeholder
  -->
 <template>
   <div>
@@ -76,6 +79,11 @@ TODO:add in the video placeholder
       :challenge="project.challenge"
       :solution="project.solution"
       :services="project.services"
+    />
+    <ProjectsVideo
+      :video-url="project.videoUrl"
+      :title="project.title"
+      :poster="project.videoPoster"
     />
     <ProjectsImage
       :image="project.heroImage"
