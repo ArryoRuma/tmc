@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { reactive, ref } from "vue";
+import { reactive, ref, computed } from "vue";
 
 const form = reactive({
   useWeLanguage: false,
@@ -74,6 +74,114 @@ const form = reactive({
 });
 
 const generated = ref("");
+const errors = reactive<Record<string, string>>({});
+const touched = reactive<Record<string, boolean>>({});
+const formSubmitted = ref(false);
+
+// Validation rules
+const requiredFields = [
+  "packageName",
+  "primaryOutcome",
+  "buyerType",
+  "niche",
+] as const;
+
+const priceFields = [
+  "monthlyPrice",
+  "setupPrice",
+  "mgmtPrice",
+  "basePrice",
+  "commissionPercent",
+] as const;
+
+const validateField = (fieldName: string, value: string): string => {
+  // Required field validation
+  if (requiredFields.includes(fieldName as typeof requiredFields[number])) {
+    if (!value || value.trim() === "") {
+      return "This field is required";
+    }
+  }
+
+  // Numeric price validation
+  if (priceFields.includes(fieldName as typeof priceFields[number])) {
+    if (value && value.trim() !== "") {
+      const numValue = parseFloat(value);
+      if (isNaN(numValue) || numValue < 0) {
+        return "Please enter a valid positive number";
+      }
+    }
+  }
+
+  return "";
+};
+
+const validateForm = (): boolean => {
+  let isValid = true;
+  const newErrors: Record<string, string> = {};
+
+  // Validate required fields
+  requiredFields.forEach((field) => {
+    const error = validateField(field, form[field] as string);
+    if (error) {
+      newErrors[field] = error;
+      isValid = false;
+    }
+  });
+
+  // Validate price fields
+  priceFields.forEach((field) => {
+    const value = form[field as keyof typeof form] as string;
+    const error = validateField(field, value);
+    if (error) {
+      newErrors[field] = error;
+      isValid = false;
+    }
+  });
+
+  // Clear existing errors and set new ones
+  Object.keys(errors).forEach((key) => {
+    errors[key] = "";
+  });
+  Object.assign(errors, newErrors);
+  return isValid;
+};
+
+const handleBlur = (fieldName: string) => {
+  touched[fieldName] = true;
+  const value = form[fieldName as keyof typeof form] as string;
+  const error = validateField(fieldName, value);
+
+  if (error) {
+    errors[fieldName] = error;
+  } else {
+    errors[fieldName] = "";
+  }
+};
+
+const handleInput = (fieldName: string) => {
+  if (touched[fieldName] || formSubmitted.value) {
+    const value = form[fieldName as keyof typeof form] as string;
+    const error = validateField(fieldName, value);
+
+    if (error) {
+      errors[fieldName] = error;
+    } else {
+      errors[fieldName] = "";
+    }
+  }
+};
+
+const hasError = (fieldName: string): boolean => {
+  return (touched[fieldName] || formSubmitted.value) && !!errors[fieldName];
+};
+
+const getErrorMessage = (fieldName: string): string => {
+  return hasError(fieldName) ? (errors[fieldName] || "") : "";
+};
+
+const activeErrors = computed(() => {
+  return Object.entries(errors).filter(([_, value]) => value);
+});
 
 const getArticle = (word: string) => {
   if (!word) return "a";
@@ -82,6 +190,22 @@ const getArticle = (word: string) => {
 };
 
 const generateOffer = () => {
+  formSubmitted.value = true;
+
+  // Validate form before generating
+  if (!validateForm()) {
+    // Scroll to first error
+    const firstErrorEntry = Object.entries(errors).find(([_, value]) => value);
+    if (firstErrorEntry) {
+      const firstErrorField = firstErrorEntry[0];
+      const element = document.querySelector(`[data-field="${firstErrorField}"]`);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+    return;
+  }
+
   const f = form;
 
   generated.value = [
@@ -225,11 +349,82 @@ const copyToClipboard = async () => {
 };
 
 const resetForm = () => {
-  Object.keys(form).forEach((key) => {
-    // @ts-expect-error – dynamic index assign
-    form[key] = "";
-  });
+  // Reset to default values instead of empty strings
+  form.useWeLanguage = false;
+  form.packageName = "Outbound Growth Engine";
+  form.painPoint1 = "Inconsistent lead generation";
+  form.painPoint2 = "Unpredictable sales pipeline";
+  form.painPoint3 = "Manual prospecting takes too much time";
+  form.painPoint4 = "Low response rates from cold outreach";
+  form.painPoint5 = "Difficulty identifying qualified prospects";
+  form.symptom1 = "Working 60+ hours but revenue stays flat";
+  form.symptom2 = "Feast or famine sales cycles";
+  form.symptom3 = "Most of your time spent chasing leads";
+  form.symptom4 = "Declining conversion rates from referrals";
+  form.roleOverloadDetails = "sales, delivery, operations, and strategy all at once";
+  form.coreProblem = "inconsistent, unpredictable pipeline and sales";
+  form.primaryOutcome = "a consistent flow of qualified conversations";
+  form.coreMechanism = "a simple, automated outbound system";
+  form.buyerType = "B2B service businesses";
+  form.niche = "industrial and professional services";
+  form.toolsOrMethod = "smart data, targeted messaging, and light automation";
+  form.simpleOutcome = "booked meetings with real buyers";
+  form.bigObstacle = "spending all day chasing leads";
+  form.onboardingFormName = "quick onboarding form";
+  form.workshopLength = "60–90 minute";
+  form.buildStyle = "live with you on the call";
+  form.deliverable1 = "Complete prospect database with contact details";
+  form.deliverable2 = "Automated email sequences for follow-up";
+  form.deliverable3 = "Custom CRM setup and training";
+  form.optionalDeliverable4 = "Monthly performance review calls";
+  form.clientPreferredWork = "the creative and strategic work you actually enjoy";
+  form.clientPainfulWork = "manual follow-ups and chasing cold leads";
+  form.goal1 = "Generate 5-10 qualified leads per month";
+  form.goal2 = "Reduce time spent on prospecting by 70%";
+  form.goal3 = "Increase conversion rates from outreach";
+  form.goal4 = "Build a predictable sales pipeline";
+  form.deliverableBlock1Title = "Prospect Research & Database Setup";
+  form.actionVerb1 = "research and organize";
+  form.component1 = "target prospect database";
+  form.outcome1 = "focus your efforts on the right people";
+  form.subItemA = "Industry-specific prospect list (500+ contacts)";
+  form.subItemB = "Contact verification and enrichment";
+  form.subItemC = "CRM setup with automated scoring";
+  form.outcomeStatement1 = "You'll have a qualified database of prospects ready to contact";
+  form.deliverableBlock2Title = "Outreach System & Messaging";
+  form.actionVerb2 = "create and optimize";
+  form.component2 = "messaging and outreach sequences";
+  form.outcome2 = "your messages get opened and responded to";
+  form.subItemD = "Email templates with high response rates";
+  form.subItemE = "LinkedIn connection and follow-up sequences";
+  form.subItemF = "A/B testing framework for optimization";
+  form.outcomeStatement2 = "You'll have proven messaging that consistently generates responses";
+  form.deliverableBlock3Title = "Automation & Follow-up Systems";
+  form.actionVerb3 = "implement and configure";
+  form.component3 = "automated follow-up systems";
+  form.toolsOrProcess = "email automation and CRM workflows";
+  form.subItemG = "Automated email drip campaigns";
+  form.subItemH = "Follow-up reminders and scheduling";
+  form.subItemI = "Performance tracking and reporting";
+  form.outcomeStatement3 = "You'll have a system that works while you focus on closing deals";
+  form.monthlyPrice = "2500";
+  form.setupPrice = "3500";
+  form.mgmtPrice = "1500";
+  form.basePrice = "2000";
+  form.commissionPercent = "5";
+  form.commissionTrigger = "closed deals from booked meetings";
+  form.timeFrame = "90 days";
+  form.ctaUrl = "";
+  form.theme = "light";
+  
   generated.value = "";
+  formSubmitted.value = false;
+  Object.keys(errors).forEach((key) => {
+    errors[key] = "";
+  });
+  Object.keys(touched).forEach((key) => {
+    touched[key] = false;
+  });
 };
 </script>
 
@@ -244,6 +439,9 @@ TODO: upon submission, create a downloadable pdf of the output -->
       <p class="text-sm text-gray-600 dark:text-gray-400">
         Fill in the fields below and click “Generate Offer” to create a
         formatted document you can paste into proposals, SOWs, or landing pages.
+      </p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">
+        <span class="text-red-600">*</span> indicates required fields
       </p>
     </header>
     <!-- Toggle Options -->
@@ -261,44 +459,104 @@ TODO: upon submission, create a downloadable pdf of the output -->
       <section class="space-y-4">
         <h2 class="text-xl font-semibold">Basics</h2>
         <div class="grid gap-4 md:grid-cols-2">
-          <label class="flex flex-col gap-1 text-sm">
-            <span class="font-bold">Package Name</span>
+          <label class="flex flex-col gap-1 text-sm" data-field="packageName">
+            <span class="font-bold"
+              >Package Name <span class="text-red-600">*</span></span
+            >
             <input
               v-model="form.packageName"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('packageName')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="Outbound Growth Engine"
+              @blur="handleBlur('packageName')"
+              @input="handleInput('packageName')"
             />
+            <span
+              v-if="hasError('packageName')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("packageName") }}
+            </span>
           </label>
 
-          <label class="flex flex-col gap-1 text-sm">
-            <span class="font-bold">Primary Outcome</span>
+          <label
+            class="flex flex-col gap-1 text-sm"
+            data-field="primaryOutcome"
+          >
+            <span class="font-bold"
+              >Primary Outcome <span class="text-red-600">*</span></span
+            >
             <input
               v-model="form.primaryOutcome"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('primaryOutcome')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="a consistent flow of qualified conversations"
+              @blur="handleBlur('primaryOutcome')"
+              @input="handleInput('primaryOutcome')"
             />
+            <span
+              v-if="hasError('primaryOutcome')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("primaryOutcome") }}
+            </span>
           </label>
 
-          <label class="flex flex-col gap-1 text-sm">
-            <span class="font-bold">Buyer Type</span>
+          <label class="flex flex-col gap-1 text-sm" data-field="buyerType">
+            <span class="font-bold"
+              >Buyer Type <span class="text-red-600">*</span></span
+            >
             <input
               v-model="form.buyerType"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('buyerType')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="B2B service businesses"
+              @blur="handleBlur('buyerType')"
+              @input="handleInput('buyerType')"
             />
+            <span
+              v-if="hasError('buyerType')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("buyerType") }}
+            </span>
           </label>
 
-          <label class="flex flex-col gap-1 text-sm">
-            <span class="font-bold">Niche</span>
+          <label class="flex flex-col gap-1 text-sm" data-field="niche">
+            <span class="font-bold"
+              >Niche <span class="text-red-600">*</span></span
+            >
             <input
               v-model="form.niche"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('niche')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="industrial and professional services"
+              @blur="handleBlur('niche')"
+              @input="handleInput('niche')"
             />
+            <span v-if="hasError('niche')" class="text-xs text-red-600 mt-1">
+              {{ getErrorMessage("niche") }}
+            </span>
           </label>
         </div>
       </section>
@@ -808,52 +1066,120 @@ TODO: upon submission, create a downloadable pdf of the output -->
       <section class="space-y-4">
         <h2 class="text-xl font-semibold">Pricing &amp; CTA</h2>
         <div class="grid gap-4 md:grid-cols-3">
-          <label class="flex flex-col gap-1 text-sm">
+          <label class="flex flex-col gap-1 text-sm" data-field="monthlyPrice">
             <span class="font-bold">Monthly Price</span>
             <input
               v-model="form.monthlyPrice"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('monthlyPrice')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="2500"
+              @blur="handleBlur('monthlyPrice')"
+              @input="handleInput('monthlyPrice')"
             />
+            <span
+              v-if="hasError('monthlyPrice')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("monthlyPrice") }}
+            </span>
           </label>
-          <label class="flex flex-col gap-1 text-sm">
+          <label class="flex flex-col gap-1 text-sm" data-field="setupPrice">
             <span class="font-bold">Setup Price</span>
             <input
               v-model="form.setupPrice"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('setupPrice')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="3500"
+              @blur="handleBlur('setupPrice')"
+              @input="handleInput('setupPrice')"
             />
+            <span
+              v-if="hasError('setupPrice')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("setupPrice") }}
+            </span>
           </label>
-          <label class="flex flex-col gap-1 text-sm">
+          <label class="flex flex-col gap-1 text-sm" data-field="mgmtPrice">
             <span class="font-bold">Management Price</span>
             <input
               v-model="form.mgmtPrice"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('mgmtPrice')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="1500"
+              @blur="handleBlur('mgmtPrice')"
+              @input="handleInput('mgmtPrice')"
             />
+            <span
+              v-if="hasError('mgmtPrice')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("mgmtPrice") }}
+            </span>
           </label>
         </div>
         <div class="grid gap-4 md:grid-cols-3">
-          <label class="flex flex-col gap-1 text-sm">
+          <label class="flex flex-col gap-1 text-sm" data-field="basePrice">
             <span class="font-bold">Base Price</span>
             <input
               v-model="form.basePrice"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('basePrice')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="2000"
+              @blur="handleBlur('basePrice')"
+              @input="handleInput('basePrice')"
             />
+            <span
+              v-if="hasError('basePrice')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("basePrice") }}
+            </span>
           </label>
-          <label class="flex flex-col gap-1 text-sm">
+          <label
+            class="flex flex-col gap-1 text-sm"
+            data-field="commissionPercent"
+          >
             <span class="font-bold">Commission %</span>
             <input
               v-model="form.commissionPercent"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('commissionPercent')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="5"
+              @blur="handleBlur('commissionPercent')"
+              @input="handleInput('commissionPercent')"
             />
+            <span
+              v-if="hasError('commissionPercent')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("commissionPercent") }}
+            </span>
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Commission Trigger</span>
@@ -875,6 +1201,26 @@ TODO: upon submission, create a downloadable pdf of the output -->
           />
         </label>
       </section>
+
+      <!-- Form Validation Error Alert -->
+      <div
+        v-if="formSubmitted && activeErrors.length > 0"
+        class="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
+      >
+        <div class="flex items-start gap-3">
+          <Icon name="lucide:alert-circle" class="text-red-600 text-xl mt-0.5" />
+          <div>
+            <h3 class="font-semibold text-red-800 dark:text-red-200">
+              Please fix the following errors:
+            </h3>
+            <ul class="mt-2 text-sm text-red-700 dark:text-red-300 list-disc list-inside">
+              <li v-for="[field, error] in activeErrors" :key="field">
+                {{ field }}: {{ error }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <div class="flex gap-4 items-center">
         <button
