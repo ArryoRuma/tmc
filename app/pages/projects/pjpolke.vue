@@ -51,7 +51,8 @@ useSeoMeta({
   ogDescription: project.description,
 });
 </script>
-
+<!--TODO: add projects gallery placeholder -->
+<!--TODO: verify this page is consistent with other project pages  -->
 <template>
   <div>
     <ProjectsHero :project="project" />

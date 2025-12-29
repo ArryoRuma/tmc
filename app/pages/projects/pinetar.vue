@@ -29,7 +29,8 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages -->
+<!-- TODO: verify this page is consistent with other project pages (like nourish-to-heal-2) by using the projectSpotlight components
+ TODO: add projects gallery placeholder -->
 <template>
   <div>
     <ProjectsHero :project="project" />
