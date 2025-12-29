@@ -74,6 +74,106 @@ const form = reactive({
 });
 
 const generated = ref("");
+const errors = reactive<Record<string, string>>({});
+const touched = reactive<Record<string, boolean>>({});
+const formSubmitted = ref(false);
+
+// Validation rules
+const requiredFields = [
+  "packageName",
+  "primaryOutcome",
+  "buyerType",
+  "niche",
+] as const;
+
+const validateField = (fieldName: string, value: string): string => {
+  // Required field validation
+  if (requiredFields.includes(fieldName as typeof requiredFields[number])) {
+    if (!value || value.trim() === "") {
+      return "This field is required";
+    }
+  }
+
+  // Numeric price validation
+  if (
+    [
+      "monthlyPrice",
+      "setupPrice",
+      "mgmtPrice",
+      "basePrice",
+      "commissionPercent",
+    ].includes(fieldName)
+  ) {
+    if (value && value.trim() !== "") {
+      const numValue = parseFloat(value);
+      if (isNaN(numValue) || numValue < 0) {
+        return "Please enter a valid positive number";
+      }
+    }
+  }
+
+  return "";
+};
+
+const validateForm = (): boolean => {
+  let isValid = true;
+  const newErrors: Record<string, string> = {};
+
+  // Validate required fields
+  requiredFields.forEach((field) => {
+    const error = validateField(field, form[field] as string);
+    if (error) {
+      newErrors[field] = error;
+      isValid = false;
+    }
+  });
+
+  // Validate price fields
+  ["monthlyPrice", "setupPrice", "mgmtPrice", "basePrice", "commissionPercent"].forEach((field) => {
+    const value = form[field as keyof typeof form] as string;
+    const error = validateField(field, value);
+    if (error) {
+      newErrors[field] = error;
+      isValid = false;
+    }
+  });
+
+  Object.assign(errors, newErrors);
+  return isValid;
+};
+
+const handleBlur = (fieldName: string) => {
+  touched[fieldName] = true;
+  const value = form[fieldName as keyof typeof form] as string;
+  const error = validateField(fieldName, value);
+
+  if (error) {
+    errors[fieldName] = error;
+  } else {
+    errors[fieldName] = "";
+  }
+};
+
+const handleInput = (fieldName: string) => {
+  if (touched[fieldName] || formSubmitted.value) {
+    const value = form[fieldName as keyof typeof form] as string;
+    const error = validateField(fieldName, value);
+
+    if (error) {
+      errors[fieldName] = error;
+    } else {
+      errors[fieldName] = "";
+    }
+  }
+};
+
+const hasError = (fieldName: string): boolean => {
+  return (touched[fieldName] || formSubmitted.value) && !!errors[fieldName];
+};
+
+const getErrorMessage = (fieldName: string): string => {
+  return hasError(fieldName) ? (errors[fieldName] || "") : "";
+};
 
 const getArticle = (word: string) => {
   if (!word) return "a";
@@ -82,6 +182,21 @@ const getArticle = (word: string) => {
 };
 
 const generateOffer = () => {
+  formSubmitted.value = true;
+
+  // Validate form before generating
+  if (!validateForm()) {
+    // Scroll to first error
+    const firstErrorField = Object.keys(errors)[0];
+    if (firstErrorField) {
+      const element = document.querySelector(`[data-field="${firstErrorField}"]`);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "center" });
+      }
+    }
+    return;
+  }
+
   const f = form;
 
   generated.value = [
@@ -230,6 +345,13 @@ const resetForm = () => {
     form[key] = "";
   });
   generated.value = "";
+  formSubmitted.value = false;
+  Object.keys(errors).forEach((key) => {
+    errors[key] = "";
+  });
+  Object.keys(touched).forEach((key) => {
+    touched[key] = false;
+  });
 };
 </script>
 
@@ -244,6 +366,9 @@ TODO: upon submission, create a downloadable pdf of the output -->
       <p class="text-sm text-gray-600 dark:text-gray-400">
         Fill in the fields below and click “Generate Offer” to create a
         formatted document you can paste into proposals, SOWs, or landing pages.
+      </p>
+      <p class="text-sm text-gray-600 dark:text-gray-400">
+        <span class="text-red-600">*</span> indicates required fields
       </p>
     </header>
     <!-- Toggle Options -->
@@ -261,44 +386,104 @@ TODO: upon submission, create a downloadable pdf of the output -->
       <section class="space-y-4">
         <h2 class="text-xl font-semibold">Basics</h2>
         <div class="grid gap-4 md:grid-cols-2">
-          <label class="flex flex-col gap-1 text-sm">
-            <span class="font-bold">Package Name</span>
+          <label class="flex flex-col gap-1 text-sm" data-field="packageName">
+            <span class="font-bold"
+              >Package Name <span class="text-red-600">*</span></span
+            >
             <input
               v-model="form.packageName"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('packageName')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="Outbound Growth Engine"
+              @blur="handleBlur('packageName')"
+              @input="handleInput('packageName')"
             />
+            <span
+              v-if="hasError('packageName')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("packageName") }}
+            </span>
           </label>
 
-          <label class="flex flex-col gap-1 text-sm">
-            <span class="font-bold">Primary Outcome</span>
+          <label
+            class="flex flex-col gap-1 text-sm"
+            data-field="primaryOutcome"
+          >
+            <span class="font-bold"
+              >Primary Outcome <span class="text-red-600">*</span></span
+            >
             <input
               v-model="form.primaryOutcome"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('primaryOutcome')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="a consistent flow of qualified conversations"
+              @blur="handleBlur('primaryOutcome')"
+              @input="handleInput('primaryOutcome')"
             />
+            <span
+              v-if="hasError('primaryOutcome')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("primaryOutcome") }}
+            </span>
           </label>
 
-          <label class="flex flex-col gap-1 text-sm">
-            <span class="font-bold">Buyer Type</span>
+          <label class="flex flex-col gap-1 text-sm" data-field="buyerType">
+            <span class="font-bold"
+              >Buyer Type <span class="text-red-600">*</span></span
+            >
             <input
               v-model="form.buyerType"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('buyerType')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="B2B service businesses"
+              @blur="handleBlur('buyerType')"
+              @input="handleInput('buyerType')"
             />
+            <span
+              v-if="hasError('buyerType')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("buyerType") }}
+            </span>
           </label>
 
-          <label class="flex flex-col gap-1 text-sm">
-            <span class="font-bold">Niche</span>
+          <label class="flex flex-col gap-1 text-sm" data-field="niche">
+            <span class="font-bold"
+              >Niche <span class="text-red-600">*</span></span
+            >
             <input
               v-model="form.niche"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('niche')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="industrial and professional services"
+              @blur="handleBlur('niche')"
+              @input="handleInput('niche')"
             />
+            <span v-if="hasError('niche')" class="text-xs text-red-600 mt-1">
+              {{ getErrorMessage("niche") }}
+            </span>
           </label>
         </div>
       </section>
@@ -808,52 +993,120 @@ TODO: upon submission, create a downloadable pdf of the output -->
       <section class="space-y-4">
         <h2 class="text-xl font-semibold">Pricing &amp; CTA</h2>
         <div class="grid gap-4 md:grid-cols-3">
-          <label class="flex flex-col gap-1 text-sm">
+          <label class="flex flex-col gap-1 text-sm" data-field="monthlyPrice">
             <span class="font-bold">Monthly Price</span>
             <input
               v-model="form.monthlyPrice"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('monthlyPrice')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="2500"
+              @blur="handleBlur('monthlyPrice')"
+              @input="handleInput('monthlyPrice')"
             />
+            <span
+              v-if="hasError('monthlyPrice')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("monthlyPrice") }}
+            </span>
           </label>
-          <label class="flex flex-col gap-1 text-sm">
+          <label class="flex flex-col gap-1 text-sm" data-field="setupPrice">
             <span class="font-bold">Setup Price</span>
             <input
               v-model="form.setupPrice"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('setupPrice')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="3500"
+              @blur="handleBlur('setupPrice')"
+              @input="handleInput('setupPrice')"
             />
+            <span
+              v-if="hasError('setupPrice')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("setupPrice") }}
+            </span>
           </label>
-          <label class="flex flex-col gap-1 text-sm">
+          <label class="flex flex-col gap-1 text-sm" data-field="mgmtPrice">
             <span class="font-bold">Management Price</span>
             <input
               v-model="form.mgmtPrice"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('mgmtPrice')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="1500"
+              @blur="handleBlur('mgmtPrice')"
+              @input="handleInput('mgmtPrice')"
             />
+            <span
+              v-if="hasError('mgmtPrice')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("mgmtPrice") }}
+            </span>
           </label>
         </div>
         <div class="grid gap-4 md:grid-cols-3">
-          <label class="flex flex-col gap-1 text-sm">
+          <label class="flex flex-col gap-1 text-sm" data-field="basePrice">
             <span class="font-bold">Base Price</span>
             <input
               v-model="form.basePrice"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('basePrice')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="2000"
+              @blur="handleBlur('basePrice')"
+              @input="handleInput('basePrice')"
             />
+            <span
+              v-if="hasError('basePrice')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("basePrice") }}
+            </span>
           </label>
-          <label class="flex flex-col gap-1 text-sm">
+          <label
+            class="flex flex-col gap-1 text-sm"
+            data-field="commissionPercent"
+          >
             <span class="font-bold">Commission %</span>
             <input
               v-model="form.commissionPercent"
               type="text"
-              class="border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900"
+              :class="[
+                'border rounded px-3 py-2 text-sm bg-white dark:bg-gray-900',
+                hasError('commissionPercent')
+                  ? 'border-red-500 focus:border-red-500 focus:ring-red-500'
+                  : 'border-gray-300 dark:border-gray-700',
+              ]"
               placeholder="5"
+              @blur="handleBlur('commissionPercent')"
+              @input="handleInput('commissionPercent')"
             />
+            <span
+              v-if="hasError('commissionPercent')"
+              class="text-xs text-red-600 mt-1"
+            >
+              {{ getErrorMessage("commissionPercent") }}
+            </span>
           </label>
           <label class="flex flex-col gap-1 text-sm">
             <span class="font-bold">Commission Trigger</span>
@@ -875,6 +1128,26 @@ TODO: upon submission, create a downloadable pdf of the output -->
           />
         </label>
       </section>
+
+      <!-- Form Validation Error Alert -->
+      <div
+        v-if="formSubmitted && Object.keys(errors).length > 0"
+        class="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
+      >
+        <div class="flex items-start gap-3">
+          <Icon name="lucide:alert-circle" class="text-red-600 text-xl mt-0.5" />
+          <div>
+            <h3 class="font-semibold text-red-800 dark:text-red-200">
+              Please fix the following errors:
+            </h3>
+            <ul class="mt-2 text-sm text-red-700 dark:text-red-300 list-disc list-inside">
+              <li v-for="(error, field) in errors" :key="field">
+                {{ field }}: {{ error }}
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
       <div class="flex gap-4 items-center">
         <button
