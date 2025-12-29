@@ -13,7 +13,7 @@ const projects = ref([
   {
     _path: "/projects/pinetar",
     title: "PineTar Self Storage",
-    to: "https://www.pinetarselfstorage.com",
+    to: "/projects/pinetar",
     thumbnail: "/images/web-design/pinetar/pinetar-hero.png",
     tags: ["Web Design", "Branding", "Video", "Photography"],
     client_type: "Real Estate Developer",
