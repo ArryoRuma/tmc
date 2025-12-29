@@ -57,27 +57,7 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages
-TODO: remove before and after, and replace with the video and short case study -->
+<!-- TODO: verify this page is consistent with other project pages -->
 <template>
-  <div>
-    <ProjectsHero :project="project" />
-    <div class="bg-gray-50 dark:bg-gray-900 py-2">
-      <ProjectsBeforeAfter
-        :before-image="project.beforeImage"
-        :after-image="project.afterImage"
-      />
-    </div>
-    <ProjectsDetails
-      :challenge="project.challenge"
-      :solution="project.solution"
-      :services="project.services"
-    />
-    <ProjectsImage
-      :image="project.heroImage"
-      :title="project.title"
-      :website-url="project.websiteUrl"
-    />
-    <ProjectsResults :results="project.results" />
-  </div>
+  <ProjectsSpotlightLayout2 :project="project" />
 </template>
