@@ -86,6 +86,14 @@ const requiredFields = [
   "niche",
 ] as const;
 
+const priceFields = [
+  "monthlyPrice",
+  "setupPrice",
+  "mgmtPrice",
+  "basePrice",
+  "commissionPercent",
+] as const;
+
 const validateField = (fieldName: string, value: string): string => {
   // Required field validation
   if (requiredFields.includes(fieldName as typeof requiredFields[number])) {
@@ -95,15 +103,7 @@ const validateField = (fieldName: string, value: string): string => {
   }
 
   // Numeric price validation
-  if (
-    [
-      "monthlyPrice",
-      "setupPrice",
-      "mgmtPrice",
-      "basePrice",
-      "commissionPercent",
-    ].includes(fieldName)
-  ) {
+  if (priceFields.includes(fieldName as typeof priceFields[number])) {
     if (value && value.trim() !== "") {
       const numValue = parseFloat(value);
       if (isNaN(numValue) || numValue < 0) {
@@ -129,7 +129,7 @@ const validateForm = (): boolean => {
   });
 
   // Validate price fields
-  ["monthlyPrice", "setupPrice", "mgmtPrice", "basePrice", "commissionPercent"].forEach((field) => {
+  priceFields.forEach((field) => {
     const value = form[field as keyof typeof form] as string;
     const error = validateField(field, value);
     if (error) {
@@ -138,6 +138,10 @@ const validateForm = (): boolean => {
     }
   });
 
+  // Clear existing errors and set new ones
+  Object.keys(errors).forEach((key) => {
+    errors[key] = "";
+  });
   Object.assign(errors, newErrors);
   return isValid;
 };
