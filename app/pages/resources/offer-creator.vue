@@ -96,14 +96,14 @@ const priceFields = [
 
 const validateField = (fieldName: string, value: string): string => {
   // Required field validation
-  if (requiredFields.includes(fieldName as typeof requiredFields[number])) {
+  if (requiredFields.includes(fieldName as (typeof requiredFields)[number])) {
     if (!value || value.trim() === "") {
       return "This field is required";
     }
   }
 
   // Numeric price validation
-  if (priceFields.includes(fieldName as typeof priceFields[number])) {
+  if (priceFields.includes(fieldName as (typeof priceFields)[number])) {
     if (value && value.trim() !== "") {
       const numValue = parseFloat(value);
       if (isNaN(numValue) || numValue < 0) {
@@ -176,7 +176,7 @@ const hasError = (fieldName: string): boolean => {
 };
 
 const getErrorMessage = (fieldName: string): string => {
-  return hasError(fieldName) ? (errors[fieldName] || "") : "";
+  return hasError(fieldName) ? errors[fieldName] || "" : "";
 };
 
 const activeErrors = computed(() => {
@@ -198,7 +198,9 @@ const generateOffer = () => {
     const firstErrorEntry = Object.entries(errors).find(([_, value]) => value);
     if (firstErrorEntry) {
       const firstErrorField = firstErrorEntry[0];
-      const element = document.querySelector(`[data-field="${firstErrorField}"]`);
+      const element = document.querySelector(
+        `[data-field="${firstErrorField}"]`,
+      );
       if (element) {
         element.scrollIntoView({ behavior: "smooth", block: "center" });
       }
@@ -361,7 +363,8 @@ const resetForm = () => {
   form.symptom2 = "Feast or famine sales cycles";
   form.symptom3 = "Most of your time spent chasing leads";
   form.symptom4 = "Declining conversion rates from referrals";
-  form.roleOverloadDetails = "sales, delivery, operations, and strategy all at once";
+  form.roleOverloadDetails =
+    "sales, delivery, operations, and strategy all at once";
   form.coreProblem = "inconsistent, unpredictable pipeline and sales";
   form.primaryOutcome = "a consistent flow of qualified conversations";
   form.coreMechanism = "a simple, automated outbound system";
@@ -377,7 +380,8 @@ const resetForm = () => {
   form.deliverable2 = "Automated email sequences for follow-up";
   form.deliverable3 = "Custom CRM setup and training";
   form.optionalDeliverable4 = "Monthly performance review calls";
-  form.clientPreferredWork = "the creative and strategic work you actually enjoy";
+  form.clientPreferredWork =
+    "the creative and strategic work you actually enjoy";
   form.clientPainfulWork = "manual follow-ups and chasing cold leads";
   form.goal1 = "Generate 5-10 qualified leads per month";
   form.goal2 = "Reduce time spent on prospecting by 70%";
@@ -390,7 +394,8 @@ const resetForm = () => {
   form.subItemA = "Industry-specific prospect list (500+ contacts)";
   form.subItemB = "Contact verification and enrichment";
   form.subItemC = "CRM setup with automated scoring";
-  form.outcomeStatement1 = "You'll have a qualified database of prospects ready to contact";
+  form.outcomeStatement1 =
+    "You'll have a qualified database of prospects ready to contact";
   form.deliverableBlock2Title = "Outreach System & Messaging";
   form.actionVerb2 = "create and optimize";
   form.component2 = "messaging and outreach sequences";
@@ -398,7 +403,8 @@ const resetForm = () => {
   form.subItemD = "Email templates with high response rates";
   form.subItemE = "LinkedIn connection and follow-up sequences";
   form.subItemF = "A/B testing framework for optimization";
-  form.outcomeStatement2 = "You'll have proven messaging that consistently generates responses";
+  form.outcomeStatement2 =
+    "You'll have proven messaging that consistently generates responses";
   form.deliverableBlock3Title = "Automation & Follow-up Systems";
   form.actionVerb3 = "implement and configure";
   form.component3 = "automated follow-up systems";
@@ -406,7 +412,8 @@ const resetForm = () => {
   form.subItemG = "Automated email drip campaigns";
   form.subItemH = "Follow-up reminders and scheduling";
   form.subItemI = "Performance tracking and reporting";
-  form.outcomeStatement3 = "You'll have a system that works while you focus on closing deals";
+  form.outcomeStatement3 =
+    "You'll have a system that works while you focus on closing deals";
   form.monthlyPrice = "2500";
   form.setupPrice = "3500";
   form.mgmtPrice = "1500";
@@ -416,7 +423,7 @@ const resetForm = () => {
   form.timeFrame = "90 days";
   form.ctaUrl = "";
   form.theme = "light";
-  
+
   generated.value = "";
   formSubmitted.value = false;
   Object.keys(errors).forEach((key) => {
@@ -1208,12 +1215,17 @@ TODO: upon submission, create a downloadable pdf of the output -->
         class="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg"
       >
         <div class="flex items-start gap-3">
-          <Icon name="lucide:alert-circle" class="text-red-600 text-xl mt-0.5" />
+          <Icon
+            name="lucide:alert-circle"
+            class="text-red-600 text-xl mt-0.5"
+          />
           <div>
             <h3 class="font-semibold text-red-800 dark:text-red-200">
               Please fix the following errors:
             </h3>
-            <ul class="mt-2 text-sm text-red-700 dark:text-red-300 list-disc list-inside">
+            <ul
+              class="mt-2 text-sm text-red-700 dark:text-red-300 list-disc list-inside"
+            >
               <li v-for="[field, error] in activeErrors" :key="field">
                 {{ field }}: {{ error }}
               </li>
