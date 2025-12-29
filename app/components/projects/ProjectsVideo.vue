@@ -17,6 +17,7 @@ const props = defineProps<{
               preload="none"
               :poster="props.poster"
               :controls="true"
+              :aria-label="props.title || 'Project video'"
             >
               <source :src="props.videoUrl" type="video/mp4" />
               Your browser does not support the video tag.
