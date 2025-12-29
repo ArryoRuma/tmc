@@ -29,7 +29,7 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages -->
+<!-- TODO: verify this page is consistent with other project pages like nourish-to-heal-2 by using the ProjectsSpotlight2 component(s) -->
 <template>
   <div>
     <ProjectsHero :project="project" />
