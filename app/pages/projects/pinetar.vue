@@ -1,17 +1,33 @@
-<script setup>
-// Static data for PJ Polke project
-const project = {
+<script setup lang="ts">
+interface Project {
+  title: string;
+  description: string;
+  year?: number;
+  client?: string;
+  services?: string[];
+  heroImage?: string;
+  beforeImage?: string;
+  afterImage?: string;
+  websiteUrl?: string;
+  challenge?: string;
+  approach?: string;
+  solution?: string;
+  results?: string[];
+}
+
+const project: Project = {
   title: "PineTar Self Storage",
   description:
     "Complete branding and web design solution for a construction company",
   year: 2024,
   client: "PineTar Self Storage",
   services: ["Web Design", "Branding", "Logo Design", "Marketing Materials"],
-  technologies: ["Vue.js", "Nuxt.js", "Tailwind CSS"],
   heroImage: "/images/web-design/pinetar/pinetar-hero.png",
   websiteUrl: "http://pinetarselfstorage.com",
   challenge:
     "PineTar Self Storage needed a modern, professional online presence that would showcase their storage facilities and establish trust with potential clients.",
+  approach:
+    "We developed a complete brand identity system starting with logo design and extending through all marketing materials, then built a modern, responsive website optimized for mobile users and lead generation.",
   solution:
     "We created a comprehensive brand identity and responsive website that highlights their expertise and facility portfolio.",
   results: [
@@ -29,26 +45,6 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages -->
 <template>
-  <div>
-    <ProjectsHero :project="project" />
-    <div class="bg-gray-50 dark:bg-gray-900 py-2">
-      <ProjectsBeforeAfter
-        :before-image="project.beforeImage"
-        :after-image="project.afterImage"
-      />
-    </div>
-    <ProjectsDetails
-      :challenge="project.challenge"
-      :solution="project.solution"
-      :services="project.services"
-    />
-    <ProjectsImage
-      :image="project.heroImage"
-      :title="project.title"
-      :website-url="project.websiteUrl"
-    />
-    <ProjectsResults :results="project.results" />
-  </div>
+  <ProjectsSpotlightLayout2 :project="project" />
 </template>
