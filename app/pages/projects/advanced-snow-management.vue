@@ -9,10 +9,13 @@ interface Project {
   beforeImage?: string;
   afterImage?: string;
   websiteUrl?: string;
+  videoUrl?: string;
+  videoPoster?: string;
   challenge?: string;
   approach?: string;
   solution?: string;
   results?: string[];
+  galleryImages?: string[];
 }
 
 const project: Project = {
@@ -33,6 +36,8 @@ const project: Project = {
   beforeImage: "",
   afterImage: "",
   websiteUrl: "",
+  videoUrl: "",
+  videoPoster: "",
   challenge:
     "Advanced Snow Management was pursuing large industrial and enterprise snow removal contracts with long sales cycles, complex scopes, and multiple decision-makers. Winning required more than competitive pricing—it required clarity, credibility, and confidence at every stage of the buying process.",
   approach:
@@ -46,6 +51,7 @@ const project: Project = {
     "Reduced friction during late-stage sales and contract discussions",
     "Stronger positioning as an enterprise-capable snow management partner",
   ],
+  galleryImages: [],
 };
 definePageMeta({
   layout: "projects",
@@ -61,6 +67,7 @@ useSeoMeta({
 <!-- TODO: verify this page is consistent with other project pages
 TODO: add photo gallery placeholder
 TODO:add in the video placeholder
+TODO: add in case study placeholder
  -->
 <template>
   <div>
@@ -77,10 +84,19 @@ TODO:add in the video placeholder
       :solution="project.solution"
     />
     <ProjectsDetails :services="project.services" />
+    <ProjectsVideo
+      :video-url="project.videoUrl"
+      :title="project.title"
+      :poster="project.videoPoster"
+    />
     <ProjectsImage
       :image="project.heroImage"
       :title="project.title"
       :website-url="project.websiteUrl"
+    />
+    <ProjectsGallery
+      :images="project.galleryImages"
+      :title="`${project.client} Photo Gallery`"
     />
     <ProjectsResults :results="project.results" />
   </div>
