@@ -29,6 +29,9 @@ const project = {
     "Stronger internal buy-in from multi-stakeholder buying committees",
     "Content that actively supports deals instead of sitting unused",
   ],
+  galleryImages: [],
+  videoUrl: "",
+  caseStudySections: [],
 };
 definePageMeta({
   layout: "projects",
@@ -41,8 +44,7 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages
-TODO: add photo gallery placeholder, case study placeholder, video placeholder -->
+<!-- TODO: verify this page is consistent with other project pages -->
 
 <template>
   <div>
@@ -62,6 +64,19 @@ TODO: add photo gallery placeholder, case study placeholder, video placeholder -
       :image="project.heroImage"
       :title="project.title"
       :website-url="project.websiteUrl"
+    />
+    <ProjectsGallery
+      :images="project.galleryImages"
+      :title="`${project.client} Photo Gallery`"
+    />
+    <ProjectsVideo
+      :video-url="project.videoUrl"
+      :title="`${project.client} Project Video`"
+      description="See how we transformed ZeroSurge's messaging and positioning"
+    />
+    <ProjectsCaseStudy
+      :sections="project.caseStudySections"
+      :title="`${project.client} Case Study`"
     />
     <ProjectsResults :results="project.results" />
   </div>
