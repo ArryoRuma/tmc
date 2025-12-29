@@ -59,8 +59,10 @@ useSeoMeta({
 </script>
 
 <!-- TODO: verify this page is consistent with other project pages
-TODO: add photo gallery from photoshoot
-TODO: Add videos from project -->
+TODO: add photo gallery placeholder
+TODO: add in case study placeholder
+TODO:add in the video placeholder
+ -->
 <template>
   <div>
     <ProjectsHero :project="project" />
