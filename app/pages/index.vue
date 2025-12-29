@@ -11,7 +11,7 @@ const fourStep = ref([
     title: "Step 1",
     subtitle: "Discover",
     description:
-      "First, we dive in to what problems your facing and determine what types of videos will best address those challenges.",
+      "First, we dive in to what problems you're facing and determine what types of videos will best address those challenges.",
     icon: "i-lucide-target",
     content:
       "Our discovery process involves deep research into your market, competitors, and audience to create a foundation for success.",
