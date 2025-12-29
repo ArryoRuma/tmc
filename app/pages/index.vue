@@ -55,7 +55,6 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: add in secondary call to action in hero and CTA footer -->
 <template>
   <div v-if="page?.title">
     <FadeInUp :delay="0.3">
