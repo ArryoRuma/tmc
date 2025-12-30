@@ -61,8 +61,6 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages
-TODO: remove before and after, and add in case study placeholder -->
 <template>
   <div>
     <ProjectsHero :project="project" />
@@ -71,30 +69,10 @@ TODO: remove before and after, and add in case study placeholder -->
       :solution="project.solution"
       :services="project.services"
     />
-    <ProjectsImage
-      :image="project.heroImage"
-      :title="project.title"
-      :website-url="project.websiteUrl"
-    />
     <ProjectsCaseStudy
       :sections="project.caseStudySections"
       :title="`${project.client} Case Study`"
     />
-
-    <!-- Hero Image / Video -->
-    <ProjectsImage
-      v-if="project.heroImage"
-      :image="project.heroImage"
-      :title="project.title"
-      :website-url="project.websiteUrl"
-    />
-
-    <!-- Video Section 
-    <ProjectsVideo
-      v-if="project.video"
-      :video="project.video"
-      :title="project.title"
-    /> -->
     <ProjectsResults v-if="project.results" :results="project.results" />
     <ProjectsBackToAllProjectsButton />
   </div>
