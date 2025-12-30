@@ -61,24 +61,6 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages using the ProjectsSpotlight2 components and layout -->
 <template>
-  <div>
-    <ProjectsHero :project="project" />
-    <ProjectsDetails
-      :challenge="project.challenge"
-      :solution="project.solution"
-      :services="project.services"
-    />
-    <ProjectsImage
-      :image="project.heroImage"
-      :title="project.title"
-      :website-url="project.websiteUrl"
-    />
-    <ProjectsGallery
-      :images="project.galleryImages"
-      :title="`${project.client} Photo Gallery`"
-    />
-    <ProjectsResults :results="project.results" />
-  </div>
+  <ProjectsSpotlightLayout2 :project="project" />
 </template>
