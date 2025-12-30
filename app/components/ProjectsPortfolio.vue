@@ -58,7 +58,7 @@ const projects = ref([
   {
     _path: "/projects/tree-staple",
     title: "Tree Staple",
-    to: "https://www.youtube.com/watch?v=K8UacQUK0Ik",
+    to: "/projects/tree-staple",
     thumbnail: "/images/video/tree-staple/tree-staple-hero.png",
     tags: ["Video", "Marketing Materials", "Photography"],
     client_type: "Manufacturing Client",
