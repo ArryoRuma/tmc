@@ -1579,7 +1579,7 @@ export const collections = {
                 ]),
               )
               .optional(),
-            variant: z.enum(["soft", "solid", "outline", "subtle"]).optional(),
+            variant: variantEnum.optional(),
             orientation: orientationEnum.optional(),
             highlight: z.boolean().optional(),
             scale: z.boolean().optional(),
