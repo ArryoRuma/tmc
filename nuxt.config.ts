@@ -82,7 +82,7 @@ export default defineNuxtConfig({
   scripts: {
     registry: {
       googleAnalytics: {
-        id: "GTM-T6DBWPNS"
+        id: "GTM-T6DBWPNS",
       },
     },
   },
