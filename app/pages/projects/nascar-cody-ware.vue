@@ -9,6 +9,8 @@ interface Project {
   beforeImage?: string;
   afterImage?: string;
   websiteUrl?: string;
+  videoUrl?: string;
+  posterImage?: string;
   challenge?: string;
   approach?: string;
   solution?: string;
@@ -32,6 +34,8 @@ const project: Project = {
   beforeImage: "/images/projects/nascar-cody-ware/nascar-cody-ware-before.png",
   afterImage: "/images/projects/nascar-cody-ware/nascar-cody-ware-after.png",
   websiteUrl: "https://vimeo.com/812175432/1d898d2c46?fl=pl&fe=sh",
+  videoUrl: "",
+  posterImage: "",
   challenge:
     "Cody Ware needed dynamic video content and a digital marketing strategy to boost fan engagement and increase brand visibility in the competitive NASCAR environment.",
   approach:
@@ -54,21 +58,19 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages
-TODO: replace the before and after with an embedded video from the project -->
+<!-- TODO: verify this page is consistent with other project pages -->
 <template>
   <div>
     <ProjectsHero :project="project" />
-    <div class="bg-gray-50 dark:bg-gray-900 py-2">
-      <ProjectsBeforeAfter
-        :before-image="project.beforeImage"
-        :after-image="project.afterImage"
-      />
-    </div>
     <ProjectsDetails
       :challenge="project.challenge"
       :solution="project.solution"
       :services="project.services"
+    />
+    <ProjectsVideo
+      :video-url="project.videoUrl"
+      :poster-image="project.posterImage"
+      :title="`${project.client} Project Video`"
     />
     <ProjectsImage
       :image="project.heroImage"
