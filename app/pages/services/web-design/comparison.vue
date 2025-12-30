@@ -30,23 +30,7 @@ defineOgImageComponent("Saas");
         :title="page.comparison.title"
         :description="page.comparison.description"
       >
-        <UPricingGrid>
-          <UPricingCard
-            v-for="(item, index) in page.comparison.items"
-            :key="index"
-            :title="item.title"
-            :description="item.description"
-            :price="item.price"
-            :tagline="item.tagline"
-            :badge="item.badge"
-            :features="item.features"
-            :button="item.button"
-            :variant="item.variant"
-            :orientation="item.orientation"
-            :highlight="item.highlight"
-            :scale="item.scale"
-          />
-        </UPricingGrid>
+        <UPricingPlans :plans="page.comparison.items" />
       </UPageSection>
     </UContainer>
 
