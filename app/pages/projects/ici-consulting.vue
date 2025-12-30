@@ -44,6 +44,10 @@ const project: Project = {
   ],
 };
 
+definePageMeta({
+  layout: "projects",
+});
+
 useSeoMeta({
   title: `${project.title} - TruMedia Creative Portfolio`,
   description: project.description,
