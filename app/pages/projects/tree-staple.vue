@@ -2,8 +2,7 @@
 import type { Project } from "~/types/project";
 
 const project: Project = {
-  title:
-    "Manufacturing Product Video Case Study: Marketing and Sales Assets",
+  title: "Manufacturing Product Video Case Study: Marketing and Sales Assets",
   description:
     "Shopify 2.0 rebuild and operational strategy for a growing meal prep and nutrition brand.",
   year: 2024,

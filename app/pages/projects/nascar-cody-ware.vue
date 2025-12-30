@@ -18,8 +18,7 @@ interface Project {
 }
 
 const project: Project = {
-  title:
-    "Motorsports Brand Video Case Study: Social and Promotional Content",
+  title: "Motorsports Brand Video Case Study: Social and Promotional Content",
   description:
     "Video production and digital marketing strategy for NASCAR driver Cody Ware to enhance fan engagement and brand visibility.",
   year: 2024,

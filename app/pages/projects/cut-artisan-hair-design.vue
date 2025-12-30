@@ -17,8 +17,7 @@ interface Project {
 }
 
 const project: Project = {
-  title:
-    "Local Hair Salon Marketing Case Study: Retention, SEO, and Paid Ads",
+  title: "Local Hair Salon Marketing Case Study: Retention, SEO, and Paid Ads",
   description:
     "SEO, retention, and paid media strategy for a high-end local hair salon focused on repeat business and predictable growth.",
   year: 2024,
