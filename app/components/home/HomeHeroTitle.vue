@@ -25,10 +25,10 @@ const { currentWord, currentIndex } = useRotatingText(rotatingWords, 1200);
           <span
             :key="currentIndex"
             class="text-primary"
-            style="
-              font-family: &quot;new-spirit&quot;, serif !important;
-              font-weight: 700 !important;
-            "
+            :style="{
+              fontFamily: 'new-spirit, serif',
+              fontWeight: 700,
+            }"
             >{{ currentWord }}</span
           >
         </Transition>

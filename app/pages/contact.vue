@@ -37,10 +37,10 @@ const contactInfo = {
           Let's Start Something
           <span
             class="text-primary block"
-            style="
-              font-family: 'new-spirit', serif !important;
-              font-weight: 700 !important;
-            "
+            :style="{
+              fontFamily: 'new-spirit, serif',
+              fontWeight: 700,
+            }"
           >
             Amazing
           </span>
