@@ -6,7 +6,7 @@
         data-v-baf90ddd=""
         preload="thumbnail"
         onpause="pause"
-        poster="/images/live-events-poster.jpg"
+        poster=""
         :controls="true"
       >
         <source
