@@ -8,6 +8,7 @@ const variantEnum = z.enum([
   "ghost",
   "link",
 ]);
+const badgeVariantEnum = z.enum(["solid", "outline", "subtle", "soft"]);
 const colorEnum = z.enum([
   "primary",
   "secondary",
@@ -116,7 +117,7 @@ const createPricingSchema = () =>
             z.object({
               label: z.string().nonempty(),
               color: colorEnum.optional(),
-              variant: variantEnum.optional(),
+              variant: badgeVariantEnum.optional(),
             }),
           ])
           .optional(),
@@ -1544,14 +1545,7 @@ export const collections = {
           z.object({
             title: z.string().nonempty(),
             description: z.string().nonempty(),
-            price: z.union([
-              z.string(),
-              z.object({
-                display: z.string().optional(),
-                amount: z.number().optional(),
-                billing: z.string().optional(),
-              }),
-            ]),
+            price: z.string().optional(),
             discount: z.string().optional(),
             billingPeriod: z.string().optional(),
             billingCycle: z.string().optional(),
@@ -1563,23 +1557,19 @@ export const collections = {
                 z.object({
                   label: z.string().nonempty(),
                   color: colorEnum.optional(),
-                  variant: variantEnum.optional(),
+                  variant: badgeVariantEnum.optional(),
                 }),
               ])
               .optional(),
             button: createLinkSchema().optional(),
-            features: z
-              .array(
-                z.union([
-                  z.string().nonempty(),
-                  z.object({
-                    title: z.string().nonempty(),
-                    icon: z.string().optional().editor({ input: "icon" }),
-                  }),
-                ]),
-              )
-              .optional(),
-            variant: variantEnum.optional(),
+            features: z.union([
+              z.array(z.string()),
+              z.array(z.object({
+                title: z.string(),
+                icon: z.string().optional(),
+              }))
+            ]).optional(),
+            variant: z.enum(["soft", "solid", "outline", "subtle"]).optional(),
             orientation: orientationEnum.optional(),
             highlight: z.boolean().optional(),
             scale: z.boolean().optional(),
