@@ -15,7 +15,8 @@ hero:
       to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       size: xl
     - label: See Web Design Portfolio
-      to: /services/web-design
+      to: /projects
+      trailingIcon: i-lucide-arrow-right
       variant: subtle
       icon: i-lucide-layers
 
@@ -26,7 +27,7 @@ sections:
     orientation: vertical
     reverse: false
     image: #TODO: update problem image
-      src: /images/services/video-growth-engine/video-engine-problem.png
+      src: /images/services/web-design/web-design-problem.png
       alt: Problem with Most Company Websites
     description:
       Most company websites look polished but fail at their core job, turning interest into action.
@@ -186,7 +187,7 @@ sections:
         icon: i-lucide-briefcase
   - id: includes
     image: #TODO: update includes image
-      src: /images/services/website-growth-system/website-system-included.png
+      src: /images/services/web-design/web-design-included.png
       alt: What's Included in the Website Growth System
     orientation: vertical
     reverse: false
@@ -196,7 +197,7 @@ sections:
         trailingIcon: i-lucide-arrow-right
         icon: i-lucide-globe
       - label: See Our Website Portfolio
-        to: /projects #TODO: update link and create packages page
+        to: /projects 
         trailingIcon: i-lucide-arrow-right
         icon: i-lucide-globe
         variant: subtle

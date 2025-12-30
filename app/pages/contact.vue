@@ -54,21 +54,10 @@ const contactInfo = {
         </p>
       </template>
     </UPageHero>
-
-    <!-- Main Contact Section -->
-    <UPageSection class="py-16">
-      <div class="grid lg:grid-cols-2 gap-16">
-        <div>
-          <h2 class="text-3xl font-bold text-highlighted mb-6">Get in Touch</h2>
-          <p class="text-muted mb-8">
-            Whether you have questions about our services, need a custom quote,
-            or want to discuss your project, we're here to help. Fill out the
-            form below and a member of our team will get back to you shortly.
-          </p>
-
-          <!-- Contact Form -->
-          <HoneyBookForm />
-        </div>
+    <!--TODO: fix the section below to be 1) centered on the page, and 2) be a grid of 2 columns. Column A) to have Email and Phone, and Column B) to have Address and Hours. Quick response and follow us section can be centered in the middle.-->
+        <UPageSection class="py-6">
+      <div >
+        
         <!-- Contact Information -->
         <div class="space-y-8">
           <div>
@@ -181,6 +170,21 @@ const contactInfo = {
         </div>
       </div>
     </UPageSection>
+    <UPageSection>
+          <div>
+          <h2 class="text-3xl font-bold text-highlighted mb-6">Get in Touch</h2>
+          <p class="text-muted mb-8">
+            Whether you have questions about our services, need a custom quote,
+            or want to discuss your project, we're here to help. Fill out the
+            form below and a member of our team will get back to you shortly.
+          </p>
+
+          <!-- Contact Form -->
+          <HoneyBookForm2 />
+        </div>
+        </UPageSection>
+    <!-- Main Contact Section -->
+
 
     <!-- CTA Section -->
     <UPageCTA
