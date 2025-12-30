@@ -1562,13 +1562,17 @@ export const collections = {
               ])
               .optional(),
             button: createLinkSchema().optional(),
-            features: z.union([
-              z.array(z.string()),
-              z.array(z.object({
-                title: z.string(),
-                icon: z.string().optional(),
-              }))
-            ]).optional(),
+            features: z
+              .union([
+                z.array(z.string()),
+                z.array(
+                  z.object({
+                    title: z.string(),
+                    icon: z.string().optional(),
+                  }),
+                ),
+              ])
+              .optional(),
             variant: z.enum(["soft", "solid", "outline", "subtle"]).optional(),
             orientation: orientationEnum.optional(),
             highlight: z.boolean().optional(),
