@@ -552,6 +552,70 @@ export const collections = {
       }),
     }),
   }),
+  liveeventsandentertainment: defineCollection({
+    source: "2.live-events-and-entertainment.yml",
+    type: "page",
+    schema: z.object({
+      // Top-level meta used in content and SEO
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      headline: z.string().optional(),
+      seo: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+        })
+        .optional(),
+      navigation: z.boolean().optional(),
+      // Hero section
+      hero: z.object({
+        headline: z.string().nonempty(),
+        description: z.string().nonempty(),
+        links: z.array(createLinkSchema()),
+      }),
+
+      sections: z.array(
+        createBaseSchema().extend({
+          id: z.string().nonempty(),
+          headline: z.string().optional(),
+          orientation: orientationEnum.optional(),
+          reverse: z.boolean().optional(),
+          features: z.array(createFeatureItemSchema()),
+        }),
+      ),
+      clients: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        items: z.array(
+          z.object({
+            name: z.string().nonempty(),
+            logo: z.string().nonempty().editor({ input: "media" }),
+          }),
+        ),
+      }),
+      features: createBaseSchema().extend({
+        items: z.array(createFeatureItemSchema()),
+      }),
+      testimonials: createBaseSchema().extend({
+        headline: z.string().optional(),
+        items: z.array(
+          z.object({
+            quote: z.string().nonempty(),
+            user: z.object({
+              name: z.string().nonempty(),
+              description: z.string().nonempty(),
+              to: z.string().nonempty(),
+              target: z.string().nonempty(),
+              avatar: createImageSchema(),
+            }),
+          }),
+        ),
+      }),
+      cta: createBaseSchema().extend({
+        links: z.array(createLinkSchema()),
+      }),
+    }),
+  }),
   webdesign: defineCollection({
     source: "0.web-design.yml",
     type: "page",
