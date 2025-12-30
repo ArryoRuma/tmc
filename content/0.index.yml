@@ -108,29 +108,41 @@ process:
   description: Our proven 4-step approach to creating marketing content that converts prospects into clients
   steps:
     - id: "1"
-      title: Discover
+      title: Step 1
       subtitle: Discover
       description: First, we dive in to what problems you're facing and determine what types of videos will best address those challenges.
       icon: i-lucide-target
       content: Our discovery process involves deep research into your market, competitors, and audience to create a foundation for success.
+      image:
+        src: /images/home/process-discover.jpg
+        alt: Team collaborating on video marketing strategy
     - id: "2"
       title: Step 2
       subtitle: Define
       description: Next, we outline a clear messaging framework that your clients will understand and connect with.
-      icon: i-lucide-video
+      icon: i-lucide-book-a
       content: We implement your strategy using best practices and cutting-edge tools, ensuring every detail aligns with your objectives.
+      image:
+        src: /images/home/process-define.jpg
+        alt: Storyboarding video marketing content
     - id: "3"
       title: Step 3
       subtitle: Develop
       description: Then, we produce high-quality marketing assets that resonate with your audience.
-      icon: i-lucide-globe
+      icon: i-lucide-folder-kanban
       content: Our production team creates compelling content that captures your brand's essence and engages your target audience effectively.
+      image:
+        src: /images/home/process-develop.jpg
+        alt: Filming video marketing content
     - id: "4"
       title: Step 4
       subtitle: Deploy
       description: Last, we distribute the marketing assets and analyze performance to optimize results.
-      icon: i-lucide-bar-chart-2
+      icon: i-lucide-rocket
       content: Continuous monitoring and optimization ensure your investment delivers measurable results and long-term success.
+      image:
+        src: /images/home/process-deploy.jpg
+        alt: Analyzing video marketing performance data
 testimonials:
   headline: Hear From Our Clients
   title: Recent Work & Outcomes

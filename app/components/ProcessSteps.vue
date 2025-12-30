@@ -15,7 +15,7 @@ const props = withDefaults(defineProps<Props>(), {
   subtitle: "A systematic approach to delivering exceptional results",
   variant: "default",
   showIcons: true,
-  showImages: false,
+  showImages: true,
 });
 
 const activeStep = ref(props.steps[0]?.id || "1");

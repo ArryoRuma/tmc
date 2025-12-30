@@ -32,7 +32,7 @@ const logos = [
 <template>
   <FadeInUp>
     <UPageLogos
-      title="Who We've Served"
+      title="Who We've Partnered with and Served"
       :marquee="{ pauseOnHover: true }"
       class="py-10 sm:py-12"
     >

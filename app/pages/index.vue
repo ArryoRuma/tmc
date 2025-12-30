@@ -50,19 +50,13 @@ useSeoMeta({
         :items="page.features.items"
       />
     </FadeInUp>
-
-    <FadeInUp :delay="0.2">
-      <ClientLogos />
-    </FadeInUp>
-
     <FadeInUp :delay="0.2">
       <UContainer>
         <PromotionalVideo class="rounded-lg shadow-md" />
       </UContainer>
     </FadeInUp>
-
     <FadeInUp :delay="0.2">
-      <ProjectsPortfolio />
+      <ClientLogos />
     </FadeInUp>
 
     <FadeInUp :delay="0.2">
@@ -73,7 +67,10 @@ useSeoMeta({
         :items="page.testimonials.items"
       />
     </FadeInUp>
-
+    <FadeInUp :delay="0.2">
+      <ProjectsPortfolio />
+    </FadeInUp>
+    <USeparator></USeparator>
     <FadeInUp :delay="0.2">
       <UPageCTA v-bind="page.cta" variant="naked" class="overflow-hidden" />
     </FadeInUp>
