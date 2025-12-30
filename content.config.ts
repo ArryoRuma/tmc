@@ -1515,4 +1515,94 @@ export const collections = {
       }),
     }),
   }),
+  webdesigncomparison: defineCollection({
+    source: "0.web-design-comparison.yml",
+    type: "page",
+    schema: z.object({
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      headline: z.string().optional(),
+      seo: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+        })
+        .optional(),
+      navigation: z.boolean().optional(),
+
+      hero: z.object({
+        headline: z.string().nonempty(),
+        title: z.string().optional(),
+        description: z.string().nonempty(),
+        links: z.array(createLinkSchema()),
+      }),
+
+      comparison: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        items: z.array(
+          z.object({
+            title: z.string().nonempty(),
+            description: z.string().nonempty(),
+            price: z.union([
+              z.string(),
+              z.object({
+                display: z.string().optional(),
+                amount: z.number().optional(),
+                billing: z.string().optional(),
+              }),
+            ]),
+            discount: z.string().optional(),
+            billingPeriod: z.string().optional(),
+            billingCycle: z.string().optional(),
+            tagline: z.string().optional(),
+            terms: z.string().optional(),
+            badge: z
+              .union([
+                z.string(),
+                z.object({
+                  label: z.string().nonempty(),
+                  color: colorEnum.optional(),
+                  variant: variantEnum.optional(),
+                }),
+              ])
+              .optional(),
+            button: createLinkSchema().optional(),
+            features: z
+              .array(
+                z.union([
+                  z.string().nonempty(),
+                  z.object({
+                    title: z.string().nonempty(),
+                    icon: z.string().optional().editor({ input: "icon" }),
+                  }),
+                ]),
+              )
+              .optional(),
+            variant: variantEnum.optional(),
+            orientation: orientationEnum.optional(),
+            highlight: z.boolean().optional(),
+            scale: z.boolean().optional(),
+            icon: z.string().optional().editor({ input: "icon" }),
+            links: z.array(createLinkSchema()).optional(),
+          }),
+        ),
+      }),
+
+      sections: z.array(
+        createBaseSchema().extend({
+          id: z.string().nonempty(),
+          headline: z.string().optional(),
+          orientation: orientationEnum.optional(),
+          reverse: z.boolean().optional(),
+          features: z.array(createFeatureItemSchema()).optional(),
+          links: z.array(createLinkSchema()).optional(),
+        }),
+      ),
+
+      cta: createBaseSchema().extend({
+        links: z.array(createLinkSchema()),
+      }),
+    }),
+  }),
 };

@@ -191,11 +191,10 @@ sections:
     orientation: vertical
     reverse: false
     links:
-      #- label: Compare Our Websites vs Traditional Web Design
-      #  to: /contact #TODO:create comparison page that shows the differences between our web design and traditional web design using the Pricing Table component from nuxt/ui
-      #  trailingIcon: i-lucide-arrow-right
-      #  icon: i-lucide-globe
-      #  active: false
+      - label: Compare Our Websites vs Traditional Web Design
+        to: /services/web-design/comparison
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-globe
       - label: See Our Website Portfolio
         to: /projects #TODO: update link and create packages page
         trailingIcon: i-lucide-arrow-right
