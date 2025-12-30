@@ -13,7 +13,7 @@ useSeoMeta({
   ogDescription: description,
 });
 </script>
-<!-- TODO: reformat this page to be a very nice industry-specific landing page for non-profits, specifically churches and their AV and live stream video needs -->
+
 <template>
   <div v-if="page?.title">
     <UPageHero
@@ -24,14 +24,11 @@ useSeoMeta({
     >
       <template #title>
         <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-          Video-Led
-          <span class="text-primary italic"> Growth Agency</span>
-          for Non-Profit Organizations.
+          Professional
+          <span class="text-primary italic"> AV & Live Streaming</span>
+          for Churches & Ministries.
         </h1>
       </template>
-      <!-- <template #top>
-        <HeroBackground />
-      </template> -->
 
       <PromotionalVideo />
     </UPageHero>
