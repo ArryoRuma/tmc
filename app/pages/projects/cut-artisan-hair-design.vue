@@ -13,6 +13,7 @@ interface Project {
   approach?: string;
   solution?: string;
   results?: string[];
+  galleryImages?: string[];
 }
 
 const project: Project = {
@@ -46,6 +47,7 @@ const project: Project = {
     "Clearer insight into marketing performance and client behavior",
     "Reduced reliance on constant new-client acquisition",
   ],
+  galleryImages: [],
 };
 
 useSeoMeta({
@@ -56,17 +58,10 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages
-TODO: remove before and after, and add and gallery -->
+<!-- TODO: verify this page is consistent with other project pages -->
 <template>
   <div>
     <ProjectsHero :project="project" />
-    <div class="bg-gray-50 dark:bg-gray-900 py-2">
-      <ProjectsBeforeAfter
-        :before-image="project.beforeImage"
-        :after-image="project.afterImage"
-      />
-    </div>
     <ProjectsDetails
       :challenge="project.challenge"
       :solution="project.solution"
@@ -76,6 +71,10 @@ TODO: remove before and after, and add and gallery -->
       :image="project.heroImage"
       :title="project.title"
       :website-url="project.websiteUrl"
+    />
+    <ProjectsGallery
+      :images="project.galleryImages"
+      :title="`${project.client} Photo Gallery`"
     />
     <ProjectsResults :results="project.results" />
   </div>
