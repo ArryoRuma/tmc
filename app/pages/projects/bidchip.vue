@@ -16,7 +16,20 @@ interface Project {
     content: string;
   }>;
 }
+interface Props {
+  project: Project;
+  layout?: "default" | "spotlight" | "minimal";
+  showBackButton?: boolean;
+  showResults?: boolean;
+  showGallery?: boolean;
+}
 
+const props = withDefaults(defineProps<Props>(), {
+  layout: "default",
+  showBackButton: true,
+  showResults: true,
+  showGallery: false,
+});
 const project: Project = {
   title:
     "B2B Electronics Marketplace Case Study: Seller Re-Activation and Outbound Growth",
@@ -80,6 +93,27 @@ TODO: remove before and after, and add in case study placeholder -->
       :sections="project.caseStudySections"
       :title="`${project.client} Case Study`"
     />
-    <ProjectsResults :results="project.results" />
+
+
+
+    <!-- Hero Image / Video -->
+    <ProjectsImage
+      v-if="project.heroImage"
+      :image="project.heroImage"
+      :title="project.title"
+      :website-url="project.websiteUrl"
+    />
+
+    <!-- Video Section 
+    <ProjectsVideo
+      v-if="project.video"
+      :video="project.video"
+      :title="project.title"
+    /> -->
+    <ProjectsResults
+      v-if="showResults && project.results"
+      :results="project.results"
+    />
+    <ProjectsBackToAllProjectsButton/>
   </div>
 </template>
