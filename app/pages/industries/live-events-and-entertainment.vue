@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: page } = await useAsyncData(() =>
-  queryCollection("contractorsmanufactures").first(),
+  queryCollection("liveeventsandentertainment").first(),
 );
 
 const title = page.value?.seo?.title || page.value?.title;
@@ -13,7 +13,7 @@ useSeoMeta({
   ogDescription: description,
 });
 </script>
-<!-- TODO: Create a very nice industry specific page for Live Events and Entertainment. specifically bands, musicians, and event organizers who want high quality events and experiences. -->
+
 <template>
   <div v-if="page?.title">
     <UPageHero
@@ -26,14 +26,14 @@ useSeoMeta({
         <h1 class="text-5xl md:text-7xl font-bold leading-tight">
           Video-Led
           <span class="text-primary italic"> Growth Agency</span>
-          for Industrial &amp; Manufacturing Companies.
+          for Live Events &amp; Entertainment.
         </h1>
       </template>
       <!-- <template #top>
         <HeroBackground />
       </template> -->
 
-      <ContractorReel />
+      <LiveEventsReel />
     </UPageHero>
 
     <UPageSection

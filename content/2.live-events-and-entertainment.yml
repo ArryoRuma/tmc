@@ -1,0 +1,142 @@
+title: Amplify Your Events with Video That Resonates
+description: |
+  More ticket sales. Bigger crowds. Lasting impressions.
+  Our video-led growth system turns performances into packed venues and unforgettable experiences while you focus on making magic happen.
+
+seo:
+  title: TruMedia Creative | Video-Led Growth Agency for Live Events & Entertainment (NJ)
+  description: TruMedia Creative creates compelling event videos and promotional content for bands, musicians, and event organizers—highlight reels, venue promos, and social campaigns that fill seats and build your brand. Book a strategy call.
+navigation: false
+hero:
+  headline: Live Events & Entertainment Marketing
+  description: Professional video production and marketing for bands, musicians, and event organizers who want to sell more tickets and create unforgettable experiences.
+  links:
+    - label: Live Events Growth Strategy Call
+      icon: i-lucide-calendar
+      trailing: true
+      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+      size: xl
+sections:
+  - title: How We Help Live Events & Entertainment
+    description: Whether you need promotional videos, event coverage, or a complete content strategy, our productized packages and done-for-you processes make it easy to stand out and sell more tickets.
+    headline: From stage to screen—perfectly.
+    id: how-we-help
+    orientation: horizontal
+    features:
+      - name: Event Highlight Reels
+        description: Capture the energy and emotion of your live performances with professional highlight videos that make people want to be there next time.
+        icon: i-lucide-video
+      - name: Promotional Content
+        description: Pre-event teasers, artist spotlights, and venue showcases that build anticipation and drive ticket sales across all platforms.
+        icon: i-lucide-megaphone
+      - name: Social Media Campaigns
+        description: Bite-sized content optimized for Instagram, TikTok, and Facebook to keep your audience engaged and coming back for more.
+        icon: i-lucide-share-2
+  - title: Built for Impact. Made to Share.
+    description: We create video content that captures the magic of live events and turns viewers into attendees. Professional production that Marketing can publish everywhere and promoters can use to fill venues.
+    id: features
+    orientation: horizontal
+    features:
+      - name: Performance Highlight Videos
+        description: 60–90s highlight reels that showcase the best moments from your events—energy, emotion, and production value that sells tickets.
+        icon: i-lucide-film
+      - name: Artist & Band Profiles
+        description: Compelling artist stories and interviews that build connection with your audience and create buzz before the show.
+        icon: i-lucide-mic-2
+      - name: Monthly Content Retainers
+        description: Ongoing video production for consistent social presence—regular shoots, edits, and content that keeps your brand top of mind.
+        icon: i-lucide-repeat-2
+  - title: Outreach Engine for Event Marketing
+    description: When you're ready to scale beyond organic reach, our Gravix-powered Outreach Engine gets your event videos in front of the right audiences and converts interest into ticket sales.
+    orientation: horizontal
+    reverse: true
+    features:
+      - name: Targeted Social Campaigns
+        description: Strategic ad placement and organic content distribution across Instagram, Facebook, and TikTok to reach music fans and event-goers.
+        icon: i-lucide-target
+      - name: Email Marketing Integration
+        description: Video-powered email sequences that nurture your fan base, announce events, and drive early bird ticket sales.
+        icon: i-lucide-mail
+      - name: Analytics & Insights
+        description: Track video performance, engagement metrics, and ticket conversions to know what's working and optimize your campaigns.
+        icon: i-lucide-bar-chart-3
+clients:
+  title: Featured Clients
+  description: Trusted by artists, venues, and event organizers across the entertainment industry.
+  items:
+    - name: Chick-fil-A
+      logo: /images/clients/chickfila.png
+    - name: BidChip
+      logo: /images/clients/bidchip.png
+    - name: pj polke
+      logo: /images/clients/pjpolke.png
+    - name: ICI Consulting
+      logo: /images/clients/ici.png
+    - name: Amazon
+      logo: /images/clients/amazon.png
+    - name: Nascar
+      logo: /images/clients/nascar.png
+    - name: Rita's
+      logo: /images/clients/ritas1.png
+features:
+  title: Everything You Need to Fill Venues
+  description: Productized packages + a streamlined process. We plan, film, edit, and distribute—then help you leverage the content across all your marketing channels while measuring what drives ticket sales.
+  items:
+    - title: Authentic Storytelling
+      description: Genuine performance footage and artist stories that resonate with fans and create emotional connections.
+      icon: i-lucide-badge-check
+    - title: Fast Turnaround
+      description: Quick delivery for time-sensitive promotions—most event highlight reels ready within 48–72 hours.
+      icon: i-lucide-rocket
+    - title: Multi-Platform Optimization
+      description: Videos formatted and optimized for YouTube, Instagram, TikTok, Facebook, and your website.
+      icon: i-lucide-smartphone
+    - title: Live Stream Production
+      description: Professional live streaming for concerts, festivals, and special events to expand your reach beyond the venue.
+      icon: i-lucide-radio
+    - title: Social Media Strategy
+      description: Content calendars, posting schedules, and engagement tactics that build your fanbase organically.
+      icon: i-lucide-calendar-days
+    - title: Performance Analytics
+      description: Detailed dashboards tracking views, engagement, shares, and conversion from viewer to ticket buyer.
+      icon: i-lucide-trending-up
+testimonials:
+  headline: Recent Events & Results
+  title: Content that packs venues
+  description: Real results from artists, bands, and event organizers who use video to grow their audience and sell more tickets.
+  items:
+    - quote: The highlight reel captured the energy perfectly—we saw a 40% increase in ticket sales for our next show after posting it.
+      user:
+        name: Local Music Venue
+        description: 500-capacity concert hall
+        to: https://example.com
+        target: _blank
+        avatar:
+          src: https://i.pravatar.cc/120?img=12
+    - quote: Their social content strategy helped us triple our Instagram engagement and build a loyal following that shows up every time.
+      user:
+        name: Indie Band
+        description: Touring musician group
+        to: https://example.com
+        target: _blank
+        avatar:
+          src: https://i.pravatar.cc/120?img=8
+    - quote: Professional live streaming opened up a whole new revenue stream—now we can reach fans who can't make it to physical events.
+      user:
+        name: Festival Organizer
+        description: Annual music festival
+        to: https://example.com
+        target: _blank
+        avatar:
+          src: https://i.pravatar.cc/120?img=15
+cta:
+  title: Ready to create videos that fill seats and build your brand?
+  description: Pick a package or book a strategy call. Our video-led growth system helps you sell more tickets, grow your audience, and create memorable experiences that keep fans coming back.
+  links:
+    - label: Book a Call
+      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+      trailingIcon: i-lucide-arrow-right
+    - label: See Event Video Packages
+      to: /
+      variant: subtle
+      icon: i-lucide-layers
