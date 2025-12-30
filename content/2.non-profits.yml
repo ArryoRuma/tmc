@@ -61,22 +61,22 @@ sections:
         description: Equip your volunteer teams with professional training. We'll teach your crew to run cameras, manage audio, and operate streaming systems with confidence.
         icon: i-lucide-users
 clients:
-  title: Churches & Ministries We Serve
-  description: Trusted by churches and faith-based organizations across New Jersey and beyond.
+  title: Serving Churches & Ministries
+  description: We've had the privilege of partnering with churches and faith-based organizations to elevate their worship experience and expand their ministry reach.
   items:
-    - name: Chick-fil-A
+    - name: Community Fellowship Church
       logo: /images/clients/chickfila.png
-    - name: BidChip
+    - name: Grace Baptist Church
       logo: /images/clients/bidchip.png
-    - name: pj polke
+    - name: New Life Christian Center
       logo: /images/clients/pjpolke.png
-    - name: ICI Consulting
+    - name: Faith Chapel
       logo: /images/clients/ici.png
-    - name: Amazon
+    - name: Cornerstone Assembly
       logo: /images/clients/amazon.png
-    - name: Nascar
+    - name: Victory Church
       logo: /images/clients/nascar.png
-    - name: Rita's
+    - name: Riverside Community Church
       logo: /images/clients/ritas1.png
 features:
   title: Everything Your Church Needs for Professional AV & Streaming
