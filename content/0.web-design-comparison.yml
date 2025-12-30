@@ -1,0 +1,156 @@
+title: Web Design Comparison
+description: Compare our revenue-focused web design approach with traditional web design
+seo:
+  title: Web Design Comparison | TruMedia Creative
+  description: See how our sales-ready web design approach differs from traditional web design and brochure websites.
+navigation: false
+
+hero:
+  headline: Web Design Comparison
+  title: Our Revenue-Focused Approach vs. Traditional Web Design
+  description: |
+    See how our strategic web design approach differs from traditional web design.
+    We build websites that actively support sales and drive revenue, not just digital brochures.
+  links:
+    - label: Book a Free Website Audit
+      icon: i-lucide-monitor-cog
+      trailingIcon: i-lucide-arrow-right
+      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+      size: xl
+    - label: See Our Web Design Process
+      to: /services/web-design
+      variant: subtle
+      icon: i-lucide-layers
+
+comparison:
+  title: Revenue-Focused vs Traditional Web Design
+  description: A clear comparison of what you get with each approach
+  items:
+    - title: Traditional Web Design
+      description: Digital brochure focused on aesthetics
+      price: $5,000 - $15,000
+      tagline: Looks good, doesn't convert
+      badge:
+        label: Old Approach
+        color: neutral
+        variant: subtle
+      button:
+        label: Not This Approach
+        to: /services/web-design
+        color: neutral
+        variant: outline
+      features:
+        - title: Aesthetic-focused design
+          icon: i-lucide-palette
+        - title: Generic messaging
+          icon: i-lucide-message-square
+        - title: No sales alignment
+          icon: i-lucide-user-x
+        - title: Hard to update content
+          icon: i-lucide-lock
+        - title: Measured by traffic only
+          icon: i-lucide-eye
+        - title: Long developer dependency
+          icon: i-lucide-clock
+        - title: No buyer journey mapping
+          icon: i-lucide-map-off
+        - title: Missing sales integration
+          icon: i-lucide-unplug
+      variant: outline
+      orientation: vertical
+      
+    - title: TruMedia Web Design
+      description: Strategic revenue asset
+      price: Starting at $8,500
+      tagline: Built to convert and support sales
+      badge:
+        label: Revenue-Focused
+        color: primary
+        variant: solid
+      button:
+        label: Book a Free Audit
+        to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+        icon: i-lucide-arrow-right
+        trailing: true
+      features:
+        - title: Buyer-focused messaging & positioning
+          icon: i-lucide-target
+        - title: Conversion-driven page structure
+          icon: i-lucide-layout-template
+        - title: Sales-enabled architecture
+          icon: i-lucide-briefcase
+        - title: Fast updates without dev bottlenecks
+          icon: i-lucide-zap
+        - title: Measured by leads & pipeline
+          icon: i-lucide-line-chart
+        - title: SEO-ready by default
+          icon: i-lucide-search
+        - title: Buyer journey mapping
+          icon: i-lucide-map
+        - title: Integrated into sales process
+          icon: i-lucide-plug
+      variant: solid
+      orientation: vertical
+      highlight: true
+      scale: true
+
+sections:
+  - id: key-differences
+    title: Key Differences That Drive Results
+    headline: Why This Matters for Your Business
+    description: |
+      The difference isn't just in features—it's in outcomes. Traditional websites 
+      look polished but fail to support revenue goals. Our approach treats your 
+      website as an active sales asset that works alongside your team.
+    orientation: vertical
+    reverse: false
+    features:
+      - title: Built for Revenue, Not Just Appearance
+        description: Every page is designed to guide buyers toward action and support real sales conversations.
+        icon: i-lucide-trending-up
+      - title: Sales Team Actually Uses It
+        description: The website becomes a tool sales teams use during deals, not something they avoid.
+        icon: i-lucide-handshake
+      - title: Reduces Sales Cycle Time
+        description: Buyers arrive informed and aligned, reducing time spent on basic explanations.
+        icon: i-lucide-clock
+      - title: Works Across the Entire Buyer Journey
+        description: Structured to support education, evaluation, objection handling, and decision-making.
+        icon: i-lucide-route
+
+  - id: what-you-get
+    title: What's Included in Our Approach
+    headline: Everything Needed for a Revenue-Ready Website
+    description: |
+      Our Website Growth System includes strategic positioning, buyer-focused 
+      architecture, and integration with your sales process—not just a designed site.
+    orientation: vertical
+    reverse: true
+    features:
+      - title: Messaging & Positioning Workshop
+        description: Clarify your value proposition and buyer priorities ($1,500 value included).
+        icon: i-lucide-compass
+      - title: Buyer-Centric Site Architecture
+        description: Pages mapped to buyer intent and decision stages.
+        icon: i-lucide-map
+      - title: Strategic Design & Development
+        description: Professional site focused on clarity, credibility, and conversion.
+        icon: i-lucide-layout
+      - title: Sales Integration & Training
+        description: Guidance on using your site in sales conversations and outreach.
+        icon: i-lucide-graduation-cap
+
+cta:
+  title: Ready to See How This Works for Your Business?
+  description: |
+    Book a free website audit to see how your current site compares and what's 
+    possible with a revenue-focused approach.
+  links:
+    - label: Book Free Website Audit
+      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+      icon: i-lucide-monitor-cog
+      trailingIcon: i-lucide-arrow-right
+    - label: See Our Portfolio
+      to: /projects
+      variant: subtle
+      icon: i-lucide-briefcase
