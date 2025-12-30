@@ -54,13 +54,12 @@ const contactInfo = {
         </p>
       </template>
     </UPageHero>
-    <UPageSection class="py-16">
+    <h2 class="text-3xl text-center font-bold text-highlighted mb-8">
+      Contact Information
+    </h2>
+    <UPageSection class="py-6">
       <!-- Contact Information - 2 Column Layout -->
       <div>
-        <h2 class="text-3xl font-bold text-highlighted mb-8">
-          Contact Information
-        </h2>
-
         <div class="grid md:grid-cols-2 gap-8 mb-12">
           <!-- Column A: Email and Phone -->
           <div class="space-y-6">
@@ -132,7 +131,7 @@ const contactInfo = {
         </div>
 
         <!-- 3 Column Section: Quick Response Promise (center) and Follow Us -->
-        <div class="grid md:grid-cols-3 gap-8">
+        <div class="grid md:grid-cols-2 gap-8">
           <!-- Empty left column for spacing -->
           <div></div>
 
@@ -150,28 +149,6 @@ const contactInfo = {
               We understand your time is valuable. That's why we guarantee a
               response to all inquiries within 24 hours, usually much sooner.
             </p>
-          </div>
-
-          <!-- Right Column: Follow Us -->
-          <div class="flex flex-col justify-center">
-            <h3 class="font-semibold text-highlighted mb-4">Follow Us</h3>
-            <div class="flex gap-3">
-              <UButton
-                variant="ghost"
-                size="sm"
-                icon="i-lucide-linkedin"
-                to="https://www.linkedin.com/company/trumedia-creative"
-                target="_blank"
-              />
-
-              <UButton
-                variant="ghost"
-                size="sm"
-                icon="i-lucide-youtube"
-                to="https://www.linkedin.com/company/trumedia-creative/"
-                target="_blank"
-              />
-            </div>
           </div>
         </div>
       </div>
@@ -192,16 +169,5 @@ const contactInfo = {
       </div>
     </UPageSection>
     <!-- Main Contact Section -->
-
-    <!-- CTA Section -->
-    <UPageCTA
-      title="Ready to Get Started?"
-      description="Don't wait to transform your marketing. The sooner we start, the sooner you'll see results."
-    >
-      <template #links>
-        <UButton size="lg" to="/pricing"> View Our Services </UButton>
-        <UButton size="lg" variant="outline" to="/"> See Our Work </UButton>
-      </template>
-    </UPageCTA>
   </div>
 </template>
