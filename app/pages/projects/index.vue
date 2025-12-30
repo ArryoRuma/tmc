@@ -1,5 +1,6 @@
 <script setup>
 // Additional projects not in ProjectsPortfolio
+// TODO: Ensure that these pages contain links back to /projects page using ProjectsBackToAllProjectsButton component
 const additionalProjects = ref([
   {
     title:
