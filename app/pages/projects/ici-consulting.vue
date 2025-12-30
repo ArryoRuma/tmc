@@ -57,7 +57,7 @@ useSeoMeta({
 </script>
 
 <!-- TODO: verify this page is consistent with other project pages
-TODO: remove before and after, and instead put photos/screenshots of testimonials, etc. -->
+TODO: remove before and after, and put placeholder for photos/screenshots of testimonials, etc. -->
 <template>
   <div>
     <ProjectsHero :project="project" />
