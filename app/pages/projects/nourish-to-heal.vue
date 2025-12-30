@@ -17,7 +17,7 @@ interface Project {
 
 const project: Project = {
   title:
-    "How Nourish to Heal Transformed a Great Meal Prep Brand into a Scalable E-Commerce System",
+    "Meal Prep Brand E-Commerce Case Study: Website, SEO, and Online Ordering",
   description:
     "Shopify 2.0 rebuild and operational strategy for a growing meal prep and nutrition brand.",
   year: 2024,

@@ -15,7 +15,7 @@ interface Project {
 
 const project: Project = {
   title:
-    "How ICI Consulting Engineered Predictable High-Value Conversations with a Targeted Outreach System",
+    "Financial Consulting Lead Generation Case Study: Outbound Sales System",
   description:
     "Outbound strategy, messaging, and sales enablement for a financial consulting firm serving banks and credit unions.",
   year: 2024,

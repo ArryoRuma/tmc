@@ -42,7 +42,7 @@ const projects = ref([
   {
     _path: "/projects/nourish-to-heal",
     title:
-      "Food Brand E-Commerce Case Study: Website, SEO, and Online Ordering",
+      "Meal Prep Brand E-Commerce Case Study: Website, SEO, and Online Ordering",
     to: "/projects/nourish-to-heal",
     thumbnail: "/images/web-design/nourish-to-heal/nourish-to-heal-hero.png",
     tags: ["Web Design", "Branding", "Photography", "SEO", "E-Commerce"],
@@ -53,7 +53,7 @@ const projects = ref([
     _path: "/projects/nascar-cody-ware",
     disabled: true,
     title: "Motorsports Brand Video Case Study: Social and Promotional Content",
-    to: "https://vimeo.com/812175432/1d898d2c46?share=copy&fl=sv&fe=ci",
+    to: "/projects/nascar-cody-ware",
     thumbnail: "/images/video/nascar-cody-ware/nascar-cody-ware-hero.png",
     tags: ["Brand Video", "Social Media Videos", "Photography"],
     client_type: "Brand Activation Client",

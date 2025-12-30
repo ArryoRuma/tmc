@@ -18,7 +18,7 @@ interface Project {
 
 const project: Project = {
   title:
-    "How Cut. artisan. hair. design. Increased Retention and Local Visibility with a Client Growth System",
+    "Local Hair Salon Marketing Case Study: Retention, SEO, and Paid Ads",
   description:
     "SEO, retention, and paid media strategy for a high-end local hair salon focused on repeat business and predictable growth.",
   year: 2024,

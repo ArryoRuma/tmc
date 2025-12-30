@@ -16,7 +16,7 @@ interface Project {
 }
 
 const project: Project = {
-  title: "PineTar Self Storage",
+  title: "Self Storage Real Estate Marketing Case Study: Brand, Website, and Visual Assets",
   description:
     "Complete branding and web design solution for a construction company",
   year: 2024,

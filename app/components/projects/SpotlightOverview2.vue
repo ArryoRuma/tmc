@@ -24,7 +24,7 @@ const props = defineProps<{ project: Project2 }>();
       class="inline-flex items-center gap-2 rounded-full border border-primary-200/70 bg-white/80 px-4 py-1.5 text-sm font-semibold text-primary-700 shadow-sm"
     >
       <span class="h-2 w-2 rounded-full bg-primary-500" />
-      Project Spotlight
+      Project Case Study
     </div>
 
     <div class="space-y-5">

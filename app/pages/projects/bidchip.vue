@@ -19,7 +19,7 @@ interface Project {
 
 const project: Project = {
   title:
-    "How BidChip Re-Activated a Dormant Marketplace with Targeted Outreach and Seller Enablement",
+    "B2B Electronics Marketplace Case Study: Seller Re-Activation and Outbound Growth",
   description:
     "Activation, re-engagement, and outbound systems for a B2B electronics and semiconductor bidding platform.",
   year: 2024,

@@ -3,7 +3,7 @@ import type { Project } from "~/types/project";
 
 const project: Project = {
   title:
-    "How PJ Polke Went from Outdated and Bulky to a Boosting Online Presence and Inbound Leads",
+    "Manufacturing Rep Website Redesign Case Study: Modern Brand and Lead-Ready Site",
   description:
     "Complete branding revamp and web design solution for a Manufacturing Representative Company.",
   year: 2024,

@@ -2,7 +2,7 @@
 // Static data for zerosurge
 const project = {
   title:
-    "How ZeroSurge Turned Complex Surge Protection into a Sales-Ready Education Engine",
+    "Electronics Manufacturing Marketing Case Study: E-Commerce, SEO, and Lead Generation",
   description:
     "Video-led messaging and positioning system for a surge protection manufacturer with multiple buyer audiences.",
   year: 2025,

@@ -3,7 +3,7 @@ import type { Project } from "~/types/project";
 
 const project: Project = {
   title:
-    "How Nourish to Heal Transformed a Great Meal Prep Brand into a Scalable E-Commerce System",
+    "Manufacturing Product Video Case Study: Marketing and Sales Assets",
   description:
     "Shopify 2.0 rebuild and operational strategy for a growing meal prep and nutrition brand.",
   year: 2024,
