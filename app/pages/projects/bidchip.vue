@@ -95,10 +95,7 @@ TODO: remove before and after, and add in case study placeholder -->
       :video="project.video"
       :title="project.title"
     /> -->
-    <ProjectsResults
-      v-if="project.results"
-      :results="project.results"
-    />
+    <ProjectsResults v-if="project.results" :results="project.results" />
     <ProjectsBackToAllProjectsButton />
   </div>
 </template>
