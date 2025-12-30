@@ -3,9 +3,9 @@
 const additionalProjects = ref([
   {
     title:
-      "How Advanced Snow Management Won and Scaled Large Industrial Contracts with Clear Positioning and Proposals",
+      "Industrial Snow Removal Marketing Case Study: 9.1x Growth in One Year",
     to: "/projects/advanced-snow-management",
-    thumbnail: "",
+    thumbnail: "/images/projects/thumbnails/snow-removal.jpg",
     tags: [
       "Industrial Marketing Strategy",
       "Proposal & RFP Support",
@@ -16,22 +16,22 @@ const additionalProjects = ref([
   },
   {
     title:
-      "How BidChip Re-Activated a Dormant Marketplace with Targeted Outreach and Seller Enablement",
+      "B2B Electronics Marketplace Case Study: Seller Re-Activation and Outbound Growth",
     to: "/projects/bidchip",
-    thumbnail: "",
+    thumbnail: "/images/projects/thumbnails/bidchip.png",
     tags: [
       "Activation & Re-Engagement Strategy",
       "Outbound Campaign Design",
       "Sales Messaging & Email Systems",
     ],
-    client_type: "B2B Electronics & Semiconductor Platform Client",
+    client_type: "B2B E-commerce Semiconductor Client",
     year: 2024,
   },
   {
     title:
-      "How Cut. artisan. hair. design. Increased Retention and Local Visibility with a Client Growth System",
+      "Local Hair Salon Marketing Case Study: Retention, SEO, and Paid Ads",
     to: "/projects/cut-artisan-hair-design",
-    thumbnail: "",
+    thumbnail: "/images/projects/thumbnails/hair-salon.jpg",
     tags: [
       "Local SEO Strategy",
       "Client Retention & Re-Engagement Campaigns",
@@ -42,9 +42,9 @@ const additionalProjects = ref([
   },
   {
     title:
-      "How ICI Consulting Engineered Predictable High-Value Conversations with a Targeted Outreach System",
+      "Financial Consulting Lead Generation Case Study: Outbound Sales System",
     to: "/projects/ici-consulting",
-    thumbnail: "",
+    thumbnail: "/images/projects/thumbnails/ici-consulting.jpg",
     tags: [
       "Outbound Strategy & Campaign Design",
       "Sales Messaging & Positioning",
@@ -54,8 +54,7 @@ const additionalProjects = ref([
     year: 2024,
   },
   {
-    title:
-      "How Nourish to Heal Transformed a Great Meal Prep Brand into a Scalable E-Commerce System",
+    title: "Meal Prep E-Commerce Case Study: Shopify 2.0 UX and Conversion",
     to: "/projects/nourish-to-heal-2",
     thumbnail: "/images/web-design/nourish-to-heal/nourish-to-heal-hero.png",
     tags: [

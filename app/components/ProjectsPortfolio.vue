@@ -3,7 +3,8 @@
 const projects = ref([
   {
     _path: "/projects/pjpolke",
-    title: "PJ Polke",
+    title:
+      "Manufacturing Rep Website Redesign Case Study: Modern Brand and Lead-Ready Site",
     to: "/projects/pjpolke",
     thumbnail: "/images/web-design/pjpolke/pjpolke-hero.png",
     tags: ["Web Design", "Branding"],
@@ -12,7 +13,8 @@ const projects = ref([
   },
   {
     _path: "/projects/pinetar",
-    title: "PineTar Self Storage",
+    title:
+      "Self Storage Real Estate Marketing Case Study: Brand, Website, and Visual Assets",
     to: "/projects/pinetar",
     thumbnail: "/images/web-design/pinetar/pinetar-hero.png",
     tags: ["Web Design", "Branding", "Video", "Photography"],
@@ -21,7 +23,8 @@ const projects = ref([
   },
   {
     _path: "/projects/zero-surge",
-    title: "ZeroSurge",
+    title:
+      "Electronics Manufacturing Marketing Case Study: E-Commerce, SEO, and Lead Generation",
     to: "/projects/zero-surge",
     thumbnail: "/images/web-design/zero-surge/zero-surge-hero.png",
     tags: [
@@ -38,7 +41,8 @@ const projects = ref([
   },
   {
     _path: "/projects/nourish-to-heal",
-    title: "Nourish To Heal",
+    title:
+      "Food Brand E-Commerce Case Study: Website, SEO, and Online Ordering",
     to: "/projects/nourish-to-heal",
     thumbnail: "/images/web-design/nourish-to-heal/nourish-to-heal-hero.png",
     tags: ["Web Design", "Branding", "Photography", "SEO", "E-Commerce"],
@@ -48,7 +52,7 @@ const projects = ref([
   {
     _path: "/projects/nascar-cody-ware",
     disabled: true,
-    title: "NASCAR Cody Ware",
+    title: "Motorsports Brand Video Case Study: Social and Promotional Content",
     to: "https://vimeo.com/812175432/1d898d2c46?share=copy&fl=sv&fe=ci",
     thumbnail: "/images/video/nascar-cody-ware/nascar-cody-ware-hero.png",
     tags: ["Brand Video", "Social Media Videos", "Photography"],
@@ -57,7 +61,7 @@ const projects = ref([
   },
   {
     _path: "/projects/tree-staple",
-    title: "Tree Staple",
+    title: "Manufacturing Product Video Case Study: Marketing and Sales Assets",
     to: "/projects/tree-staple",
     thumbnail: "/images/video/tree-staple/tree-staple-hero.png",
     tags: ["Video", "Marketing Materials", "Photography"],
@@ -70,7 +74,7 @@ const projects = ref([
 <template>
   <FadeInUp>
     <div class="container mx-auto px-4 py-8">
-      <h1 class="text-3xl font-bold mb-8">Recent Projects</h1>
+      <h1 class="text-3xl font-bold mb-8">Recent Projects & Case Studies</h1>
 
       <div v-if="!projects || projects.length === 0" class="text-center py-8">
         <p class="text-gray-600">No projects found.</p>
