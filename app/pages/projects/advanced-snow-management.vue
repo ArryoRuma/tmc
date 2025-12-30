@@ -16,6 +16,10 @@ interface Project {
   solution?: string;
   results?: string[];
   galleryImages?: string[];
+  caseStudySections?: Array<{
+    heading: string;
+    content: string;
+  }>;
 }
 
 const project: Project = {
@@ -52,6 +56,7 @@ const project: Project = {
     "Stronger positioning as an enterprise-capable snow management partner",
   ],
   galleryImages: [],
+  caseStudySections: [],
 };
 definePageMeta({
   layout: "projects",
@@ -64,9 +69,7 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages
-TODO: add in case study placeholder
- -->
+<!-- TODO: verify this page is consistent with other project pages -->
 <template>
   <div>
     <ProjectsHero :project="project" />
@@ -94,6 +97,10 @@ TODO: add in case study placeholder
     <ProjectsGallery
       :images="project.galleryImages"
       :title="`${project.client} Photo Gallery`"
+    />
+    <ProjectsCaseStudy
+      :sections="project.caseStudySections"
+      :title="`${project.client} Case Study`"
     />
     <ProjectsResults :results="project.results" />
   </div>
