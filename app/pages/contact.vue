@@ -53,83 +53,90 @@ const contactInfo = {
           with our team and let's discuss how we can help you sell more.
         </p>
       </template>
-      <!-- TODO: Reformat this section to have 2 columns. Column A to have email and phone, Column B to have address and hours. Below,  in a 3 column section, have the quick response promise section and follow us links. where its using the middle column. -->
     </UPageHero>
     <UPageSection class="py-16">
-      <div class="grid lg:grid-cols-2 gap-16">
-        <!-- Contact Information -->
-        <div class="space-y-8">
-          <div>
-            <h2 class="text-3xl font-bold text-highlighted mb-6">
-              Contact Information
-            </h2>
+      <!-- Contact Information - 2 Column Layout -->
+      <div>
+        <h2 class="text-3xl font-bold text-highlighted mb-8">
+          Contact Information
+        </h2>
 
-            <div class="space-y-6">
-              <!-- Email -->
-              <div class="flex items-start gap-4">
-                <div class="bg-primary/10 p-3 rounded-lg">
-                  <UIcon name="i-lucide-mail" class="text-primary text-xl" />
-                </div>
-                <div>
-                  <h3 class="font-semibold text-highlighted">Email</h3>
-                  <a
-                    :href="`mailto:${contactInfo.email}`"
-                    class="text-primary hover:underline"
-                  >
-                    {{ contactInfo.email }}
-                  </a>
-                </div>
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <!-- Column A: Email and Phone -->
+          <div class="space-y-6">
+            <!-- Email -->
+            <div class="flex items-start gap-4">
+              <div class="bg-primary/10 p-3 rounded-lg">
+                <UIcon name="i-lucide-mail" class="text-primary text-xl" />
               </div>
-
-              <!-- Phone -->
-              <div class="flex items-start gap-4">
-                <div class="bg-primary/10 p-3 rounded-lg">
-                  <UIcon name="i-lucide-phone" class="text-primary text-xl" />
-                </div>
-                <div>
-                  <h3 class="font-semibold text-highlighted">Phone</h3>
-                  <a
-                    :href="`tel:${contactInfo.phone}`"
-                    class="text-primary hover:underline"
-                  >
-                    {{ contactInfo.phone }}
-                  </a>
-                </div>
+              <div>
+                <h3 class="font-semibold text-highlighted">Email</h3>
+                <a
+                  :href="`mailto:${contactInfo.email}`"
+                  class="text-primary hover:underline"
+                >
+                  {{ contactInfo.email }}
+                </a>
               </div>
+            </div>
 
-              <!-- Address -->
-              <div class="flex items-start gap-4">
-                <div class="bg-primary/10 p-3 rounded-lg">
-                  <UIcon name="i-lucide-map-pin" class="text-primary text-xl" />
-                </div>
-                <div>
-                  <h3 class="font-semibold text-highlighted">Address</h3>
-                  <p class="text-muted">
-                    {{ contactInfo.address.street }}<br />
-                    {{ contactInfo.address.city }},
-                    {{ contactInfo.address.state }}
-                    {{ contactInfo.address.zip }}
-                  </p>
-                </div>
+            <!-- Phone -->
+            <div class="flex items-start gap-4">
+              <div class="bg-primary/10 p-3 rounded-lg">
+                <UIcon name="i-lucide-phone" class="text-primary text-xl" />
               </div>
-
-              <!-- Hours -->
-              <div class="flex items-start gap-4">
-                <div class="bg-primary/10 p-3 rounded-lg">
-                  <UIcon name="i-lucide-clock" class="text-primary text-xl" />
-                </div>
-                <div>
-                  <h3 class="font-semibold text-highlighted">Hours</h3>
-                  <p class="text-muted">
-                    {{ contactInfo.hours.weekdays }}<br />
-                    {{ contactInfo.hours.weekend }}
-                  </p>
-                </div>
+              <div>
+                <h3 class="font-semibold text-highlighted">Phone</h3>
+                <a
+                  :href="`tel:${contactInfo.phone}`"
+                  class="text-primary hover:underline"
+                >
+                  {{ contactInfo.phone }}
+                </a>
               </div>
             </div>
           </div>
 
-          <!-- Quick Response Promise -->
+          <!-- Column B: Address and Hours -->
+          <div class="space-y-6">
+            <!-- Address -->
+            <div class="flex items-start gap-4">
+              <div class="bg-primary/10 p-3 rounded-lg">
+                <UIcon name="i-lucide-map-pin" class="text-primary text-xl" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-highlighted">Address</h3>
+                <p class="text-muted">
+                  {{ contactInfo.address.street }}<br />
+                  {{ contactInfo.address.city }},
+                  {{ contactInfo.address.state }}
+                  {{ contactInfo.address.zip }}
+                </p>
+              </div>
+            </div>
+
+            <!-- Hours -->
+            <div class="flex items-start gap-4">
+              <div class="bg-primary/10 p-3 rounded-lg">
+                <UIcon name="i-lucide-clock" class="text-primary text-xl" />
+              </div>
+              <div>
+                <h3 class="font-semibold text-highlighted">Hours</h3>
+                <p class="text-muted">
+                  {{ contactInfo.hours.weekdays }}<br />
+                  {{ contactInfo.hours.weekend }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Column Section: Quick Response Promise (center) and Follow Us -->
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Empty left column for spacing -->
+          <div></div>
+
+          <!-- Center Column: Quick Response Promise -->
           <div
             class="bg-gradient-to-br from-primary/5 to-primary/10 border border-primary/20 rounded-xl p-6"
           >
@@ -145,8 +152,8 @@ const contactInfo = {
             </p>
           </div>
 
-          <!-- Social Links -->
-          <div>
+          <!-- Right Column: Follow Us -->
+          <div class="flex flex-col justify-center">
             <h3 class="font-semibold text-highlighted mb-4">Follow Us</h3>
             <div class="flex gap-3">
               <UButton
