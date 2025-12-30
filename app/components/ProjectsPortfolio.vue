@@ -92,7 +92,9 @@ const projects = ref([
               v-else
               class="rounded-xl w-full h-56 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 shadow-lg drop-shadow-lg group-hover:shadow-xl group-hover:drop-shadow-xl transition-all duration-300 flex items-center justify-center"
             >
-              <span class="text-primary-700 dark:text-primary-200 font-bold text-2xl">
+              <span
+                class="text-primary-700 dark:text-primary-200 font-bold text-2xl"
+              >
                 {{ project.title }}
               </span>
             </div>
