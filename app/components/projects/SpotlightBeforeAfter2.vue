@@ -1,4 +1,3 @@
-
 <script setup lang="ts">
 const props = defineProps<{
   beforeImage?: string;
@@ -30,7 +29,7 @@ onMounted(() => {
   onUnmounted(() => window.removeEventListener("keydown", handleKey));
 });
 </script>
-<!-- TODO: Fix this component's format and functionality so that it matches the ProjectsBeforeAfter.vue component. --> 
+<!-- TODO: Fix this component's format and functionality so that it matches the ProjectsBeforeAfter.vue component. -->
 
 <template>
   <div class="grid gap-4 sm:grid-cols-2">

@@ -1,7 +1,4 @@
-<script setup>
-  import ProjectsBackToAllProjectsButton from '~/components/projects/ProjectsBackToAllProjectsButton.vue';
-  
-</script>
+<script setup></script>
 
 <template>
   <div class="min-h-screen bg-white text-slate-900 dark:bg-slate-950">
@@ -25,7 +22,6 @@
         <slot />
       </UMain>
 
-      
       <AppFooter />
     </div>
   </div>

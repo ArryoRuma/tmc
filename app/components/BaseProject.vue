@@ -32,8 +32,6 @@ definePageMeta({
 
 <template>
   <div class="min-h-screen">
-   
-
     <!-- Hero Section -->
     <ProjectsHero :project="project" />
 
@@ -153,7 +151,7 @@ definePageMeta({
         </div>
       </UContainer>
     </section>
-     <!-- Back Button -->
+    <!-- Back Button -->
     <ProjectsBackToAllProjectsButton v-if="showBackButton" />
   </div>
 </template>
