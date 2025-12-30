@@ -8,7 +8,7 @@ const description = page.value?.seo?.description || page.value?.description;
 const fourStep = ref([
   {
     id: "1",
-    title: "Step 1",
+    title: "Discover",
     subtitle: "Discover",
     description:
       "First, we dive in to what problems you're facing and determine what types of videos will best address those challenges.",
@@ -76,6 +76,7 @@ useSeoMeta({
     </FadeInUp>
 
     <FadeInUp :delay="0.2">
+      <!--TODO: Update this section with Process Steps Component -->
       <UPageSection
         title="We've Got You Covered... Here's How."
         description="Our proven 4-step approach to creating marketing content that converts prospects into clients"
