@@ -37,6 +37,7 @@ const props = defineProps<{ project: Project2 }>();
       <div class="grid gap-12 lg:grid-cols-[1.05fr_0.95fr] lg:items-start">
         <ProjectsSpotlightOverview2 :project="props.project" />
         <ProjectsSpotlightDetails2 :project="props.project" />
+        <ProjectsSpotlightResults2 :results="props.project.results" />
       </div>
     </UContainer>
   </section>

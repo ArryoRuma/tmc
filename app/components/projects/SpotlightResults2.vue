@@ -6,7 +6,7 @@ const props = defineProps<{ results?: string[] }>();
   <div
     class="rounded-3xl border border-white/50 bg-white/80 p-6 shadow-xl backdrop-blur"
   >
-    <p class="text-sm font-semibold text-slate-500">Results</p>
+    <p class="text-sm font-semibold text-slate-900">Results</p>
     <ul class="mt-4 space-y-3 text-sm text-slate-600">
       <li
         v-for="result in props.results"
