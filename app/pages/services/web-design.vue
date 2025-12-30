@@ -22,34 +22,14 @@ useSeoMeta({
       :headline="page.hero.headline"
       :links="page.hero.links"
     >
-      <template #title>
-        <h1 class="text-5xl md:text-7xl font-bold leading-tight">
-          Web Design that Turns
-          <span class="text-primary italic"> conversations</span>
-          into
-          <span class="text-primary italic"> clients</span>
-          with a video growth engine.
-        </h1>
-      </template>
+      
       <!-- <template #top>
         <HeroBackground />
-      </template> -->
+      </template>
 
-      <PromotionalVideo />
+      <PromotionalVideo /> -->
     </UPageHero>
-    <UPageSection
-      :title="page.features.title"
-      :description="page.features.description"
-    >
-      <UPageGrid>
-        <UPageCard
-          v-for="(item, index) in page.features.items"
-          :key="index"
-          v-bind="item"
-          spotlight
-        />
-      </UPageGrid>
-    </UPageSection>
+    
     <UPageSection
       v-for="(section, index) in page.sections"
       :key="index"
@@ -60,13 +40,13 @@ useSeoMeta({
       :reverse="section.reverse"
       :features="section.features"
       :price="section.price"
+      :links="section.links"
     >
-      <ImagePlaceholder />
+      
     </UPageSection>
     <USeparator />
-    <ProjectsPortfolio />
+    
     <UPageCTA v-bind="page.cta" variant="naked" class="overflow-hidden">
-      <LazyStarsBg />
     </UPageCTA>
   </div>
 </template>
