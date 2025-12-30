@@ -76,8 +76,14 @@ export default defineNuxtConfig({
     },
   },
   robots: {
+    allow: "/",
     disallow: ["/admin", "/private"],
-    allow: ["/"],
+    groups: [
+      {
+        userAgent: "GPTBot",
+        allow: "/",
+      },
+    ],
   },
   scripts: {
     registry: {
