@@ -57,7 +57,7 @@ useSeoMeta({
 </script>
 
 <!-- TODO: verify this page is consistent with other project pages
-TODO: remove before and after, and actually write a legit case study -->
+TODO: remove before and after, and add case study -->
 <template>
   <div>
     <ProjectsHero :project="project" />
