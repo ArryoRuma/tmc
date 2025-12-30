@@ -1,5 +1,6 @@
 <script setup>
-import BackToAllProjectsButton from "~/components/projects/ProjectsBackToAllProjectsButton.vue";
+  import ProjectsBackToAllProjectsButton from '~/components/projects/ProjectsBackToAllProjectsButton.vue';
+  
 </script>
 
 <template>
@@ -24,7 +25,7 @@ import BackToAllProjectsButton from "~/components/projects/ProjectsBackToAllProj
         <slot />
       </UMain>
 
-      <BackToAllProjectsButton />
+      
       <AppFooter />
     </div>
   </div>
