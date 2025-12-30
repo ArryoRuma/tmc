@@ -1,4 +1,5 @@
-# Nuxt SaaS Template
+# TruMedia Creative website
+# TODO: Update project title and description and fix this page so that it's not the Nuxt SaaS template README, but this project's README.
 
 [![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
 
