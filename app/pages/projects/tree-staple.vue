@@ -57,7 +57,6 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages -->
 <template>
   <ProjectsSpotlightLayout2 :project="project" />
 </template>
