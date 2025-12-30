@@ -20,11 +20,17 @@ const props = defineProps<{ project: Project2 }>();
 
 <template>
   <div class="space-y-6">
+    <div class="rounded-3xl border border-slate-100 bg-white/90 p-6 shadow-lg">
+      <p class="text-sm font-semibold text-slate-900">Approach</p>
+      <p class="mt-3 text-sm text-slate-600">
+        {{ props.project.approach }}
+      </p>
+    </div>
     <div
       class="rounded-3xl border border-white/50 bg-white/80 p-6 shadow-xl backdrop-blur"
     >
       <div class="flex items-center justify-between">
-        <p class="text-sm font-semibold text-slate-500">What we delivered</p>
+        <p class="text-sm font-semibold text-slate-900">What we delivered</p>
         <span
           class="rounded-full bg-primary-50 px-3 py-1 text-xs font-semibold text-primary-700"
         >
@@ -42,12 +48,7 @@ const props = defineProps<{ project: Project2 }>();
       </div>
     </div>
 
-    <div class="rounded-3xl border border-slate-100 bg-white/90 p-6 shadow-lg">
-      <p class="text-sm font-semibold text-slate-500">Approach</p>
-      <p class="mt-3 text-sm text-slate-600">
-        {{ props.project.approach }}
-      </p>
-    </div>
+    
 
     <ProjectsSpotlightBeforeAfter2
       :before-image="props.project.beforeImage"
@@ -55,6 +56,6 @@ const props = defineProps<{ project: Project2 }>();
       :client="props.project.client"
     />
 
-    <ProjectsSpotlightResults2 :results="props.project.results" />
+    
   </div>
 </template>
