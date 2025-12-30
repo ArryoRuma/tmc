@@ -13,7 +13,7 @@ useSeoMeta({
   ogDescription: description,
 });
 </script>
-
+<!-- TODO: Create a very nice industry specific page for Live Events and Entertainment. specifically bands, musicians, and event organizers who want high quality events and experiences. -->
 <template>
   <div v-if="page?.title">
     <UPageHero
