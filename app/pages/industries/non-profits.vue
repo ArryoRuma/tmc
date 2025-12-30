@@ -13,7 +13,7 @@ useSeoMeta({
   ogDescription: description,
 });
 </script>
-
+<!-- TODO: reformat this page to be a very nice industry-specific landing page for non-profits, specifically churches and their AV and live stream video needs -->
 <template>
   <div v-if="page?.title">
     <UPageHero
