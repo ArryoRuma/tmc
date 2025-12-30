@@ -38,7 +38,7 @@ const contactInfo = {
           <span
             class="text-primary block"
             style="
-              font-family: &quot;new-spirit&quot;, serif !important;
+              font-family: 'new-spirit', serif !important;
               font-weight: 700 !important;
             "
           >
@@ -53,22 +53,11 @@ const contactInfo = {
           with our team and let's discuss how we can help you sell more.
         </p>
       </template>
+<!-- TODO: Reformat this section to have 2 columns. Column A to have email and phone, Column B to have address and hours. Below,  in a 3 column section, have the quick response promise section and follow us links. where its using the middle column.-->
     </UPageHero>
-
-    <!-- Main Contact Section -->
-    <UPageSection class="py-16">
+        <UPageSection class="py-16">
       <div class="grid lg:grid-cols-2 gap-16">
-        <div>
-          <h2 class="text-3xl font-bold text-highlighted mb-6">Get in Touch</h2>
-          <p class="text-muted mb-8">
-            Whether you have questions about our services, need a custom quote,
-            or want to discuss your project, we're here to help. Fill out the
-            form below and a member of our team will get back to you shortly.
-          </p>
-
-          <!-- Contact Form -->
-          <HoneyBookForm />
-        </div>
+        
         <!-- Contact Information -->
         <div class="space-y-8">
           <div>
@@ -181,6 +170,21 @@ const contactInfo = {
         </div>
       </div>
     </UPageSection>
+    <UPageSection>
+      <div>
+          <h2 class="text-3xl font-bold text-center text-highlighted mb-6">Get in Touch</h2>
+          <p class="text-muted mb-8">
+            Whether you have questions about our services, need a custom quote,
+            or want to discuss your project, we're here to help. Fill out the
+            form below and a member of our team will get back to you shortly.
+          </p>
+
+          <!-- Contact Form -->
+          <HoneyBookForm2 />
+        </div>
+    </UPageSection>
+    <!-- Main Contact Section -->
+
 
     <!-- CTA Section -->
     <UPageCTA
