@@ -16,20 +16,7 @@ interface Project {
     content: string;
   }>;
 }
-interface Props {
-  project: Project;
-  layout?: "default" | "spotlight" | "minimal";
-  showBackButton?: boolean;
-  showResults?: boolean;
-  showGallery?: boolean;
-}
 
-const props = withDefaults(defineProps<Props>(), {
-  layout: "default",
-  showBackButton: true,
-  showResults: true,
-  showGallery: false,
-});
 const project: Project = {
   title:
     "B2B Electronics Marketplace Case Study: Seller Re-Activation and Outbound Growth",
@@ -94,8 +81,6 @@ TODO: remove before and after, and add in case study placeholder -->
       :title="`${project.client} Case Study`"
     />
 
-
-
     <!-- Hero Image / Video -->
     <ProjectsImage
       v-if="project.heroImage"
@@ -114,6 +99,6 @@ TODO: remove before and after, and add in case study placeholder -->
       v-if="showResults && project.results"
       :results="project.results"
     />
-    <ProjectsBackToAllProjectsButton/>
+    <ProjectsBackToAllProjectsButton />
   </div>
 </template>
