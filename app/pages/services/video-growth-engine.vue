@@ -148,24 +148,14 @@ useSeoMeta({
     </UPageSection>
     <USeparator />
 
-    <!-- TODO: Re-add ProcessTab component when ready and remove UStepper and related code
-    <div class="my-16 flex justify-center">
-      <ServicesProcessTab />
-    </div> -->
-    <UPageSection
-      id="our-process"
+    <!-- Process Steps -->
+    <ProcessSteps
+      :steps="items"
       title="Our Process"
-      description="Our proven 4-step approach to creating video content that converts prospects into clients"
-    >
-      <UStepper
-        :items="items"
-        orientation="vertical"
-        :active="-1"
-        class="max-w-4xl mx-auto"
-        size="xl"
-      />
-      <USeparator />
-    </UPageSection>
+      subtitle="Our proven 4-step approach to creating video content that converts prospects into clients"
+      variant="default"
+      :show-icons="true"
+    />
     <UPageSection
       :title="page.features.title"
       :description="page.features.description"
