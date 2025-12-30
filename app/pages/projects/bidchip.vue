@@ -6,13 +6,15 @@ interface Project {
   client?: string;
   services?: string[];
   heroImage?: string;
-  beforeImage?: string;
-  afterImage?: string;
   websiteUrl?: string;
   challenge?: string;
   approach?: string;
   solution?: string;
   results?: string[];
+  caseStudySections?: Array<{
+    heading: string;
+    content: string;
+  }>;
 }
 
 const project: Project = {
@@ -30,8 +32,6 @@ const project: Project = {
     "Performance Tracking & Optimization",
   ],
   heroImage: "",
-  beforeImage: "",
-  afterImage: "",
   websiteUrl: "",
   challenge:
     "BidChip had an active platform and a growing database of buyers and sellers, but many sellers were dormant or underutilizing the marketplace. Without consistent activation and education, marketplace liquidity and deal velocity were limited.",
@@ -46,6 +46,7 @@ const project: Project = {
     "Repeatable activation framework for ongoing growth",
     "Better visibility into seller behavior and campaign performance",
   ],
+  caseStudySections: [],
 };
 
 useSeoMeta({
@@ -61,12 +62,6 @@ TODO: remove before and after, and add in case study placeholder -->
 <template>
   <div>
     <ProjectsHero :project="project" />
-    <div class="bg-gray-50 dark:bg-gray-900 py-2">
-      <ProjectsBeforeAfter
-        :before-image="project.beforeImage"
-        :after-image="project.afterImage"
-      />
-    </div>
     <ProjectsDetails
       :challenge="project.challenge"
       :solution="project.solution"
@@ -76,6 +71,10 @@ TODO: remove before and after, and add in case study placeholder -->
       :image="project.heroImage"
       :title="project.title"
       :website-url="project.websiteUrl"
+    />
+    <ProjectsCaseStudy
+      :sections="project.caseStudySections"
+      :title="`${project.client} Case Study`"
     />
     <ProjectsResults :results="project.results" />
   </div>
