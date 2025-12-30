@@ -1,19 +1,5 @@
 <script setup lang="ts">
-interface Project {
-  title: string;
-  description: string;
-  year?: number;
-  client?: string;
-  services?: string[];
-  heroImage?: string;
-  beforeImage?: string;
-  afterImage?: string;
-  websiteUrl?: string;
-  challenge?: string;
-  approach?: string;
-  solution?: string;
-  results?: string[];
-}
+import type { Project } from "~/types/project";
 
 const project: Project = {
   title:
@@ -48,15 +34,8 @@ const project: Project = {
     "Improved customer confidence at checkout through clearer dietary, allergen, and meal information",
   ],
 };
-
-useSeoMeta({
-  title: `${project.title} - TruMedia Creative Portfolio`,
-  description: project.description,
-  ogTitle: `${project.title} - TruMedia Creative Portfolio`,
-  ogDescription: project.description,
-});
 </script>
 
 <template>
-  <ProjectsSpotlightLayout2 :project="project" />
+  <BaseProject :project="project" />
 </template>
