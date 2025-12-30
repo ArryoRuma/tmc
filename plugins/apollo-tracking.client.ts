@@ -1,16 +1,27 @@
-export default defineNuxtPlugin((nuxtApp) => {
+export default defineNuxtPlugin(() => {
   const config = useRuntimeConfig();
 
-  if (!config.public.apolloTrackingId) return;
+  const appId = config.public.apolloTrackingId;
+  if (!appId) return;
 
-  useHead({
-    script: [
-      {
-        src: "https://assets.apollo.io/js/track.js",
-        async: true,
-        defer: true,
-        "data-apollo-tracking-id": config.public.apolloTrackingId,
-      },
-    ],
-  });
+  // Prevent double-injection
+  if ((window as any).__apolloTrackerLoaded) return;
+  (window as any).__apolloTrackerLoaded = true;
+
+  const cacheBuster = Math.random().toString(36).substring(7);
+  const script = document.createElement("script");
+
+  script.src = `https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=${cacheBuster}`;
+  script.async = true;
+  script.defer = true;
+
+  script.onload = () => {
+    if ((window as any).trackingFunctions?.onLoad) {
+      (window as any).trackingFunctions.onLoad({
+        appId,
+      });
+    }
+  };
+
+  document.head.appendChild(script);
 });
