@@ -85,11 +85,6 @@ export default defineNuxtConfig({
       },
     ],
   },
-  runtimeConfig: {
-    public: {
-      apolloTrackingId: "663123b733ed510438edeb4f",
-    },
-  },
   scripts: {
     registry: {
       googleAnalytics: {
