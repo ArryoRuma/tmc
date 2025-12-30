@@ -64,6 +64,73 @@ const projects = ref([
     client_type: "Manufacturing Client",
     year: 2023,
   },
+  {
+    _path: "/projects/advanced-snow-management",
+    title: "Advanced Snow Management",
+    to: "/projects/advanced-snow-management",
+    thumbnail: "",
+    tags: [
+      "Industrial Marketing",
+      "Proposal Strategy",
+      "Sales Enablement",
+      "Video",
+    ],
+    client_type: "Commercial Snow & Ice Management",
+    year: 2024,
+  },
+  {
+    _path: "/projects/bidchip",
+    title: "BidChip",
+    to: "/projects/bidchip",
+    thumbnail: "",
+    tags: [
+      "Activation Strategy",
+      "Outbound Campaign",
+      "Sales Messaging",
+      "Performance Tracking",
+    ],
+    client_type: "B2B Electronics Marketplace",
+    year: 2024,
+  },
+  {
+    _path: "/projects/cut-artisan-hair-design",
+    title: "Cut. artisan. hair. design.",
+    to: "/projects/cut-artisan-hair-design",
+    thumbnail: "",
+    tags: ["Local SEO", "Client Retention", "Paid Ads", "Marketing Systems"],
+    client_type: "Hair Salon",
+    year: 2024,
+  },
+  {
+    _path: "/projects/ici-consulting",
+    title: "ICI Consulting",
+    to: "/projects/ici-consulting",
+    thumbnail: "",
+    tags: [
+      "Outbound Strategy",
+      "ICP Definition",
+      "Sales Messaging",
+      "Cold Email",
+      "Sales Enablement",
+    ],
+    client_type: "Financial Consulting Firm",
+    year: 2024,
+  },
+  {
+    _path: "/projects/nourish-to-heal-2",
+    title: "Nourish to Heal - E-Commerce Transformation",
+    to: "/projects/nourish-to-heal-2",
+    thumbnail: "/images/web-design/nourish-to-heal/nourish-to-heal-hero.png",
+    tags: [
+      "Shopify 2.0",
+      "Web Design",
+      "UX Strategy",
+      "E-Commerce",
+      "Brand Messaging",
+    ],
+    client_type: "Meal Prep & Nutrition Brand",
+    year: 2024,
+  },
 ]);
 </script>
 
@@ -84,9 +151,18 @@ const projects = ref([
         >
           <NuxtLink :to="project.to" class="group block cursor-pointer">
             <img
+              v-if="project.thumbnail"
               :src="project.thumbnail"
               class="rounded-xl w-full h-56 object-cover object-top shadow-lg drop-shadow-lg group-hover:shadow-xl group-hover:drop-shadow-xl transition-all duration-300"
             />
+            <div
+              v-else
+              class="rounded-xl w-full h-56 bg-gradient-to-br from-primary-100 to-primary-200 dark:from-primary-900 dark:to-primary-800 shadow-lg drop-shadow-lg group-hover:shadow-xl group-hover:drop-shadow-xl transition-all duration-300 flex items-center justify-center"
+            >
+              <span class="text-primary-600 dark:text-primary-300 font-bold text-2xl">
+                {{ project.title }}
+              </span>
+            </div>
             <h3
               class="mt-4 font-bold text-xl group-hover:text-primary transition"
             >
