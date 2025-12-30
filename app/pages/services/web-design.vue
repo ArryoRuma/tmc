@@ -22,14 +22,13 @@ useSeoMeta({
       :headline="page.hero.headline"
       :links="page.hero.links"
     >
-      
       <!-- <template #top>
         <HeroBackground />
       </template>
 
       <PromotionalVideo /> -->
     </UPageHero>
-    
+
     <UPageSection
       v-for="(section, index) in page.sections"
       :key="index"
@@ -42,10 +41,9 @@ useSeoMeta({
       :price="section.price"
       :links="section.links"
     >
-      
     </UPageSection>
     <USeparator />
-    
+
     <UPageCTA v-bind="page.cta" variant="naked" class="overflow-hidden">
     </UPageCTA>
   </div>
