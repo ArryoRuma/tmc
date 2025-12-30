@@ -1,6 +1,6 @@
-title: Turn [*conversations*]{class="text-primary"} into [*clients*]{class="text-primary"} with a video growth engine.
+title: Web Design That Helps You Sell More Without The Hassle
 description: |
-  We design, produce, and distribute sales-ready video that turns complex B2B offerings into closed-won deals.
+  We design, develop, and deploy sales-ready web solutions for service-based businesses, turning complex B2B offerings into closed-won deals.
 seo:
   title: TruMedia Creative | Video‑Led Growth Agency for Industrial & Professional Services (NJ)
   description: TruMedia Creative makes sales‑ready video and gets it watched—case studies, FAQ libraries, and an integrated cold‑outbound system that turns expertise into booked meetings. Book a strategy call.
@@ -9,116 +9,275 @@ hero:
   headline: Web Design for Industrial & Professional Services
   title: Turn [*conversations*]{class="text-primary"} into [*clients*]{class="text-primary"} with a video growth engine.
   links:
-    - label: Industrial Growth Strategy Call
-      icon: i-lucide-calendar
-      trailing: true
+    - label: Book a Free Website Audit
+      icon: i-lucide-monitor-cog
+      trailingIcon: i-lucide-arrow-right
       to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       size: xl
-features:
-  title: Everything You Need to Win Deals
-  description: Productized packages + a clean process. We plan, film, edit, distribute, and help you publish—then reuse the content across sales and marketing while we measure what moves pipeline.
-  items:
-    - title: Proof Over Promises
-      description: Outcome‑focused stories and objection‑crushing FAQs that buyers actually believe.
-      icon: i-lucide-badge-check
-    - title: Seamless Booking
-      description: Inline scheduling on every key page so interest becomes meetings, fast.
-      icon: i-lucide-calendar-check
-    - title: Fast Turnaround
-      description: Defined SLAs and rush options—most packages deliver in 7–10 business days.
-      icon: i-lucide-rocket
-    - title: SEO & Landing Pages (Add‑On)
-      description: Simple landing pages and video embeds that buyers and search engines can find.
-      icon: i-lucide-search
-    - title: Outreach Engine (Integrated)
-      description: Gravix‑powered outbound and LinkedIn steps to keep qualified conversations coming.
-      icon: i-lucide-zap
-    - title: Analytics & Reporting
-      description: Lightweight dashboards for publish cadence, views, watch %, replies, meetings, and CTA clicks.
-      icon: i-lucide-bar-chart-3
+    - label: See Web Design Portfolio
+      to: /services/web-design
+      variant: subtle
+      icon: i-lucide-layers
+
 sections:
-  - title: The FAQ Authority Pack
-    description: A set of FAQ videos that Marketing can publish everywhere and Sales can send 1:1 to answer the most common questions prospects have before the call.
-    headline: Establish authority & eliminate objections 24/7.
-    id: how-we-help
-    orientation: horizontal
-    reverse: true
-    features:
-      - title: 8 Polished FAQ Videos
-        description: Your most common questions turned into engaging clips
-        icon: i-lucide-video
-      - title: Master Compilation Video ($750 Value)
-        description: All FAQs stitched together for your site.
-        icon: i-lucide-clapperboard
-      - title: SEO Titles & Descriptions ($500 value)
-        description: Done-for-you, optimized copy.
-        icon: i-lucide-search-code
-      - title: Aimated Intro/Outro ($1,000 value)
-        description: Branded polish you can reuse forever.
-        icon: i-lucide-repeat-2
-      - title: Podcast Export ($300 Value)
-        description: Repurpose the audio for your podcast or blog.
-        icon: i-lucide-mic
-  - title: The Case Study Engine
-    description: Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
-    headline: Showcase Client Success stories that sell while you sleep.
-    id: how-we-help
-    orientation: horizontal
+  - id: problem
+    title: Why Most Company Websites Don't Convert or Drive Revenue
+    headline: The Problem with Most Company Websites
+    orientation: vertical
     reverse: false
+    image: #TODO: update problem image
+      src: /images/services/video-growth-engine/video-engine-problem.png
+      alt: Problem with Most Company Websites
+    description:
+      Most company websites look polished but fail at their core job, turning interest into action. 
+      They act like digital brochures instead of revenue assets—disconnected from sales, unclear on who they serve, 
+      and silent when buyers are ready to decide. These are the most common points of failure we see in company websites.
+    links:
+      - label: Get a Free Website Audit
+        to: /contact
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-monitor-cog
     features:
-      - title: 1 Hero Interview Video
-        description: Your most common questions turned into engaging clips
-        icon: i-lucide-video
-      - title: 3 Short Cutdowns for social.
-        description: All FAQs stitched together for your site.
-        icon: i-lucide-clapperboard
-      - title: BONUS - PDF Case Study Companion ($500 value)
-        description: Done-for-you, optimized copy.
-        icon: i-lucide-search-code
-      - title: BONUS - 15-Second Teaser ($1,000 value)
-        description: Branded polish you can reuse forever.
-        icon: i-lucide-repeat-2
-      - title: Podcast Export ($300 Value)
-        description: Repurpose the audio for your podcast or blog.
-        icon: i-lucide-mic
-  - title: The Content Storm Day
-    description: Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
-    headline: One day → Months of content.
-    id: how-we-help
-    orientation: horizontal
+      - title: Built as a brochure, not a conversion system
+        description:
+          Pages are designed to look good, not to guide buyers toward clear next steps that support sales.
+        icon: i-lucide-layout
+      - title: No clear messaging hierarchy or buyer flow 
+        description: Visitors aren’t sure who the site is for, what problem it solves, or what to do next—so they leave.
+        icon: i-lucide-shuffle
+      - title: Not aligned with buyer questions, objections, or decision stages
+        description: Critical information is missing or buried, forcing buyers to fill in the gaps themselves.
+        icon: i-lucide-circle-question-mark
+      - title: Sales teams don’t use the site during real deals
+        description: The website isn’t structured to support sales conversations, follow-ups, or deal progression.
+        icon: i-lucide-user-x
+      - title: Success measured by traffic instead of leads and pipeline
+        description: High traffic means nothing if it doesn’t translate into conversations, opportunities, and revenue
+        icon: i-lucide-eye-off
+      - title: Hard to update, slow to evolve, and dependent on developers
+        description: Simple changes require tickets, timelines, or rework—so the site quickly falls out of sync with the business.
+        icon: i-lucide-clock
+  - id: solution
+    image: #TODO: update solution image
+      src: /images/services/web-design/web-design-solution.png
+      alt: Solution to Drive Revenue with a Website
+    orientation: vertical
     reverse: true
+    headline: The Solution to Drive Revenue with a Website
+    title: What's Required for a Website to Actually Drive Revenue
+    description: >
+      A website only drives revenue when it supports how buyers evaluate options,
+      build confidence, and take next steps.
+      That requires clear positioning, intentional page structure,
+      and tight alignment with sales and marketing workflows.
+      Our web design approach is built to do exactly that.
     features:
-      - title: 1 Hero Interview Video
-        description: Your most common questions turned into engaging clips
-        icon: i-lucide-video
-      - title: 3 Short Cutdowns for social.
-        description: All FAQs stitched together for your site.
-        icon: i-lucide-clapperboard
-      - title: BONUS - PDF Case Study Companion ($500 value)
-        description: Done-for-you, optimized copy.
-        icon: i-lucide-search-code
-      - title: BONUS - 15-Second Teaser ($1,000 value)
-        description: Branded polish you can reuse forever.
-        icon: i-lucide-repeat-2
-      - title: Podcast Export ($300 Value)
-        description: Repurpose the audio for your podcast or blog.
-        icon: i-lucide-mic
-  - title: Video Growth Club
-    description: Ongoing video pipeline that feeds sales consistently.
-    headline: Monthly shoot days + Outreach Engine.
-    id: how-we-help
-    orientation: horizontal
+      - title: Clear Positioning & Buyer-Focused Messaging
+        description: >
+          Your site clearly communicates who it's for, what problem you solve,
+          and why you're the right choice—above the fold and throughout the journey.
+        icon: i-lucide-target
+      - title: Conversion-Driven Page Structure
+        description: >
+          Pages are intentionally laid out to guide visitors from interest to action,
+          not just present information.
+        icon: i-lucide-layout-template
+      - title: Sales-Enabled Website Architecture
+        description: >
+          The site is designed to support real sales conversations, follow-ups,
+          and deal progression—not just marketing traffic.
+        icon: i-lucide-briefcase
+      - title: Measured by Leads, Pipeline, and Revenue
+        description: >
+          Performance is tracked by qualified inquiries, sales usage,
+          and downstream revenue impact.
+        icon: i-lucide-line-chart
+      - title: Fast Updates Without Developer Bottlenecks
+        description: &gt;
+          Content, messaging, and offers can be updated quickly without breaking layouts
+          or relying on long dev cycles.
+        icon: i-lucide-zap
+      - title: SEO-Ready by Default, Not as an Afterthought
+        description: &gt;
+          Pages are structured for discoverability, clarity, and long-term search performance,
+          so the site compounds value over time.
+        icon: i-lucide-search
+    links:
+      - label: Want to See How This Would Work for Your Website?
+        to: /contact
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-globe
+  - id: how-we-help
+    image: #TODO: update how we help image
+      src: /images/services/web-design/web-design-process.png
+      alt: How We Help You Win More Deals with Your Website
+    orientation: vertical
     reverse: false
+    headline: How We Help You Win More Deals with Your Website
+    title: How Our Web Design Process Works
+    description: &gt;
+      We help you turn your expertise into a strategic website that supports
+      marketing and sales at every stage of the buying journey. Our web design
+      approach combines positioning, structure, and deployment so your site is
+      built with intention and performs where it matters most.
     features:
-      - title: Lite - $2,500/mo
-        description: 1 shoot day + 4 Shorts + 1 Strategy Call (BONUS Captioned versions, $750 value)
-        icon: i-lucide-video
-      - title: Pro - $4,500/mo
-        description: Lite + 1 Half-Day Shoot + Analytics Report (BONUS Fast-track delivery on 2 videos, $1,000 value)
-        icon: i-lucide-clapperboard
-      - title: Elite - $6,500/mo
-        description: Pro + 1 Full Shoot Day + Unlimited Edits (fair use cap) + Quarterly Workshop (BONUS VIP Priority Delivery, $2,500 value)
-        icon: i-lucide-repeat-2
+      - title: Message & Positioning Clarity
+        description: &gt;
+          We define your core message, positioning, and differentiation so your
+          website speaks directly to the problems your buyers care about.
+        icon: i-lucide-compass
+      - title: Buyer-Focused Site Architecture
+        description: &gt;
+          We design a structured site mapped to buyer stages including
+          education, evaluation, objection handling, and decision support.
+        icon: i-lucide-map
+      - title: Strategic Website Development
+        description: &gt;
+          We build focused, conversion-ready pages designed for clarity,
+          credibility, and real-world sales usage.
+        icon: i-lucide-layout-template
+      - title: Sales & Marketing Integration
+        description: &gt;
+          We help integrate your website into outreach, follow-ups, proposals, and
+          sales conversations so it actively supports deals.
+        icon: i-lucide-plug
+    links:
+      - label: See How Our Web Design Process Works
+        to: /contact
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-globe
+      - label: See Our Process for Creating Sales-Ready Websites
+        to: "#our-process"
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-calendar
+        variant: subtle
+  - id: proof
+    image: #TODO: update proof image
+      src: /images/services/web-design/web-design-proof.png
+      alt: Proof That Our Web Design Approach Works
+    orientation: vertical
+    reverse: true
+    headline: Real Results from Our Web Design Approach
+    title: Proof That Strategic Web Design Works
+    description: &gt;
+      Companies use our web design approach to improve buyer engagement,
+      shorten evaluation cycles, and turn their website into an active revenue
+      asset across the entire buying journey. Instead of a static brochure,
+      teams gain a strategic website that actively supports real deals.
+    features:
+      - title: Shorter Sales Cycles
+        description: &gt;
+          Prospects arrive informed and aligned before the first call, reducing
+          the time spent explaining and re-educating.
+        icon: i-lucide-clock
+      - title: Higher-Quality Sales Conversations
+        description: &gt;
+          Sales teams focus on fit, priorities, and next steps rather than basic
+          explanations or repeated objections.
+        icon: i-lucide-message-circle
+      - title: Stronger Buyer Confidence
+        description: &gt;
+          Clear messaging and visible proof help buyers make decisions with less
+          friction and fewer internal delays.
+        icon: i-lucide-shield-check
+    links:
+      - label: See Case Studies from Our Clients
+        to: /projects
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-briefcase
+  - id: includes
+    image: #TODO: update includes image
+      src: /images/services/website-growth-system/website-system-included.png
+      alt: What's Included in the Website Growth System
+    orientation: vertical
+    reverse: false
+    links: 
+      #- label: Compare Our Websites vs Traditional Web Design
+      #  to: /contact #TODO:create comparison page that shows the differences between our web design and traditional web design using the Pricing Table component from nuxt/ui
+      #  trailingIcon: i-lucide-arrow-right
+      #  icon: i-lucide-globe
+      #  active: false
+      - label: See Our Website Portfolio
+        to: /projects #TODO: update link and create packages page
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-globe
+        variant: subtle
+    headline: What’s Included in the Website Growth System
+    title: What’s Included in the Website Growth System
+    description: >
+      Our Website Growth System is delivered as a structured engagement that combines
+      strategy, structure, and implementation. Everything included is designed to
+      ensure your website is clear, credible, and actively supports how buyers
+      evaluate, trust, and engage with your business.
+    features:
+      - title: Messaging & Positioning Workshop
+        description: >
+          A guided working session to clarify your value proposition, differentiation,
+          and buyer priorities so your website is built on a clear strategic foundation.
+        icon: i-lucide-target
+        price:
+          display: Included ($1,500 value)
+
+      - title: Buyer-Centric Site Architecture
+        description: >
+          A defined page structure mapped to buyer intent (education, validation,
+          objection handling, and decision-making), so visitors can quickly find what
+          they need.
+        icon: i-lucide-map
+
+      - title: Strategic Website Design & Build
+        description: >
+          A professionally designed and developed website focused on clarity,
+          usability, and credibility. Built to scale with your marketing and sales
+          efforts.
+        icon: i-lucide-layout
+
+      - title: Conversion & Sales-Ready Pages
+        description: >
+          Key pages optimized for lead capture, scheduling, proposals, and follow-up
+          workflow.
+        icon: i-lucide-mouse-pointer-click
+
+      - title: Launch, Usage & Optimization Guidance
+        description: >
+          Direction on how to use your website across sales conversations, outbound
+          efforts, and marketing channels so it remains an active growth asset.
+        icon: i-lucide-settings
+  - id: not-for
+    orientation: vertical
+    reverse: true
+    image:
+      src: /images/services/website-growth-system/website-system-not-for.png
+      alt: Who the Website Growth System Is Not For
+    headline: Who the Website Growth System™ Is Not For
+    links:
+      - label: See If You’re a Good Fit
+        to: /contact
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-globe
+    title: Who This Is Not For
+    description: >
+      The Website Growth System is intentionally not designed for every situation.
+      It works best for teams that expect their website to support revenue—not just
+      exist as a digital brochure.
+    features:
+      - title: Not Designed for “Just a Website”
+        description: >
+          Teams looking for a simple online presence without strategy, buyer intent,
+          or integration into sales and marketing workflows.
+        icon: i-lucide-x-circle
+
+      - title: Not for Design-Only Projects
+        description: >
+          Companies focused purely on aesthetics or rebrands without addressing
+          messaging clarity, buyer questions, or conversion paths.
+        icon: i-lucide-palette
+
+      - title: Not for Low-Commitment Teams
+        description: >
+          Organizations unwilling to align stakeholders, clarify positioning, or
+          treat the website as an active part of their growth system.
+        icon: i-lucide-user-round-x
 
 testimonials:
   headline: Recent Work & Outcomes
@@ -144,13 +303,18 @@ testimonials:
         avatar:
           src: https://i.pravatar.cc/120?img=3
 cta:
-  title: Ready to show proof and get it in front of the right buyers?
-  description: Pick a package or book a strategy call. Done-for-you systems generate more pipeline, shorten sales cycles, and reduce burnout while your team focuses on closing deals.
+  title: Ready to turn your website into a sales asset?
+  description: >
+    Choose a package or book a strategy call. Done-for-you website systems clarify
+    your message, guide buyers to action, and support your sales process—without
+    adding complexity or workload for your team.
   links:
     - label: Book a Call
-      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+      to: /contact
+      icon: i-lucide-calendar
       trailingIcon: i-lucide-arrow-right
-    - label: See Video + Outreach Packages
-      to: /
+    - label: Want a Free Website Audit?
+      to: /contact
+      trailingIcon: i-lucide-arrow-right
       variant: subtle
-      icon: i-lucide-layers
+      icon: i-lucide-monitor-cog
