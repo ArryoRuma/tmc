@@ -58,7 +58,7 @@ comparison:
           icon: i-lucide-unplug
       variant: outline
       orientation: vertical
-      
+
     - title: TruMedia Web Design
       description: Strategic revenue asset
       price: Starting at $8,500
