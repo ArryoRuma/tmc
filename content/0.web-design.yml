@@ -29,8 +29,8 @@ sections:
       src: /images/services/video-growth-engine/video-engine-problem.png
       alt: Problem with Most Company Websites
     description:
-      Most company websites look polished but fail at their core job, turning interest into action. 
-      They act like digital brochures instead of revenue assets—disconnected from sales, unclear on who they serve, 
+      Most company websites look polished but fail at their core job, turning interest into action.
+      They act like digital brochures instead of revenue assets—disconnected from sales, unclear on who they serve,
       and silent when buyers are ready to decide. These are the most common points of failure we see in company websites.
     links:
       - label: Get a Free Website Audit
@@ -39,10 +39,9 @@ sections:
         icon: i-lucide-monitor-cog
     features:
       - title: Built as a brochure, not a conversion system
-        description:
-          Pages are designed to look good, not to guide buyers toward clear next steps that support sales.
+        description: Pages are designed to look good, not to guide buyers toward clear next steps that support sales.
         icon: i-lucide-layout
-      - title: No clear messaging hierarchy or buyer flow 
+      - title: No clear messaging hierarchy or buyer flow
         description: Visitors aren’t sure who the site is for, what problem it solves, or what to do next—so they leave.
         icon: i-lucide-shuffle
       - title: Not aligned with buyer questions, objections, or decision stages
@@ -93,13 +92,13 @@ sections:
           and downstream revenue impact.
         icon: i-lucide-line-chart
       - title: Fast Updates Without Developer Bottlenecks
-        description: &gt;
-          Content, messaging, and offers can be updated quickly without breaking layouts
+        description:
+          &gt; Content, messaging, and offers can be updated quickly without breaking layouts
           or relying on long dev cycles.
         icon: i-lucide-zap
       - title: SEO-Ready by Default, Not as an Afterthought
-        description: &gt;
-          Pages are structured for discoverability, clarity, and long-term search performance,
+        description:
+          &gt; Pages are structured for discoverability, clarity, and long-term search performance,
           so the site compounds value over time.
         icon: i-lucide-search
     links:
@@ -115,30 +114,30 @@ sections:
     reverse: false
     headline: How We Help You Win More Deals with Your Website
     title: How Our Web Design Process Works
-    description: &gt;
-      We help you turn your expertise into a strategic website that supports
+    description:
+      &gt; We help you turn your expertise into a strategic website that supports
       marketing and sales at every stage of the buying journey. Our web design
       approach combines positioning, structure, and deployment so your site is
       built with intention and performs where it matters most.
     features:
       - title: Message & Positioning Clarity
-        description: &gt;
-          We define your core message, positioning, and differentiation so your
+        description:
+          &gt; We define your core message, positioning, and differentiation so your
           website speaks directly to the problems your buyers care about.
         icon: i-lucide-compass
       - title: Buyer-Focused Site Architecture
-        description: &gt;
-          We design a structured site mapped to buyer stages including
+        description:
+          &gt; We design a structured site mapped to buyer stages including
           education, evaluation, objection handling, and decision support.
         icon: i-lucide-map
       - title: Strategic Website Development
-        description: &gt;
-          We build focused, conversion-ready pages designed for clarity,
+        description:
+          &gt; We build focused, conversion-ready pages designed for clarity,
           credibility, and real-world sales usage.
         icon: i-lucide-layout-template
       - title: Sales & Marketing Integration
-        description: &gt;
-          We help integrate your website into outreach, follow-ups, proposals, and
+        description:
+          &gt; We help integrate your website into outreach, follow-ups, proposals, and
           sales conversations so it actively supports deals.
         icon: i-lucide-plug
     links:
@@ -159,25 +158,25 @@ sections:
     reverse: true
     headline: Real Results from Our Web Design Approach
     title: Proof That Strategic Web Design Works
-    description: &gt;
-      Companies use our web design approach to improve buyer engagement,
+    description:
+      &gt; Companies use our web design approach to improve buyer engagement,
       shorten evaluation cycles, and turn their website into an active revenue
       asset across the entire buying journey. Instead of a static brochure,
       teams gain a strategic website that actively supports real deals.
     features:
       - title: Shorter Sales Cycles
-        description: &gt;
-          Prospects arrive informed and aligned before the first call, reducing
+        description:
+          &gt; Prospects arrive informed and aligned before the first call, reducing
           the time spent explaining and re-educating.
         icon: i-lucide-clock
       - title: Higher-Quality Sales Conversations
-        description: &gt;
-          Sales teams focus on fit, priorities, and next steps rather than basic
+        description:
+          &gt; Sales teams focus on fit, priorities, and next steps rather than basic
           explanations or repeated objections.
         icon: i-lucide-message-circle
       - title: Stronger Buyer Confidence
-        description: &gt;
-          Clear messaging and visible proof help buyers make decisions with less
+        description:
+          &gt; Clear messaging and visible proof help buyers make decisions with less
           friction and fewer internal delays.
         icon: i-lucide-shield-check
     links:
@@ -191,7 +190,7 @@ sections:
       alt: What's Included in the Website Growth System
     orientation: vertical
     reverse: false
-    links: 
+    links:
       #- label: Compare Our Websites vs Traditional Web Design
       #  to: /contact #TODO:create comparison page that shows the differences between our web design and traditional web design using the Pricing Table component from nuxt/ui
       #  trailingIcon: i-lucide-arrow-right
