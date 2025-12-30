@@ -61,7 +61,7 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages -->
+<!-- TODO: verify this page is consistent with other project pages using the ProjectsSpotlight2 components and layout -->
 <template>
   <div>
     <ProjectsHero :project="project" />
