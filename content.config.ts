@@ -55,6 +55,7 @@ const createLinkSchema = () =>
     color: colorEnum.optional(),
     variant: variantEnum.optional(),
     headline: z.string().optional(),
+    active: z.boolean().optional(),
   });
 const createVideoSchema = () =>
   z.object({
@@ -554,6 +555,7 @@ export const collections = {
           orientation: orientationEnum.optional(),
           reverse: z.boolean().optional(),
           features: z.array(createFeatureItemSchema()).optional(),
+          links: z.array(createLinkSchema()).optional(),
           price: z
             .union([
               z.string(),
