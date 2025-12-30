@@ -71,6 +71,23 @@ const createImageSchema = () =>
     srcset: z.string().optional(),
   });
 
+const createProcessStepSchema = () =>
+  z.object({
+    id: z.string().nonempty(),
+    title: z.string().nonempty(),
+    subtitle: z.string().nonempty(),
+    description: z.string().nonempty(),
+    icon: z.string().optional().editor({ input: "icon" }),
+    content: z.string().optional(),
+    image: createImageSchema().optional(),
+    link: z
+      .object({
+        url: z.string().nonempty(),
+        text: z.string().nonempty(),
+      })
+      .optional(),
+  });
+
 const createPricingSchema = () =>
   z.object({
     title: z.string().nonempty(),
@@ -180,6 +197,15 @@ export const collections = {
       features: createBaseSchema().extend({
         items: z.array(createFeatureItemSchema()),
       }),
+
+      // Process Steps
+      process: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+          steps: z.array(createProcessStepSchema()),
+        })
+        .optional(),
 
       // Testimonials – make `to` and `target` optional so your current YAML is valid
       testimonials: createBaseSchema().extend({
