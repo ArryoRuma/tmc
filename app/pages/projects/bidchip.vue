@@ -96,7 +96,7 @@ TODO: remove before and after, and add in case study placeholder -->
       :title="project.title"
     /> -->
     <ProjectsResults
-      v-if="showResults && project.results"
+      v-if="project.results"
       :results="project.results"
     />
     <ProjectsBackToAllProjectsButton />
