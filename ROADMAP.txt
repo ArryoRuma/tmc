@@ -35,7 +35,7 @@
 - Standardize animation timings, auto-import rules, and any scrolling behaviors
 
 ## Technical Enhancements
-- Performance checklist: `@nuxt/image`, video lazy loading, critical CSS strategies
+- Performance checklist: `@nuxt/image`, video lazy loading, critical CSS strategies  #TODO: implement video lazy loading across all pages that have videos.
 - Accessibility passes (color contrast, keyboard nav, aria labels, dark-mode parity)
 - Analytics and tracking: `window.trackingFunctions` typings, gtag custom events, conversion logging
 
