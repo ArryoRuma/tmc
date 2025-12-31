@@ -42,22 +42,22 @@ sections:
     features:
       - title: Stale marketing
         description: #How do we modernize it without losing who we are?
-        icon: i-lucide-circle-x 
+        icon: i-lucide-circle-x
       - title: Inconsistent leads
         description: #How do we get more people to see it?
-        icon: i-lucide-circle-x 
-      - title: Unpredictable sales 
+        icon: i-lucide-circle-x
+      - title: Unpredictable sales
         description: #...but we’re not sure how to reach them.
-        icon: i-lucide-circle-x 
+        icon: i-lucide-circle-x
       - title: Long sales cycles
         description: #How do we get them to talk to us sooner?
-        icon: i-lucide-circle-x 
+        icon: i-lucide-circle-x
       - title: Prospecting taking too long
         description: #How do we build something that lasts?
-        icon: i-lucide-circle-x 
+        icon: i-lucide-circle-x
       - title: We're ready to grow.
         description: We just need a smarter way to do it.
-        icon: i-lucide-circle-x 
+        icon: i-lucide-circle-x
 
 clients:
   title: Featured Clients

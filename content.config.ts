@@ -1,4 +1,5 @@
 import { defineCollection, z } from "@nuxt/content";
+
 const variantEnum = z.enum([
   "solid",
   "outline",

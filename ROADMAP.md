@@ -12,30 +12,30 @@ Eliminate rework and scope drift by freezing the decisions that everything else 
 
 ### Inputs
 
-- [X] Positioning statement
-- [X] ICP tiers (Primary / Secondary / Tertiary)
+- [x] Positioning statement
+- [x] ICP tiers (Primary / Secondary / Tertiary)
 - [ ] Core revenue motions (Video → Outreach → Retainers)
-- [ ] Explicit non-goals (what the site is *not* responsible for)
+- [ ] Explicit non-goals (what the site is _not_ responsible for)
 
 ### Work
 
-- [X] Define **primary CTA per audience**
-  - [X] Cold traffic → Strategy Call
-  - [X] Warm traffic → Package / Offer pages
-  - [X] Existing clients → Resources / Docs
-- [X] Define **conversion hierarchy**
-  - [X] Hero CTA
-  - [X] Inline CTAs
-  - [X] Exit-intent or last-chance CTAs
-- [X] Lock **success metrics**
-  - [X] Macro: booked calls, qualified leads
-  - [X] Micro: scroll depth, video plays, CTA clicks
+- [x] Define **primary CTA per audience**
+  - [x] Cold traffic → Strategy Call
+  - [x] Warm traffic → Package / Offer pages
+  - [x] Existing clients → Resources / Docs
+- [x] Define **conversion hierarchy**
+  - [x] Hero CTA
+  - [x] Inline CTAs
+  - [x] Exit-intent or last-chance CTAs
+- [x] Lock **success metrics**
+  - [x] Macro: booked calls, qualified leads
+  - [x] Micro: scroll depth, video plays, CTA clicks
 
 ### Artifacts Produced
 
-- [X] `docs/positioning.md`
-- [X] `docs/cta-map.yml`
-- [X] `docs/metrics.yml`
+- [x] `docs/positioning.md`
+- [x] `docs/cta-map.yml`
+- [x] `docs/metrics.yml`
 
 **Exit Criteria**
 
@@ -133,7 +133,7 @@ Remove design decisions from daily work.
 - [ ] Standardize animation usage
   - [ ] Entry timing
   - [ ] Scroll triggers
-  - [ ] Clear rules for when *not* to animate
+  - [ ] Clear rules for when _not_ to animate
 - [ ] Lock iconography and illustration direction
 - [ ] Define media rules
   - [ ] Video aspect ratios

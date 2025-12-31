@@ -1,26 +1,26 @@
-primary_ctas: 
-  cold_traffic: 
+primary_ctas:
+  cold_traffic:
     goal: Capture leads
     cta_label: Get a Free Quote
     destination: /contact
-  warm_traffic: 
+  warm_traffic:
     goal: Evaluate offers
     cta_label: View Packages
     destination: /services
-  existing_clients: 
+  existing_clients:
     goal: Enable self‑service
     cta_label: Client Resources
     destination: /resources
-secondary_ctas: 
-  inline: 
+secondary_ctas:
+  inline:
     - label: See How It Works
       destination: /video-growth-engine
     - label: View Case Studies
       destination: /projects
-exit_intent: 
+exit_intent:
   label: Not ready yet? Start with clarity.
   destination: /clarity-to-clients
 rules:
-- One primary CTA per page
-- Secondary CTAs must support the primary action
-- Never mix booking CTAs with pricing CTAs on the same screen
+  - One primary CTA per page
+  - Secondary CTAs must support the primary action
+  - Never mix booking CTAs with pricing CTAs on the same screen

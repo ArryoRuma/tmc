@@ -46,7 +46,7 @@ In your Vue page component (e.g., `app/pages/services/video-growth-engine.vue`):
 <template>
   <div>
     <!-- Other page content -->
-  
+
     <VideoShowcaseGallery
       v-if="page.videoShowcase"
       :title="page.videoShowcase.title"
@@ -54,38 +54,38 @@ In your Vue page component (e.g., `app/pages/services/video-growth-engine.vue`):
       :headline="page.videoShowcase.headline"
       :videos="page.videoShowcase.videos"
     />
-  
+
     <!-- More page content -->
   </div>
 </template>
 
 <script setup>
-const { data: page } = await useAsyncData('video-growth-engine', () =>
-  queryCollection('videoengine').first()
+const { data: page } = await useAsyncData("video-growth-engine", () =>
+  queryCollection("videoengine").first(),
 );
 </script>
 ```
 
 ## Props
 
-| Prop            | Type            | Required | Default                                             | Description                              |
-| --------------- | --------------- | -------- | --------------------------------------------------- | ---------------------------------------- |
+| Prop          | Type          | Required | Default                                             | Description                              |
+| ------------- | ------------- | -------- | --------------------------------------------------- | ---------------------------------------- |
 | `title`       | `string`      | No       | "Video Showcase"                                    | Main title of the video showcase section |
 | `description` | `string`      | No       | "Explore our video work and client success stories" | Description text below the title         |
 | `headline`    | `string`      | No       | -                                                   | Optional headline above the title        |
-| `videos`      | `VideoItem[]` | No       | `[]`                                              | Array of video items to display          |
+| `videos`      | `VideoItem[]` | No       | `[]`                                                | Array of video items to display          |
 
 ### VideoItem Interface
 
 Each video in the `videos` array supports:
 
-| Property        | Type       | Required      | Description                                          |
-| --------------- | ---------- | ------------- | ---------------------------------------------------- |
-| `src`         | `string` | **Yes** | URL or path to the video file                        |
-| `title`       | `string` | No            | Title displayed above the video                      |
-| `description` | `string` | No            | Description text displayed below the video           |
-| `poster`      | `string` | No            | URL or path to the poster/thumbnail image            |
-| `thumbnail`   | `string` | No            | Alternative to `poster` for backward compatibility |
+| Property      | Type     | Required | Description                                        |
+| ------------- | -------- | -------- | -------------------------------------------------- |
+| `src`         | `string` | **Yes**  | URL or path to the video file                      |
+| `title`       | `string` | No       | Title displayed above the video                    |
+| `description` | `string` | No       | Description text displayed below the video         |
+| `poster`      | `string` | No       | URL or path to the poster/thumbnail image          |
+| `thumbnail`   | `string` | No       | Alternative to `poster` for backward compatibility |
 
 ## Schema Configuration
 
