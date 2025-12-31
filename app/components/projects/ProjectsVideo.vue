@@ -22,15 +22,16 @@ const props = defineProps<{
           v-if="props.videoUrl"
           class="relative overflow-hidden rounded-2xl shadow-2xl"
         >
-          <video
+          <LazyVideo
             class="w-full aspect-video rounded-xl"
             preload="none"
             :poster="props.posterImage"
             :controls="true"
+            :src="props.videoUrl"
+            type="video/mp4"
           >
-            <source :src="props.videoUrl" type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </LazyVideo>
         </div>
 
         <!-- Placeholder if no video URL -->
