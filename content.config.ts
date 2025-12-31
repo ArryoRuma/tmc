@@ -1272,6 +1272,22 @@ export const collections = {
           }),
         ),
       }),
+      videoShowcase: z
+        .object({
+          title: z.string().optional(),
+          description: z.string().optional(),
+          headline: z.string().optional(),
+          videos: z.array(
+            z.object({
+              title: z.string().optional(),
+              description: z.string().optional(),
+              src: z.string().nonempty(),
+              poster: z.string().optional(),
+              thumbnail: z.string().optional(),
+            }),
+          ),
+        })
+        .optional(),
       cta: createBaseSchema().extend({
         links: z.array(createLinkSchema()),
       }),

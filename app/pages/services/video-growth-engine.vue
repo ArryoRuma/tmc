@@ -193,7 +193,13 @@ useSeoMeta({
       </div>
     </UPageSection>
     <USeparator /> -->
-    <!-- TODO: Create a video showcase gallery component specifically for video growth engine. I need the ability to modify it and add as many or as little videos links to it as needed. -->
+    <VideoShowcaseGallery
+      v-if="page.videoShowcase"
+      :title="page.videoShowcase.title"
+      :description="page.videoShowcase.description"
+      :headline="page.videoShowcase.headline"
+      :videos="page.videoShowcase.videos"
+    />
     <UPageCTA v-bind="page.cta" variant="naked" class="overflow-hidden">
       <LazyStarsBg />
     </UPageCTA>
