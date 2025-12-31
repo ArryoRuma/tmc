@@ -4,7 +4,7 @@
       <LazyVideo
         class="rounded-xl"
         data-v-baf90ddd=""
-        preload="thumbnail"
+        preload="metadata"
         onpause="pause"
         poster="/images/contractor plate.jpg"
         :controls="true"
