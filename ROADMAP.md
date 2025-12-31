@@ -1,57 +1,280 @@
-# TruMedia Creative Website Roadmap
+# TruMedia Creative Website — Execution Roadmap
 
-## Vision & Alignment
-- Clarify audience segments (prospects, existing clients, event organizers) and primary calls-to-action (contact, demos, signup)
-- Anchor success metrics: qualified leads, form completions, time-on-page, SEO rankings
-- Keep positioning statement and messaging pillars documented for quick reference
+This roadmap is designed as a **build-and-operate system**, not a finish-line checklist. It is organized by phases, each with a clear objective, concrete work, durable artifacts, and explicit exit criteria so you always know what to do next.
 
-## Foundation & Infrastructure
-- Confirm Nuxt 4 + pnpm setup; keep `pnpm lint`, `pnpm typecheck`, `pnpm test` in the daily loop
-- Track environment/config: color modes, SEO defaults, analytics, HoneyBook forms, GTM if added later
-- Document deployment flow (Git branching, preview URLs, production target)
+---
 
-## Content Model & Data
-- Review `content.config.ts` schemas and note changes before editing YAML
-- Audit `/content` collections (home, services, industries, docs, blog, etc.) to identify gaps and outdated copy
-- Define workflow for new content: copy source → YAML/MD location → approval → publish
+## Phase 0 — Strategic Guardrails (Lock Before You Build)
 
-## UX & Visual System
-- Maintain typography, spacing, and dark/light token references; note Adobe font kit usage
-- List animation conventions (FadeInUp delays, intersection triggers, marquee rules)
-- Capture iconography and illustration direction; log any new assets needed per section
+**Objective**
 
-## Primary Pages & Flows
-1. **Home**: hero, value props, social proof, CTA; sync with `content/0.index.yml`
-2. **Services & Solutions**: consistent layout per offering; ensure case studies + CTA buttons
-3. **Industries**: tailored messaging per vertical; verify dynamic routes and sidebar nav
-4. **Projects/Portfolio**: update assets for BaseProject, ProjectsPortfolio, before/after sliders
-5. **Resources (docs/blog/changelog)**: navigation, search/filter, SEO metadata, RSS if needed
-6. **Pricing**: tier cards, feature matrix, FAQs, contact CTA
-7. **Contact/Signup/Login**: HoneyBook form integration + fallback contact info
+Eliminate rework and scope drift by freezing the decisions that everything else depends on.
 
-## Components & Interactions
-- Inventory existing components; checklist for props, slots, and content sources
-- Plan upcoming components (testimonials carousel, CTA banner, comparison tables) with data contracts
-- Standardize animation timings, auto-import rules, and any scrolling behaviors
+### Inputs
 
-## Technical Enhancements
-- Performance checklist: `@nuxt/image`, video lazy loading (✅ implemented with Intersection Observer API), critical CSS strategies
-- Accessibility passes (color contrast, keyboard nav, aria labels, dark-mode parity)
-- Analytics and tracking: `window.trackingFunctions` typings, gtag custom events, conversion logging
+- [X] Positioning statement
+- [X] ICP tiers (Primary / Secondary / Tertiary)
+- [ ] Core revenue motions (Video → Outreach → Retainers)
+- [ ] Explicit non-goals (what the site is *not* responsible for)
 
-## Quality & Testing
-- Automate lint/format/type scripts via CI; keep pre-commit hooks optional but documented
-- Add targeted unit tests for composables (e.g., `useRotatingText`) and snapshot tests for UI
-- Maintain manual QA list per page: responsive states, animation timing, form submissions
+### Work
 
-## SEO & Marketing Ops
-- Ensure every route calls `useSeoMeta`; document OG/tw requirements and @nuxtjs/seo configs
-- Track OG image generation assets inside `/app/components/OgImage`
-- Define content cadence for blog/resources (naming, scheduling, RSS or newsletter tie-ins)
+- [X] Define **primary CTA per audience**
+  - [X] Cold traffic → Strategy Call
+  - [X] Warm traffic → Package / Offer pages
+  - [X] Existing clients → Resources / Docs
+- [X] Define **conversion hierarchy**
+  - [X] Hero CTA
+  - [X] Inline CTAs
+  - [X] Exit-intent or last-chance CTAs
+- [X] Lock **success metrics**
+  - [X] Macro: booked calls, qualified leads
+  - [X] Micro: scroll depth, video plays, CTA clicks
 
-## Launch & Iteration
-- Pre-launch checklist: Lighthouse, 404/500 pages, form success, analytics events, sitemap
-- Post-launch backlog: personalization ideas, A/B tests, new industries, interactive demos
-- Schedule recurring reviews (weekly triage of feedback, monthly roadmap refinement)
+### Artifacts Produced
 
-> Treat this file as a living artifact—update sections as scope evolves so you can always jump back in with clear direction.
+- [X] `docs/positioning.md`
+- [X] `docs/cta-map.yml`
+- [X] `docs/metrics.yml`
+
+**Exit Criteria**
+
+You can answer "what should this page make someone do?" in one sentence.
+
+---
+
+## Phase 1 — System Architecture & Developer Ergonomics
+
+**Objective**
+
+Make it easy to build pages quickly without thinking about structure or conventions.
+
+### Work
+
+- [ ] Finalize Nuxt 4 conventions
+  - [ ] File and folder naming
+  - [ ] Slug rules
+  - [ ] Content collection taxonomy
+- [ ] Normalize content schemas
+  - [ ] Services
+  - [ ] Industries
+  - [ ] Solutions
+  - [ ] Resources
+- [ ] Document "golden paths"
+  - [ ] How to add a new service
+  - [ ] How to add a new industry
+  - [ ] How to clone an existing page safely
+
+### Tooling
+
+- [ ] pnpm scripts documented and enforced
+- [ ] Optional pre-commit hooks (lint, typecheck)
+- [ ] CI expectations documented (lint, typecheck, build)
+
+### Artifacts Produced
+
+- [ ] `docs/content-architecture.md`
+- [ ] `docs/dev-workflow.md`
+- [ ] Finalized `content.config.ts`
+
+**Exit Criteria**
+
+You can scaffold a new page in under five minutes without second-guessing structure.
+
+---
+
+## Phase 2 — Content Inventory & Gap Mapping
+
+**Objective**
+
+Stop rewriting pages blindly and focus effort where it matters.
+
+### Work
+
+- [ ] Inventory all existing YAML and MD content
+- [ ] Classify each item
+  - [ ] Keep
+  - [ ] Rewrite
+  - [ ] Merge
+  - [ ] Kill
+- [ ] Map every page to a buyer journey stage
+  - [ ] Problem-aware
+  - [ ] Solution-aware
+  - [ ] Vendor-aware
+- [ ] Identify missing assets
+  - [ ] Case studies
+  - [ ] Objection handlers
+  - [ ] Proof blocks
+
+### Artifacts Produced
+
+- [ ] Content audit (spreadsheet or Notion database)
+- [ ] `docs/journey-map.md`
+- [ ] Page priority list (P0 / P1 / P2)
+
+**Exit Criteria**
+
+You know exactly which pages matter for revenue versus polish.
+
+---
+
+## Phase 3 — Design System & UX Rules
+
+**Objective**
+
+Remove design decisions from daily work.
+
+### Work
+
+- [ ] Finalize visual foundations
+  - [ ] Type scale
+  - [ ] Spacing tokens
+  - [ ] Dark/light mode behavior
+- [ ] Standardize animation usage
+  - [ ] Entry timing
+  - [ ] Scroll triggers
+  - [ ] Clear rules for when *not* to animate
+- [ ] Lock iconography and illustration direction
+- [ ] Define media rules
+  - [ ] Video aspect ratios
+  - [ ] Poster image standards
+  - [ ] Fallback behavior
+
+### Artifacts Produced
+
+- [ ] `docs/design-system.md`
+- [ ] `docs/animation-rules.md`
+- [ ] `/assets/design/` reference set
+
+**Exit Criteria**
+
+You stop tweaking spacing, fonts, and animations mid-build.
+
+---
+
+## Phase 4 — Revenue Pages (Money First)
+
+**Objective**
+
+Ship pages that can close deals without you present.
+
+### Build Order (Strict)
+
+- [ ] Home
+- [ ] Video Growth Engine
+- [ ] Outreach Engine
+- [ ] Pricing
+- [ ] Contact / Booking
+
+### For Each Page
+
+- [ ] One primary promise
+- [ ] One primary CTA
+- [ ] One proof mechanism
+- [ ] One objection handler
+
+### Artifacts Produced
+
+- [ ] Final YAML per page
+- [ ] CTA tracking events
+- [ ] Page-level QA checklist
+
+**Exit Criteria**
+
+A prospect can understand, trust, and book without emailing you.
+
+---
+
+## Phase 5 — Expansion Pages (Industries, Solutions, Resources)
+
+**Objective**
+
+Scale relevance without creating a maintenance nightmare.
+
+### Work
+
+- [ ] Use base templates only
+- [ ] Enforce copy constraints (no essays)
+- [ ] Ensure every page
+  - [ ] Mentions the buyer role
+  - [ ] Shows proof
+  - [ ] Links back to a revenue page
+
+### Automation
+
+- [ ] Programmatic OG images
+- [ ] Shared SEO defaults
+- [ ] Collection-level navigation
+
+### Artifacts Produced
+
+- [ ] Industry coverage matrix
+- [ ] Solution cross-link map
+
+**Exit Criteria**
+
+Adding pages increases surface area without increasing workload.
+
+---
+
+## Phase 6 — Tracking, SEO, and Feedback Loops
+
+**Objective**
+
+Know what is working without guessing.
+
+### Work
+
+- [ ] Finalize analytics stack
+- [ ] Define conversion events
+- [ ] Implement SEO hygiene
+  - [ ] `useSeoMeta` everywhere
+  - [ ] Sitemap validation
+  - [ ] OG image coverage
+- [ ] Add lightweight reporting dashboards
+
+### Artifacts Produced
+
+- [ ] `docs/analytics-events.md`
+- [ ] SEO checklist
+- [ ] Post-launch review cadence
+
+**Exit Criteria**
+
+You can answer "what page is pulling its weight?" in under two minutes.
+
+---
+
+## Phase 7 — Iteration & Scale
+
+**Objective**
+
+Turn the site into an asset, not a recurring project.
+
+### Ongoing Cadence
+
+- [ ] Weekly: friction log
+- [ ] Monthly: page-level optimizations
+- [ ] Quarterly: offer and positioning review
+
+### Backlog Themes
+
+- [ ] Personalization
+- [ ] Industry-specific demos
+- [ ] Interactive proof (calculators, flows)
+
+**Exit Criteria**
+
+Changes are incremental, intentional, and revenue-driven.
+
+---
+
+## Operating Note
+
+Treat this document as a living system. Each phase should be marked:
+
+- [ ] Not Started
+- [ ] In Progress
+- [ ] Locked
+
+Once a phase is locked, changes require intent—not impulse.
