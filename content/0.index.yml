@@ -22,12 +22,12 @@ hero:
       icon: i-lucide-eye
       size: xl
 sections:
-  - title: Any of these sound familiar?
-    description: You’re not alone — and you don’t need louder marketing. You need clarity, proof, and a system that works together.
+  - title: Are You Struggling With...
+    description: If this sounds familiar, you don’t need louder marketing. You need clarity, proof, and a system that works together.
     id: outdated-marketing
     orientation: horizontal
     links:
-      - label: Don't Worry. We can help.
+      - label: Don't Worry. We Can Help.
         to: https://trumediacreative.hbportal.co/public/6500b138434e3d0025b0e595/1-Inquiry_form
         variant: subtle
         icon: i-lucide-smile
@@ -40,24 +40,24 @@ sections:
       src: /images/home/frustrated-icon.png
       alt: Frustrated business owner looking at a computer screen
     features:
-      - title: Our marketing feels stale.
-        description: How do we modernize it without losing who we are?
-        icon: i-lucide-arrow-right-circle
-      - title: We have a great product that no one knows about.
-        description: How do we get more people to see it?
-        icon: i-lucide-arrow-right-circle
-      - title: We need more customers...
-        description: ...but we’re not sure how to reach them.
-        icon: i-lucide-arrow-right-circle
-      - title: People love us AFTER they've talked to us.
-        description: How do we get them to talk to us sooner?
-        icon: i-lucide-arrow-right-circle
-      - title: Marketing feels like an endless treadmill.
-        description: How do we build something that lasts?
-        icon: i-lucide-arrow-right-circle
+      - title: Stale marketing
+        description: #How do we modernize it without losing who we are?
+        icon: i-lucide-circle-x 
+      - title: Inconsistent leads
+        description: #How do we get more people to see it?
+        icon: i-lucide-circle-x 
+      - title: Unpredictable sales 
+        description: #...but we’re not sure how to reach them.
+        icon: i-lucide-circle-x 
+      - title: Long sales cycles
+        description: #How do we get them to talk to us sooner?
+        icon: i-lucide-circle-x 
+      - title: Prospecting taking too long
+        description: #How do we build something that lasts?
+        icon: i-lucide-circle-x 
       - title: We're ready to grow.
         description: We just need a smarter way to do it.
-        icon: i-lucide-arrow-right-circle
+        icon: i-lucide-circle-x 
 
 clients:
   title: Featured Clients

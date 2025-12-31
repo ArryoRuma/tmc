@@ -193,6 +193,13 @@ useSeoMeta({
       </div>
     </UPageSection>
     <USeparator /> -->
+    <VideoShowcaseGallery
+      v-if="page.videoShowcase"
+      :title="page.videoShowcase.title"
+      :description="page.videoShowcase.description"
+      :headline="page.videoShowcase.headline"
+      :videos="page.videoShowcase.videos"
+    />
     <UPageCTA v-bind="page.cta" variant="naked" class="overflow-hidden">
       <LazyStarsBg />
     </UPageCTA>
