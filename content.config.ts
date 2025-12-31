@@ -1,5 +1,4 @@
 import { defineCollection, z } from "@nuxt/content";
-
 const variantEnum = z.enum([
   "solid",
   "outline",
@@ -143,64 +142,126 @@ const createPricingSchema = () =>
     ),
   });
 
-export const collections = {
-  index: defineCollection({
-    source: "0.index.yml",
-    type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
+// Shared schema components for common sections
+const createHeroSchema = () =>
+  z.object({
+    headline: z.string().nonempty(),
+    description: z.string().nonempty(),
+    links: z.array(createLinkSchema()),
+    photo: createImageSchema().optional(),
+    orientation: orientationEnum.optional(),
+    title: z.string().optional(),
+  });
+
+const createSectionSchema = () =>
+  createBaseSchema().extend({
+    id: z.string().nonempty(),
+    headline: z.string().optional(),
+    orientation: orientationEnum.optional(),
+    reverse: z.boolean().optional(),
+    features: z.array(createFeatureItemSchema()).optional(),
+    photo: createImageSchema().optional(),
+    video: createVideoSchema().optional(),
+    links: z.array(createLinkSchema()).optional(),
+    price: createPriceSchema().optional(),
+    image: createImageSchema().optional(),
+  });
+
+const createTestimonialsSchema = () =>
+  createBaseSchema().extend({
+    headline: z.string().optional(),
+    items: z.array(
+      z.object({
+        quote: z.string().nonempty(),
+        user: z.object({
+          name: z.string().nonempty(),
           description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-        photo: createImageSchema().optional(),
-        orientation: orientationEnum.optional(),
-      }),
-
-      // Sections
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()),
-          photo: createImageSchema().optional(),
-          video: createVideoSchema().optional(),
-          links: z.array(createLinkSchema()).optional(),
+          to: z.string().optional(),
+          target: z.string().optional(),
+          avatar: createImageSchema(),
         }),
-      ),
+      }),
+    ),
+  });
 
-      // Clients
-      clients: z.object({
+const createCTASchema = () =>
+  createBaseSchema().extend({
+    links: z.array(createLinkSchema()),
+  });
+
+const createClientsSchema = () =>
+  z.object({
+    title: z.string().nonempty(),
+    description: z.string().nonempty(),
+    items: z.array(
+      z.object({
+        name: z.string().nonempty(),
+        logo: z.string().nonempty().editor({ input: "media" }),
+      }),
+    ),
+  });
+
+// Standardized page type schemas based on content-architecture.md
+const createPageMetaSchema = () =>
+  z.object({
+    title: z.string().nonempty(),
+    description: z.string().nonempty(),
+    headline: z.string().optional(),
+    seo: z
+      .object({
         title: z.string().nonempty(),
         description: z.string().nonempty(),
-        items: z.array(
-          z.object({
-            name: z.string().nonempty(),
-            logo: z.string().nonempty().editor({ input: "media" }),
-          }),
-        ),
-      }),
+      })
+      .optional(),
+    navigation: z.boolean().optional(),
+  });
 
-      // Features
+const createServicePageSchema = () =>
+  createPageMetaSchema().extend({
+    hero: createHeroSchema(),
+    sections: z.array(createSectionSchema()),
+    features: createBaseSchema().extend({
+      items: z.array(createFeatureItemSchema()),
+    }),
+    testimonials: createTestimonialsSchema(),
+    cta: createCTASchema(),
+  });
+
+const createSolutionPageSchema = () =>
+  createPageMetaSchema().extend({
+    hero: createHeroSchema(),
+    sections: z.array(createSectionSchema()),
+    features: createBaseSchema().extend({
+      items: z.array(createFeatureItemSchema()),
+    }),
+    testimonials: createTestimonialsSchema(),
+    cta: createCTASchema(),
+  });
+
+const createIndustryPageSchema = () =>
+  createPageMetaSchema().extend({
+    hero: createHeroSchema(),
+    sections: z.array(createSectionSchema()),
+    clients: createClientsSchema(),
+    features: createBaseSchema().extend({
+      items: z.array(createFeatureItemSchema()),
+    }),
+    testimonials: createTestimonialsSchema(),
+    cta: createCTASchema(),
+  });
+
+export const collections = {
+  // Home page
+  index: defineCollection({
+    source: "home/index.yml",
+    type: "page",
+    schema: createPageMetaSchema().extend({
+      hero: createHeroSchema(),
+      sections: z.array(createSectionSchema()),
+      clients: createClientsSchema(),
       features: createBaseSchema().extend({
         items: z.array(createFeatureItemSchema()),
       }),
-
-      // Process Steps
       process: z
         .object({
           title: z.string().nonempty(),
@@ -208,1070 +269,37 @@ export const collections = {
           steps: z.array(createProcessStepSchema()),
         })
         .optional(),
-
-      // Testimonials – make `to` and `target` optional so your current YAML is valid
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().optional(),
-              target: z.string().optional(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-
-      // CTA
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
+      testimonials: createTestimonialsSchema(),
+      cta: createCTASchema(),
     }),
   }),
-  contractorsmanufactures: defineCollection({
-    source: "2.contractors-manufactures.yml",
-    type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
 
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()),
-        }),
-      ),
-      clients: z.object({
-        title: z.string().nonempty(),
-        description: z.string().nonempty(),
-        items: z.array(
-          z.object({
-            name: z.string().nonempty(),
-            logo: z.string().nonempty().editor({ input: "media" }),
-          }),
-        ),
-      }),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().nonempty(),
-              target: z.string().nonempty(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
-  }),
-  foodservices: defineCollection({
-    source: "2.food-services.yml",
-    type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()),
-        }),
-      ),
-      clients: z.object({
-        title: z.string().nonempty(),
-        description: z.string().nonempty(),
-        items: z.array(
-          z.object({
-            name: z.string().nonempty(),
-            logo: z.string().nonempty().editor({ input: "media" }),
-          }),
-        ),
-      }),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().nonempty(),
-              target: z.string().nonempty(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
-  }),
-  healthandwellness: defineCollection({
-    source: "2.health-and-wellness.yaml",
-    type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()),
-        }),
-      ),
-      clients: z.object({
-        title: z.string().nonempty(),
-        description: z.string().nonempty(),
-        items: z.array(
-          z.object({
-            name: z.string().nonempty(),
-            logo: z.string().nonempty().editor({ input: "media" }),
-          }),
-        ),
-      }),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().nonempty(),
-              target: z.string().nonempty(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
-  }),
-  nonprofits: defineCollection({
-    source: "2.non-profits.yml",
-    type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()),
-        }),
-      ),
-      clients: z.object({
-        title: z.string().nonempty(),
-        description: z.string().nonempty(),
-        items: z.array(
-          z.object({
-            name: z.string().nonempty(),
-            logo: z.string().nonempty().editor({ input: "media" }),
-          }),
-        ),
-      }),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().nonempty(),
-              target: z.string().nonempty(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
-  }),
-  financialservices: defineCollection({
-    source: "2.financial-services.yml",
-    type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()),
-        }),
-      ),
-      clients: z.object({
-        title: z.string().nonempty(),
-        description: z.string().nonempty(),
-        items: z.array(
-          z.object({
-            name: z.string().nonempty(),
-            logo: z.string().nonempty().editor({ input: "media" }),
-          }),
-        ),
-      }),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().nonempty(),
-              target: z.string().nonempty(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
-  }),
-  liveeventsandentertainment: defineCollection({
-    source: "2.live-events-and-entertainment.yml",
-    type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()),
-        }),
-      ),
-      clients: z.object({
-        title: z.string().nonempty(),
-        description: z.string().nonempty(),
-        items: z.array(
-          z.object({
-            name: z.string().nonempty(),
-            logo: z.string().nonempty().editor({ input: "media" }),
-          }),
-        ),
-      }),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().nonempty(),
-              target: z.string().nonempty(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
-  }),
+  // Services
   webdesign: defineCollection({
-    source: "0.web-design.yml",
+    source: "services/web-design.yml",
     type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()).optional(),
-          links: z.array(createLinkSchema()).optional(),
-          price: z
-            .union([
-              z.string(),
-              z.object({
-                display: z.string().optional(),
-                amount: z.number().optional(),
-                billing: z.string().optional(),
-              }),
-            ])
-            .optional(),
-        }),
-      ),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().optional(),
-              target: z.string().optional(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
+    schema: createServicePageSchema(),
   }),
   seoandpaidads: defineCollection({
-    source: "0.seo-and-paid-ads.yml",
+    source: "services/seo-and-paid-ads.yml",
     type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()).optional(),
-          price: z
-            .union([
-              z.string(),
-              z.object({
-                display: z.string().optional(),
-                amount: z.number().optional(),
-                billing: z.string().optional(),
-              }),
-            ])
-            .optional(),
-        }),
-      ),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().optional(),
-              target: z.string().optional(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
+    schema: createServicePageSchema(),
   }),
   marketingautomation: defineCollection({
-    source: "0.marketing-automation.yml",
+    source: "services/marketing-automation.yml",
     type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()).optional(),
-          price: z
-            .union([
-              z.string(),
-              z.object({
-                display: z.string().optional(),
-                amount: z.number().optional(),
-                billing: z.string().optional(),
-              }),
-            ])
-            .optional(),
-        }),
-      ),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().optional(),
-              target: z.string().optional(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
+    schema: createServicePageSchema(),
   }),
-  getmoreleads: defineCollection({
-    source: "1.get-more-leads.yml",
-    type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()).optional(),
-          price: z
-            .union([
-              z.string(),
-              z.object({
-                display: z.string().optional(),
-                amount: z.number().optional(),
-                billing: z.string().optional(),
-              }),
-            ])
-            .optional(),
-        }),
-      ),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().optional(),
-              target: z.string().optional(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
-  }),
-  clarifyyourmessage: defineCollection({
-    source: "1.clarify-your-message.yml",
-    type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()).optional(),
-          price: z
-            .union([
-              z.string(),
-              z.object({
-                display: z.string().optional(),
-                amount: z.number().optional(),
-                billing: z.string().optional(),
-              }),
-            ])
-            .optional(),
-        }),
-      ),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().optional(),
-              target: z.string().optional(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
-  }),
-  speedupsales: defineCollection({
-    source: "1.speed-up-sales.yml",
-    type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()).optional(),
-          price: z
-            .union([
-              z.string(),
-              z.object({
-                display: z.string().optional(),
-                amount: z.number().optional(),
-                billing: z.string().optional(),
-              }),
-            ])
-            .optional(),
-        }),
-      ),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().optional(),
-              target: z.string().optional(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
-  }),
-  keepcustomerslonger: defineCollection({
-    source: "1.keep-customers-longer.yml",
-    type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()).optional(),
-          price: z
-            .union([
-              z.string(),
-              z.object({
-                display: z.string().optional(),
-                amount: z.number().optional(),
-                billing: z.string().optional(),
-              }),
-            ])
-            .optional(),
-        }),
-      ),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().optional(),
-              target: z.string().optional(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
-  }),
-  reachmorebuyers: defineCollection({
-    source: "1.reach-more-buyers.yml",
-    type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()).optional(),
-          price: z
-            .union([
-              z.string(),
-              z.object({
-                display: z.string().optional(),
-                amount: z.number().optional(),
-                billing: z.string().optional(),
-              }),
-            ])
-            .optional(),
-        }),
-      ),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().optional(),
-              target: z.string().optional(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
-  }),
-  fixyourlivestreamandevents: defineCollection({
-    source: "1.fix-your-live-stream-and-events.yml",
-    type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()).optional(),
-          price: z
-            .union([
-              z.string(),
-              z.object({
-                display: z.string().optional(),
-                amount: z.number().optional(),
-                billing: z.string().optional(),
-              }),
-            ])
-            .optional(),
-        }),
-      ),
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().optional(),
-              target: z.string().optional(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
-  }),
-
   videoengine: defineCollection({
-    source: "0.videoengine.yml",
+    source: "services/video-growth-engine.yml",
     type: "page",
-    schema: z.object({
-      // Top-level meta used in content and SEO
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-
-      // Hero section
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()).optional(),
-          video: z
-            .object({
-              src: z.string().nonempty(),
-              poster: z.string().optional(),
-              title: z.string().optional(),
-            })
-            .optional(),
-          links: z.array(createLinkSchema()).optional(),
-          image: createImageSchema().optional(),
-          price: z
-            .union([
-              z.string(),
-              z.object({
-                display: z.string().optional(),
-                amount: z.number().optional(),
-                billing: z.string().optional(),
-              }),
-            ])
-            .optional(),
-        }),
-      ),
+    schema: createPageMetaSchema().extend({
+      hero: createHeroSchema(),
+      sections: z.array(createSectionSchema()),
       features: createBaseSchema().extend({
         items: z.array(createFeatureItemSchema()),
       }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().optional(),
-              target: z.string().optional(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
+      testimonials: createTestimonialsSchema(),
       videoShowcase: z
         .object({
           title: z.string().optional(),
@@ -1288,38 +316,105 @@ export const collections = {
           ),
         })
         .optional(),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
+      cta: createCTASchema(),
     }),
   }),
-  outreachengine: defineCollection({
-    source: "0.outreachengine.yml",
+  webdesigncomparison: defineCollection({
+    source: "services/web-design-comparison.yml",
     type: "page",
-    schema: z.object({
+    schema: createPageMetaSchema().extend({
       hero: z.object({
         headline: z.string().nonempty(),
+        title: z.string().optional(),
+        description: z.string().nonempty(),
         links: z.array(createLinkSchema()),
       }),
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()).optional(),
-          price: z
-            .union([
-              z.string(),
-              z.object({
-                display: z.string().optional(),
-                amount: z.number().optional(),
-                billing: z.string().optional(),
-              }),
-            ])
-            .optional(),
-        }),
-      ),
+      comparison: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        items: z.array(
+          z.object({
+            title: z.string().nonempty(),
+            description: z.string().nonempty(),
+            price: z.string().optional(),
+            discount: z.string().optional(),
+            billingPeriod: z.string().optional(),
+            billingCycle: z.string().optional(),
+            tagline: z.string().optional(),
+            terms: z.string().optional(),
+            badge: z
+              .union([
+                z.string(),
+                z.object({
+                  label: z.string().nonempty(),
+                  color: colorEnum.optional(),
+                  variant: badgeVariantEnum.optional(),
+                }),
+              ])
+              .optional(),
+            button: createLinkSchema().optional(),
+            features: z
+              .union([
+                z.array(z.string()),
+                z.array(
+                  z.object({
+                    title: z.string(),
+                    icon: z.string().optional(),
+                  }),
+                ),
+              ])
+              .optional(),
+            variant: z.enum(["soft", "solid", "outline", "subtle"]).optional(),
+            orientation: orientationEnum.optional(),
+            highlight: z.boolean().optional(),
+            scale: z.boolean().optional(),
+            icon: z.string().optional().editor({ input: "icon" }),
+            links: z.array(createLinkSchema()).optional(),
+          }),
+        ),
+      }),
+      sections: z.array(createSectionSchema()),
+      cta: createCTASchema(),
+    }),
+  }),
+
+  // Solutions
+  getmoreleads: defineCollection({
+    source: "solutions/get-more-leads.yml",
+    type: "page",
+    schema: createSolutionPageSchema(),
+  }),
+  clarifyyourmessage: defineCollection({
+    source: "solutions/clarify-your-message.yml",
+    type: "page",
+    schema: createSolutionPageSchema(),
+  }),
+  speedupsales: defineCollection({
+    source: "solutions/speed-up-sales.yml",
+    type: "page",
+    schema: createSolutionPageSchema(),
+  }),
+  keepcustomerslonger: defineCollection({
+    source: "solutions/keep-customers-longer.yml",
+    type: "page",
+    schema: createSolutionPageSchema(),
+  }),
+  reachmorebuyers: defineCollection({
+    source: "solutions/reach-more-buyers.yml",
+    type: "page",
+    schema: createSolutionPageSchema(),
+  }),
+  fixyourlivestreamandevents: defineCollection({
+    source: "solutions/fix-your-live-stream-and-events.yml",
+    type: "page",
+    schema: createSolutionPageSchema(),
+  }),
+  outreachengine: defineCollection({
+    source: "solutions/outreach-engine.yml",
+    type: "page",
+    schema: z.object({
+      hero: createHeroSchema(),
+      sections: z.array(createSectionSchema()),
       features: createBaseSchema().extend({
         items: z.array(createFeatureItemSchema()),
       }),
@@ -1329,135 +424,95 @@ export const collections = {
         loading: z.string().optional(),
         srcset: z.string().optional(),
       }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().optional(),
-              target: z.string().optional(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
+      testimonials: createTestimonialsSchema(),
+      cta: createCTASchema(),
     }),
   }),
   portfolio: defineCollection({
-    source: "0.portfolio.yml",
+    source: "solutions/portfolio.yml",
     type: "page",
     schema: z.object({
-      hero: z.object({
-        headline: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()).optional(),
-          price: z
-            .union([
-              z.string(),
-              z.object({
-                display: z.string().optional(),
-                amount: z.number().optional(),
-                billing: z.string().optional(),
-              }),
-            ])
-            .optional(),
-        }),
-      ),
+      hero: createHeroSchema(),
+      sections: z.array(createSectionSchema()),
       features: createBaseSchema().extend({
         items: z.array(createFeatureItemSchema()),
       }),
-      testimonials: createBaseSchema().extend({
-        headline: z.string().optional(),
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              to: z.string().optional(),
-              target: z.string().optional(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
+      testimonials: createTestimonialsSchema(),
+      cta: createCTASchema(),
+    }),
+  }),
+  claritytoclients: defineCollection({
+    source: "solutions/clarity-to-clients.yml",
+    type: "page",
+    schema: createPageMetaSchema().extend({
+      hero: createHeroSchema(),
+      sections: z.array(createSectionSchema()),
+      features: createBaseSchema().extend({
+        items: z.array(createFeatureItemSchema()),
       }),
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
+      pricing: createPricingSchema(),
+      testimonials: createTestimonialsSchema(),
+      cta: createCTASchema(),
     }),
   }),
 
+  // Industries
+  contractorsmanufactures: defineCollection({
+    source: "industries/contractors-manufactures.yml",
+    type: "page",
+    schema: createIndustryPageSchema(),
+  }),
+  foodservices: defineCollection({
+    source: "industries/food-services.yml",
+    type: "page",
+    schema: createIndustryPageSchema(),
+  }),
+  healthandwellness: defineCollection({
+    source: "industries/health-and-wellness.yml",
+    type: "page",
+    schema: createIndustryPageSchema(),
+  }),
+  nonprofits: defineCollection({
+    source: "industries/non-profits.yml",
+    type: "page",
+    schema: createIndustryPageSchema(),
+  }),
+  financialservices: defineCollection({
+    source: "industries/financial-services.yml",
+    type: "page",
+    schema: createIndustryPageSchema(),
+  }),
+  liveeventsandentertainment: defineCollection({
+    source: "industries/live-events-and-entertainment.yml",
+    type: "page",
+    schema: createIndustryPageSchema(),
+  }),
+
+  // Projects
+  projects: defineCollection({
+    source: "projects/*.md",
+    type: "page",
+    schema: z.object({
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      year: z.number().optional(),
+      client: z.string().optional(),
+      services: z.array(z.string()).optional(),
+      heroImage: z.string().optional(),
+      beforeImage: z.string().optional(),
+      afterImage: z.string().optional(),
+      websiteUrl: z.string().optional(),
+      challenge: z.string().optional(),
+      approach: z.string().optional(),
+      solution: z.string().optional(),
+      results: z.array(z.string()).optional(),
+    }),
+  }),
+
+  // Resources & Blog
   docs: defineCollection({
     source: "1.docs/**/*",
     type: "page",
-  }),
-  pricing: defineCollection({
-    source: "2.pricing.yml",
-    type: "page",
-    schema: z.object({
-      plans: z.array(
-        z.object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-          price: z.string().nonempty(),
-          discount: z.string().optional(),
-          billingPeriod: z.string().optional(),
-          billingCycle: z.string().optional(),
-          tagline: z.string().optional(),
-          terms: z.string().optional(),
-          badge: z
-            .union([
-              z.string(),
-              z.object({
-                label: z.string().nonempty(),
-                color: colorEnum.optional(),
-                variant: variantEnum.optional(),
-              }),
-            ])
-            .optional(),
-          button: createLinkSchema(),
-          features: z.array(
-            z.union([
-              z.string().nonempty(),
-              z.object({
-                title: z.string().nonempty(),
-                icon: z.string().optional().editor({ input: "icon" }),
-              }),
-            ]),
-          ),
-          variant: z.enum(["soft", "solid", "outline", "subtle"]).optional(),
-          orientation: orientationEnum.optional(),
-          highlight: z.boolean().optional(),
-          scale: z.boolean().optional(),
-        }),
-      ),
-      logos: z.object({
-        title: z.string().nonempty(),
-        icons: z.array(z.string()),
-      }),
-      faq: createBaseSchema().extend({
-        items: z.array(
-          z.object({
-            label: z.string().nonempty(),
-            content: z.string().nonempty(),
-            defaultOpen: z.boolean().optional(),
-          }),
-        ),
-      }),
-    }),
   }),
   blog: defineCollection({
     source: "3.blog.yml",
@@ -1522,160 +577,59 @@ export const collections = {
     }),
   }),
 
-  projects: defineCollection({
-    source: "projects/*.md",
+  // Pricing
+  pricing: defineCollection({
+    source: "2.pricing.yml",
     type: "page",
     schema: z.object({
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      year: z.number().optional(),
-      client: z.string().optional(),
-      services: z.array(z.string()).optional(),
-      heroImage: z.string().optional(),
-      beforeImage: z.string().optional(),
-      afterImage: z.string().optional(),
-      websiteUrl: z.string().optional(),
-      challenge: z.string().optional(),
-      approach: z.string().optional(),
-      solution: z.string().optional(),
-      results: z.array(z.string()).optional(),
-    }),
-  }),
-  claritytoclients: defineCollection({
-    source: "1.clarity-to-clients.yml",
-    type: "page",
-    schema: z.object({
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
+      plans: z.array(
+        z.object({
           title: z.string().nonempty(),
           description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-
-      hero: z.object({
-        headline: z.string().nonempty(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
+          price: z.string().nonempty(),
+          discount: z.string().optional(),
+          billingPeriod: z.string().optional(),
+          billingCycle: z.string().optional(),
+          tagline: z.string().optional(),
+          terms: z.string().optional(),
+          badge: z
+            .union([
+              z.string(),
+              z.object({
+                label: z.string().nonempty(),
+                color: colorEnum.optional(),
+                variant: variantEnum.optional(),
+              }),
+            ])
+            .optional(),
+          button: createLinkSchema(),
+          features: z.array(
+            z.union([
+              z.string().nonempty(),
+              z.object({
+                title: z.string().nonempty(),
+                icon: z.string().optional().editor({ input: "icon" }),
+              }),
+            ]),
+          ),
+          variant: z.enum(["soft", "solid", "outline", "subtle"]).optional(),
           orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()),
+          highlight: z.boolean().optional(),
+          scale: z.boolean().optional(),
         }),
       ),
-
-      features: createBaseSchema().extend({
-        items: z.array(createFeatureItemSchema()),
-      }),
-
-      pricing: createPricingSchema(),
-
-      testimonials: createBaseSchema().extend({
-        items: z.array(
-          z.object({
-            quote: z.string().nonempty(),
-            user: z.object({
-              name: z.string().nonempty(),
-              description: z.string().nonempty(),
-              avatar: createImageSchema(),
-            }),
-          }),
-        ),
-      }),
-
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
-      }),
-    }),
-  }),
-  webdesigncomparison: defineCollection({
-    source: "0.web-design-comparison.yml",
-    type: "page",
-    schema: z.object({
-      title: z.string().nonempty(),
-      description: z.string().nonempty(),
-      headline: z.string().optional(),
-      seo: z
-        .object({
-          title: z.string().nonempty(),
-          description: z.string().nonempty(),
-        })
-        .optional(),
-      navigation: z.boolean().optional(),
-
-      hero: z.object({
-        headline: z.string().nonempty(),
-        title: z.string().optional(),
-        description: z.string().nonempty(),
-        links: z.array(createLinkSchema()),
-      }),
-
-      comparison: z.object({
+      logos: z.object({
         title: z.string().nonempty(),
-        description: z.string().nonempty(),
+        icons: z.array(z.string()),
+      }),
+      faq: createBaseSchema().extend({
         items: z.array(
           z.object({
-            title: z.string().nonempty(),
-            description: z.string().nonempty(),
-            price: z.string().optional(),
-            discount: z.string().optional(),
-            billingPeriod: z.string().optional(),
-            billingCycle: z.string().optional(),
-            tagline: z.string().optional(),
-            terms: z.string().optional(),
-            badge: z
-              .union([
-                z.string(),
-                z.object({
-                  label: z.string().nonempty(),
-                  color: colorEnum.optional(),
-                  variant: badgeVariantEnum.optional(),
-                }),
-              ])
-              .optional(),
-            button: createLinkSchema().optional(),
-            features: z
-              .union([
-                z.array(z.string()),
-                z.array(
-                  z.object({
-                    title: z.string(),
-                    icon: z.string().optional(),
-                  }),
-                ),
-              ])
-              .optional(),
-            variant: z.enum(["soft", "solid", "outline", "subtle"]).optional(),
-            orientation: orientationEnum.optional(),
-            highlight: z.boolean().optional(),
-            scale: z.boolean().optional(),
-            icon: z.string().optional().editor({ input: "icon" }),
-            links: z.array(createLinkSchema()).optional(),
+            label: z.string().nonempty(),
+            content: z.string().nonempty(),
+            defaultOpen: z.boolean().optional(),
           }),
         ),
-      }),
-
-      sections: z.array(
-        createBaseSchema().extend({
-          id: z.string().nonempty(),
-          headline: z.string().optional(),
-          orientation: orientationEnum.optional(),
-          reverse: z.boolean().optional(),
-          features: z.array(createFeatureItemSchema()).optional(),
-          links: z.array(createLinkSchema()).optional(),
-        }),
-      ),
-
-      cta: createBaseSchema().extend({
-        links: z.array(createLinkSchema()),
       }),
     }),
   }),
