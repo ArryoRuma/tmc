@@ -42,7 +42,7 @@ const props = withDefaults(defineProps<VideoShowcaseProps>(), {
           </template>
 
           <div class="relative overflow-hidden rounded-lg shadow-xl">
-            <LazyVideo
+            <video
               :src="video.src"
               :poster="video.poster || video.thumbnail"
               controls
@@ -50,7 +50,7 @@ const props = withDefaults(defineProps<VideoShowcaseProps>(), {
               preload="metadata"
             >
               <p>Your browser doesn't support video playback.</p>
-            </LazyVideo>
+            </video>
           </div>
 
           <template v-if="video.description" #description>

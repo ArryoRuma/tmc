@@ -1,10 +1,10 @@
 <template>
   <div class="relative">
     <UPageCard variant="subtle" class="rounded-2xl">
-      <LazyVideo
+      <video
         class="rounded-xl"
         data-v-baf90ddd=""
-        preload="metadata"
+        preload="thumbnail"
         onpause="pause"
         poster=""
         :controls="true"

@@ -124,15 +124,15 @@ useSeoMeta({
         v-if="section.video"
         class="relative overflow-hidden shadow-xl rounded-lg"
       >
-        <LazyVideo
+        <video
           :src="section.video.src"
           :poster="section.video.poster"
           controls
           class="w-full h-auto aspect-video"
-          preload="metadata"
+          preload="thumbnail"
         >
           <p>Your browser doesn't support video playback.</p>
-        </LazyVideo>
+        </video>
       </div>
       <div
         v-else-if="section.image"
@@ -193,7 +193,7 @@ useSeoMeta({
       </div>
     </UPageSection>
     <USeparator /> -->
-    <VideoShowcaseGallery
+    <ServicesVideoShowcaseGallery
       v-if="page.videoShowcase"
       :title="page.videoShowcase.title"
       :description="page.videoShowcase.description"

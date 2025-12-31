@@ -145,7 +145,7 @@ const currentStep = computed(() => {
               class="w-full text-left p-4 rounded-xl transition-all duration-300 group"
               :class="[
                 activeStep === step.id
-                  ? 'bg-primary-50 dark:bg-primary-900/20 border-2 border-primary-200 dark:border-primary-800'
+                  ? 'bg-gray-50 dark:bg-primary-500/20 border-2 border-primary-500 dark:border-primary-500'
                   : 'bg-white dark:bg-gray-800 border-2 border-transparent hover:border-gray-200 dark:hover:border-gray-700 hover:shadow-md',
               ]"
               @click="setActiveStep(step.id)"
@@ -155,8 +155,8 @@ const currentStep = computed(() => {
                   class="flex-shrink-0 w-10 h-10 rounded-lg flex items-center justify-center transition-colors"
                   :class="[
                     activeStep === step.id
-                      ? 'bg-primary-600 text-white'
-                      : 'bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 group-hover:bg-primary-100 dark:group-hover:bg-primary-900/30',
+                      ? 'bg-primary-500 text-white'
+                      : 'bg-gray-100 text-primary-400 dark:bg-gray-700 text-gray-500 dark:text-gray-300 group-hover:bg-primary-400 group-hover:text-white text-primary-400 dark:group-hover:bg-primary-500',
                   ]"
                 >
                   <Icon
@@ -192,7 +192,7 @@ const currentStep = computed(() => {
             <div class="mb-6">
               <div class="flex items-center gap-3 mb-4">
                 <div
-                  class="w-12 h-12 rounded-xl bg-primary-600 flex items-center justify-center text-white"
+                  class="w-12 h-12 rounded-xl bg-primary-400 flex items-center justify-center text-white"
                 >
                   <Icon
                     v-if="showIcons && currentStep.icon"
