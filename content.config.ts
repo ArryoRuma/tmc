@@ -1,5 +1,5 @@
 import { defineCollection, z } from "@nuxt/content";
-
+// TODO: Go through and use /content/tmc-docs/content-architecure.md as a guide to improve and standardize these schemas. change what needs to be changed accordingly in the content files.
 const variantEnum = z.enum([
   "solid",
   "outline",
