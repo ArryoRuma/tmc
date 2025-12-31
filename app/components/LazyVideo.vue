@@ -23,12 +23,13 @@ const props = withDefaults(defineProps<LazyVideoProps>(), {
 const videoRef = ref<HTMLVideoElement | null>(null);
 const isIntersecting = ref(false);
 const hasLoaded = ref(false);
+const observer = ref<IntersectionObserver | null>(null);
 
 // Use Intersection Observer to detect when video enters viewport
 onMounted(() => {
   if (!videoRef.value) return;
 
-  const observer = new IntersectionObserver(
+  observer.value = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting && !hasLoaded.value) {
@@ -43,13 +44,14 @@ onMounted(() => {
     },
   );
 
-  observer.observe(videoRef.value);
+  observer.value.observe(videoRef.value);
+});
 
-  onUnmounted(() => {
-    if (videoRef.value) {
-      observer.unobserve(videoRef.value);
-    }
-  });
+onUnmounted(() => {
+  if (observer.value && videoRef.value) {
+    observer.value.unobserve(videoRef.value);
+    observer.value.disconnect();
+  }
 });
 </script>
 
