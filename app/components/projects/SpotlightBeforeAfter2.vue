@@ -1,115 +1,97 @@
 <script setup lang="ts">
+import { ref } from "vue";
+
 const props = defineProps<{
   beforeImage?: string;
   afterImage?: string;
-  client?: string;
 }>();
-
-const activeImage = ref<string | null>(null);
-const activeLabel = ref<string | null>(null);
-
-const openLightbox = (image?: string, label?: string) => {
-  if (!image) return;
-  activeImage.value = image;
-  activeLabel.value = label || null;
-};
-
-const closeLightbox = () => {
-  activeImage.value = null;
-  activeLabel.value = null;
-};
-
-onMounted(() => {
-  const handleKey = (event: KeyboardEvent) => {
-    if (event.key === "Escape") {
-      closeLightbox();
-    }
-  };
-  window.addEventListener("keydown", handleKey);
-  onUnmounted(() => window.removeEventListener("keydown", handleKey));
-});
+const activeTab = ref<"before" | "after">("after");
 </script>
-<!-- TODO: Fix this component's format and functionality so that it matches the ProjectsBeforeAfter.vue component. -->
 
 <template>
-  <div class="grid gap-4 sm:grid-cols-2">
-    <div class="rounded-2xl border border-primary-100 bg-white p-4 shadow-lg">
-      <p
-        class="text-xs font-semibold uppercase tracking-[0.2em] text-primary-500"
-      >
-        Before
-      </p>
-      <button
-        type="button"
-        class="group mt-3 w-full overflow-hidden rounded-xl bg-slate-100"
-        @click="
-          openLightbox(
-            props.beforeImage,
-            props.client ? `${props.client} before` : 'Before image',
-          )
-        "
-      >
-        <NuxtImg
-          v-if="props.beforeImage"
-          :src="props.beforeImage"
-          :alt="props.client ? `${props.client} before` : 'Before image'"
-          class="h-40 w-full object-cover transition duration-300 group-hover:scale-[1.02]"
-        />
-      </button>
-    </div>
-    <div class="rounded-2xl border border-amber-100 bg-white p-4 shadow-lg">
-      <p
-        class="text-xs font-semibold uppercase tracking-[0.2em] text-amber-600"
-      >
-        After
-      </p>
-      <button
-        type="button"
-        class="group mt-3 w-full overflow-hidden rounded-xl bg-slate-100"
-        @click="
-          openLightbox(
-            props.afterImage,
-            props.client ? `${props.client} after` : 'After image',
-          )
-        "
-      >
-        <NuxtImg
-          v-if="props.afterImage"
-          :src="props.afterImage"
-          :alt="props.client ? `${props.client} after` : 'After image'"
-          class="h-40 w-full object-cover transition duration-300 group-hover:scale-[1.02]"
-        />
-      </button>
-    </div>
-  </div>
-
-  <Teleport to="body">
-    <div
-      v-if="activeImage"
-      class="fixed inset-0 z-50 flex items-center justify-center bg-slate-950/80 p-6"
-      role="dialog"
-      aria-modal="true"
-      @click.self="closeLightbox"
-    >
-      <div class="relative w-full max-w-5xl">
-        <button
-          type="button"
-          class="absolute -top-10 right-0 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold text-slate-700 shadow"
-          @click="closeLightbox"
-        >
-          Close
-        </button>
-        <div class="overflow-hidden rounded-3xl bg-white shadow-2xl">
-          <NuxtImg
-            :src="activeImage"
-            :alt="activeLabel || 'Project image'"
-            class="max-h-[80vh] w-full object-contain"
-          />
-        </div>
-        <p v-if="activeLabel" class="mt-3 text-center text-xs text-white/80">
-          {{ activeLabel }}
+  <div class="bg-gray-50 dark:bg-gray-900 py-8">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-3xl font-bold mb-2 text-center">Before & After</h3>
+        <p class="text-center text-gray-600 dark:text-gray-300 mb-4">
+          See the transformation from the old website to our modern design
         </p>
+
+        <div class="flex justify-center mb-8">
+          <div class="bg-white dark:bg-gray-800 p-1 rounded-lg shadow-md">
+            <button
+              :class="[
+                'px-6 py-3 rounded-md font-semibold transition-all duration-200',
+                activeTab === 'before'
+                  ? 'bg-primary text-white shadow-sm'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-primary',
+              ]"
+              @click="activeTab = 'before'"
+            >
+              Before
+            </button>
+            <button
+              :class="[
+                'px-6 py-3 rounded-md font-semibold transition-all duration-200',
+                activeTab === 'after'
+                  ? 'bg-primary text-white shadow-sm'
+                  : 'text-gray-600 dark:text-gray-300 hover:text-primary',
+              ]"
+              @click="activeTab = 'after'"
+            >
+              After
+            </button>
+          </div>
+        </div>
+
+        <div
+          class="relative rounded-2xl overflow-hidden shadow-2xl aspect-[16/9]"
+        >
+          <transition name="fade" mode="out-in">
+            <div
+              v-if="activeTab === 'before'"
+              key="before"
+              class="absolute inset-0 overflow-auto"
+            >
+              <img
+                v-if="props.beforeImage"
+                :src="props.beforeImage"
+                alt="Before - Old Website"
+                class="w-full min-h-full object-cover object-top"
+              />
+              <div
+                class="absolute bottom-4 left-4 bg-red-500 text-white px-3 py-1 rounded-md text-sm font-semibold"
+              >
+                Before
+              </div>
+            </div>
+            <div v-else key="after" class="absolute inset-0 overflow-auto">
+              <img
+                v-if="props.afterImage"
+                :src="props.afterImage"
+                alt="After - New Website"
+                class="w-full min-h-full object-cover object-top"
+              />
+              <div
+                class="absolute bottom-4 left-4 bg-green-500 text-white px-3 py-1 rounded-md text-sm font-semibold"
+              >
+                After
+              </div>
+            </div>
+          </transition>
+        </div>
       </div>
     </div>
-  </Teleport>
+  </div>
 </template>
+
+<style scoped>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s ease;
+}
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+</style>
