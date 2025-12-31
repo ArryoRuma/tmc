@@ -48,8 +48,10 @@ onMounted(() => {
 });
 
 onUnmounted(() => {
-  if (observer.value && videoRef.value) {
-    observer.value.unobserve(videoRef.value);
+  if (observer.value) {
+    if (videoRef.value) {
+      observer.value.unobserve(videoRef.value);
+    }
     observer.value.disconnect();
   }
 });
