@@ -3,6 +3,8 @@ const { data: page } = await useAsyncData("index", () =>
   queryCollection("index").first(),
 );
 
+// TODO: Provide a loading/error fallback here so the homepage does not render empty while content queries resolve.
+
 const title = page.value?.seo?.title || page.value?.title;
 const description = page.value?.seo?.description || page.value?.description;
 
@@ -16,6 +18,7 @@ useSeoMeta({
 
 <template>
   <div v-if="page?.title">
+    <!-- TODO: Generate these FadeInUp sections from structured content (e.g., page.modules array) instead of hardcoding every slice. -->
     <FadeInUp :delay="0.3">
       <UPageHero
         :description="page.description"

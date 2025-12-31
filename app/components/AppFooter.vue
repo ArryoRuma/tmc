@@ -1,4 +1,5 @@
 <script setup lang="ts">
+// TODO: Move these footer columns into the content/ tree (or a navigation config) so copy/URLs stay versioned with the rest of the marketing site.
 const columns = [
   {
     label: "Solutions",
@@ -190,6 +191,7 @@ const columns = [
     </template>
 
     <template #right>
+      <!-- TODO: Extract social buttons into a reusable <SocialLinks /> cluster shared with hero/contact sections. -->
       <UButton
         to="https://www.linkedin.com/company/trumedia-creative/"
         target="_blank"

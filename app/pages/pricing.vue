@@ -3,6 +3,8 @@ const { data: page } = await useAsyncData("pricing", () =>
   queryCollection("pricing").first(),
 );
 
+// TODO: Add error/loading states here so the pricing hero doesn't flash blank content while the CMS query resolves.
+
 const title = page.value?.seo?.title || page.value?.title;
 const description = page.value?.seo?.description || page.value?.description;
 
@@ -27,6 +29,8 @@ const items = ref([
     value: "1",
   },
 ]);
+
+// TODO: Drive plan tiers + billing toggles from page.pricingPlans instead of hardcoding two static tab labels.
 </script>
 
 <template>

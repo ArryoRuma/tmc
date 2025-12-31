@@ -51,6 +51,8 @@ const providers = [
   },
 ];
 
+// TODO: Swap these toast placeholders with real OAuth handlers (server-side session, redirect flow, state validation).
+
 const schema = z.object({
   email: z.string().email("Invalid email"),
   password: z.string().min(8, "Must be at least 8 characters"),
@@ -61,6 +63,8 @@ type Schema = z.output<typeof schema>;
 function onSubmit(payload: FormSubmitEvent<Schema>) {
   console.log("Submitted", payload);
 }
+
+// TODO: Send credentials to an auth endpoint + display inline error feedback instead of logging to console.
 </script>
 
 <template>

@@ -4,6 +4,8 @@ useSeoMeta({
   description:
     "Learn about TruMedia Creative's mission, values, and the team behind our marketing and creative solutions.",
 });
+
+// TODO: Port this long-form about page into structured content entries (hero, mission, values, team) so marketing can edit without code changes.
 </script>
 
 <template>
@@ -19,6 +21,7 @@ useSeoMeta({
             that actually gets used—and gets results.
           </p>
           <!-- Hero Image Placeholder -->
+          <!-- TODO: Replace placeholder blocks with <NuxtImg> or a reusable media component that can swap light/dark assets. -->
           <div
             class="bg-gray-200 dark:bg-gray-700 rounded-lg h-64 flex items-center justify-center"
           >
@@ -78,6 +81,7 @@ useSeoMeta({
 
         <!-- Timeline or Key Milestones -->
         <div class="grid md:grid-cols-3 gap-8 mt-16">
+          <!-- TODO: Drive milestone items from a content array to avoid editing markup for each new year. -->
           <div class="text-center">
             <div
               class="bg-primary-100 rounded-full w-32 h-32 flex items-center justify-center mx-auto mb-4"
@@ -133,6 +137,7 @@ useSeoMeta({
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- TODO: Loop over page.values data instead of duplicating 6 cards manually. -->
           <!-- Value 1 -->
           <div
             class="text-center p-6 rounded-lg border hover:shadow-lg transition-shadow"
@@ -251,6 +256,7 @@ useSeoMeta({
         </div>
 
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- TODO: Source team data (name, role, bio, social) from a people collection and reuse a <TeamCard> component. -->
           <!-- Team Member 1 -->
           <div
             class="text-center bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg"

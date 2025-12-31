@@ -51,6 +51,8 @@ const providers = [
   },
 ];
 
+// TODO: Wire these providers to real OAuth endpoints + reuse a shared auth composable so login/signup stay consistent.
+
 const schema = z.object({
   name: z.string().min(1, "Name is required"),
   email: z.string().email("Invalid email"),
@@ -62,6 +64,8 @@ type Schema = z.output<typeof schema>;
 function onSubmit(payload: FormSubmitEvent<Schema>) {
   console.log("Submitted", payload);
 }
+
+// TODO: Persist the signup payload to an API (w/ loading + error states) instead of console logging.
 </script>
 
 <template>

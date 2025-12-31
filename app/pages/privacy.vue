@@ -8,6 +8,8 @@ useSeoMeta({
   ogDescription:
     "Learn how TruMedia Creative collects, uses, and protects your personal information. Read our comprehensive privacy policy.",
 });
+
+// TODO: Render this policy from a markdown/YAML source in content/ so legal text + effective dates can be versioned with the CMS.
 </script>
 
 <template>

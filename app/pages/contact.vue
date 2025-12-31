@@ -24,6 +24,8 @@ const contactInfo = {
     weekend: "Weekend: By appointment only",
   },
 };
+
+// TODO: Load contact info + hero copy from content/ so updates don't require code changes and can support localization.
 </script>
 
 <template>
@@ -58,6 +60,7 @@ const contactInfo = {
       Contact Information
     </h2>
     <UPageSection class="py-6">
+      <!-- TODO: Render these contact cards from a schema-driven array instead of one-off markup to keep icons, copy, and layout consistent. -->
       <!-- Contact Information - 2 Column Layout -->
       <div>
         <div class="grid md:grid-cols-2 gap-8 mb-12">
@@ -165,6 +168,7 @@ const contactInfo = {
         </p>
 
         <!-- Contact Form -->
+        <!-- TODO: Move HoneyBook form ID into runtime config + provide fallback native form for users with blockers. -->
         <HoneyBookForm2 />
       </div>
     </UPageSection>

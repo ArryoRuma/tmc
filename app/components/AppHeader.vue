@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
+// TODO: Extract this mega menu data into /content or app config so product, solution, and industry lists can be maintained without touching this component.
 const items = computed(() => [
   {
     label: "Who We Help",
@@ -133,6 +134,7 @@ const items = computed(() => [
   /// { label: 'Pricing', to: '/pricing'}
 ]);
 
+// TODO: Derive mobile items directly from the desktop schema instead of copying the structure to keep states/icons aligned.
 const mobileItems = computed(() => [
   {
     label: "Who We Help",
@@ -318,6 +320,7 @@ const mobileItems = computed(() => [
           font-weight: 600 !important;
         "
       />
+      <!-- TODO: Replace inline font styles with a semantic button variant or utility class in assets/css to keep typography consistent. -->
       <UColorModeButton />
       <!-- <UButton
         label="Sign up"
