@@ -488,38 +488,6 @@ export const collections = {
     schema: createIndustryPageSchema(),
   }),
 
-  // Industries
-  contractorsmanufactures: defineCollection({
-    source: "industries/contractors-manufactures.yml",
-    type: "page",
-    schema: createIndustryPageSchema(),
-  }),
-  foodservices: defineCollection({
-    source: "industries/food-services.yml",
-    type: "page",
-    schema: createIndustryPageSchema(),
-  }),
-  healthandwellness: defineCollection({
-    source: "industries/health-and-wellness.yml",
-    type: "page",
-    schema: createIndustryPageSchema(),
-  }),
-  nonprofits: defineCollection({
-    source: "industries/non-profits.yml",
-    type: "page",
-    schema: createIndustryPageSchema(),
-  }),
-  financialservices: defineCollection({
-    source: "industries/financial-services.yml",
-    type: "page",
-    schema: createIndustryPageSchema(),
-  }),
-  liveeventsandentertainment: defineCollection({
-    source: "industries/live-events-and-entertainment.yml",
-    type: "page",
-    schema: createIndustryPageSchema(),
-  }),
-
   // Projects
   projects: defineCollection({
     source: "projects/*.md",
