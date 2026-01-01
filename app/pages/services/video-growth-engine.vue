@@ -65,7 +65,6 @@ useSeoMeta({
 });
 </script>
 
-<!-- TODO: decide on whether to use video or image for each section and be consistent -->
 <template>
   <div v-if="page?.title">
     <UPageHero
