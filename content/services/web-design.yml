@@ -25,7 +25,7 @@ sections:
     headline: The Problem with Most Company Websites
     orientation: vertical
     reverse: false
-    image: #TODO: update problem image
+    image:
       src: /images/services/video-growth-engine/video-engine-problem.png
       alt: Problem with Most Company Websites
     description:
@@ -57,7 +57,7 @@ sections:
         description: Simple changes require tickets, timelines, or rework—so the site quickly falls out of sync with the business.
         icon: i-lucide-clock
   - id: solution
-    image: #TODO: update solution image
+    image:
       src: /images/services/web-design/web-design-solution.png
       alt: Solution to Drive Revenue with a Website
     orientation: vertical
@@ -107,7 +107,7 @@ sections:
         trailingIcon: i-lucide-arrow-right
         icon: i-lucide-globe
   - id: how-we-help
-    image: #TODO: update how we help image
+    image:
       src: /images/services/web-design/web-design-process.png
       alt: How We Help You Win More Deals with Your Website
     orientation: vertical
@@ -151,7 +151,7 @@ sections:
         icon: i-lucide-calendar
         variant: subtle
   - id: proof
-    image: #TODO: update proof image
+    image:
       src: /images/services/web-design/web-design-proof.png
       alt: Proof That Our Web Design Approach Works
     orientation: vertical
@@ -185,7 +185,7 @@ sections:
         trailingIcon: i-lucide-arrow-right
         icon: i-lucide-briefcase
   - id: includes
-    image: #TODO: update includes image
+    image:
       src: /images/services/website-growth-system/website-system-included.png
       alt: What's Included in the Website Growth System
     orientation: vertical
@@ -196,7 +196,7 @@ sections:
         trailingIcon: i-lucide-arrow-right
         icon: i-lucide-globe
       - label: See Our Website Portfolio
-        to: /projects #TODO: update link and create packages page
+        to: /projects
         trailingIcon: i-lucide-arrow-right
         icon: i-lucide-globe
         variant: subtle

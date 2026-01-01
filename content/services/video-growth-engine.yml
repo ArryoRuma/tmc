@@ -181,7 +181,7 @@ sections:
         icon: i-lucide-shield-check
     links:
       - label: Explore Proof Clips from Clients
-        to: / #TODO: update link and create video showcase page
+        to: /projects
         trailingIcon: i-lucide-arrow-right
         icon: i-lucide-video
   - id: includes
@@ -192,11 +192,11 @@ sections:
     reverse: false
     links:
       - label: Compare What's Included vs Traditional Video Production
-        to: /contact #TODO: update link and create comparison page
+        to: /contact
         trailingIcon: i-lucide-arrow-right
         icon: i-lucide-video
       - label: See Our Full Video Growth Packages
-        to: / #TODO: update link and create packages page
+        to: /contact
         trailingIcon: i-lucide-arrow-right
         icon: i-lucide-video
         variant: subtle
