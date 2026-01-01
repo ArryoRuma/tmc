@@ -1,17 +1,5 @@
 <script setup lang="ts">
-interface Project {
-  title: string;
-  description: string;
-  year?: number;
-  client?: string;
-  services?: string[];
-  heroImage?: string;
-  websiteUrl?: string;
-  challenge?: string;
-  approach?: string;
-  solution?: string;
-  results?: string[];
-}
+import type { Project } from "~/types/project";
 
 const project: Project = {
   title:
@@ -27,8 +15,6 @@ const project: Project = {
     "Cold Email & Outreach Systems",
     "Sales Enablement & Performance Tracking",
   ],
-  heroImage: "",
-  websiteUrl: "",
   challenge:
     "ICI Consulting offers high-value advisory services to banks and credit unions, but growth depended heavily on referrals and inconsistent outbound efforts. Long sales cycles and multiple stakeholders made it difficult to generate predictable, qualified conversations at scale.",
   approach:
@@ -43,57 +29,8 @@ const project: Project = {
     "Better visibility into outreach performance and pipeline health",
   ],
 };
-
-definePageMeta({
-  layout: "projects",
-});
-
-useSeoMeta({
-  title: `${project.title} - TruMedia Creative Portfolio`,
-  description: project.description,
-  ogTitle: `${project.title} - TruMedia Creative Portfolio`,
-  ogDescription: project.description,
-});
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages -->
 <template>
-  <div>
-    <ProjectsHero :project="project" />
-    <ProjectsDetails
-      :challenge="project.challenge"
-      :solution="project.solution"
-      :services="project.services"
-    />
-    <div class="bg-gray-50 dark:bg-gray-900 py-16">
-      <div class="container mx-auto px-4">
-        <div class="max-w-4xl mx-auto">
-          <h3 class="text-3xl font-bold mb-4 text-center">
-            Client Testimonials & Project Screenshots
-          </h3>
-          <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
-            Coming soon - testimonials and visual assets from this project
-          </p>
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <ImagePlaceholder>
-              <p class="text-gray-400 dark:text-gray-500 text-sm">
-                Testimonial Placeholder
-              </p>
-            </ImagePlaceholder>
-            <ImagePlaceholder>
-              <p class="text-gray-400 dark:text-gray-500 text-sm">
-                Screenshot Placeholder
-              </p>
-            </ImagePlaceholder>
-          </div>
-        </div>
-      </div>
-    </div>
-    <ProjectsImage
-      :image="project.heroImage"
-      :title="project.title"
-      :website-url="project.websiteUrl"
-    />
-    <ProjectsResults :results="project.results" />
-  </div>
+  <BaseProject :project="project" />
 </template>

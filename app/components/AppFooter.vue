@@ -156,7 +156,6 @@ const columns = [
 ];
 </script>
 
-<!-- TODO: update footer links and icons when ready -->
 <template>
   <USeparator class="h-px" color="primary" />
 

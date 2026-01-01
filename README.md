@@ -1,37 +1,37 @@
-# TruMedia Creative website
-
-# TODO: Update project title and description and fix this page so that it's not the Nuxt SaaS template README, but this project's README.
+# TruMedia Creative
 
 [![Nuxt UI](https://img.shields.io/badge/Made%20with-Nuxt%20UI-00DC82?logo=nuxt&labelColor=020420)](https://ui.nuxt.com)
 
-Fully built SaaS application to launch your next project with a landing page, a pricing page, a documentation and a blog powered by [Nuxt UI](https://ui.nuxt.com) components.
+TruMedia Creative's marketing website - a modern, content-driven web application showcasing our services in web design, video production, and digital marketing. Built with Nuxt 4 and Nuxt UI components, featuring a powerful content management system and responsive design.
 
-- [Live demo](https://saas-template.nuxt.dev/)
-- [Documentation](https://ui4.nuxt.com/docs/getting-started/installation/nuxt)
+## Features
 
-<a href="https://saas-template.nuxt.dev/" target="_blank">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://ui4.nuxt.com/assets/templates/nuxt/saas-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="https://ui4.nuxt.com/assets/templates/nuxt/saas-light.png">
-    <img alt="Nuxt SaaS Template" src="https://ui4.nuxt.com/assets/templates/nuxt/saas-light.png">
-  </picture>
-</a>
+- 🎨 **Services Showcase**: Dedicated pages for Video Growth Engine and Web Design services
+- 📱 **Responsive Design**: Mobile-first approach with dark/light mode support
+- 📝 **Content Management**: YAML-based content system with schema validation
+- 🎬 **Project Portfolio**: Case studies and client success stories
+- 🔍 **SEO Optimized**: Built-in SEO capabilities with OG image generation
+- 🎯 **Lead Generation**: Integrated forms with HoneyBook
+- 📊 **Analytics**: Google Analytics integration via nuxt-gtag
+
+## Tech Stack
+
+- **Framework**: [Nuxt 4](https://nuxt.com/)
+- **UI Components**: [Nuxt UI](https://ui.nuxt.com)
+- **Content**: [Nuxt Content](https://content.nuxt.com/) with YAML schema
+- **Styling**: Tailwind CSS
+- **Fonts**: Adobe Fonts integration
+- **Icons**: Iconify with Lucide and Simple Icons
+- **Images**: @nuxt/image for optimization
+- **Type Safety**: TypeScript with Zod validation
 
 ## Quick Start
 
-```bash [Terminal]
-npx nuxi init -t github:nuxt-ui-templates/saas
-```
-
-## Deploy your own
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fnuxt-ui-templates%2Fsaas&demo-image=https%3A%2F%2Fui4.nuxt.com%2Fassets%2Ftemplates%2Fnuxt%2Fsaas-dark.png&demo-url=https%3A%2F%2Fsaas-template.nuxt.dev%2F&demo-title=Nuxt%20SaaS%20Template&demo-description=A%20SaaS%20template%20with%20landing%2C%20pricing%2C%20docs%20and%20blog%20powered%20by%20Nuxt%20Content.)
-
-## Setup
-
-Make sure to install the dependencies:
+Clone and install:
 
 ```bash
+git clone https://github.com/ArryoRuma/tmc.git
+cd tmc
 pnpm install
 ```
 
@@ -41,6 +41,25 @@ Start the development server on `http://localhost:3000`:
 
 ```bash
 pnpm dev
+```
+
+## Development Commands
+
+```bash
+# Lint code
+pnpm lint
+
+# Type check
+pnpm typecheck
+
+# Format code
+pnpm format
+
+# Fix formatting and linting issues
+pnpm fix
+
+# Run all checks (format, lint, typecheck)
+pnpm check
 ```
 
 ## Production
@@ -59,6 +78,33 @@ pnpm preview
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
 
-## Renovate integration
+## Project Structure
 
-Install [Renovate GitHub app](https://github.com/apps/renovate/installations/select_target) on your repository and you are good to go.
+```
+tmc/
+├── app/
+│   ├── components/      # Vue components organized by feature
+│   ├── layouts/         # Page layouts (default, etc.)
+│   └── pages/          # Route-based pages
+├── content/            # YAML content files with schema validation
+│   ├── services/       # Service pages content
+│   └── *.yml          # Other content collections
+├── public/            # Static assets
+└── content.config.ts  # Content schema definitions
+```
+
+## Content Management
+
+Content is managed through YAML files in the `/content/` directory. All content follows schema validation defined in `content.config.ts`:
+
+- Edit YAML files to update page content
+- Changes reflect automatically in dev mode
+- Schema validation ensures type safety
+- Supports structured data for hero sections, features, testimonials, etc.
+
+## Contributing
+
+1. Create a feature branch
+2. Make your changes
+3. Run `pnpm check` to ensure quality
+4. Submit a pull request
