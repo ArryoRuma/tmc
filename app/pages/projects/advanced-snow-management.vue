@@ -1,26 +1,5 @@
 <script setup lang="ts">
-interface Project {
-  title: string;
-  description: string;
-  year?: number;
-  client?: string;
-  services?: string[];
-  heroImage?: string;
-  beforeImage?: string;
-  afterImage?: string;
-  websiteUrl?: string;
-  videoUrl?: string;
-  posterImage?: string;
-  challenge?: string;
-  approach?: string;
-  solution?: string;
-  results?: string[];
-  galleryImages?: string[];
-  caseStudySections?: Array<{
-    heading: string;
-    content: string;
-  }>;
-}
+import type { Project } from "~/types/project";
 
 const project: Project = {
   title:
@@ -36,12 +15,6 @@ const project: Project = {
     "Video & Visual Sales Assets",
     "Deal Structuring & Sales Enablement",
   ],
-  heroImage: "",
-  beforeImage: "",
-  afterImage: "",
-  websiteUrl: "",
-  videoUrl: "",
-  posterImage: "",
   challenge:
     "Advanced Snow Management was pursuing large industrial and enterprise snow removal contracts with long sales cycles, complex scopes, and multiple decision-makers. Winning required more than competitive pricing—it required clarity, credibility, and confidence at every stage of the buying process.",
   approach:
@@ -55,53 +28,9 @@ const project: Project = {
     "Reduced friction during late-stage sales and contract discussions",
     "Stronger positioning as an enterprise-capable snow management partner",
   ],
-  galleryImages: [],
-  caseStudySections: [],
 };
-definePageMeta({
-  layout: "projects",
-});
-useSeoMeta({
-  title: `${project.title} - TruMedia Creative Portfolio`,
-  description: project.description,
-  ogTitle: `${project.title} - TruMedia Creative Portfolio`,
-  ogDescription: project.description,
-});
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages -->
 <template>
-  <div>
-    <ProjectsHero :project="project" />
-    <div class="bg-gray-50 dark:bg-gray-900 py-2">
-      <ProjectsBeforeAfter
-        :before-image="project.beforeImage"
-        :after-image="project.afterImage"
-      />
-    </div>
-    <ProjectsDetails
-      :challenge="project.challenge"
-      :solution="project.solution"
-      :services="project.services"
-    />
-    <ProjectsVideo
-      :video-url="project.videoUrl"
-      :poster-image="project.posterImage"
-      :title="`${project.client} Project Video`"
-    />
-    <ProjectsImage
-      :image="project.heroImage"
-      :title="project.title"
-      :website-url="project.websiteUrl"
-    />
-    <ProjectsGallery
-      :images="project.galleryImages"
-      :title="`${project.client} Photo Gallery`"
-    />
-    <ProjectsCaseStudy
-      :sections="project.caseStudySections"
-      :title="`${project.client} Case Study`"
-    />
-    <ProjectsResults :results="project.results" />
-  </div>
+  <BaseProject :project="project" />
 </template>

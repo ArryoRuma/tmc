@@ -1,19 +1,5 @@
 <script setup lang="ts">
-interface Project {
-  title: string;
-  description: string;
-  year?: number;
-  client?: string;
-  services?: string[];
-  heroImage?: string;
-  beforeImage?: string;
-  afterImage?: string;
-  websiteUrl?: string;
-  challenge?: string;
-  approach?: string;
-  solution?: string;
-  results?: string[];
-}
+import type { Project } from "~/types/project";
 
 const project: Project = {
   title:
@@ -47,22 +33,23 @@ const project: Project = {
     "Faster menu and product updates without risking site breakage or fulfillment errors",
     "Improved customer confidence at checkout through clearer dietary, allergen, and meal information",
   ],
+  images: [
+    {
+      src: "/images/web-design/nourish-to-heal/nourish-to-heal-hero.png",
+      alt: "Nourish to Heal website homepage",
+    },
+    {
+      src: "/images/web-design/nourish-to-heal/nourish-to-heal-after.png",
+      alt: "Nourish to Heal redesigned website",
+    },
+    {
+      src: "/images/web-design/nourish-to-heal/nourish-to-heal-before.png",
+      alt: "Nourish to Heal original website",
+    },
+  ],
 };
-
-definePageMeta({
-  layout: "projects",
-});
-
-useSeoMeta({
-  title: `${project.title} - TruMedia Creative Portfolio`,
-  description: project.description,
-  ogTitle: `${project.title} - TruMedia Creative Portfolio`,
-  ogDescription: project.description,
-});
 </script>
 
-<!-- TODO: verify this page is consistent with other project pages
-TODO: add photo gallery from photoshoot -->
 <template>
-  <ProjectsSpotlightLayout2 :project="project" />
+  <BaseProject :project="project" :show-gallery="true" layout="spotlight" />
 </template>
