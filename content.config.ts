@@ -708,6 +708,9 @@ export const collections = {
           description: z.string().nonempty(),
         }),
       }),
+    }),
+  }),
+
   // Footer Navigation
   footer: defineCollection({
     source: "footer.yml",
