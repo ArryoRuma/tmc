@@ -1,42 +1,28 @@
 <script setup lang="ts">
-// SEO Meta
+const { data: page } = await useAsyncData("contact", () =>
+  queryCollection("contact").first(),
+);
+
+const title = page.value?.seo?.title || page.value?.title;
+const description = page.value?.seo?.description || page.value?.description;
+
 useSeoMeta({
-  title: "Contact Us - TruMedia Creative",
-  ogTitle: "Contact Us - TruMedia Creative",
-  description:
-    "Ready to grow your business? Contact TruMedia Creative today. We help brands sell more through video production, web design, and marketing automation.",
-  ogDescription:
-    "Ready to grow your business? Contact TruMedia Creative today. We help brands sell more through video production, web design, and marketing automation.",
+  title,
+  ogTitle: title,
+  description,
+  ogDescription: description,
 });
-
-// Contact information
-const contactInfo = {
-  email: "hello@trumediacreative.com",
-  phone: "+1 (908) 356-0321",
-  address: {
-    street: "21 Main St.",
-    city: "Clinton Township",
-    state: "NJ",
-    zip: "08801",
-  },
-  hours: {
-    weekdays: "Monday - Friday: 8:00 AM - 4:00 PM EST",
-    weekend: "Weekend: By appointment only",
-  },
-};
-
-// TODO: Load contact info + hero copy from content/ so updates don't require code changes and can support localization.
 </script>
 
 <template>
-  <div>
+  <div v-if="page">
     <!-- Hero Section -->
     <UPageHero>
       <template #title>
         <h1
           class="text-5xl sm:text-7xl text-pretty tracking-tight font-bold text-highlighted"
         >
-          Let's Start Something
+          {{ page.hero.headline }}
           <span
             class="text-primary block"
             :style="{
@@ -44,20 +30,19 @@ const contactInfo = {
               fontWeight: 700,
             }"
           >
-            Amazing
+            {{ page.hero.highlightedWord }}
           </span>
         </h1>
       </template>
 
       <template #description>
         <p class="text-lg sm:text-xl/8 text-muted">
-          Ready to transform your marketing and grow your business? Get in touch
-          with our team and let's discuss how we can help you sell more.
+          {{ page.hero.description }}
         </p>
       </template>
     </UPageHero>
     <h2 class="text-3xl text-center font-bold text-highlighted mb-8">
-      Contact Information
+      {{ page.sections.contactInfoTitle }}
     </h2>
     <UPageSection class="py-6">
       <!-- TODO: Render these contact cards from a schema-driven array instead of one-off markup to keep icons, copy, and layout consistent. -->
@@ -74,10 +59,10 @@ const contactInfo = {
               <div>
                 <h3 class="font-semibold text-highlighted">Email</h3>
                 <a
-                  :href="`mailto:${contactInfo.email}`"
+                  :href="`mailto:${page.contactInfo.email}`"
                   class="text-primary hover:underline"
                 >
-                  {{ contactInfo.email }}
+                  {{ page.contactInfo.email }}
                 </a>
               </div>
             </div>
@@ -90,10 +75,10 @@ const contactInfo = {
               <div>
                 <h3 class="font-semibold text-highlighted">Phone</h3>
                 <a
-                  :href="`tel:${contactInfo.phone}`"
+                  :href="`tel:${page.contactInfo.phone}`"
                   class="text-primary hover:underline"
                 >
-                  {{ contactInfo.phone }}
+                  {{ page.contactInfo.phone }}
                 </a>
               </div>
             </div>
@@ -109,10 +94,10 @@ const contactInfo = {
               <div>
                 <h3 class="font-semibold text-highlighted">Address</h3>
                 <p class="text-muted">
-                  {{ contactInfo.address.street }}<br />
-                  {{ contactInfo.address.city }},
-                  {{ contactInfo.address.state }}
-                  {{ contactInfo.address.zip }}
+                  {{ page.contactInfo.address.street }}<br />
+                  {{ page.contactInfo.address.city }},
+                  {{ page.contactInfo.address.state }}
+                  {{ page.contactInfo.address.zip }}
                 </p>
               </div>
             </div>
@@ -125,8 +110,8 @@ const contactInfo = {
               <div>
                 <h3 class="font-semibold text-highlighted">Hours</h3>
                 <p class="text-muted">
-                  {{ contactInfo.hours.weekdays }}<br />
-                  {{ contactInfo.hours.weekend }}
+                  {{ page.contactInfo.hours.weekdays }}<br />
+                  {{ page.contactInfo.hours.weekend }}
                 </p>
               </div>
             </div>
@@ -145,12 +130,11 @@ const contactInfo = {
             <div class="flex items-center gap-3 mb-3">
               <UIcon name="i-lucide-zap" class="text-primary text-xl" />
               <h3 class="font-semibold text-highlighted">
-                Quick Response Guarantee
+                {{ page.sections.responseGuarantee.title }}
               </h3>
             </div>
             <p class="text-muted text-sm">
-              We understand your time is valuable. That's why we guarantee a
-              response to all inquiries within 24 hours, usually much sooner.
+              {{ page.sections.responseGuarantee.description }}
             </p>
           </div>
         </div>
@@ -159,12 +143,10 @@ const contactInfo = {
     <UPageSection>
       <div>
         <h2 class="text-3xl font-bold text-center text-highlighted mb-6">
-          Get in Touch
+          {{ page.sections.formSection.title }}
         </h2>
         <p class="text-muted mb-8">
-          Whether you have questions about our services, need a custom quote, or
-          want to discuss your project, we're here to help. Fill out the form
-          below and a member of our team will get back to you shortly.
+          {{ page.sections.formSection.description }}
         </p>
 
         <!-- Contact Form -->

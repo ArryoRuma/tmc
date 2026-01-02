@@ -634,4 +634,42 @@ export const collections = {
       }),
     }),
   }),
+
+  // Contact
+  contact: defineCollection({
+    source: "contact.yml",
+    type: "page",
+    schema: createPageMetaSchema().extend({
+      hero: z.object({
+        headline: z.string().nonempty(),
+        highlightedWord: z.string().optional(),
+        description: z.string().nonempty(),
+      }),
+      contactInfo: z.object({
+        email: z.string().email().nonempty(),
+        phone: z.string().nonempty(),
+        address: z.object({
+          street: z.string().nonempty(),
+          city: z.string().nonempty(),
+          state: z.string().nonempty(),
+          zip: z.string().nonempty(),
+        }),
+        hours: z.object({
+          weekdays: z.string().nonempty(),
+          weekend: z.string().nonempty(),
+        }),
+      }),
+      sections: z.object({
+        contactInfoTitle: z.string().nonempty(),
+        responseGuarantee: z.object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+        }),
+        formSection: z.object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+        }),
+      }),
+    }),
+  }),
 };
