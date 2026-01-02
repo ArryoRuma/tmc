@@ -73,6 +73,15 @@ const createImageSchema = () =>
     srcset: z.string().optional(),
   });
 
+const createPersonSchema = () =>
+  z.object({
+    name: z.string().nonempty(),
+    role: z.string().nonempty(),
+    bio: z.string().nonempty(),
+    photo: createImageSchema(),
+    links: z.array(createLinkSchema()).optional(),
+  });
+
 const createProcessStepSchema = () =>
   z.object({
     id: z.string().nonempty(),
@@ -289,6 +298,76 @@ export const collections = {
     schema: z.object({
       items: z.array(createNavigationGroupSchema()),
     }),
+  }),
+  // About
+  whoweare: defineCollection({
+    source: "who-we-are.yml",
+    type: "page",
+    schema: z.object({
+      title: z.string().nonempty(),
+      description: z.string().nonempty(),
+      seo: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+        })
+        .optional(),
+      hero: createHeroSchema(),
+      mission: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        vision: z.object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+        }),
+        photo: createImageSchema().optional(),
+      }),
+      story: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        milestones: z.array(
+          z.object({
+            label: z.string().optional(),
+            year: z.string().nonempty(),
+            description: z.string().nonempty(),
+          }),
+        ),
+      }),
+      values: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        items: z.array(
+          z.object({
+            title: z.string().nonempty(),
+            description: z.string().nonempty(),
+            icon: z.string().nonempty().editor({ input: "icon" }),
+          }),
+        ),
+      }),
+      team: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        people: z.array(z.string()).optional(),
+      }),
+      differentiators: z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        items: z.array(
+          z.object({
+            title: z.string().nonempty(),
+            description: z.string().nonempty(),
+            icon: z.string().optional().editor({ input: "icon" }),
+          }),
+        ),
+        photo: createImageSchema().optional(),
+      }),
+      cta: createCTASchema(),
+    }),
+  }),
+  people: defineCollection({
+    source: "people/*.yml",
+    type: "page",
+    schema: createPersonSchema(),
   }),
   // Home page
   index: defineCollection({
