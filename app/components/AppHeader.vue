@@ -1,270 +1,21 @@
 <script setup lang="ts">
 import { computed } from "vue";
 
-// TODO: Extract this mega menu data into /content or app config so product, solution, and industry lists can be maintained without touching this component.
-const items = computed(() => [
-  {
-    label: "Who We Help",
-    children: [
-      {
-        label: "Contractors & Manufacturing",
-        icon: "i-lucide-hammer",
-        to: "/industries/contractors-manufactures",
-        disabled: false,
-      },
-      {
-        label: "Financial Services",
-        icon: "i-lucide-banknote",
-        to: "/industries/financial-services",
-        disabled: false,
-      },
-      {
-        label: "Food Services",
-        icon: "i-lucide-utensils",
-        to: "/industries/food-services",
-        disabled: false,
-      },
-      {
-        label: "Non-Profits",
-        icon: "i-lucide-heart",
-        to: "/industries/non-profits",
-        disabled: false,
-      },
-      {
-        label: "Health & Wellness",
-        icon: "i-lucide-heart-pulse",
-        to: "/industries/health-and-wellness",
-        disabled: false,
-      },
-      {
-        label: "Live Events & Entertainment",
-        icon: "i-lucide-music",
-        to: "/industries/live-events-and-entertainment",
-        disabled: false,
-      },
-    ],
-  },
-  {
-    label: "How We Help",
-    children: [
-      {
-        label: "Clarify Your Message",
-        icon: "i-lucide-award",
-        to: "/solutions/clarify-your-message",
-        disabled: false,
-      },
-      {
-        label: "Get More Leads",
-        icon: "i-lucide-user-search",
-        to: "/solutions/get-more-leads",
-        disabled: false,
-      },
-      {
-        label: "Speed Up Sales",
-        icon: "i-lucide-refresh-ccw",
-        to: "/solutions/speed-up-sales",
-        disabled: false,
-      },
-      {
-        label: "Reach More Buyers",
-        icon: "i-lucide-expand",
-        to: "/solutions/reach-more-buyers",
-        disabled: false,
-      },
-      {
-        label: "Keep Customers Longer",
-        icon: "i-lucide-chart-no-axes-combined",
-        to: "/solutions/keep-customers-longer",
-        disabled: false,
-      },
-      {
-        label: "Fix Your Live Stream & Events",
-        icon: "i-lucide-video",
-        to: "/solutions/fix-your-live-stream-and-events",
-        disabled: false,
-      },
-    ],
-  },
-  {
-    label: "Ways We Work Together",
-    children: [
-      {
-        label: "Video Production",
-        icon: "i-lucide-video",
-        to: "/services/video-growth-engine",
-        disabled: false,
-      },
-      {
-        label: "Outbound Campaigns",
-        icon: "i-lucide-send",
-        to: "/services/outreach-engine",
-        disabled: false,
-      },
-      {
-        label: "Web Design & Development",
-        icon: "i-lucide-layout-dashboard",
-        to: "/services/web-design",
-        disabled: false,
-      },
-      {
-        label: "SEO & Paid Ads",
-        icon: "i-lucide-mouse-pointer-click",
-        to: "/services/seo-and-paid-ads",
-        disabled: false,
-      },
-      {
-        label: "Marketing Automation",
-        icon: "i-lucide-bot",
-        to: "/services/marketing-automation",
-        disabled: false,
-      },
-      {
-        label: "Content Creation",
-        icon: "i-lucide-edit-3",
-        to: "/services/content-creation",
-        disabled: true,
-      },
-    ],
-  },
+// Fetch navigation data from content collection
+const { data: navigationData } = await useAsyncData("header-navigation", () =>
+  queryCollection("navigation").first(),
+);
 
-  /// {label: 'Docs', to: '/docs', active: route.path.startsWith('/docs')},
-  /// { label: 'Resources', to: '/resources' },
-  /// { label: 'About', to: '/who-we-are' }
-  // { label: 'Resources', to: '/portfolio' },
-  /// { label: 'Pricing', to: '/pricing'}
-]);
+// Desktop navigation items
+const items = computed(() => navigationData.value?.items || []);
 
-// TODO: Derive mobile items directly from the desktop schema instead of copying the structure to keep states/icons aligned.
-const mobileItems = computed(() => [
-  {
-    label: "Who We Help",
+// Mobile navigation items - derived from desktop items with 'open' property
+const mobileItems = computed(() =>
+  (navigationData.value?.items || []).map((item) => ({
+    ...item,
     open: true,
-    children: [
-      {
-        label: "Contractors & Manufacturing",
-        icon: "i-lucide-hammer",
-        to: "/industries/contractors-manufactures",
-        disabled: false,
-      },
-      {
-        label: "Financial Services",
-        icon: "i-lucide-banknote",
-        to: "/industries/financial-services",
-        disabled: false,
-      },
-      {
-        label: "Food Services",
-        icon: "i-lucide-utensils",
-        to: "/industries/food-services",
-        disabled: false,
-      },
-      {
-        label: "Non-Profits",
-        icon: "i-lucide-heart",
-        to: "/industries/non-profits",
-        disabled: false,
-      },
-      {
-        label: "Health & Wellness",
-        icon: "i-lucide-heart-pulse",
-        to: "/industries/health-and-wellness",
-        disabled: false,
-      },
-      {
-        label: "Live Events & Entertainment",
-        icon: "i-lucide-music",
-        to: "/industries/live-events-and-entertainment",
-        disabled: false,
-      },
-    ],
-  },
-  {
-    label: "How We Help",
-    open: true,
-    children: [
-      {
-        label: "Clarify Your Message",
-        icon: "i-lucide-award",
-        to: "/solutions/clarify-your-message",
-        disabled: false,
-      },
-      {
-        label: "Get More Leads",
-        icon: "i-lucide-user-search",
-        to: "/solutions/get-more-leads",
-        disabled: false,
-      },
-      {
-        label: "Speed Up Sales",
-        icon: "i-lucide-refresh-ccw",
-        to: "/solutions/speed-up-sales",
-        disabled: false,
-      },
-      {
-        label: "Reach More Buyers",
-        icon: "i-lucide-expand",
-        to: "/solutions/reach-more-buyers",
-        disabled: false,
-      },
-      {
-        label: "Keep Customers Longer",
-        icon: "i-lucide-chart-no-axes-combined",
-        to: "/solutions/keep-customers-longer",
-        disabled: false,
-      },
-      {
-        label: "Fix Your Live Stream & Events",
-        icon: "i-lucide-video",
-        to: "/solutions/fix-your-live-stream-and-events",
-        disabled: false,
-      },
-    ],
-  },
-  {
-    label: "Ways We Work Together",
-    open: true,
-    children: [
-      {
-        label: "Video Production",
-        icon: "i-lucide-video",
-        to: "/services/video-growth-engine",
-        disabled: false,
-      },
-      {
-        label: "Outbound Campaigns",
-        icon: "i-lucide-send",
-        to: "/services/outreach-engine",
-        disabled: false,
-      },
-      {
-        label: "Web Design & Development",
-        icon: "i-lucide-layout-dashboard",
-        to: "/services/web-design",
-        disabled: false,
-      },
-      {
-        label: "SEO & Paid Ads",
-        icon: "i-lucide-mouse-pointer-click",
-        to: "/services/seo-and-paid-ads",
-        disabled: false,
-      },
-      {
-        label: "Marketing Automation",
-        icon: "i-lucide-bot",
-        to: "/services/marketing-automation",
-        disabled: false,
-      },
-      {
-        label: "Content Creation",
-        icon: "i-lucide-edit-3",
-        to: "/services/content-creation",
-        disabled: true,
-      },
-    ],
-  },
-  /// { label: 'Resources', to: '/resources' },
-  /// { label: 'About', to: '/who-we-are' }
-]);
+  })),
+);
 </script>
 
 <template>
@@ -315,13 +66,8 @@ const mobileItems = computed(() => [
         color="primary"
         variant="solid"
         to="/contact"
-        class="hidden lg:inline-flex text-lg"
-        style="
-          font-family: &quot;new-spirit&quot;, serif !important;
-          font-weight: 600 !important;
-        "
+        class="hidden lg:inline-flex text-lg header-cta-button"
       />
-      <!-- TODO: Replace inline font styles with a semantic button variant or utility class in assets/css to keep typography consistent. -->
       <UColorModeButton />
       <!-- <UButton
         label="Sign up"
