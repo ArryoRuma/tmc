@@ -278,3 +278,15 @@ Treat this document as a living system. Each phase should be marked:
 - [ ] Locked
 
 Once a phase is locked, changes require intent—not impulse.
+
+---
+
+## Recent Activity (Last 24 Hours)
+
+### January 2, 2026
+
+- **PR #38 Merged**: Replace inline font styles with semantic CSS utility class for header CTA
+  - Created `.header-cta-button` utility class in `main.css` for consistent header CTA styling
+  - Applied semantic class to Contact Us button in `AppHeader.vue`
+  - **Phase Impact**: Advanced Phase 3 (Design System & UX Rules) by standardizing button styling
+  - **Benefit**: Removed inline style decisions, improved maintainability and consistency
