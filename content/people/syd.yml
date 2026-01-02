@@ -1,0 +1,13 @@
+name: Syd
+role: Business Development
+bio: Drives new business relationships and strategic partnerships. Connects with potential clients to understand their challenges and match them with the right solutions.
+photo:
+  src: /images/who-we-are-photos/Syd-headshot1.jpg
+  alt: Portrait of Syd, Business Development at TruMedia Creative
+links:
+  - label: LinkedIn
+    to: https://www.linkedin.com/in/sydney-truman-49058829b/
+    icon: i-simple-icons-linkedin
+    variant: ghost
+    size: sm
+    target: _blank

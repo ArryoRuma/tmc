@@ -1,0 +1,100 @@
+title: Who We Are
+description: Learn about TruMedia Creative's mission, values, and the team behind our marketing and creative solutions.
+seo:
+  title: Who We Are
+  description: Learn about TruMedia Creative's mission, values, and the team behind our marketing and creative solutions.
+hero:
+  headline: Who We Are
+  description: TruMedia Creative helps industrial and professional service companies turn complex expertise into clear, sales-ready marketing that actually gets used—and gets results.
+  links:
+    - label: Get Started Today
+      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+      size: lg
+      target: _blank
+    - label: View Our Work
+      to: /projects
+      size: lg
+      variant: outline
+  photo:
+    src: /images/blocks/image7.png
+    alt: Team members collaborating at TruMedia Creative
+mission:
+  title: Our Mission
+  description: To help expert-led businesses clearly communicate what they do, why it matters, and why they’re the right choice—using video and systems that shorten sales cycles and drive confident decisions. We exist to eliminate confusion, wasted marketing spend, and “great content that never gets used.”
+  vision:
+    title: Our Vision
+    description: A world where great companies don’t lose deals because they’re hard to understand. We believe the future of marketing belongs to businesses that can explain complex ideas simply, show real proof, and deploy content as part of a system—not random tactics.
+  photo:
+    src: /images/blocks/image14.png
+    alt: Video strategy session at TruMedia Creative
+story:
+  title: Our Story
+  description: |
+    TruMedia Creative was founded out of frustration with traditional marketing agencies that produced “nice-looking” assets with no connection to sales outcomes. After years working alongside industrial, manufacturing, and service-based companies, one pattern became obvious: the problem wasn’t lack of expertise—it was lack of clarity. So TruMedia was built to bridge the gap between what companies know and what buyers need to understand. By combining video, messaging frameworks, and practical systems, we help businesses turn their knowledge into momentum.
+  milestones:
+    - label: FOUNDED
+      year: "2020"
+      description: TruMedia Creative launches with a focus on video-first marketing for industrial and professional services.
+    - label: STRATEGIC SHIFT
+      year: "2023"
+      description: Expansion into messaging, outbound systems, and sales-enablement content—moving beyond “content creation” into growth infrastructure.
+    - label: TODAY
+      year: "2026"
+      description: Trusted partner to companies that need clarity, credibility, and consistent lead generation without bloated teams or wasted spend.
+values:
+  title: Our Values
+  description: These principles guide how we work, who we work with, and how we make decisions.
+  items:
+    - title: Client Success
+      description: We measure success by outcomes, not deliverables. If it doesn’t help you close deals, build trust, or move the needle, we don’t ship it.
+      icon: lucide:heart
+    - title: Innovation
+      description: We use modern tools, AI, and systems strategically—not for hype, but to create leverage and efficiency for our clients.
+      icon: lucide:lightbulb
+    - title: Collaboration
+      description: The best results come from partnership. We work with our clients, not at arm’s length.
+      icon: lucide:users
+    - title: Results-Driven
+      description: Every recommendation ties back to revenue, pipeline, or sales efficiency. Strategy always comes before tactics.
+      icon: lucide:target
+    - title: Integrity
+      description: No fluff. No smoke. No selling services you don’t need. We believe trust is the strongest growth strategy.
+      icon: lucide:shield-check
+    - title: Continuous Growth
+      description: Markets change. Tools evolve. Buyers get smarter. We stay ahead so our clients don’t fall behind.
+      icon: lucide:trending-up
+team:
+  title: Meet Our Team
+  description: We’re a lean team built for speed, clarity, and execution—without the agency bloat.
+  people:
+    - /people/lar
+    - /people/han
+    - /people/syd
+differentiators:
+  title: What Sets Us Apart
+  description: We design every engagement to turn expertise into usable sales tools and repeatable growth systems.
+  items:
+    - title: Video That Actually Gets Used
+      description: We don’t make “brand videos.” We make sales tools—FAQ libraries, case studies, and proof assets designed to move deals forward.
+      icon: lucide:check-circle
+    - title: Systems, Not Just Content
+      description: Content is only valuable when deployed correctly. We build repeatable systems for lead generation, sales enablement, and follow-up.
+      icon: lucide:check-circle
+    - title: Built for Complex Businesses
+      description: Industrial, manufacturing, and professional services aren’t simple—and your marketing shouldn’t pretend they are. We specialize in clarity without dumbing things down.
+      icon: lucide:check-circle
+  photo:
+    src: /images/blocks/image12.png
+    alt: Abstract representation of TruMedia Creative differentiators
+cta:
+  title: Ready to Work Together?
+  description: If you’re tired of unclear messaging, underperforming content, or marketing that doesn’t support sales—we should talk.
+  links:
+    - label: Get Started Today
+      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+      size: lg
+      target: _blank
+    - label: View Our Work
+      to: /projects
+      size: lg
+      variant: outline

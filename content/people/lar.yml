@@ -1,0 +1,13 @@
+name: Lar
+role: Founder / Strategist / Creative Lead
+bio: Leads strategy, messaging, and video direction. Bridges sales psychology, storytelling, and systems thinking to turn expertise into demand.
+photo:
+  src: /images/who-we-are-photos/Lar-headshot.png
+  alt: Portrait of Lar, Founder of TruMedia Creative
+links:
+  - label: LinkedIn
+    to: https://www.linkedin.com/in/larryontrumanii
+    icon: i-simple-icons-linkedin
+    variant: ghost
+    size: sm
+    target: _blank
