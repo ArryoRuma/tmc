@@ -285,8 +285,54 @@ Once a phase is locked, changes require intent—not impulse.
 
 ### January 2, 2026
 
+- **PR #39 Merged**: Move contact page content from hardcoded strings to YAML
+  - Created `content/contact.yml` with contact information and hero copy
+  - Added contact page schema in `content.config.ts` with comprehensive validation
+  - Updated `app/pages/contact.vue` to load data from content collection
+  - **Phase Impact**: Advanced Phase 1 (System Architecture) by normalizing content schemas
+  - **Benefit**: Marketing team can update contact info without code changes, supports future i18n
+
 - **PR #38 Merged**: Replace inline font styles with semantic CSS utility class for header CTA
   - Created `.header-cta-button` utility class in `main.css` for consistent header CTA styling
   - Applied semantic class to Contact Us button in `AppHeader.vue`
   - **Phase Impact**: Advanced Phase 3 (Design System & UX Rules) by standardizing button styling
   - **Benefit**: Removed inline style decisions, improved maintainability and consistency
+
+- **PR #37 Merged**: Extract header navigation data to content system
+  - Moved hardcoded mega menu navigation from `AppHeader.vue` to `content/navigation.yml`
+  - Created `createNavigationItemSchema()` and `createNavigationGroupSchema()` in `content.config.ts`
+  - Reduced component from 362 lines to 91 lines by replacing hardcoded arrays with content queries
+  - **Phase Impact**: Advanced Phase 1 (System Architecture) by normalizing content schemas
+  - **Benefit**: Navigation updates require editing YAML only, no code changes needed
+
+- **PR #36 Merged**: Move footer navigation to content tree for versioning
+  - Created `content/footer.yml` with footer navigation structure (Solutions, Services, Industries, Resources)
+  - Added footer schema to `content.config.ts` for type-safe validation
+  - Refactored `AppFooter.vue` from 155-line hardcoded array to async content query
+  - **Phase Impact**: Advanced Phase 1 (System Architecture) by keeping copy/URLs versioned
+  - **Benefit**: Footer navigation stays in sync with marketing site content
+
+- **PR #35 Merged**: Prepare TruMedia Creative website for public launch
+  - Enabled 17+ disabled pages across Services, Solutions, and Industries sections
+  - Enhanced meta titles and descriptions for all major pages with B2B-focused keywords
+  - Added accessibility improvements (aria-label for icon-only buttons, verified alt text)
+  - Fixed typos and updated Privacy Policy effective date to January 2, 2026
+  - Created `LAUNCH_READINESS_REPORT.md` with comprehensive launch checklist
+  - **Phase Impact**: Advanced Phase 6 (Tracking, SEO, and Feedback Loops) with SEO optimization
+  - **Benefit**: Website ready for public launch with 152 routes successfully prerendered, zero security vulnerabilities
+
+- **PR #34 Merged**: Implement all easy and medium TODOs
+  - Updated README.md with TruMedia Creative documentation replacing boilerplate
+  - Removed obsolete TODOs from component files
+  - Cleaned up 8 content file TODOs (removed placeholder comments)
+  - Added photo gallery infrastructure to 2 project pages
+  - Standardized 6 project pages using BaseProject component, reducing code by 274 lines
+  - **Phase Impact**: Advanced Phase 2 (Content Inventory) by cleaning up placeholders
+  - **Benefit**: Improved code maintainability and consistency across project pages
+
+- **PR #33 Merged**: Reorganize content into architectural directories and consolidate schemas
+  - Migrated from flat structure with numeric prefixes to semantic directories (`/home`, `/services`, `/solutions`, `/industries`, `/projects`)
+  - Created reusable schema builders: `createPageMetaSchema()`, `createHeroSchema()`, `createSectionSchema()`, etc.
+  - Reduced `content.config.ts` from 1,680 lines to 636 lines (62% reduction)
+  - **Phase Impact**: Advanced Phase 1 (System Architecture) per `/content/tmc-docs/content-architecture.md`
+  - **Benefit**: Eliminated schema duplication, standardized page types, all 31 collections validate successfully
