@@ -24,6 +24,7 @@ useSeoMeta({
         >
           {{ page.hero.headline }}
           <span
+            v-if="page.hero.highlightedWord"
             class="text-primary block"
             :style="{
               fontFamily: 'new-spirit, serif',
