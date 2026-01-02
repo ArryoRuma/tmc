@@ -297,7 +297,7 @@ useSeoMeta({
             <h3 class="text-xl font-semibold mb-2">Han</h3>
             <p class="text-primary-600 font-medium mb-3">Office Manager</p>
             <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-              [Brief bio or description of their role and expertise]
+              Manages day-to-day operations, client communications, and project coordination. Ensures smooth workflows and timely delivery of all client projects.
             </p>
           </div>
 
@@ -315,7 +315,7 @@ useSeoMeta({
               Business Development
             </p>
             <p class="text-gray-600 dark:text-gray-300 text-sm mb-4">
-              [Brief bio or description of their role and expertise]
+              Drives new business relationships and strategic partnerships. Connects with potential clients to understand their challenges and match them with the right solutions.
             </p>
             <div class="flex justify-center gap-3">
               <UButton
