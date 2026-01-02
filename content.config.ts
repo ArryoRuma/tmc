@@ -202,6 +202,20 @@ const createClientsSchema = () =>
     ),
   });
 
+const createFooterNavigationItemSchema = () =>
+  z.object({
+    label: z.string().nonempty(),
+    to: z.string().nonempty(),
+    icon: z.string().nonempty().editor({ input: "icon" }),
+    disabled: z.boolean().optional(),
+  });
+
+const createFooterColumnSchema = () =>
+  z.object({
+    label: z.string().nonempty(),
+    children: z.array(createFooterNavigationItemSchema()),
+  });
+
 // Standardized page type schemas based on content-architecture.md
 const createPageMetaSchema = () =>
   z.object({
@@ -632,6 +646,15 @@ export const collections = {
           }),
         ),
       }),
+    }),
+  }),
+
+  // Footer Navigation
+  footer: defineCollection({
+    source: "footer.yml",
+    type: "page",
+    schema: z.object({
+      columns: z.array(createFooterColumnSchema()),
     }),
   }),
 };
