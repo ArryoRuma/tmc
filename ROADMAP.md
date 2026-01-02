@@ -51,15 +51,15 @@ Make it easy to build pages quickly without thinking about structure or conventi
 
 ### Work
 
-- [ ] Finalize Nuxt 4 conventions
-  - [ ] File and folder naming
+- [x] Finalize Nuxt 4 conventions
+  - [x] File and folder naming
   - [ ] Slug rules
-  - [ ] Content collection taxonomy
-- [ ] Normalize content schemas
-  - [ ] Services
-  - [ ] Industries
-  - [ ] Solutions
-  - [ ] Resources
+  - [x] Content collection taxonomy
+- [x] Normalize content schemas
+  - [x] Services
+  - [x] Industries
+  - [x] Solutions
+  - [x] Resources
 - [ ] Document "golden paths"
   - [ ] How to add a new service
   - [ ] How to add a new industry
@@ -73,9 +73,9 @@ Make it easy to build pages quickly without thinking about structure or conventi
 
 ### Artifacts Produced
 
-- [ ] `docs/content-architecture.md`
+- [x] `docs/content-architecture.md`
 - [ ] `docs/dev-workflow.md`
-- [ ] Finalized `content.config.ts`
+- [x] Finalized `content.config.ts`
 
 **Exit Criteria**
 
@@ -91,12 +91,12 @@ Stop rewriting pages blindly and focus effort where it matters.
 
 ### Work
 
-- [ ] Inventory all existing YAML and MD content
-- [ ] Classify each item
-  - [ ] Keep
-  - [ ] Rewrite
-  - [ ] Merge
-  - [ ] Kill
+- [x] Inventory all existing YAML and MD content
+- [x] Classify each item
+  - [x] Keep
+  - [x] Rewrite
+  - [x] Merge
+  - [x] Kill
 - [ ] Map every page to a buyer journey stage
   - [ ] Problem-aware
   - [ ] Solution-aware
@@ -126,10 +126,10 @@ Remove design decisions from daily work.
 
 ### Work
 
-- [ ] Finalize visual foundations
-  - [ ] Type scale
+- [x] Finalize visual foundations
+  - [x] Type scale
   - [ ] Spacing tokens
-  - [ ] Dark/light mode behavior
+  - [x] Dark/light mode behavior
 - [ ] Standardize animation usage
   - [ ] Entry timing
   - [ ] Scroll triggers
@@ -227,8 +227,8 @@ Know what is working without guessing.
 
 - [ ] Finalize analytics stack
 - [ ] Define conversion events
-- [ ] Implement SEO hygiene
-  - [ ] `useSeoMeta` everywhere
+- [x] Implement SEO hygiene
+  - [x] `useSeoMeta` everywhere
   - [ ] Sitemap validation
   - [ ] OG image coverage
 - [ ] Add lightweight reporting dashboards
@@ -236,7 +236,7 @@ Know what is working without guessing.
 ### Artifacts Produced
 
 - [ ] `docs/analytics-events.md`
-- [ ] SEO checklist
+- [x] SEO checklist
 - [ ] Post-launch review cadence
 
 **Exit Criteria**
