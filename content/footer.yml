@@ -1,0 +1,100 @@
+columns:
+  - label: Solutions
+    children:
+      - label: Clarify Your Message
+        to: /solutions/clarify-your-message
+        icon: i-lucide-award
+        disabled: false
+      - label: Get More Leads
+        to: /solutions/get-more-leads
+        icon: i-lucide-user-search
+        disabled: false
+      - label: Speed Up Sales
+        to: /solutions/speed-up-sales
+        icon: i-lucide-refresh-ccw
+        disabled: false
+      - label: Reach More Buyers
+        to: /solutions/reach-more-buyers
+        icon: i-lucide-expand
+        disabled: false
+      - label: Keep Customers Longer
+        to: /solutions/keep-customers-longer
+        icon: i-lucide-chart-no-axes-combined
+        disabled: false
+      - label: Fix Your Live Stream
+        to: /solutions/fix-your-live-stream-and-events
+        icon: i-lucide-video
+        disabled: false
+
+  - label: Services
+    children:
+      - label: Video Production
+        to: /services/video-growth-engine
+        icon: i-lucide-video
+        disabled: false
+      - label: Outbound Marketing
+        to: /services/outreach-engine
+        icon: i-lucide-send
+        disabled: false
+      - label: Website Design
+        to: /services/web-design
+        icon: i-lucide-layout-dashboard
+        disabled: false
+      - label: SEO & Paid Ads
+        to: /services/seo-and-paid-ads
+        icon: i-lucide-mouse-pointer-click
+        disabled: false
+      - label: Marketing Automation
+        to: /services/marketing-automation
+        icon: i-lucide-bot
+        disabled: false
+      - label: Content Creation
+        to: /services/content-creation
+        icon: i-lucide-edit-3
+        disabled: true
+
+  - label: Industries We Serve
+    children:
+      - label: Industrial
+        to: /industries/contractors-manufactures
+        icon: i-lucide-hammer
+        disabled: false
+      - label: Financial Services
+        to: /industries/financial-services
+        icon: i-lucide-banknote
+        disabled: false
+      - label: Food Services
+        to: /industries/food-services
+        icon: i-lucide-utensils
+        disabled: false
+      - label: Health & Wellness
+        to: /industries/health-and-wellness
+        icon: i-lucide-heart-pulse
+        disabled: false
+      - label: Non-Profits
+        to: /industries/non-profits
+        icon: i-lucide-heart
+        disabled: false
+
+  - label: Resources
+    children:
+      - label: Guides
+        to: /resources/guides
+        icon: i-lucide-book-open
+        disabled: true
+      - label: Tutorials
+        to: /resources/tutorials
+        icon: i-lucide-video
+        disabled: true
+      - label: Case Studies
+        to: /resources/case-studies
+        icon: i-lucide-file-text
+        disabled: true
+      - label: Blog
+        to: /resources/blog
+        icon: i-lucide-edit-3
+        disabled: true
+      - label: Media Kit
+        to: /resources/media-kit
+        icon: i-lucide-download
+        disabled: true
