@@ -1,0 +1,32 @@
+title: Contact Us - TruMedia Creative
+description: Ready to grow your business? Contact TruMedia Creative today. We help brands sell more through video production, web design, and marketing automation.
+seo:
+  title: Contact Us - TruMedia Creative
+  description: Ready to grow your business? Contact TruMedia Creative today. We help brands sell more through video production, web design, and marketing automation.
+navigation: true
+
+hero:
+  headline: Let's Start Something
+  highlightedWord: Amazing
+  description: Ready to transform your marketing and grow your business? Get in touch with our team and let's discuss how we can help you sell more.
+
+contactInfo:
+  email: hello@trumediacreative.com
+  phone: +1 (908) 356-0321
+  address:
+    street: 21 Main St.
+    city: Clinton Township
+    state: NJ
+    zip: "08801"
+  hours:
+    weekdays: "Monday - Friday: 8:00 AM - 4:00 PM EST"
+    weekend: "Weekend: By appointment only"
+
+sections:
+  contactInfoTitle: Contact Information
+  responseGuarantee:
+    title: Quick Response Guarantee
+    description: We understand your time is valuable. That's why we guarantee a response to all inquiries within 24 hours, usually much sooner.
+  formSection:
+    title: Get in Touch
+    description: Whether you have questions about our services, need a custom quote, or want to discuss your project, we're here to help. Fill out the form below and a member of our team will get back to you shortly.
