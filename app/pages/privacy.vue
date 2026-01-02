@@ -139,8 +139,8 @@ useSeoMeta({
 
         <div class="border-t pt-6">
           <p class="text-sm text-muted">
-            <strong>Effective Date:</strong> December 19, 2025<br />
-            <strong>Last Updated:</strong> December 19, 2025
+            <strong>Effective Date:</strong> January 2, 2026<br />
+            <strong>Last Updated:</strong> January 2, 2026
           </p>
         </div>
       </div>
