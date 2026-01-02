@@ -306,6 +306,7 @@ const mobileItems = computed(() => [
         color="primary"
         variant="solid"
         to="/contact"
+        aria-label="Contact Us"
         class="lg:hidden"
       />
 
