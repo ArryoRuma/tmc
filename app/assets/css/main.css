@@ -116,6 +116,13 @@ section [class*="UButton"],
   font-display: swap;
 }
 
+/* Utility class for header CTA buttons with New Spirit font */
+.header-cta-button {
+  font-family: "new-spirit", serif !important;
+  font-weight: 600 !important;
+  font-display: swap;
+}
+
 /* Light theme (default) */
 :root {
   --ui-bg: #f5fbff;
