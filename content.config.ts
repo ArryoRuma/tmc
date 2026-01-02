@@ -265,7 +265,31 @@ const createIndustryPageSchema = () =>
     cta: createCTASchema(),
   });
 
+// Navigation schema for header/footer menus
+const createNavigationItemSchema = () =>
+  z.object({
+    label: z.string().nonempty(),
+    icon: z.string().optional().editor({ input: "icon" }),
+    to: z.string().nonempty(),
+    disabled: z.boolean().optional(),
+  });
+
+const createNavigationGroupSchema = () =>
+  z.object({
+    label: z.string().nonempty(),
+    children: z.array(createNavigationItemSchema()),
+    open: z.boolean().optional(),
+  });
+
 export const collections = {
+  // Navigation
+  navigation: defineCollection({
+    source: "navigation.yml",
+    type: "page",
+    schema: z.object({
+      items: z.array(createNavigationGroupSchema()),
+    }),
+  }),
   // Home page
   index: defineCollection({
     source: "home/index.yml",
