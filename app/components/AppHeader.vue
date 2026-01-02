@@ -315,13 +315,8 @@ const mobileItems = computed(() => [
         color="primary"
         variant="solid"
         to="/contact"
-        class="hidden lg:inline-flex text-lg"
-        style="
-          font-family: &quot;new-spirit&quot;, serif !important;
-          font-weight: 600 !important;
-        "
+        class="hidden lg:inline-flex text-lg header-cta-button"
       />
-      <!-- TODO: Replace inline font styles with a semantic button variant or utility class in assets/css to keep typography consistent. -->
       <UColorModeButton />
       <!-- <UButton
         label="Sign up"
