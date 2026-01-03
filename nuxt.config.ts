@@ -46,6 +46,12 @@ export default defineNuxtConfig({
     name: "TruMedia Creative",
   },
 
+  runtimeConfig: {
+    public: {
+      honeyBookFormId: "62f67000c557950007e38acd",
+    },
+  },
+
   // Optimize module loading
   build: {
     transpile: ["@headlessui/vue"],

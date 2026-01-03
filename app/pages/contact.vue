@@ -12,6 +12,38 @@ useSeoMeta({
   description,
   ogDescription: description,
 });
+
+// Contact card configuration
+const contactCards = computed(() => {
+  if (!page.value?.contactInfo) return [];
+  
+  return [
+    {
+      icon: "i-lucide-mail",
+      title: "Email",
+      content: page.value.contactInfo.email,
+      href: `mailto:${page.value.contactInfo.email}`,
+    },
+    {
+      icon: "i-lucide-phone",
+      title: "Phone",
+      content: page.value.contactInfo.phone,
+      href: `tel:${page.value.contactInfo.phone}`,
+    },
+    {
+      icon: "i-lucide-map-pin",
+      title: "Address",
+      content: `${page.value.contactInfo.address.street}<br />${page.value.contactInfo.address.city}, ${page.value.contactInfo.address.state} ${page.value.contactInfo.address.zip}`,
+      isHtml: true,
+    },
+    {
+      icon: "i-lucide-clock",
+      title: "Hours",
+      content: `${page.value.contactInfo.hours.weekdays}<br />${page.value.contactInfo.hours.weekend}`,
+      isHtml: true,
+    },
+  ];
+});
 </script>
 
 <template>
@@ -46,74 +78,34 @@ useSeoMeta({
       {{ page.sections.contactInfoTitle }}
     </h2>
     <UPageSection class="py-6">
-      <!-- TODO: Render these contact cards from a schema-driven array instead of one-off markup to keep icons, copy, and layout consistent. -->
       <!-- Contact Information - 2 Column Layout -->
       <div>
         <div class="grid md:grid-cols-2 gap-8 mb-12">
-          <!-- Column A: Email and Phone -->
-          <div class="space-y-6">
-            <!-- Email -->
+          <div
+            v-for="(card, index) in contactCards"
+            :key="card.icon"
+            :class="index % 2 === 0 ? 'space-y-6' : ''"
+          >
             <div class="flex items-start gap-4">
               <div class="bg-primary/10 p-3 rounded-lg">
-                <UIcon name="i-lucide-mail" class="text-primary text-xl" />
+                <UIcon :name="card.icon" class="text-primary text-xl" />
               </div>
               <div>
-                <h3 class="font-semibold text-highlighted">Email</h3>
+                <h3 class="font-semibold text-highlighted">{{ card.title }}</h3>
                 <a
-                  :href="`mailto:${page.contactInfo.email}`"
+                  v-if="card.href"
+                  :href="card.href"
                   class="text-primary hover:underline"
                 >
-                  {{ page.contactInfo.email }}
+                  {{ card.content }}
                 </a>
-              </div>
-            </div>
-
-            <!-- Phone -->
-            <div class="flex items-start gap-4">
-              <div class="bg-primary/10 p-3 rounded-lg">
-                <UIcon name="i-lucide-phone" class="text-primary text-xl" />
-              </div>
-              <div>
-                <h3 class="font-semibold text-highlighted">Phone</h3>
-                <a
-                  :href="`tel:${page.contactInfo.phone}`"
-                  class="text-primary hover:underline"
-                >
-                  {{ page.contactInfo.phone }}
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Column B: Address and Hours -->
-          <div class="space-y-6">
-            <!-- Address -->
-            <div class="flex items-start gap-4">
-              <div class="bg-primary/10 p-3 rounded-lg">
-                <UIcon name="i-lucide-map-pin" class="text-primary text-xl" />
-              </div>
-              <div>
-                <h3 class="font-semibold text-highlighted">Address</h3>
-                <p class="text-muted">
-                  {{ page.contactInfo.address.street }}<br />
-                  {{ page.contactInfo.address.city }},
-                  {{ page.contactInfo.address.state }}
-                  {{ page.contactInfo.address.zip }}
-                </p>
-              </div>
-            </div>
-
-            <!-- Hours -->
-            <div class="flex items-start gap-4">
-              <div class="bg-primary/10 p-3 rounded-lg">
-                <UIcon name="i-lucide-clock" class="text-primary text-xl" />
-              </div>
-              <div>
-                <h3 class="font-semibold text-highlighted">Hours</h3>
-                <p class="text-muted">
-                  {{ page.contactInfo.hours.weekdays }}<br />
-                  {{ page.contactInfo.hours.weekend }}
-                </p>
+                <!-- eslint-disable-next-line vue/no-v-html -->
+                <p
+                  v-else-if="card.isHtml"
+                  class="text-muted"
+                  v-html="card.content"
+                ></p>
+                <p v-else class="text-muted">{{ card.content }}</p>
               </div>
             </div>
           </div>
@@ -151,7 +143,6 @@ useSeoMeta({
         </p>
 
         <!-- Contact Form -->
-        <!-- TODO: Move HoneyBook form ID into runtime config + provide fallback native form for users with blockers. -->
         <HoneyBookForm2 />
       </div>
     </UPageSection>

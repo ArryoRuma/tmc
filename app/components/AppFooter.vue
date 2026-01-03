@@ -40,25 +40,7 @@ const columns = computed(() => footerData.value?.columns || []);
     </template>
 
     <template #right>
-      <!-- TODO: Extract social buttons into a reusable <SocialLinks /> cluster shared with hero/contact sections. -->
-      <UButton
-        to="https://www.linkedin.com/company/trumedia-creative/"
-        target="_blank"
-        icon="i-simple-icons-linkedin"
-        aria-label="TruMedia Creative on LinkedIn"
-        color="primary"
-        variant="ghost"
-        size="xl"
-      />
-      <UButton
-        to="https://www.youtube.com/@TruMedia-Creative"
-        target="_blank"
-        icon="i-simple-icons-youtube"
-        aria-label="TruMedia Creative on YouTube"
-        color="primary"
-        variant="ghost"
-        size="xl"
-      />
+      <SocialLinks />
     </template>
   </UFooter>
 </template>

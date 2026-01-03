@@ -71,7 +71,7 @@ const links = [
   },
 ];
 
-// TODO: Move global quick links/navigations into a content collection so updates stay in sync with AppHeader/AppFooter.
+// Note: Navigation is currently hardcoded. Consider moving to content collection for centralized management.
 
 provide("navigation", navigation);
 </script>

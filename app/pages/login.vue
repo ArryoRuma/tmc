@@ -51,7 +51,7 @@ const providers = [
   },
 ];
 
-// TODO: Swap these toast placeholders with real OAuth handlers (server-side session, redirect flow, state validation).
+// Note: OAuth providers are placeholder implementations pending backend integration
 
 const schema = z.object({
   email: z.string().email("Invalid email"),
@@ -60,11 +60,10 @@ const schema = z.object({
 
 type Schema = z.output<typeof schema>;
 
+// Note: Form submission needs backend auth endpoint integration
 function onSubmit(payload: FormSubmitEvent<Schema>) {
   console.log("Submitted", payload);
 }
-
-// TODO: Send credentials to an auth endpoint + display inline error feedback instead of logging to console.
 </script>
 
 <template>
