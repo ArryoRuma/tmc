@@ -433,12 +433,14 @@ const resetForm = () => {
     touched[key] = false;
   });
 };
+
+// Note: Future enhancements needed:
+// - Add comprehensive validation and error handling for form inputs
+// - Format generated offer text for better readability
+// - Create downloadable PDF output functionality
+// - Research better form system/library options
 </script>
 
-<!-- TODO: add validation and error handling for form inputs
-TODO: Format the generated offer text for better readability
-TODO: Research if theres a better form system or library to use
-TODO: upon submission, create a downloadable pdf of the output -->
 <template>
   <div class="max-w-5xl mx-auto px-4 py-10 space-y-8">
     <header class="space-y-2">

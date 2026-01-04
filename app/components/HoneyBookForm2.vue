@@ -8,6 +8,8 @@ declare global {
   }
 }
 
+const config = useRuntimeConfig();
+const formId = config.public.honeyBookFormId;
 const honeyBookLoaded = ref(false);
 
 onMounted(async () => {
@@ -35,7 +37,7 @@ onMounted(async () => {
       // Initialize after script loads
       setTimeout(() => {
         if (window._HB_) {
-          window._HB_.pid = "62f67000c557950007e38acd";
+          window._HB_.pid = formId;
         }
         honeyBookLoaded.value = true;
       }, 200);
@@ -44,19 +46,19 @@ onMounted(async () => {
 
     // Also set up the global initialization
     window._HB_ = window._HB_ || {};
-    window._HB_.pid = "62f67000c557950007e38acd";
+    window._HB_.pid = formId;
   }
 });
 </script>
 
 <template>
   <ClientOnly>
-    <div class="hb-p-62f67000c557950007e38acd-2" />
+    <div :class="`hb-p-${formId}-2`" />
     <img
       height="1"
       width="1"
       style="display: none"
-      src="https://www.honeybook.com/p.png?pid=62f67000c557950007e38acd"
+      :src="`https://www.honeybook.com/p.png?pid=${formId}`"
     />
   </ClientOnly>
 </template>
