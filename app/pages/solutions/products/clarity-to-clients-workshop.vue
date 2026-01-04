@@ -16,6 +16,7 @@ useSeoMeta({
 
 <template>
   <div v-if="page?.title">
+    <BackToIndexButton />
     <UPageHero
       :title="page.title"
       :description="page.hero?.description"
