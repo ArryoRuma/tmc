@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-full h-[500px] overflow-hidden"
+    class="relative w-full h-[500px] overflow-hidden bg-stone-200 dark:bg-stone-800"
     style="perspective: 1000px"
   >
     <!-- First column - reverse -->
