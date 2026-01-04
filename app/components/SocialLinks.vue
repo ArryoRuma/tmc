@@ -5,15 +5,25 @@ interface SocialLink {
   label: string;
 }
 
-const props = withDefaults(defineProps<{
-  color?: "primary" | "secondary" | "success" | "info" | "warning" | "error" | "neutral";
-  variant?: "solid" | "outline" | "soft" | "subtle" | "ghost" | "link";
-  size?: "xs" | "sm" | "md" | "lg" | "xl";
-}>(), {
-  color: "primary",
-  variant: "ghost",
-  size: "xl",
-});
+const props = withDefaults(
+  defineProps<{
+    color?:
+      | "primary"
+      | "secondary"
+      | "success"
+      | "info"
+      | "warning"
+      | "error"
+      | "neutral";
+    variant?: "solid" | "outline" | "soft" | "subtle" | "ghost" | "link";
+    size?: "xs" | "sm" | "md" | "lg" | "xl";
+  }>(),
+  {
+    color: "primary",
+    variant: "ghost",
+    size: "xl",
+  },
+);
 
 const socialLinks: SocialLink[] = [
   {
