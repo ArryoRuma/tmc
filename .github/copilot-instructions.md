@@ -24,12 +24,26 @@ const { data: page } = await useAsyncData("page-name", () =>
 
 **Package Management**: Uses `pnpm` (not npm/yarn). Key commands:
 
-- `pnpm dev` - Development server
+- `pnpm dev` - Development server on http://localhost:3000
 - `pnpm build` - Production build
-- `pnpm lint` - ESLint (configured with @nuxt/eslint)
+- `pnpm generate` - Static site generation
+- `pnpm preview` - Preview production build locally
+- `pnpm lint` - ESLint check (configured with @nuxt/eslint)
 - `pnpm typecheck` - TypeScript validation
+- `pnpm format` - Check code formatting with Prettier
+- `pnpm format:fix` - Fix code formatting with Prettier
+- `pnpm fix` - Auto-fix formatting and linting issues
+- `pnpm check` - Fix formatting/linting and run typecheck - **Use before finalizing changes**
+- `pnpm clean` - Clean Nuxt cache and build artifacts (runs `npx nuxt cleanup`)
 
 **Content Updates**: Edit YAML files in `/content/` which automatically sync with pages. Schema validation in `content.config.ts` ensures type safety.
+
+**Testing & Validation**:
+
+- Always run `pnpm check` before committing changes
+- Verify development server runs without errors after changes
+- Test content changes by viewing affected pages in browser
+- For component changes, verify in both light and dark modes
 
 ## Key Conventions
 
@@ -97,3 +111,27 @@ useSeoMeta({
 - All components auto-imported, no manual imports needed
 - Content changes reflect immediately in dev mode
 - Build targets static generation for deployment
+
+## Build Artifacts & Git
+
+**Files to Ignore** (already configured in .gitignore):
+
+- `.output`, `.nuxt`, `.nitro`, `.cache`, `dist` - Nuxt build outputs
+- `node_modules` - Dependencies
+- `.data` - Nuxt content database
+- `*.log` - Log files
+
+**Committing Changes**: After making changes, use `pnpm check` to ensure code quality before committing.
+
+## Error Handling & Validation
+
+**Content Validation**: All YAML content is validated against Zod schemas in `content.config.ts`. Schema errors will show in console during dev.
+
+**Type Safety**: Use TypeScript types from auto-generated `.nuxt/` directory. Run `pnpm typecheck` to catch type errors.
+
+**Common Patterns**:
+
+- Provide fallback content for async data: `v-if="page?.title"` pattern
+- Use optional chaining for nested content: `page.value?.seo?.title || page.value?.title`
+- Handle loading states for content queries
+- Validate required image alt text for accessibility

@@ -46,9 +46,7 @@ const orderedTeam = computed(() => {
 
     return ids
       .map((id) => lookup.get(id))
-      .filter(
-        (member): member is (typeof members)[number] => Boolean(member),
-      );
+      .filter((member): member is (typeof members)[number] => Boolean(member));
   }
 
   return members;
@@ -225,7 +223,9 @@ useSeoMeta({
           <div v-if="page.differentiators.photo?.src" class="relative">
             <NuxtImg
               :src="page.differentiators.photo.src"
-              :alt="page.differentiators.photo.alt || page.differentiators.title"
+              :alt="
+                page.differentiators.photo.alt || page.differentiators.title
+              "
               class="rounded-lg h-96 w-full object-cover shadow-lg"
             />
           </div>
