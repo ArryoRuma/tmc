@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Project } from "~/types/project";
-
+// TODO: Update project details below to be about a Tree Staple case study, primarily focused on video production 
 const project: Project = {
   title: "Manufacturing Product Video Case Study: Marketing and Sales Assets",
   description:
