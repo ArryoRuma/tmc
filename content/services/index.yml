@@ -1,0 +1,41 @@
+title: Services
+description: Explore our comprehensive range of services designed to help B2B and expert-led companies grow through strategic marketing, web design, and video production.
+seo:
+  title: Services | TruMedia Creative - B2B Marketing & Growth Solutions
+  description: Comprehensive marketing services for B2B and expert-led companies. From video production to web design, we help you turn expertise into revenue.
+navigation: false
+hero:
+  headline: Services
+  title: Grow Your Business with Strategic Marketing Solutions
+  description: Explore our comprehensive range of services designed to help B2B and expert-led companies grow through strategic marketing, web design, and video production.
+  links:
+    - label: Schedule a Strategy Call
+      icon: i-lucide-calendar
+      to: /contact
+      size: xl
+      variant: solid
+items:
+  - title: Video Growth Engine
+    description: A video-led growth system that clarifies your message, builds trust with buyers, and turns your expertise into sales-ready assets your team can actually use.
+    icon: i-lucide-video
+    to: /services/video-growth-engine
+  - title: Web Design & Development
+    description: Sales-ready web solutions for service-based businesses, turning complex B2B offerings into closed-won deals.
+    icon: i-lucide-monitor
+    to: /services/web-design
+  - title: SEO & Paid Ads
+    description: Increase your online visibility, drive qualified traffic, and generate more leads with data-driven search marketing strategies.
+    icon: i-lucide-search
+    to: /services/seo-and-paid-ads
+  - title: Marketing Automation
+    description: Streamline lead nurturing, automate follow-ups, and turn prospects into customers with systematic, automated marketing.
+    icon: i-lucide-zap
+    to: /services/marketing-automation
+  - title: Outreach Engine
+    description: Turn cold outreach into warm conversations with an outbound machine on autopilot.
+    icon: i-lucide-send
+    to: /services/outreach-engine
+  - title: Content Creation
+    description: Strategic content development that positions your expertise and drives engagement across all channels.
+    icon: i-lucide-file-text
+    to: /services/content-creation
