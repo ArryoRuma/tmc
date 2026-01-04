@@ -1,0 +1,41 @@
+title: Solutions
+description: Discover targeted solutions to your biggest business challenges. From lead generation to customer retention, we have the expertise to help you succeed.
+seo:
+  title: Solutions | TruMedia Creative - Solve Your B2B Growth Challenges
+  description: Targeted solutions for B2B companies facing growth challenges. Get more leads, clarify your message, speed up sales, and keep customers longer.
+navigation: false
+hero:
+  headline: Solutions
+  title: Solve Your Biggest Business Challenges
+  description: Discover targeted solutions to your biggest business challenges. From lead generation to customer retention, we have the expertise to help you succeed.
+  links:
+    - label: Schedule a Strategy Call
+      icon: i-lucide-calendar
+      to: /contact
+      size: xl
+      variant: solid
+items:
+  - title: Get More Leads
+    description: Design, produce, and distribute sales-ready video that turns complex B2B offerings into closed-won deals.
+    icon: i-lucide-users
+    to: /solutions/get-more-leads
+  - title: Clarify Your Message
+    description: Take what's in your team's head and turn it into a clear message delivered so your customers finally "get it" and move forward.
+    icon: i-lucide-message-circle
+    to: /solutions/clarify-your-message
+  - title: Speed Up Sales
+    description: Accelerate your sales cycles with video content that answers questions and builds trust before the first call.
+    icon: i-lucide-trending-up
+    to: /solutions/speed-up-sales
+  - title: Keep Customers Longer
+    description: Build lasting relationships with systematic follow-up and engagement strategies that keep customers coming back.
+    icon: i-lucide-heart-handshake
+    to: /solutions/keep-customers-longer
+  - title: Reach More Buyers
+    description: Expand your market reach with targeted campaigns and distribution strategies that get your message in front of the right people.
+    icon: i-lucide-target
+    to: /solutions/reach-more-buyers
+  - title: Fix Your Live Stream & Events
+    description: Professional live stream and event production that showcases your expertise and engages your audience.
+    icon: i-lucide-radio
+    to: /solutions/fix-your-live-stream-and-events

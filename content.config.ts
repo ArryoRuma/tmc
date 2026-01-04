@@ -274,6 +274,20 @@ const createIndustryPageSchema = () =>
     cta: createCTASchema(),
   });
 
+// Index page schema for navigational landing pages
+const createIndexPageSchema = () =>
+  createPageMetaSchema().extend({
+    hero: createHeroSchema(),
+    items: z.array(
+      z.object({
+        title: z.string().nonempty(),
+        description: z.string().nonempty(),
+        icon: z.string().nonempty().editor({ input: "icon" }),
+        to: z.string().nonempty(),
+      }),
+    ),
+  });
+
 // Navigation schema for header/footer menus
 const createNavigationItemSchema = () =>
   z.object({
@@ -495,6 +509,11 @@ export const collections = {
       cta: createCTASchema(),
     }),
   }),
+  servicesIndex: defineCollection({
+    source: "services/index.yml",
+    type: "page",
+    schema: createIndexPageSchema(),
+  }),
 
   // Solutions
   getmoreleads: defineCollection({
@@ -573,6 +592,11 @@ export const collections = {
       cta: createCTASchema(),
     }),
   }),
+  solutionsIndex: defineCollection({
+    source: "solutions/index.yml",
+    type: "page",
+    schema: createIndexPageSchema(),
+  }),
 
   // Industries
   contractorsmanufactures: defineCollection({
@@ -604,6 +628,11 @@ export const collections = {
     source: "industries/live-events-and-entertainment.yml",
     type: "page",
     schema: createIndustryPageSchema(),
+  }),
+  industriesIndex: defineCollection({
+    source: "industries/index.yml",
+    type: "page",
+    schema: createIndexPageSchema(),
   }),
 
   // Projects

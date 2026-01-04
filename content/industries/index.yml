@@ -1,0 +1,41 @@
+title: Industries
+description: We specialize in working with companies across diverse industries, delivering tailored marketing strategies that drive real results.
+seo:
+  title: Industries We Serve | TruMedia Creative - Specialized B2B Marketing
+  description: Industry-specific marketing expertise for contractors, manufacturers, financial services, health & wellness, food services, nonprofits, and live events.
+navigation: false
+hero:
+  headline: Industries
+  title: Specialized Marketing for Your Industry
+  description: We specialize in working with companies across diverse industries, delivering tailored marketing strategies that drive real results.
+  links:
+    - label: Schedule a Strategy Call
+      icon: i-lucide-calendar
+      to: /contact
+      size: xl
+      variant: solid
+items:
+  - title: Contractors & Manufacturers
+    description: Generate qualified leads without lifting a finger. Our done-for-you systems run behind the scenes while your team focuses on closing deals.
+    icon: i-lucide-hard-hat
+    to: /industries/contractors-manufactures
+  - title: Financial Services
+    description: Build trust and credibility with content that demonstrates your expertise and helps clients make informed decisions.
+    icon: i-lucide-landmark
+    to: /industries/financial-services
+  - title: Health & Wellness
+    description: Connect with patients and clients through authentic storytelling and educational content that builds lasting relationships.
+    icon: i-lucide-heart-pulse
+    to: /industries/health-and-wellness
+  - title: Food Services
+    description: Showcase your culinary expertise and create memorable experiences that keep customers coming back for more.
+    icon: i-lucide-utensils
+    to: /industries/food-services
+  - title: Nonprofits
+    description: Amplify your mission and impact with compelling storytelling that inspires action and drives donations.
+    icon: i-lucide-hand-heart
+    to: /industries/non-profits
+  - title: Live Events & Entertainment
+    description: Create unforgettable experiences with professional event production and promotional content that fills seats.
+    icon: i-lucide-ticket
+    to: /industries/live-events-and-entertainment
