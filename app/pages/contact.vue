@@ -33,14 +33,18 @@ const contactCards = computed(() => {
     {
       icon: "i-lucide-map-pin",
       title: "Address",
-      content: `${page.value.contactInfo.address.street}<br />${page.value.contactInfo.address.city}, ${page.value.contactInfo.address.state} ${page.value.contactInfo.address.zip}`,
-      isHtml: true,
+      lines: [
+        page.value.contactInfo.address.street,
+        `${page.value.contactInfo.address.city}, ${page.value.contactInfo.address.state} ${page.value.contactInfo.address.zip}`,
+      ],
     },
     {
       icon: "i-lucide-clock",
       title: "Hours",
-      content: `${page.value.contactInfo.hours.weekdays}<br />${page.value.contactInfo.hours.weekend}`,
-      isHtml: true,
+      lines: [
+        page.value.contactInfo.hours.weekdays,
+        page.value.contactInfo.hours.weekend,
+      ],
     },
   ];
 });
@@ -99,12 +103,15 @@ const contactCards = computed(() => {
                 >
                   {{ card.content }}
                 </a>
-                <!-- eslint-disable-next-line vue/no-v-html -->
-                <p
-                  v-else-if="card.isHtml"
-                  class="text-muted"
-                  v-html="card.content"
-                ></p>
+                <p v-else-if="card.lines" class="text-muted">
+                  <span
+                    v-for="(line, idx) in card.lines"
+                    :key="idx"
+                    class="block"
+                  >
+                    {{ line }}
+                  </span>
+                </p>
                 <p v-else class="text-muted">{{ card.content }}</p>
               </div>
             </div>
