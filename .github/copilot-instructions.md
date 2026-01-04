@@ -33,7 +33,7 @@ const { data: page } = await useAsyncData("page-name", () =>
 - `pnpm format` - Check code formatting with Prettier
 - `pnpm format:fix` - Fix code formatting with Prettier
 - `pnpm fix` - Auto-fix formatting and linting issues
-- `pnpm check` - Run all checks (format, lint, typecheck) - **Use before finalizing changes**
+- `pnpm check` - Fix formatting/linting and run typecheck - **Use before finalizing changes**
 - `pnpm clean` - Clean Nuxt cache and build artifacts (runs `npx nuxt cleanup`)
 
 **Content Updates**: Edit YAML files in `/content/` which automatically sync with pages. Schema validation in `content.config.ts` ensures type safety.
