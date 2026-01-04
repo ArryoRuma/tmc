@@ -8,21 +8,27 @@ const project: Project = {
     "Complete branding revamp and web design solution for a Manufacturing Representative Company.",
   year: 2024,
   client: "PJ Polke",
-  services: ["Web Design", "Photography", "Marketing Materials", "SEO"],
+  services: [
+    "Web Design",
+    "Photography",
+    "Marketing Materials",
+    "SEO",
+    "Manufacturer Line Positioning",
+  ],
   heroImage: "/images/web-design/pjpolke/pjpolke-hero.png",
   beforeImage: "/images/web-design/pjpolke/pjpolke-before.png",
   afterImage: "/images/web-design/pjpolke/pjpolke-after.png",
   websiteUrl: "https://pjpolke.com",
   challenge:
-    "PJ Polke needed a modern, professional online presence that would showcase their construction projects and establish trust with potential clients.",
+    "PJ Polke represents industrial manufacturers, but their site read like a general construction portfolio and buried the product lines reps needed to feature.",
   approach:
-    "We focused on creating a clean, user-friendly website with high-quality images and clear calls to action to drive engagement.",
+    "We reorganized the site around the manufacturers they represent, crafted positioning for each line, and created photography that speaks to specifiers and procurement teams.",
   solution:
-    "We created a comprehensive brand identity and responsive website that highlights their expertise and project portfolio.",
+    "A modern brand system, responsive website, and marketing kit that highlights partner brands, makes contact paths obvious, and reinforces PJ Polke’s role as a trusted manufacturer rep.",
   results: [
-    "50% increase in lead generation",
-    "Professional brand recognition",
-    "Mobile-optimized user experience",
+    "Refined copy that clearly positions PJ Polke as a manufacturer rep—not a contractor",
+    "Product-line specific landing areas that make it easy for vendors and buyers to connect",
+    "Mobile-optimized experience for field teams sharing links on-site",
   ],
 };
 </script>

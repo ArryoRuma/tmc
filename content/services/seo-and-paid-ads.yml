@@ -44,21 +44,21 @@ sections:
     orientation: horizontal
     reverse: true
     features:
-      - title: 8 Polished FAQ Videos
-        description: Your most common questions turned into engaging clips
+      - title: 8 Scripted FAQ Videos
+        description: Clear answers with hooks, CTAs, and supporting b-roll for the questions your buyers ask most.
         icon: i-lucide-video
-      - title: Master Compilation Video ($750 Value)
-        description: All FAQs stitched together for your site.
+      - title: Master Compilation Video ($750 value)
+        description: All FAQs stitched together for your site or onboarding library.
         icon: i-lucide-clapperboard
       - title: SEO Titles & Descriptions ($500 value)
-        description: Done-for-you, optimized copy.
+        description: Search-ready copy plus schema notes for embedding across your site.
         icon: i-lucide-search-code
-      - title: Aimated Intro/Outro ($1,000 value)
-        description: Branded polish you can reuse forever.
+      - title: Animated Intro/Outro ($1,000 value)
+        description: Branded open and close sequences you can reuse on every future video.
         icon: i-lucide-repeat-2
-      - title: Podcast Export ($300 Value)
-        description: Repurpose the audio for your podcast or blog.
-        icon: i-lucide-mic
+      - title: Sales Follow-Up Kit
+        description: Downloadable thumbnails, captions, and transcripts so reps can send videos 1:1.
+        icon: i-lucide-mail
   - title: The Case Study Engine
     description: Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
     headline: Showcase Client Success stories that sell while you sleep.
@@ -66,21 +66,21 @@ sections:
     orientation: horizontal
     reverse: false
     features:
-      - title: 1 Hero Interview Video
-        description: Your most common questions turned into engaging clips
+      - title: 1 Flagship Interview
+        description: Storyboarded customer interview that captures the pain, solution, and outcomes.
         icon: i-lucide-video
-      - title: 3 Short Cutdowns for social.
-        description: All FAQs stitched together for your site.
+      - title: 3 Social Cutdowns
+        description: Platform-ready clips with hooks and captions for LinkedIn, email, and ads.
         icon: i-lucide-clapperboard
-      - title: BONUS - PDF Case Study Companion ($500 value)
-        description: Done-for-you, optimized copy.
+      - title: PDF Case Study Companion ($500 value)
+        description: One-sheet summarizing the story with CTA links for sales decks and proposals.
         icon: i-lucide-search-code
-      - title: BONUS - 15-Second Teaser ($1,000 value)
-        description: Branded polish you can reuse forever.
+      - title: 15-Second Teaser ($1,000 value)
+        description: Fast teaser for events, ad retargeting, and trade show loops.
         icon: i-lucide-repeat-2
-      - title: Podcast Export ($300 Value)
-        description: Repurpose the audio for your podcast or blog.
-        icon: i-lucide-mic
+      - title: Sales Enablement Captions
+        description: Prewritten email and social captions to help teams share proof quickly.
+        icon: i-lucide-mail
   - title: The Content Storm Day
     description: Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
     headline: One day → Months of content.
@@ -88,21 +88,21 @@ sections:
     orientation: horizontal
     reverse: true
     features:
-      - title: 1 Hero Interview Video
-        description: Your most common questions turned into engaging clips
+      - title: Pre-Production Roadmap
+        description: Shot list and interview prompts aligned to campaigns before we arrive.
         icon: i-lucide-video
-      - title: 3 Short Cutdowns for social.
-        description: All FAQs stitched together for your site.
+      - title: Full-Day On-Site Capture
+        description: Crew covers demos, team soundbites, and b-roll in one efficient day.
         icon: i-lucide-clapperboard
-      - title: BONUS - PDF Case Study Companion ($500 value)
-        description: Done-for-you, optimized copy.
+      - title: 12+ Edited Assets
+        description: Mix of long-form, shorts, and vertical clips delivered in a single package.
         icon: i-lucide-search-code
-      - title: BONUS - 15-Second Teaser ($1,000 value)
-        description: Branded polish you can reuse forever.
+      - title: Captioned Social Kit
+        description: Exported subtitles, thumbnails, and aspect ratios for every major channel.
         icon: i-lucide-repeat-2
-      - title: Podcast Export ($300 Value)
-        description: Repurpose the audio for your podcast or blog.
-        icon: i-lucide-mic
+      - title: 10-Business-Day Delivery
+        description: Priority edit schedule with one round of revisions baked in.
+        icon: i-lucide-mail
   - title: Video Growth Club
     description: Ongoing video pipeline that feeds sales consistently.
     headline: Monthly shoot days + Outreach Engine.
@@ -111,13 +111,13 @@ sections:
     reverse: false
     features:
       - title: Lite - $2,500/mo
-        description: 1 shoot day + 4 Shorts + 1 Strategy Call (BONUS Captioned versions, $750 value)
+        description: Monthly shoot day, 4 edited shorts, strategy sync, and captioned deliverables.
         icon: i-lucide-video
       - title: Pro - $4,500/mo
-        description: Lite + 1 Half-Day Shoot + Analytics Report (BONUS Fast-track delivery on 2 videos, $1,000 value)
+        description: Lite plus an extra half-day shoot, 2 pillar videos, analytics, and distribution support.
         icon: i-lucide-clapperboard
       - title: Elite - $6,500/mo
-        description: Pro + 1 Full Shoot Day + Unlimited Edits (fair use cap) + Quarterly Workshop (BONUS VIP Priority Delivery, $2,500 value)
+        description: Pro plus an additional shoot day, priority editing, and quarterly workshop for your team.
         icon: i-lucide-repeat-2
 
 testimonials:

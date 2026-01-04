@@ -61,12 +61,13 @@ const projects = ref([
   },
   {
     _path: "/projects/tree-staple",
-    title: "Manufacturing Product Video Case Study: Marketing and Sales Assets",
+    title:
+      "Tree Staple Product Video Case Study: Visual Proof for Contractors & Municipal Buyers",
     to: "/projects/tree-staple",
     thumbnail: "/images/video/tree-staple/tree-staple-hero.png",
-    tags: ["Video", "Marketing Materials", "Photography"],
+    tags: ["Video", "Motion Graphics", "Dealer Enablement"],
     client_type: "Manufacturing Client",
-    year: 2023,
+    year: 2024,
   },
 ]);
 </script>

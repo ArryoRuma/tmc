@@ -1,36 +1,32 @@
 <script setup lang="ts">
 import type { Project } from "~/types/project";
-// TODO: Update project details below to be about a Tree Staple case study, primarily focused on video production 
+
 const project: Project = {
-  title: "Manufacturing Product Video Case Study: Marketing and Sales Assets",
+  title:
+    "Tree Staple Product Video Case Study: Visual Proof for Contractors & Municipal Buyers",
   description:
-    "Shopify 2.0 rebuild and operational strategy for a growing meal prep and nutrition brand.",
+    "On-site product explainer and sales cutdowns that show exactly how Tree Staple works in the field.",
   year: 2024,
-  client: "Nourish to Heal",
+  client: "Tree Staple",
   services: [
-    "Shopify 2.0 Web Design",
-    "UX & Conversion Strategy",
-    "Brand Messaging & Positioning",
-    "Product & Collection Data Structuring",
-    "Retention & Re-Engagement Foundation",
+    "Product Explainer & Script Development",
+    "On-Location Video Production",
+    "Motion Graphics & Callout Overlays",
+    "Voiceover & Sound Design",
+    "Social Cutdowns for Dealers & Sales",
   ],
-  heroImage: "/images/web-design/nourish-to-heal/nourish-to-heal-hero.png",
-  beforeImage: "/images/web-design/nourish-to-heal/nourish-to-heal-before.png",
-  afterImage: "/images/web-design/nourish-to-heal/nourish-to-heal-after.png",
-  websiteUrl: "https://cw6cbq-yp.myshopify.com",
+  heroImage: "/images/video/tree-staple/tree-staple-hero.png",
   challenge:
-    "Nourish to Heal had a strong product and loyal customers, but their website and backend systems weren’t built to support how meal prep customers actually buy, subscribe, and reorder. Growth increased operational complexity, manual work, and customer friction.",
+    "Tree Staple needed a way to demonstrate installation and durability to landscapers, contractors, and municipal buyers without being on-site for every bid.",
   approach:
-    "We rebuilt the website around a macro-first, meal-centric buying experience and simplified subscriptions, reorders, and menu updates to reduce decision fatigue for customers and operational strain for the team.",
+    "We storyboarded an installation walkthrough, filmed on location, and layered motion graphics to highlight anchoring strength, speed, and safety.",
   solution:
-    "We delivered a Shopify 2.0 rebuild designed specifically for food-based e-commerce, structuring meals, macros, and subscriptions in a scalable system that supports growth, retention, and operational efficiency.",
+    "The final deliverables included a flagship explainer video plus short social and email cutdowns dealers can reuse to educate prospects and win specs.",
   results: [
-    "Clearer buying experience with reduced customer decision fatigue",
-    "Simplified ordering process",
-    "Reduced manual updates and operational friction",
-    "Foundation for scalable growth and customer retention",
-    "Faster menu and product updates without risking site breakage or fulfillment errors",
-    "Improved customer confidence at checkout through clearer dietary, allergen, and meal information",
+    "Clear, repeatable install story sales teams can send before every bid",
+    "Product benefits visualized with on-screen callouts instead of text-heavy PDFs",
+    "Dealer network equipped with ready-to-send clips for outreach and events",
+    "Consistent brand polish across long-form explainer and short social edits",
   ],
 };
 </script>
