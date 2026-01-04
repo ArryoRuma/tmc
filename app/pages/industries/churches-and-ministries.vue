@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { data: page } = await useAsyncData(() =>
-  queryCollection("nonprofits").first(),
+  queryCollection("churchesministries").first(),
 );
 
 const title = page.value?.seo?.title || page.value?.title;
