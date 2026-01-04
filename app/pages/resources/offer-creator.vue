@@ -439,6 +439,7 @@ const resetForm = () => {
 // - Format generated offer text for better readability
 // - Create downloadable PDF output functionality
 // - Research better form system/library options
+</script>
 
 <template>
   <div class="max-w-5xl mx-auto px-4 py-10 space-y-8">
