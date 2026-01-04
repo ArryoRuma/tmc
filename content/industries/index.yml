@@ -16,7 +16,7 @@ hero:
       variant: solid
 items:
   - title: Contractors & Manufacturers
-    description: Generate qualified leads without lifting a robot. Our done-for-you systems run behind the scenes while your team focuses on closing deals.
+    description: Generate qualified leads without lifting a finger. Our done-for-you systems run behind the scenes while your team focuses on closing deals.
     icon: i-lucide-hard-hat
     to: /industries/contractors-manufactures
   - title: Financial Services
