@@ -18,6 +18,7 @@ defineOgImageComponent("Saas");
 
 <template>
   <div v-if="page">
+    <BackToIndexButton />
     <UPageHero
       :title="page.hero.title"
       :description="page.hero.description"
