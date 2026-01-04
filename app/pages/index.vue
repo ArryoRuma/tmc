@@ -77,7 +77,10 @@ useSeoMeta({
   </div>
   <div v-else class="flex items-center justify-center min-h-screen">
     <div class="text-center">
-      <UIcon name="i-lucide-loader-circle" class="w-12 h-12 animate-spin mx-auto mb-4 text-primary" />
+      <UIcon
+        name="i-lucide-loader-circle"
+        class="w-12 h-12 animate-spin mx-auto mb-4 text-primary"
+      />
       <p class="text-muted">Loading content...</p>
     </div>
   </div>

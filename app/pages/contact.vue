@@ -16,7 +16,7 @@ useSeoMeta({
 // Contact card configuration
 const contactCards = computed(() => {
   if (!page.value?.contactInfo) return [];
-  
+
   return [
     {
       icon: "i-lucide-mail",
