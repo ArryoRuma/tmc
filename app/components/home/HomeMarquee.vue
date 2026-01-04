@@ -1,41 +1,65 @@
-<script setup lang="ts">
-const marqueeImages = [
-  "images/blocks/image1.png",
-  "images/blocks/image2.png",
-  "images/blocks/image3.png",
-  "images/blocks/image4.png",
-  "images/blocks/image5.png",
-  "images/blocks/image6.png",
-  "images/blocks/image7.png",
-  "images/blocks/image8.png",
-  "images/blocks/image9.png",
-  "images/blocks/image10.png",
-  "images/blocks/image11.png",
-  "images/blocks/image12.png",
-  "images/blocks/image13.png",
-  "images/blocks/image14.png",
-  "images/blocks/image15.png",
-];
-</script>
-
 <template>
-  <FadeInUp :delay="0.3" :duration="1.2">
-    <div
-      class="relative w-full bg-muted overflow-hidden shadow-2xl drop-shadow-2xl rounded-2xl p-6"
+  <div
+    class="relative w-full h-[500px] overflow-hidden"
+    style="perspective: 1000px"
+  >
+    <!-- First column - reverse -->
+    <UMarquee
+      reverse
+      orientation="vertical"
+      :overlay="false"
+      :ui="{
+        root: '[--duration:40s] absolute w-[460px] -left-[100px] -top-[300px] h-[940px] transform-3d rotate-x-55 rotate-y-0 rotate-z-30',
+      }"
     >
-      <UMarquee :pause-on-hover="true" :repeat="2">
-        <NuxtImg
-          v-for="src in marqueeImages"
-          :key="src"
-          :src="src"
-          width="360"
-          height="202"
-          alt=""
-          aria-hidden="true"
-          loading="lazy"
-          class="aspect-video border border-default rounded-lg bg-white shadow-lg drop-shadow-lg object-cover w-80 mx-2"
-        />
-      </UMarquee>
-    </div>
-  </FadeInUp>
+      <NuxtImg
+        v-for="i in 4"
+        :key="i"
+        :src="`/images/blocks/image${i}.png`"
+        width="460"
+        height="258"
+        :alt="`Nuxt UI Screenshot ${i}`"
+        class="aspect-video border border-default rounded-lg bg-white"
+      />
+    </UMarquee>
+
+    <!-- Second column -->
+    <UMarquee
+      orientation="vertical"
+      :overlay="false"
+      :ui="{
+        root: '[--duration:40s] absolute w-[460px] -top-[400px] left-[480px] h-[1160px] transform-3d rotate-x-55 rotate-y-0 rotate-z-30',
+      }"
+    >
+      <NuxtImg
+        v-for="i in [5, 6, 7, 8]"
+        :key="i"
+        :src="`/images/blocks/image${i}.png`"
+        width="460"
+        height="258"
+        :alt="`Nuxt UI Screenshot ${i}`"
+        class="aspect-video border border-default rounded-lg bg-white"
+      />
+    </UMarquee>
+
+    <!-- Third column - reverse, hidden on mobile -->
+    <UMarquee
+      reverse
+      orientation="vertical"
+      :overlay="false"
+      :ui="{
+        root: 'hidden md:flex [--duration:40s] absolute w-[460px] -top-[300px] left-[1020px] h-[1060px] transform-3d rotate-x-55 rotate-y-0 rotate-z-30',
+      }"
+    >
+      <NuxtImg
+        v-for="i in [9, 10, 11, 12]"
+        :key="i"
+        :src="`/images/blocks/image${i}.png`"
+        width="460"
+        height="258"
+        :alt="`Nuxt UI Screenshot ${i}`"
+        class="aspect-video border border-default rounded-lg bg-white"
+      />
+    </UMarquee>
+  </div>
 </template>
