@@ -5,11 +5,15 @@ interface SocialLink {
   label: string;
 }
 
-defineProps<{
-  color?: string;
-  variant?: string;
-  size?: string;
-}>();
+const props = withDefaults(defineProps<{
+  color?: "primary" | "secondary" | "success" | "info" | "warning" | "error" | "neutral";
+  variant?: "solid" | "outline" | "soft" | "subtle" | "ghost" | "link";
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
+}>(), {
+  color: "primary",
+  variant: "ghost",
+  size: "xl",
+});
 
 const socialLinks: SocialLink[] = [
   {
@@ -33,8 +37,8 @@ const socialLinks: SocialLink[] = [
     target="_blank"
     :icon="link.icon"
     :aria-label="link.label"
-    :color="color || 'primary'"
-    :variant="variant || 'ghost'"
-    :size="size || 'xl'"
+    :color="props.color"
+    :variant="props.variant"
+    :size="props.size"
   />
 </template>
