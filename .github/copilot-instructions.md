@@ -34,7 +34,7 @@ const { data: page } = await useAsyncData("page-name", () =>
 - `pnpm format:fix` - Fix code formatting with Prettier
 - `pnpm fix` - Auto-fix formatting and linting issues
 - `pnpm check` - Run all checks (format, lint, typecheck) - **Use before finalizing changes**
-- `pnpm clean` - Clean Nuxt build artifacts
+- `pnpm clean` - Clean Nuxt cache and build artifacts (runs `npx nuxt cleanup`)
 
 **Content Updates**: Edit YAML files in `/content/` which automatically sync with pages. Schema validation in `content.config.ts` ensures type safety.
 
@@ -116,9 +116,9 @@ useSeoMeta({
 
 **Files to Ignore** (already configured in .gitignore):
 
-- `.output/`, `.nuxt/`, `.nitro/`, `.cache/`, `dist/` - Nuxt build outputs
-- `node_modules/` - Dependencies
-- `.data/` - Nuxt content database
+- `.output`, `.nuxt`, `.nitro`, `.cache`, `dist` - Nuxt build outputs
+- `node_modules` - Dependencies
+- `.data` - Nuxt content database
 - `*.log` - Log files
 
 **Committing Changes**: After making changes, use `pnpm check` to ensure code quality before committing.
