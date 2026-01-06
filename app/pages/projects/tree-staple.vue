@@ -28,6 +28,10 @@ const project: Project = {
     "Dealer network equipped with ready-to-send clips for outreach and events",
     "Consistent brand polish across long-form explainer and short social edits",
   ],
+  video: {
+    src: "https://player.vimeo.com/video/844682993?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479",
+    poster: "/images/video/tree-staple/tree-staple-hero.png",
+  },
 };
 </script>
 

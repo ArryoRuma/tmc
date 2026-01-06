@@ -67,14 +67,14 @@ Make it easy to build pages quickly without thinking about structure or conventi
 
 ### Tooling
 
-- [ ] pnpm scripts documented and enforced
-- [ ] Optional pre-commit hooks (lint, typecheck)
-- [ ] CI expectations documented (lint, typecheck, build)
+- [x] pnpm scripts documented and enforced
+- [x] Optional pre-commit hooks (lint, typecheck)
+- [x] CI expectations documented (lint, typecheck, build)
 
 ### Artifacts Produced
 
 - [x] `docs/content-architecture.md`
-- [ ] `docs/dev-workflow.md`
+
 - [x] Finalized `content.config.ts`
 
 **Exit Criteria**
@@ -97,10 +97,7 @@ Stop rewriting pages blindly and focus effort where it matters.
   - [x] Rewrite
   - [x] Merge
   - [x] Kill
-- [ ] Map every page to a buyer journey stage
-  - [ ] Problem-aware
-  - [ ] Solution-aware
-  - [ ] Vendor-aware
+
 - [ ] Identify missing assets
   - [ ] Case studies
   - [ ] Objection handlers
