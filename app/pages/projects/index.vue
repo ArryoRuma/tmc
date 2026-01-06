@@ -112,13 +112,10 @@ const filteredProjects = computed(() => {
       (project.client_type &&
         selectedClientTypes.value.includes(project.client_type));
 
-    // Project must match both filter categories if both have selections
-    if (selectedTags.value.length > 0 && selectedClientTypes.value.length > 0) {
-      return matchesTags && matchesClientType;
-    }
-
-    // Otherwise, match either category
-    return matchesTags || matchesClientType;
+    // Project must match both filter categories if both have selections, otherwise match either
+    return selectedTags.value.length > 0 && selectedClientTypes.value.length > 0
+      ? matchesTags && matchesClientType
+      : matchesTags || matchesClientType;
   });
 });
 
@@ -195,7 +192,9 @@ const hasActiveFilters = computed(() => {
             >
               {{ tag }}
               <button
+                type="button"
                 class="ml-1 hover:text-primary-700"
+                :aria-label="`Remove ${tag} filter`"
                 @click="selectedTags = selectedTags.filter((t) => t !== tag)"
               >
                 ×
@@ -210,7 +209,9 @@ const hasActiveFilters = computed(() => {
             >
               {{ type }}
               <button
+                type="button"
                 class="ml-1 hover:text-blue-700"
+                :aria-label="`Remove ${type} filter`"
                 @click="
                   selectedClientTypes = selectedClientTypes.filter(
                     (t) => t !== type,
