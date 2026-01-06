@@ -65,6 +65,20 @@ const additionalProjects = ref([
     client_type: "Meal Prep and Nutrition Brand Client",
     year: 2024,
   },
+  {
+    title:
+      "Country Club AV System Case Study: Complete Lighting System Redesign",
+    to: "/projects/fiddlers-elbow-country-club",
+    thumbnail: "/images/projects/thumbnails/fiddlers-elbow.jpg",
+    tags: [
+      "AV System Design",
+      "Lighting Installation",
+      "System Integration",
+      "Technical Consultation",
+    ],
+    client_type: "Country Club & Entertainment Venue",
+    year: 2025,
+  },
 ]);
 </script>
 

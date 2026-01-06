@@ -69,6 +69,16 @@ const projects = ref([
     client_type: "Manufacturing Client",
     year: 2024,
   },
+  {
+    _path: "/projects/fiddlers-elbow-country-club",
+    title:
+      "Country Club AV System Case Study: Complete Lighting System Redesign",
+    to: "/projects/fiddlers-elbow-country-club",
+    thumbnail: "/images/projects/thumbnails/fiddlers-elbow.jpg",
+    tags: ["AV System Design", "Lighting Installation", "System Integration"],
+    client_type: "Country Club & Entertainment Venue",
+    year: 2025,
+  },
 ]);
 </script>
 
