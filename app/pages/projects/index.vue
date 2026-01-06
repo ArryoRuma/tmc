@@ -1,5 +1,6 @@
 <script setup>
 // Additional projects not in ProjectsPortfolio
+// TODO: Create an actual filter system using the tags and client_type fields
 const additionalProjects = ref([
   {
     title:
