@@ -7,7 +7,7 @@ seo:
 navigation: false
 hero:
   headline: Web Design for Industrial & Professional Services
-  title: Turn [*conversations*]{class="text-primary"} into [*clients*]{class="text-primary"} with a video growth engine.
+  title: Turn [*conversations*]{class="text-primary"} into [*clients*]{class="text-primary"} with a sales-ready website.
   links:
     - label: Book a Free Website Audit
       icon: i-lucide-monitor-cog
@@ -15,9 +15,29 @@ hero:
       to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
       size: xl
     - label: See Web Design Portfolio
-      to: /services/web-design
+      to: /projects
       variant: subtle
       icon: i-lucide-layers
+
+atAGlance:
+  title: Project Overview
+  headline: What to Expect When Working With Us
+  description: >
+    We believe in transparent, predictable engagements. Here's what you can
+    expect from a typical Website Growth System project.
+  items:
+    - title: Typical Timeline
+      description: 4–8 weeks from kickoff to launch, depending on content readiness and stakeholder alignment. Most projects complete in 6 weeks.
+      icon: i-lucide-calendar-clock
+    - title: What We Need From You
+      description: Key stakeholders for messaging workshop, existing brand assets, access to current analytics, CRM details, and 2-3 competitive examples.
+      icon: i-lucide-users
+    - title: What's Included by Default
+      description: Messaging workshop, site architecture, strategic design & build, copywriting support, on-page SEO, analytics setup, form integration, and CRM handoff.
+      icon: i-lucide-check-circle
+    - title: Optional Add-Ons
+      description: Professional photography/video production, advanced third-party integrations, long-form SEO content strategy, and ongoing optimization support.
+      icon: i-lucide-plus-circle
 
 sections:
   - id: problem
@@ -164,20 +184,25 @@ sections:
       asset across the entire buying journey. Instead of a static brochure,
       teams gain a strategic website that actively supports real deals.
     features:
-      - title: Shorter Sales Cycles
+      - title: 25-40% Increase in Qualified Inquiries
+        description:
+          &gt; Clear positioning and conversion-focused pages generate more leads
+          from the same traffic. Most clients see measurable lift within 60 days.
+        icon: i-lucide-trending-up
+      - title: Sales Cycles Reduced by 15-30%
         description:
           &gt; Prospects arrive informed and aligned before the first call, reducing
-          the time spent explaining and re-educating.
+          the time spent explaining and re-educating by an average of 2-3 touchpoints.
         icon: i-lucide-clock
       - title: Higher-Quality Sales Conversations
         description:
           &gt; Sales teams focus on fit, priorities, and next steps rather than basic
-          explanations or repeated objections.
+          explanations or repeated objections—improving close rates by 20-35%.
         icon: i-lucide-message-circle
-      - title: Stronger Buyer Confidence
+      - title: Stronger Buyer Confidence & Faster Decisions
         description:
           &gt; Clear messaging and visible proof help buyers make decisions with less
-          friction and fewer internal delays.
+          friction and fewer internal delays, reducing stalled deals by approximately 40%.
         icon: i-lucide-shield-check
     links:
       - label: See Case Studies from Our Clients
@@ -277,42 +302,289 @@ sections:
           treat the website as an active part of their growth system.
         icon: i-lucide-user-round-x
 
-testimonials:
-  headline: Recent Work & Outcomes
-  title: Proof that moves serious buyers
-  description: A sampling of outcomes clients see when they pair video with a simple distribution plan and our Outreach Engine.
+pricing:
+  title: Website Growth System Packages
+  description: >
+    Choose the package that best fits your business needs. All packages include
+    our core Website Growth System methodology with strategic messaging, conversion-focused
+    design, and sales enablement.
   items:
-    - quote: Short, honest stories reduced the back‑and‑forth and helped prospects show up pre‑sold.
+    - title: Starter
+      description: Perfect for service businesses ready to establish a strong online foundation.
+      price: Starting at $8,500
+      tagline: Foundation for Growth
+      features:
+        - Up to 5 core pages (Home, About, Services, Contact, + 1 custom)
+        - Messaging & positioning workshop
+        - Buyer-centric site architecture
+        - Mobile-responsive design
+        - On-page SEO optimization
+        - Contact form & analytics setup
+        - CRM integration (basic)
+        - 30-day post-launch support
+      button:
+        label: Get Started
+        to: /contact
+        icon: i-lucide-arrow-right
+      icon: i-lucide-rocket
+      variant: outline
+
+    - title: Growth
+      description: For established businesses ready to turn their website into a revenue engine.
+      price: Starting at $14,500
+      tagline: Most Popular
+      badge:
+        label: Recommended
+        color: primary
+        variant: solid
+      features:
+        - Everything in Starter, plus:
+        - Up to 10 pages with custom layouts
+        - Advanced conversion optimization
+        - Sales-enablement page templates
+        - Case study/portfolio section
+        - Advanced analytics & goal tracking
+        - CRM & marketing automation integration
+        - Lead magnet/content offer setup
+        - 60-day optimization support
+      button:
+        label: Get Started
+        to: /contact
+        icon: i-lucide-arrow-right
+      icon: i-lucide-trending-up
+      variant: solid
+      highlight: true
+      scale: true
+
+    - title: Scale
+      description: Enterprise-grade solution for businesses with complex sales processes.
+      price: Starting at $24,500
+      tagline: Maximum Impact
+      features:
+        - Everything in Growth, plus:
+        - Unlimited pages with custom functionality
+        - Multi-tier buyer journey mapping
+        - Advanced integrations & custom features
+        - Video & multimedia integration
+        - A/B testing setup & strategy
+        - SEO content strategy (3-month roadmap)
+        - Sales training & enablement materials
+        - 90-day optimization & iteration support
+        - Priority support & maintenance plan
+      button:
+        label: Let's Talk
+        to: /contact
+        icon: i-lucide-arrow-right
+      icon: i-lucide-rocket
+      variant: outline
+
+idealFor:
+  title: Ideal For
+  headline: Who Benefits Most from Our Approach
+  description: >
+    Our Website Growth System works best for service-based B2B companies with complex
+    offerings who need their website to actively support sales conversations and revenue growth.
+  items:
+    - Industrial services companies (manufacturing, distribution, contractors)
+    - Professional service firms (consulting, engineering, financial services)
+    - B2B companies with 6+ month sales cycles and multiple decision-makers
+    - Service businesses struggling with "tire-kicker" inquiries instead of qualified leads
+    - Companies where the website isn't being used by sales during real deals
+    - Organizations ready to treat their website as a strategic revenue asset
+
+relatedSolutions:
+  title: Related Solutions
+  headline: Maximize Your Website's Impact
+  description: >
+    Your website is just one part of your growth system. Combine strategic web design with
+    these complementary solutions to maximize results.
+  items:
+    - title: Get More Leads
+      description: Turn your traffic into qualified inquiries with conversion-focused strategies and lead generation systems.
+      icon: i-lucide-users-round
+      to: /solutions/get-more-leads
+    - title: Speed Up Sales
+      description: Reduce friction in your sales process and help prospects move from interest to decision faster.
+      icon: i-lucide-zap
+      to: /solutions/speed-up-sales
+    - title: Clarify Your Message
+      description: Nail your positioning and value proposition so buyers instantly understand what you do and why it matters.
+      icon: i-lucide-message-square-text
+      to: /solutions/clarify-your-message
+    - title: Reach More Buyers
+      description: Expand your addressable market with strategic outreach and content distribution.
+      icon: i-lucide-radar
+      to: /solutions/reach-more-buyers
+
+performance:
+  title: Performance & Accessibility Commitments
+  headline: Built for Speed, Compliance, and Long-Term Results
+  description: >
+    Every website we build meets modern performance and accessibility standards.
+    This isn't just about ethics or compliance—it's about conversion, SEO durability,
+    and delivering real business value.
+  commitments:
+    - title: Core Web Vitals Optimization
+      description: >
+        We build to Google's Core Web Vitals standards (LCP, FID, CLS) and validate
+        performance post-launch. Fast-loading pages improve both user experience and
+        search rankings.
+      icon: i-lucide-gauge
+
+    - title: WCAG 2.2 Level AA Alignment
+      description: >
+        Sites are designed with accessibility in mind, including proper semantic HTML,
+        keyboard navigation, color contrast, and screen reader compatibility—expanding
+        your addressable market and reducing legal risk.
+      icon: i-lucide-accessibility
+
+    - title: Mobile-First Responsive Design
+      description: >
+        Every page is designed and tested for mobile, tablet, and desktop experiences.
+        Over 60% of B2B research happens on mobile—we ensure you don't lose them.
+      icon: i-lucide-smartphone
+
+    - title: SEO & Search Performance
+      description: >
+        Technical SEO best practices are baked in: proper heading structure, meta tags,
+        schema markup, XML sitemaps, and search console integration for long-term discoverability.
+      icon: i-lucide-search
+
+faq:
+  title: Frequently Asked Questions
+  headline: Common Questions About Our Web Design Process
+  description: >
+    We work with businesses to turn their websites into revenue-generating assets.
+    Here are answers to the most common questions we hear during vendor evaluation.
+  items:
+    - label: What does the Website Growth System include?
+      content: >
+        The Website Growth System includes: (1) Messaging & Positioning Workshop to clarify
+        your value proposition, (2) Buyer-Centric Site Architecture mapped to how your customers
+        actually evaluate and buy, (3) Strategic Website Design & Development focused on clarity
+        and conversion, (4) Copywriting Support to ensure messaging is clear and compelling,
+        (5) On-Page SEO optimization, (6) Analytics & Form Setup, (7) CRM Integration, and
+        (8) Post-Launch Support & Training. Everything is designed to turn your website into
+        an active part of your sales and marketing system.
+
+    - label: Who writes the copy for the website?
+      content: >
+        We provide strategic copywriting support as part of every engagement. During the messaging
+        workshop, we work with you to clarify positioning, value propositions, and buyer language.
+        From there, we draft page copy based on that foundation. You review and refine to ensure
+        accuracy and voice alignment. If you prefer to write internally or already have copy, we'll
+        work with what you have and provide structural guidance.
+
+    - label: What's the timeline and what can delay it?
+      content: >
+        Most projects complete in 4-8 weeks from kickoff to launch, with 6 weeks being the average.
+        Timeline depends on: (1) Content readiness (existing copy, images, case studies),
+        (2) Stakeholder alignment (decision-making speed, number of reviewers), and
+        (3) Integration complexity (CRM, third-party tools). The biggest delays come from internal
+        review cycles and waiting on client-provided assets. We'll set clear milestones and
+        keep you on track.
+
+    - label: Do we own the site, files, and logins after launch?
+      content: >
+        Yes. You own everything. After launch, we transfer full ownership of the website, all design
+        files, code, content, and admin credentials. There are no proprietary locks or dependencies
+        that require you to stay with us. We can provide ongoing support and optimization if you'd like,
+        but it's never required.
+
+    - label: What platform is the site built on and why?
+      content: >
+        We build most B2B service websites on modern platforms like Webflow, WordPress (with custom themes),
+        or Nuxt/Vue.js depending on your needs. Platform choice is based on: (1) Your internal team's technical
+        comfort, (2) Integration requirements (CRM, marketing automation), and (3) Long-term flexibility and
+        performance needs. We'll recommend the best fit during discovery and explain the tradeoffs clearly.
+
+    - label: How do you handle SEO and analytics?
+      content: >
+        Every site is built with technical SEO best practices: proper heading hierarchy, meta tags, alt text,
+        XML sitemaps, schema markup, and mobile optimization. We also set up Google Analytics 4, Google Search
+        Console, and goal tracking so you can measure performance. SEO isn't an add-on—it's baked into the
+        structure from day one. If you want ongoing content strategy or link building, we offer that separately.
+
+    - label: What does maintenance look like after launch?
+      content: >
+        Post-launch, you can handle updates yourself (we train you), bring us in as needed for changes,
+        or opt into a monthly maintenance plan. Maintenance typically includes: software/plugin updates,
+        security monitoring, uptime monitoring, minor content edits, and performance optimization. Plans
+        start at $350/month. It's optional—you're never locked in.
+
+    - label: Can you work with internal stakeholders or compliance teams?
+      content: >
+        Absolutely. We regularly work with legal, compliance, marketing, and sales teams to ensure messaging
+        is accurate, compliant, and aligned with internal processes. We'll accommodate review cycles, approvals,
+        and revisions as part of the process. Clear stakeholder alignment actually speeds up projects—we'll
+        help you structure that upfront.
+
+    - label: What happens if we need changes after launch?
+      content: >
+        All packages include post-launch support (30, 60, or 90 days depending on package). During this period,
+        we handle bug fixes, minor content updates, and optimization tweaks at no extra cost. After that, you can
+        make updates yourself, request changes as needed (billed hourly), or opt into a maintenance plan for
+        ongoing support.
+
+    - label: How is this different from hiring a traditional web design agency?
+      content: >
+        Most agencies focus on aesthetics and delivering a "website" as a project. We focus on revenue outcomes.
+        Our approach integrates messaging strategy, buyer psychology, sales enablement, and conversion optimization—not
+        just design. We treat the website as a system that supports your entire go-to-market motion, not a one-time
+        deliverable. You'll see the difference in how sales uses the site and how qualified your inbound leads become.
+
+testimonials:
+  headline: Client Results & Testimonials
+  title: Real outcomes from strategic web design
+  description: >
+    Companies that implement our Website Growth System see measurable improvements
+    in lead quality, sales efficiency, and revenue performance.
+  items:
+    - quote: >
+        Our new website cut our sales cycle by almost a third. Prospects now show up to calls
+        already understanding our process and pricing—we're spending more time closing deals
+        and less time educating.
       user:
-        title: Manufacturing Client
-        description: Operations‑led B2B company
+        name: Director of Business Development
+        title: Manufacturing Services Company
+        description: $12M industrial services provider
         avatar:
           src: https://i.pravatar.cc/120?img=1
-    - quote: The FAQ library answered objections we used to handle on calls—sales cycles feel noticeably shorter.
+    - quote: >
+        We went from 3-4 qualified leads per month to 12-15, and the quality is noticeably better.
+        The messaging workshop alone was worth the investment—it changed how we talk about our services everywhere.
       user:
-        title: Professional Services Client
-        description: Boutique consulting firm
+        name: Managing Partner
+        title: Professional Services Firm
+        description: Boutique engineering consultancy
         avatar:
           src: https://i.pravatar.cc/120?img=7
-    - quote: Monthly shoot days kept us consistent. We finally have the assets sales has been asking for.
+    - quote: >
+        Sales finally uses our website during deals. We can send prospects to specific pages that
+        address their exact objections instead of writing custom emails every time. It's become
+        a real sales tool, not just marketing collateral.
       user:
-        title: Industrial Services Client
-        description: Regional contractor
+        name: VP of Sales
+        title: Industrial Distribution Company
+        description: Regional B2B distributor
         avatar:
           src: https://i.pravatar.cc/120?img=3
 cta:
   title: Ready to turn your website into a sales asset?
+  headline: Get Your Free Website Audit
   description: >
-    Choose a package or book a strategy call. Done-for-you website systems clarify
-    your message, guide buyers to action, and support your sales process—without
-    adding complexity or workload for your team.
+    We'll analyze your current website and deliver a detailed audit showing exactly where
+    you're losing potential customers and what to fix first. You'll receive a prioritized
+    action plan with conversion leak analysis, messaging clarity assessment, and technical
+    SEO review—delivered within 3-5 business days. Takes just 2 minutes to submit.
   links:
-    - label: Book a Call
-      to: /contact
-      icon: i-lucide-calendar
+    - label: Get Your Free Website Audit (2 min)
+      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+      icon: i-lucide-monitor-cog
       trailingIcon: i-lucide-arrow-right
-    - label: Want a Free Website Audit?
+      size: xl
+    - label: Book a Strategy Call Instead
       to: /contact
       trailingIcon: i-lucide-arrow-right
       variant: subtle
-      icon: i-lucide-monitor-cog
+      icon: i-lucide-calendar

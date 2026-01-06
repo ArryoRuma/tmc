@@ -410,7 +410,71 @@ export const collections = {
   webdesign: defineCollection({
     source: "services/web-design.yml",
     type: "page",
-    schema: createServicePageSchema(),
+    schema: createServicePageSchema().extend({
+      atAGlance: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+          headline: z.string().optional(),
+          items: z.array(
+            z.object({
+              title: z.string().nonempty(),
+              description: z.string().nonempty(),
+              icon: z.string().nonempty().editor({ input: "icon" }),
+            }),
+          ),
+        })
+        .optional(),
+      pricing: createPricingSchema().optional(),
+      faq: createBaseSchema()
+        .extend({
+          items: z.array(
+            z.object({
+              label: z.string().nonempty(),
+              content: z.string().nonempty(),
+              defaultOpen: z.boolean().optional(),
+            }),
+          ),
+        })
+        .optional(),
+      idealFor: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+          headline: z.string().optional(),
+          items: z.array(z.string().nonempty()),
+        })
+        .optional(),
+      relatedSolutions: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+          headline: z.string().optional(),
+          items: z.array(
+            z.object({
+              title: z.string().nonempty(),
+              description: z.string().nonempty(),
+              icon: z.string().optional().editor({ input: "icon" }),
+              to: z.string().nonempty(),
+            }),
+          ),
+        })
+        .optional(),
+      performance: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+          headline: z.string().optional(),
+          commitments: z.array(
+            z.object({
+              title: z.string().nonempty(),
+              description: z.string().nonempty(),
+              icon: z.string().optional().editor({ input: "icon" }),
+            }),
+          ),
+        })
+        .optional(),
+    }),
   }),
   seoandpaidads: defineCollection({
     source: "services/seo-and-paid-ads.yml",
