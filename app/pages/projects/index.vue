@@ -65,6 +65,20 @@ const additionalProjects = ref([
     client_type: "Meal Prep and Nutrition Brand Client",
     year: 2024,
   },
+  {
+    title: "Olivet Baptist Church - Professional Worship Production System",
+    to: "/projects/olivet-baptist-church",
+    thumbnail: "/images/projects/thumbnails/olivet-baptist.jpg",
+    tags: [
+      "Live Stream Setup",
+      "Digital Board Installation",
+      "In-Ear Monitor System",
+      "Audio System Integration",
+      "Volunteer Training",
+    ],
+    client_type: "Church & Ministry Client",
+    year: 2024,
+  },
 ]);
 </script>
 
