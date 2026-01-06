@@ -77,7 +77,7 @@ const additionalProjects = ref([
       "Technical Consultation",
     ],
     client_type: "Country Club & Entertainment Venue",
-    year: 2025,
+    year: 2024,
   },
 ]);
 </script>

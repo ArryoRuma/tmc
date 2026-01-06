@@ -5,7 +5,7 @@ const project: Project = {
   title: "Country Club AV System Case Study: Complete Lighting System Redesign",
   description:
     "Complete audio-visual lighting system overhaul for Fiddler's Elbow Country Club, modernizing their facilities with state-of-the-art lighting solutions.",
-  year: 2025,
+  year: 2024,
   client: "Fiddler's Elbow Country Club",
   services: [
     "AV System Design",

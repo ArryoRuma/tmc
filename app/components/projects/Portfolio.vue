@@ -75,9 +75,14 @@ const projects = ref([
       "Country Club AV System Case Study: Complete Lighting System Redesign",
     to: "/projects/fiddlers-elbow-country-club",
     thumbnail: "/images/projects/thumbnails/fiddlers-elbow.jpg",
-    tags: ["AV System Design", "Lighting Installation", "System Integration"],
+    tags: [
+      "AV System Design",
+      "Lighting Installation",
+      "System Integration",
+      "Technical Consultation",
+    ],
     client_type: "Country Club & Entertainment Venue",
-    year: 2025,
+    year: 2024,
   },
 ]);
 </script>
