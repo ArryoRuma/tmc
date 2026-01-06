@@ -392,6 +392,30 @@ idealFor:
     - Companies where the website isn't being used by sales during real deals
     - Organizations ready to treat their website as a strategic revenue asset
 
+relatedSolutions:
+  title: Related Solutions
+  headline: Maximize Your Website's Impact
+  description: >
+    Your website is just one part of your growth system. Combine strategic web design with
+    these complementary solutions to maximize results.
+  items:
+    - title: Get More Leads
+      description: Turn your traffic into qualified inquiries with conversion-focused strategies and lead generation systems.
+      icon: i-lucide-users-round
+      to: /solutions/get-more-leads
+    - title: Speed Up Sales
+      description: Reduce friction in your sales process and help prospects move from interest to decision faster.
+      icon: i-lucide-zap
+      to: /solutions/speed-up-sales
+    - title: Clarify Your Message
+      description: Nail your positioning and value proposition so buyers instantly understand what you do and why it matters.
+      icon: i-lucide-message-square-text
+      to: /solutions/clarify-your-message
+    - title: Reach More Buyers
+      description: Expand your addressable market with strategic outreach and content distribution.
+      icon: i-lucide-radar
+      to: /solutions/reach-more-buyers
+
 performance:
   title: Performance & Accessibility Commitments
   headline: Built for Speed, Compliance, and Long-Term Results

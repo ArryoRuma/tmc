@@ -77,6 +77,30 @@ useSeoMeta({
       </UPageList>
     </UPageSection>
 
+    <!-- Related Solutions Section -->
+    <UPageSection
+      v-if="page.relatedSolutions"
+      :title="page.relatedSolutions.title"
+      :description="page.relatedSolutions.description"
+      :headline="page.relatedSolutions.headline"
+      orientation="vertical"
+      class="bg-neutral-50 dark:bg-neutral-900"
+    >
+      <UPageGrid>
+        <UPageCard
+          v-for="(solution, index) in page.relatedSolutions.items"
+          :key="index"
+          :title="solution.title"
+          :description="solution.description"
+          :to="solution.to"
+        >
+          <template v-if="solution.icon" #icon>
+            <UIcon :name="solution.icon" class="size-8" />
+          </template>
+        </UPageCard>
+      </UPageGrid>
+    </UPageSection>
+
     <!-- Performance Commitments Section -->
     <UPageSection
       v-if="page.performance"

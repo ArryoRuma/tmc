@@ -445,6 +445,21 @@ export const collections = {
           items: z.array(z.string().nonempty()),
         })
         .optional(),
+      relatedSolutions: z
+        .object({
+          title: z.string().nonempty(),
+          description: z.string().nonempty(),
+          headline: z.string().optional(),
+          items: z.array(
+            z.object({
+              title: z.string().nonempty(),
+              description: z.string().nonempty(),
+              icon: z.string().optional().editor({ input: "icon" }),
+              to: z.string().nonempty(),
+            }),
+          ),
+        })
+        .optional(),
       performance: z
         .object({
           title: z.string().nonempty(),
