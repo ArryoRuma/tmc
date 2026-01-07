@@ -4,48 +4,6 @@ const { data: page } = await useAsyncData("video-growth-engine", () =>
 );
 const title = page.value?.seo?.title || page.value?.title;
 const description = page.value?.seo?.description || page.value?.description;
-const items = ref([
-  {
-    id: "1",
-    title: "Step 1",
-    subtitle: "Discover",
-    description:
-      "First, we dive in to what problems you're facing and determine what types of videos will best address those challenges.",
-    icon: "i-lucide-target",
-    content:
-      "Our discovery process involves deep research into your market, competitors, and audience to create a foundation for success.",
-  },
-  {
-    id: "2",
-    title: "Step 2",
-    subtitle: "Define",
-    description:
-      "Next, we outline a clear video strategy tailored to your goals.",
-    icon: "i-lucide-video",
-    content:
-      "We implement your strategy using best practices and cutting-edge tools, ensuring every detail aligns with your objectives.",
-  },
-  {
-    id: "3",
-    title: "Step 3",
-    subtitle: "Develop",
-    description:
-      "Then, we film and produce high-quality videos that resonate with your audience.",
-    icon: "i-lucide-globe",
-    content:
-      "Our production team creates compelling video content that captures your brand's essence and engages your target audience effectively.",
-  },
-  {
-    id: "4",
-    title: "Step 4",
-    subtitle: "Deploy",
-    description:
-      "Last, we distribute the videos and analyze performance to optimize results.",
-    icon: "i-lucide-bar-chart-2",
-    content:
-      "Continuous monitoring and optimization ensure your investment delivers measurable results and long-term success.",
-  },
-]);
 
 // Handle smooth scrolling for anchor links
 onMounted(() => {
@@ -148,14 +106,6 @@ useSeoMeta({
     </UPageSection>
     <USeparator />
 
-    <!-- Process Steps -->
-    <ProcessSteps
-      :steps="items"
-      title="Our Process"
-      subtitle="Our proven 4-step approach to creating video content that converts prospects into clients"
-      variant="default"
-      :show-icons="true"
-    />
     <UPageSection
       :title="page.features.title"
       :description="page.features.description"
