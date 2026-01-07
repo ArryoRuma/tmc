@@ -32,5 +32,5 @@ const project: Project = {
 </script>
 
 <template>
-  <BaseProject :project="project" />
+  <ProjectsSpotlightLayout2 :project="project" />
 </template>

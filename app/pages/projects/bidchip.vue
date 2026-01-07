@@ -62,18 +62,5 @@ useSeoMeta({
 </script>
 
 <template>
-  <div>
-    <ProjectsHero :project="project" />
-    <ProjectsDetails
-      :challenge="project.challenge"
-      :solution="project.solution"
-      :services="project.services"
-    />
-    <ProjectsCaseStudy
-      :sections="project.caseStudySections"
-      :title="`${project.client} Case Study`"
-    />
-    <ProjectsResults v-if="project.results" :results="project.results" />
-    <ProjectsBackToAllProjectsButton />
-  </div>
+  <ProjectsSpotlightLayout2 :project="project" />
 </template>
