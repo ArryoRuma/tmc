@@ -51,5 +51,5 @@ const project: Project = {
 </script>
 
 <template>
-  <BaseProject :project="project" :show-gallery="true" layout="spotlight" />
+  <ProjectsSpotlightLayout2 :project="project" />
 </template>
