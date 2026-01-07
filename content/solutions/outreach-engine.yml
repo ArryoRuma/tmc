@@ -36,92 +36,152 @@ features:
     - title: Analytics & Reporting
       description: Lightweight dashboards for publish cadence, views, watch %, replies, meetings, and CTA clicks.
       icon: i-lucide-bar-chart-3
-sections:
-  - title: Outreach Engine Core
-    description: Our core program is $500/month. And includes the following
-    headline: Start building pipeline from day one.
-    id: how-we-help
-    orientation: horizontal
-    reverse: true
-    features:
-      - title: 200 cold emails snipers pre-written for you
-        description: Dropped directly into your inbox, daily, in batches of 10.
-        icon: i-lucide-mail
-      - title: 100 suggested LinkedIn connections/month
-        description: Sent straight to your inbox on the 1st of each month.
-        icon: i-lucide-users
-      - title: 2 LinkedIn Posts/week
-        description: Grow your network and nurture connections with consistent thought leadership posts.
-        icon: i-lucide-linkedin
-      - title: Targeted direct message suggestions
-        description: Dropped directly into your inbox.
-        icon: i-lucide-message-circle
-      - title: Monthly strategy call
-        description: Review results, optimize messaging, and plan next steps.
-        icon: i-lucide-calendar
-      - title: Ongoing support
-        description: Email support and quarterly reviews to ensure your outreach is effective and aligned with your goals.
-        icon: i-lucide-headphones
-  - title: The Case Study Engine
-    description: Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
-    headline: Showcase Client Success stories that sell while you sleep.
-    id: how-we-help
-    orientation: horizontal
-    reverse: false
-    features:
-      - title: 1 Hero Interview Video
-        description: Your most common questions turned into engaging clips
-        icon: i-lucide-video
-      - title: 3 Short Cutdowns for social.
-        description: All FAQs stitched together for your site.
-        icon: i-lucide-clapperboard
-      - title: BONUS - PDF Case Study Companion ($500 value)
-        description: Done-for-you, optimized copy.
-        icon: i-lucide-search-code
-      - title: BONUS - 15-Second Teaser ($1,000 value)
-        description: Branded polish you can reuse forever.
-        icon: i-lucide-repeat-2
-      - title: Podcast Export ($300 Value)
-        description: Repurpose the audio for your podcast or blog.
-        icon: i-lucide-mic
-  - title: The Content Storm Day
-    description: Transform client success stories into trust-building case studies and social proof assets. (Starts at $2,500)
-    headline: One day → Months of content.
-    id: how-we-help
-    orientation: horizontal
-    reverse: true
-    features:
-      - title: 1 Hero Interview Video
-        description: Your most common questions turned into engaging clips
-        icon: i-lucide-video
-      - title: 3 Short Cutdowns for social.
-        description: All FAQs stitched together for your site.
-        icon: i-lucide-clapperboard
-      - title: BONUS - PDF Case Study Companion ($500 value)
-        description: Done-for-you, optimized copy.
-        icon: i-lucide-search-code
-      - title: BONUS - 15-Second Teaser ($1,000 value)
-        description: Branded polish you can reuse forever.
-        icon: i-lucide-repeat-2
-      - title: Podcast Export ($300 Value)
-        description: Repurpose the audio for your podcast or blog.
-        icon: i-lucide-mic
-  - title: Video Growth Club
-    description: Ongoing video pipeline that feeds sales consistently.
-    headline: Monthly shoot days + Outreach Engine.
-    id: how-we-help
-    orientation: horizontal
-    reverse: false
-    features:
-      - title: Lite - $2,500/mo
-        description: 1 shoot day + 4 Shorts + 1 Strategy Call (BONUS Captioned versions, $750 value)
-        icon: i-lucide-video
-      - title: Pro - $4,500/mo
-        description: Lite + 1 Half-Day Shoot + Analytics Report (BONUS Fast-track delivery on 2 videos, $1,000 value)
-        icon: i-lucide-clapperboard
-      - title: Elite - $6,500/mo
-        description: Pro + 1 Full Shoot Day + Unlimited Edits (fair use cap) + Quarterly Workshop (BONUS VIP Priority Delivery, $2,500 value)
-        icon: i-lucide-repeat-2
+pricing:
+  title: Outreach Engine Packages
+  description: Choose the package that fits your pipeline goals. All packages include proven outreach systems, done-for-you messaging, and ongoing support.
+  items:
+    - title: Outreach Engine Core
+      description: Start building pipeline from day one.
+      icon: i-lucide-mail
+      price:
+        display: $500
+        amount: 500
+        billing: /month
+      features:
+        - title: 200 cold emails snipers pre-written for you
+          icon: i-lucide-mail
+        - title: 100 suggested LinkedIn connections/month
+          icon: i-lucide-users
+        - title: 2 LinkedIn Posts/week
+          icon: i-lucide-linkedin
+        - title: Targeted direct message suggestions
+          icon: i-lucide-message-circle
+        - title: Monthly strategy call
+          icon: i-lucide-calendar
+        - title: Ongoing support
+          icon: i-lucide-headphones
+      button:
+        label: Get Started
+        to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+        icon: i-lucide-arrow-right
+        trailing: true
+      highlight: true
+      scale: true
+    - title: The Case Study Engine
+      description: Showcase Client Success stories that sell while you sleep.
+      icon: i-lucide-video
+      price:
+        display: Starting at $2,500
+        amount: 2500
+        billing: one-time
+      features:
+        - title: 1 Hero Interview Video
+          icon: i-lucide-video
+        - title: 3 Short Cutdowns for social
+          icon: i-lucide-clapperboard
+        - title: PDF Case Study Companion ($500 value)
+          icon: i-lucide-file-text
+        - title: 15-Second Teaser ($1,000 value)
+          icon: i-lucide-repeat-2
+        - title: Podcast Export ($300 Value)
+          icon: i-lucide-mic
+      button:
+        label: Learn More
+        to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+        icon: i-lucide-arrow-right
+        trailing: true
+    - title: The Content Storm Day
+      description: One day → Months of content.
+      icon: i-lucide-calendar-clock
+      price:
+        display: Starting at $2,500
+        amount: 2500
+        billing: one-time
+      features:
+        - title: 1 Hero Interview Video
+          icon: i-lucide-video
+        - title: 3 Short Cutdowns for social
+          icon: i-lucide-clapperboard
+        - title: PDF Case Study Companion ($500 value)
+          icon: i-lucide-file-text
+        - title: 15-Second Teaser ($1,000 value)
+          icon: i-lucide-repeat-2
+        - title: Podcast Export ($300 Value)
+          icon: i-lucide-mic
+      button:
+        label: Learn More
+        to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+        icon: i-lucide-arrow-right
+        trailing: true
+    - title: Video Growth Club - Lite
+      description: Monthly shoot days + Outreach Engine.
+      icon: i-lucide-video
+      price:
+        display: $2,500
+        amount: 2500
+        billing: /month
+      features:
+        - title: 1 shoot day per month
+          icon: i-lucide-video
+        - title: 4 Shorts
+          icon: i-lucide-film
+        - title: 1 Strategy Call
+          icon: i-lucide-calendar
+        - title: Captioned versions ($750 value)
+          icon: i-lucide-subtitles
+      button:
+        label: Get Started
+        to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+        icon: i-lucide-arrow-right
+        trailing: true
+    - title: Video Growth Club - Pro
+      description: Ongoing video pipeline that feeds sales consistently.
+      icon: i-lucide-clapperboard
+      price:
+        display: $4,500
+        amount: 4500
+        billing: /month
+      features:
+        - title: Everything in Lite
+          icon: i-lucide-check
+        - title: 1 Half-Day Shoot
+          icon: i-lucide-video
+        - title: Analytics Report
+          icon: i-lucide-bar-chart
+        - title: Fast-track delivery on 2 videos ($1,000 value)
+          icon: i-lucide-zap
+      button:
+        label: Get Started
+        to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+        icon: i-lucide-arrow-right
+        trailing: true
+    - title: Video Growth Club - Elite
+      description: Premium video production with unlimited edits and priority delivery.
+      icon: i-lucide-crown
+      price:
+        display: $6,500
+        amount: 6500
+        billing: /month
+      features:
+        - title: Everything in Pro
+          icon: i-lucide-check
+        - title: 1 Full Shoot Day
+          icon: i-lucide-video
+        - title: Unlimited Edits (fair use cap)
+          icon: i-lucide-infinity
+        - title: Quarterly Workshop
+          icon: i-lucide-presentation
+        - title: VIP Priority Delivery ($2,500 value)
+          icon: i-lucide-star
+      button:
+        label: Get Started
+        to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+        icon: i-lucide-arrow-right
+        trailing: true
+      badge:
+        label: Popular
+        color: primary
+        variant: solid
 
 testimonials:
   headline: Recent Work & Outcomes

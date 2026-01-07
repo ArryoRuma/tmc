@@ -51,17 +51,13 @@ useSeoMeta({
       </UPageGrid>
     </UPageSection>
     <UPageSection
-      v-for="(section, index) in page.sections"
-      :key="index"
-      :title="section.title"
-      :description="section.description"
-      :headline="section.headline"
-      :orientation="section.orientation"
-      :reverse="section.reverse"
-      :features="section.features"
-      :price="section.price"
+      v-if="page.pricing"
+      :title="page.pricing.title"
+      :description="page.pricing.description"
+      orientation="vertical"
+      class="bg-neutral-50 dark:bg-neutral-900"
     >
-      <ImagePlaceholder />
+      <UPricingPlans :plans="page.pricing.items as any" />
     </UPageSection>
     <USeparator />
     <UPageCTA v-bind="page.cta" variant="naked" class="overflow-hidden">
