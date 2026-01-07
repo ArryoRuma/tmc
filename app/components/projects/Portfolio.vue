@@ -3,8 +3,7 @@
 const projects = ref([
   {
     _path: "/projects/pjpolke",
-    title:
-      "Manufacturing Rep Website Redesign Case Study: Modern Brand and Lead-Ready Site",
+    title: "A Modern, Lead-Ready Website for a Manufacturing Rep",
     to: "/projects/pjpolke",
     thumbnail: "/images/web-design/pjpolke/pjpolke-hero.png",
     tags: ["Web Design", "Branding"],
@@ -14,7 +13,7 @@ const projects = ref([
   {
     _path: "/projects/pinetar",
     title:
-      "Self Storage Real Estate Marketing Case Study: Brand, Website, and Visual Assets",
+      "Brand and Marketing Assets for a Self Storage Real Estate Developer",
     to: "/projects/pinetar",
     thumbnail: "/images/web-design/pinetar/pinetar-hero.png",
     tags: ["Web Design", "Branding", "Video", "Photography"],
@@ -23,8 +22,7 @@ const projects = ref([
   },
   {
     _path: "/projects/zero-surge",
-    title:
-      "Electronics Manufacturing Marketing Case Study: E-Commerce, SEO, and Lead Generation",
+    title: "Driving E-Commerce and Lead Growth for an Electronics Manufacturer",
     to: "/projects/zero-surge",
     thumbnail: "/images/web-design/zero-surge/zero-surge-hero.png",
     tags: [
@@ -42,7 +40,7 @@ const projects = ref([
   {
     _path: "/projects/nourish-to-heal",
     title:
-      "Meal Prep Brand E-Commerce Case Study: Website, SEO, and Online Ordering",
+      "Building an Online Ordering and Growth Platform for a Meal Prep Brand",
     to: "/projects/nourish-to-heal",
     thumbnail: "/images/web-design/nourish-to-heal/nourish-to-heal-hero.png",
     tags: ["Web Design", "Branding", "Photography", "SEO", "E-Commerce"],
@@ -52,7 +50,7 @@ const projects = ref([
   {
     _path: "/projects/nascar-cody-ware",
     disabled: true,
-    title: "Motorsports Brand Video Case Study: Social and Promotional Content",
+    title: "Social and Promotional Video Content for a Motorsports Brand",
     to: "/projects/nascar-cody-ware",
     thumbnail: "/images/video/nascar-cody-ware/nascar-cody-ware-hero.png",
     tags: ["Brand Video", "Social Media Videos", "Photography"],
@@ -61,8 +59,7 @@ const projects = ref([
   },
   {
     _path: "/projects/tree-staple",
-    title:
-      "Tree Staple Product Video Case Study: Visual Proof for Contractors & Municipal Buyers",
+    title: "Product Video Proof for Contractors and Municipal Buyers",
     to: "/projects/tree-staple",
     thumbnail: "/images/video/tree-staple/tree-staple-hero.png",
     tags: ["Video", "Motion Graphics", "Dealer Enablement"],
@@ -71,18 +68,12 @@ const projects = ref([
   },
   {
     _path: "/projects/fiddlers-elbow-country-club",
-    title:
-      "Country Club AV System Case Study: Complete Lighting System Redesign",
+    title: "Ballroom Lighting Design for a Luxury Country Club Event Space",
     to: "/projects/fiddlers-elbow-country-club",
-    thumbnail: "/images/projects/thumbnails/fiddlers-elbow.jpg",
-    tags: [
-      "AV System Design",
-      "Lighting Installation",
-      "System Integration",
-      "Technical Consultation",
-    ],
-    client_type: "Country Club & Entertainment Venue",
-    year: 2024,
+    thumbnail: "/images/projects/thumbnails/fiddlers-elbow-ballroom.jpg",
+    tags: ["AV Design", "AV Install"],
+    client_type: "Venue",
+    year: 2023,
   },
 ]);
 </script>

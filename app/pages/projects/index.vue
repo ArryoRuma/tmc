@@ -2,8 +2,7 @@
 // Additional projects not in ProjectsPortfolio
 const additionalProjects = ref([
   {
-    title:
-      "Industrial Snow Removal Marketing Case Study: 9.1x Growth in One Year",
+    title: "9.1× Revenue Growth for an Industrial Snow & Ice Contractor",
     to: "/projects/advanced-snow-management",
     thumbnail: "/images/projects/thumbnails/snow-removal.jpg",
     tags: [
@@ -15,8 +14,7 @@ const additionalProjects = ref([
     year: 2024,
   },
   {
-    title:
-      "B2B Electronics Marketplace Case Study: Seller Re-Activation and Outbound Growth",
+    title: "Seller Re-Activation & Outbound Growth for a B2B Marketplace",
     to: "/projects/bidchip",
     thumbnail: "/images/projects/thumbnails/bidchip.png",
     tags: [
@@ -28,8 +26,7 @@ const additionalProjects = ref([
     year: 2024,
   },
   {
-    title:
-      "Local Hair Salon Marketing Case Study: Retention, SEO, and Paid Ads",
+    title: "Increasing Retention and Demand for a High-End Local Salon",
     to: "/projects/cut-artisan-hair-design",
     thumbnail: "/images/projects/thumbnails/hair-salon.jpg",
     tags: [
@@ -41,8 +38,7 @@ const additionalProjects = ref([
     year: 2024,
   },
   {
-    title:
-      "Financial Consulting Lead Generation Case Study: Outbound Sales System",
+    title: "Building an Outbound Lead System for a Financial Consulting Firm",
     to: "/projects/ici-consulting",
     thumbnail: "/images/projects/thumbnails/ici-consulting.jpg",
     tags: [
@@ -66,29 +62,44 @@ const additionalProjects = ref([
     year: 2024,
   },
   {
-    title:
-      "Country Club AV System Case Study: Complete Lighting System Redesign",
-    to: "/projects/fiddlers-elbow-country-club",
-    thumbnail: "/images/projects/thumbnails/fiddlers-elbow.jpg",
-    tags: [
-      "AV System Design",
-      "Lighting Installation",
-      "System Integration",
-      "Technical Consultation",
-    ],
-    client_type: "Country Club & Entertainment Venue",
-    title: "Olivet Baptist Church - Professional Worship Production System",
+    title: "Live Production and Media Systems for a Modern Church Campus",
+    to: "/projects/south-ridge-cc",
+    thumbnail: "/images/projects/thumbnails/south-ridge-cc.jpg",
+    tags: ["Live Streaming", "AV Design", "AV Installation"],
+    client_type: "House of Worship",
+    year: 2024,
+  },
+  {
+    title: "Livestream and Worship Production Systems for a Growing Church",
+    to: "/projects/shore-christian",
+    thumbnail: "/images/projects/thumbnails/shore-christian.jpg",
+    tags: ["Live Streaming", "AV Design", "AV Installation"],
+    client_type: "House of Worship",
+    year: 2024,
+  },
+  {
+    title: "Sanctuary Audio and Media Upgrades for a Historic Church",
     to: "/projects/olivet-baptist-church",
     thumbnail: "/images/projects/thumbnails/olivet-baptist.jpg",
-    tags: [
-      "Live Stream Setup",
-      "Digital Board Installation",
-      "In-Ear Monitor System",
-      "Audio System Integration",
-      "Volunteer Training",
-    ],
-    client_type: "Church & Ministry Client",
+    tags: ["Live Streaming", "AV Design", "AV Installation"],
+    client_type: "House of Worship",
+    year: 2023,
+  },
+  {
+    title: "Portable Worship and Livestream Systems for a Church Plant",
+    to: "/projects/resurgent",
+    thumbnail: "/images/projects/thumbnails/resurgent.jpg",
+    tags: ["Live Streaming", "AV Design", "AV Installation"],
+    client_type: "House of Worship",
     year: 2024,
+  },
+  {
+    title: "Simple Post-Covid Streaming Solution for Local Church",
+    to: "/projects/church/spruce-run-lutheran",
+    thumbnail: "/images/projects/thumbnails/spruce-run-lutheran.jpg",
+    tags: ["Live Streaming", "AV Design", "AV Installation"],
+    client_type: "House of Worship",
+    year: 2023,
   },
 ]);
 
