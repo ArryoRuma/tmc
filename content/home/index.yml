@@ -5,7 +5,7 @@ seo:
   description: New Jersey-based digital marketing agency helping B2B and expert-led companies clarify their message, create sales-ready content, and deploy repeatable growth systems. Video production, web design, and marketing automation services.
 navigation: true
 hero:
-  headline: Video Marketing & Web Design That Turns B2B Expertise Into Revenue
+  headline: Marketing That Turns B2B Expertise Into Revenue
   title: We Help Brands Sell More Stuff.
   description:
   photo:
@@ -57,7 +57,7 @@ sections:
         description: #How do we build something that lasts?
         icon: i-lucide-circle-x
       - title: We're ready to grow.
-        description: We just need a smarter way to do it.
+        description:
         icon: i-lucide-circle-x
 
 clients:
@@ -104,6 +104,17 @@ features:
     - title: Dynamic Brand Activations
       description: Clear visibility into what’s live, what’s working, and where attention is turning into action.
       icon: i-lucide-activity
+cta_after_features:
+  title: Ready to get started?
+  description: See how we can help your business grow with proven marketing strategies.
+  links:
+    - label: Schedule a Discovery Call
+      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+      icon: i-lucide-phone
+    - label: Explore Our Services
+      to: /services
+      variant: subtle
+      icon: i-lucide-layers
 process:
   title: We've Got You Covered... Here's How.
   description: Our proven 4-step approach to creating marketing content that converts prospects into clients
@@ -167,6 +178,17 @@ testimonials:
         description: Large Non-Profit Client
         avatar:
           src:
+cta_after_testimonials:
+  title: Let's create something great together
+  description: Join the growing list of businesses we've helped achieve their marketing goals.
+  links:
+    - label: Get Started Today
+      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+      icon: i-lucide-calendar
+    - label: View Case Studies
+      to: /projects
+      variant: subtle
+      icon: i-lucide-folder-open
 cta:
   title: Ready to show proof and get it in front of the right buyers?
   description: Want to find out how done-for-you systems generate more pipeline, shorten sales cycles, and reduce burnout while your team focuses on closing deals? Book a strategy call today.

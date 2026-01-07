@@ -50,6 +50,17 @@ useSeoMeta({
         :items="page.features.items"
       />
     </FadeInUp>
+
+    <FadeInUp v-if="page.cta_after_features" :delay="0.2">
+      <UContainer>
+        <UPageCTA
+          v-bind="page.cta_after_features"
+          variant="naked"
+          class="py-8"
+        />
+      </UContainer>
+    </FadeInUp>
+
     <FadeInUp :delay="0.2">
       <UContainer>
         <PromotionalVideo class="rounded-lg shadow-md" />
@@ -67,6 +78,17 @@ useSeoMeta({
         :items="page.testimonials.items"
       />
     </FadeInUp>
+
+    <FadeInUp v-if="page.cta_after_testimonials" :delay="0.2">
+      <UContainer>
+        <UPageCTA
+          v-bind="page.cta_after_testimonials"
+          variant="naked"
+          class="py-8"
+        />
+      </UContainer>
+    </FadeInUp>
+
     <FadeInUp :delay="0.2">
       <ProjectsPortfolio />
     </FadeInUp>

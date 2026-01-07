@@ -394,6 +394,7 @@ export const collections = {
       features: createBaseSchema().extend({
         items: z.array(createFeatureItemSchema()),
       }),
+      cta_after_features: createCTASchema().optional(),
       process: z
         .object({
           title: z.string().nonempty(),
@@ -402,6 +403,7 @@ export const collections = {
         })
         .optional(),
       testimonials: createTestimonialsSchema(),
+      cta_after_testimonials: createCTASchema().optional(),
       cta: createCTASchema(),
     }),
   }),

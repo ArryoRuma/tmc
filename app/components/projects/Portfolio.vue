@@ -66,15 +66,6 @@ const projects = ref([
     client_type: "Manufacturing Client",
     year: 2024,
   },
-  {
-    _path: "/projects/fiddlers-elbow-country-club",
-    title: "Ballroom Lighting Design for a Luxury Country Club Event Space",
-    to: "/projects/fiddlers-elbow-country-club",
-    thumbnail: "/images/projects/thumbnails/fiddlers-elbow-ballroom.jpg",
-    tags: ["AV Design", "AV Install"],
-    client_type: "Venue",
-    year: 2023,
-  },
 ]);
 </script>
 
