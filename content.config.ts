@@ -613,18 +613,12 @@ export const collections = {
   outreachengine: defineCollection({
     source: "solutions/outreach-engine.yml",
     type: "page",
-    schema: z.object({
+    schema: createPageMetaSchema().extend({
       hero: createHeroSchema(),
-      sections: z.array(createSectionSchema()),
       features: createBaseSchema().extend({
         items: z.array(createFeatureItemSchema()),
       }),
-      image: createBaseSchema().extend({
-        src: z.string().nonempty().editor({ input: "media" }),
-        alt: z.string().optional(),
-        loading: z.string().optional(),
-        srcset: z.string().optional(),
-      }),
+      pricing: createPricingSchema(),
       testimonials: createTestimonialsSchema(),
       cta: createCTASchema(),
     }),
