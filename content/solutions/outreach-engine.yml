@@ -98,16 +98,16 @@ pricing:
         amount: 2500
         billing: one-time
       features:
-        - title: 1 Hero Interview Video
+        - title: Full-day intensive shoot session
+          icon: i-lucide-calendar-days
+        - title: 10+ Video clips for social media
           icon: i-lucide-video
-        - title: 3 Short Cutdowns for social
-          icon: i-lucide-clapperboard
-        - title: PDF Case Study Companion ($500 value)
-          icon: i-lucide-file-text
-        - title: 15-Second Teaser ($1,000 value)
-          icon: i-lucide-repeat-2
-        - title: Podcast Export ($300 Value)
-          icon: i-lucide-mic
+        - title: Behind-the-scenes content
+          icon: i-lucide-camera
+        - title: B-roll footage library
+          icon: i-lucide-film
+        - title: Content calendar included
+          icon: i-lucide-calendar
       button:
         label: Learn More
         to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
@@ -217,4 +217,3 @@ cta:
       to: /
       variant: subtle
       icon: i-lucide-layers
-image: /Users/larryontruman/Desktop/TruMedia-Creative-website/saas/public/images/OutReach-Engine.png
