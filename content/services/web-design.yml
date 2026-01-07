@@ -48,7 +48,7 @@ sections:
     image:
       src: /images/services/video-growth-engine/video-engine-problem.png
       alt: Problem with Most Company Websites
-    description:
+    description: >
       Most company websites look polished but fail at their core job, turning interest into action.
       They act like digital brochures instead of revenue assets—disconnected from sales, unclear on who they serve,
       and silent when buyers are ready to decide. These are the most common points of failure we see in company websites.
@@ -112,13 +112,13 @@ sections:
           and downstream revenue impact.
         icon: i-lucide-line-chart
       - title: Fast Updates Without Developer Bottlenecks
-        description:
-          &gt; Content, messaging, and offers can be updated quickly without breaking layouts
+        description: >
+          Content, messaging, and offers can be updated quickly without breaking layouts
           or relying on long dev cycles.
         icon: i-lucide-zap
       - title: SEO-Ready by Default, Not as an Afterthought
-        description:
-          &gt; Pages are structured for discoverability, clarity, and long-term search performance,
+        description: >
+          Pages are structured for discoverability, clarity, and long-term search performance,
           so the site compounds value over time.
         icon: i-lucide-search
     links:
@@ -134,30 +134,30 @@ sections:
     reverse: false
     headline: How We Help You Win More Deals with Your Website
     title: How Our Web Design Process Works
-    description:
-      &gt; We help you turn your expertise into a strategic website that supports
+    description: >
+      We help you turn your expertise into a strategic website that supports
       marketing and sales at every stage of the buying journey. Our web design
       approach combines positioning, structure, and deployment so your site is
       built with intention and performs where it matters most.
     features:
       - title: Message & Positioning Clarity
-        description:
-          &gt; We define your core message, positioning, and differentiation so your
+        description: >
+          We define your core message, positioning, and differentiation so your
           website speaks directly to the problems your buyers care about.
         icon: i-lucide-compass
       - title: Buyer-Focused Site Architecture
-        description:
-          &gt; We design a structured site mapped to buyer stages including
+        description: >
+          We design a structured site mapped to buyer stages including
           education, evaluation, objection handling, and decision support.
         icon: i-lucide-map
       - title: Strategic Website Development
-        description:
-          &gt; We build focused, conversion-ready pages designed for clarity,
+        description: >
+          We build focused, conversion-ready pages designed for clarity,
           credibility, and real-world sales usage.
         icon: i-lucide-layout-template
       - title: Sales & Marketing Integration
-        description:
-          &gt; We help integrate your website into outreach, follow-ups, proposals, and
+        description: >
+          We help integrate your website into outreach, follow-ups, proposals, and
           sales conversations so it actively supports deals.
         icon: i-lucide-plug
     links:
@@ -178,30 +178,30 @@ sections:
     reverse: true
     headline: Real Results from Our Web Design Approach
     title: Proof That Strategic Web Design Works
-    description:
-      &gt; Companies use our web design approach to improve buyer engagement,
+    description: >
+      Companies use our web design approach to improve buyer engagement,
       shorten evaluation cycles, and turn their website into an active revenue
       asset across the entire buying journey. Instead of a static brochure,
       teams gain a strategic website that actively supports real deals.
     features:
       - title: 25-40% Increase in Qualified Inquiries
-        description:
-          &gt; Clear positioning and conversion-focused pages generate more leads
+        description: >
+          Clear positioning and conversion-focused pages generate more leads
           from the same traffic. Most clients see measurable lift within 60 days.
         icon: i-lucide-trending-up
       - title: Sales Cycles Reduced by 15-30%
-        description:
-          &gt; Prospects arrive informed and aligned before the first call, reducing
+        description: >
+          Prospects arrive informed and aligned before the first call, reducing
           the time spent explaining and re-educating by an average of 2-3 touchpoints.
         icon: i-lucide-clock
       - title: Higher-Quality Sales Conversations
-        description:
-          &gt; Sales teams focus on fit, priorities, and next steps rather than basic
+        description: >
+          Sales teams focus on fit, priorities, and next steps rather than basic
           explanations or repeated objections—improving close rates by 20-35%.
         icon: i-lucide-message-circle
       - title: Stronger Buyer Confidence & Faster Decisions
-        description:
-          &gt; Clear messaging and visible proof help buyers make decisions with less
+        description: >
+          Clear messaging and visible proof help buyers make decisions with less
           friction and fewer internal delays, reducing stalled deals by approximately 40%.
         icon: i-lucide-shield-check
     links:
