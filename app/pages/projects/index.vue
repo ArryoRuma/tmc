@@ -79,7 +79,7 @@ const additionalProjects = ref([
   },
   {
     title: "Sanctuary Audio and Media Upgrades for a Historic Church",
-    to: "/projects/olivet-baptist",
+    to: "/projects/olivet-baptist-church",
     thumbnail: "/images/projects/thumbnails/olivet-baptist.jpg",
     tags: ["Live Streaming", "AV Design", "AV Installation"],
     client_type: "House of Worship",
