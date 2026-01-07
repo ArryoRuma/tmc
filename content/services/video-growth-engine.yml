@@ -1,9 +1,10 @@
 title: Grow your business with a video growth strategy
-description: 'A video-led growth system that clarifies your message, builds trust with buyers,
+description:
+  "A video-led growth system that clarifies your message, builds trust with buyers,
 
   and turns your expertise into sales-ready assets your team can actually use.
 
-  '
+  "
 seo:
   title: Video Growth Engine™ for B2B & Expert-Led Companies | TruMedia Creative | Video‑Led Growth Agency for Industrial, Financial & Professional Services (NJ)
   description: A video-led growth system that clarifies your message, builds trust, and turns content into booked meetings. Built for B2B and expert-led companies.
@@ -12,270 +13,276 @@ hero:
   headline: Video Production + Distribution Systems
   title: Grow your business with a video growth strategy
   links:
-  - label: Book a Video Growth Strategy Call
-    icon: i-lucide-calendar
-    to: /contact
-    trailingIcon: i-lucide-arrow-right
-    size: xl
+    - label: Book a Video Growth Strategy Call
+      icon: i-lucide-calendar
+      to: /contact
+      trailingIcon: i-lucide-arrow-right
+      size: xl
 sections:
-- id: problem
-  title: The Problem with Most B2B Marketing Videos
-  headline: Why Most Marketing Videos Don't Drive Revenue
-  orientation: horizontal
-  reverse: false
-  image:
-    src: /images/services/video-growth-engine/video-engine-problem.png
-    alt: Problem with Most Marketing Videos
-  description: Most marketing videos look great but don't drive results. They sit on websites or YouTube, disconnected from actual sales conversations. Here's what usually goes wrong.
-  links:
-  - label: Fix the Gaps in Your Current Video Strategy.
-    to: /contact
-    trailingIcon: i-lucide-arrow-right
-    icon: i-lucide-video
-  features:
-  - title: Created as one-offs, not part of a system
-    description: Without clear purpose or buyer focus, videos become expensive decorations.
-    icon: i-lucide-video-off
-  - title: Sit on websites without driving action
-    description: Videos gather dust instead of generating conversations or leads.
-    icon: i-lucide-youtube
-  - title: Don't address buyer questions or objections
-    description: Generic content that misses what buyers actually care about.
-    icon: i-lucide-circle-question-mark
-  - title: Sales teams never use them
-    description: Videos don't make it into real deals or sales conversations.
-    icon: i-lucide-user-x
-  - title: Measured by views, not revenue
-    description: Vanity metrics replace what matters—pipeline and closed deals.
-    icon: i-lucide-eye-off
-- id: solution
-  image:
-    src: /images/services/video-growth-engine/video-engine-solution.png
-    alt: Solution to Drive Revenue with Video
-  orientation: horizontal
-  reverse: true
-  headline: What's Required for Video to Actually Drive Revenue
-  title: The Solution to Drive Revenue with Video
-  description: Video drives revenue when it supports how buyers evaluate options, build trust, and make decisions. That requires clear messaging, intentional sequencing, and deployment in real sales conversations.
-  features:
-  - title: Clear Message & Buyer Alignment
-    description: Your message speaks directly to buyer problems so prospects quickly understand your value.
-    icon: i-lucide-target
-  - title: Intentional Video Roles
-    description: Each video has a defined purpose that moves buyers forward.
-    icon: i-lucide-layers
-  - title: Sales-Enabled Distribution
-    description: Videos are used in outreach, follow-ups, and proposals where decisions happen.
-    icon: i-lucide-briefcase
-  - title: Measurable Business Impact
-    description: Success measured by sales usage, deal velocity, and pipeline impact.
-    icon: i-lucide-line-chart
-  links:
-  - label: Want to See How This Would Work in Your Sales Process?
-    to: /contact
-    trailingIcon: i-lucide-arrow-right
-    icon: i-lucide-video
-- id: how-we-help
-  image:
-    src: /images/services/video-growth-engine/video-engine-process.png
-    alt: How We Help You Win More Deals with Video
-  orientation: horizontal
-  reverse: false
-  headline: How the Video Growth Engine™ Works
-  title: How We Help You Win More Deals with Video
-  description: We turn your expertise into a video system that supports marketing and sales at every buying stage. The Video Growth Engine™ combines strategy, production, and deployment so videos are created with intention and used where they matter most.
-  features:
-  - title: Message & Positioning Clarity
-    description: Define your core message and differentiation so every video speaks to buyer problems.
-    icon: i-lucide-compass
-  - title: Buyer-Focused Video Framework
-    description: Structured videos mapped to buyer stages—education, evaluation, objection handling, decision support.
-    icon: i-lucide-map
-  - title: Strategic Video Production
-    description: Focused, reusable assets designed for clarity, credibility, and sales usage.
-    icon: i-lucide-video
-  - title: Sales & Marketing Deployment
-    description: Integrate video into outreach, follow-ups, proposals, and sales conversations.
-    icon: i-lucide-plug
-  links:
-  - label: See How the Video Growth Engine Works
-    to: /contact
-    trailingIcon: i-lucide-arrow-right
-    icon: i-lucide-video
-- id: proof
-  image:
-    src: /images/services/video-growth-engine/video-engine-proof.png
-    alt: Proof That the Video Growth Engine Works
-  orientation: horizontal
-  reverse: true
-  headline: Proof That the Video Growth Engine™ Works
-  title: Real Results from the Video Growth Engine™
-  description: Companies use the Video Growth Engine™ to improve sales conversations, shorten cycles, and make marketing more effective. Instead of unused content, teams gain video assets that actively support deals.
-  features:
-  - title: Shorter Sales Cycles
-    description: Prospects arrive informed before the first call, reducing explanation time.
-    icon: i-lucide-clock
-  - title: Higher-Quality Sales Conversations
-    description: Sales teams focus on fit and next steps, not basic explanations.
-    icon: i-lucide-message-circle
-  - title: Increased Content Adoption
-    description: Videos consistently used in outreach and proposals instead of sitting idle.
-    icon: i-lucide-play
-  - title: Stronger Buyer Confidence
-    description: Clear messaging helps buyers decide with less friction.
-    icon: i-lucide-shield-check
-  links:
-  - label: Explore Proof Clips from Clients
-    to: /projects
-    trailingIcon: i-lucide-arrow-right
-    icon: i-lucide-video
-- id: includes
-  image:
-    src: /images/services/video-growth-engine/video-engine-included.png
-    alt: What's Included in the Video Growth Engine
-  orientation: horizontal
-  reverse: false
-  links:
-  - label: Compare What's Included vs Traditional Video Production
-    to: /contact
-    trailingIcon: i-lucide-arrow-right
-    icon: i-lucide-video
-  - label: See Our Full Video Growth Packages
-    to: /contact
-    trailingIcon: i-lucide-arrow-right
-    icon: i-lucide-video
-    variant: subtle
-  headline: What’s Included in the Video Growth Engine
-  title: What’s Included in the Video Growth Engine
-  description: The Video Growth Engine combines strategy, production, and deployment. Everything is designed to ensure your videos are clear, usable, and integrated into how your team sells.
-  features:
-  - title: Messaging & Positioning Workshop
-    description: Guided session to clarify your message, differentiation, and buyer priorities.
-    icon: i-lucide-target
-    price:
-      display: Included ($1,500 value)
-  - title: Buyer-Focused Video Framework
-    description: Defined video types mapped to buyer stages—education, evaluation, objection handling, decision support.
-    icon: i-lucide-map
-  - title: Strategic Video Production
-    description: Professional assets designed for clarity, credibility, and repeat use.
-    icon: i-lucide-video
-  - title: Sales & Outreach-Ready Cuts
-    description: Short versions optimized for emails, follow-ups, and proposals.
-    icon: i-lucide-mail
-  - title: Deployment & Usage Guidance
-    description: Direction on integrating videos into CRM workflows and outreach sequences.
-    icon: i-lucide-settings
-- id: not-for
-  orientation: horizontal
-  reverse: true
-  image:
-    src: /images/services/video-growth-engine/video-engine-not-for.png
-    alt: Who the Video Growth Engine Is Not For
-  headline: Who This Is Not For
-  links:
-  - label: See If You’re a Good Fit
-    to: /contact
-    trailingIcon: i-lucide-arrow-right
-    icon: i-lucide-video
-  title: Who the Video Growth Engine™ Is Not For
-  description: The Video Growth Engine works best for teams that want video to support revenue, not just branding.
-  features:
-  - title: Not for One-Off Videos
-    description: Teams wanting a single video without a broader system.
-    icon: i-lucide-x-circle
-  - title: Not for Pure Awareness Campaigns
-    description: Companies focused only on impressions and views, not sales impact.
-    icon: i-lucide-eye-off
-  - title: Not for Low-Commitment Teams
-    description: Organizations unwilling to align marketing and sales or adopt new workflows.
-    icon: i-lucide-user-round-x
+  - id: problem
+    title: The Problem with Most B2B Marketing Videos
+    headline: Why Most Marketing Videos Don't Drive Revenue
+    orientation: horizontal
+    reverse: false
+    image:
+      src: /images/services/video-growth-engine/video-engine-problem.png
+      alt: Problem with Most Marketing Videos
+    description: Most marketing videos look great but don't drive results. They sit on websites or YouTube, disconnected from actual sales conversations. Here's what usually goes wrong.
+    links:
+      - label: Fix the Gaps in Your Current Video Strategy.
+        to: /contact
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-video
+    features:
+      - title: Created as one-offs, not part of a system
+        description: Without clear purpose or buyer focus, videos become expensive decorations.
+        icon: i-lucide-video-off
+      - title: Sit on websites without driving action
+        description: Videos gather dust instead of generating conversations or leads.
+        icon: i-lucide-youtube
+      - title: Don't address buyer questions or objections
+        description: Generic content that misses what buyers actually care about.
+        icon: i-lucide-circle-question-mark
+      - title: Sales teams never use them
+        description: Videos don't make it into real deals or sales conversations.
+        icon: i-lucide-user-x
+      - title: Measured by views, not revenue
+        description: Vanity metrics replace what matters—pipeline and closed deals.
+        icon: i-lucide-eye-off
+  - id: solution
+    image:
+      src: /images/services/video-growth-engine/video-engine-solution.png
+      alt: Solution to Drive Revenue with Video
+    orientation: horizontal
+    reverse: true
+    headline: What's Required for Video to Actually Drive Revenue
+    title: The Solution to Drive Revenue with Video
+    description: Video drives revenue when it supports how buyers evaluate options, build trust, and make decisions. That requires clear messaging, intentional sequencing, and deployment in real sales conversations.
+    features:
+      - title: Clear Message & Buyer Alignment
+        description: Your message speaks directly to buyer problems so prospects quickly understand your value.
+        icon: i-lucide-target
+      - title: Intentional Video Roles
+        description: Each video has a defined purpose that moves buyers forward.
+        icon: i-lucide-layers
+      - title: Sales-Enabled Distribution
+        description: Videos are used in outreach, follow-ups, and proposals where decisions happen.
+        icon: i-lucide-briefcase
+      - title: Measurable Business Impact
+        description: Success measured by sales usage, deal velocity, and pipeline impact.
+        icon: i-lucide-line-chart
+    links:
+      - label: Want to See How This Would Work in Your Sales Process?
+        to: /contact
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-video
+  - id: how-we-help
+    image:
+      src: /images/services/video-growth-engine/video-engine-process.png
+      alt: How We Help You Win More Deals with Video
+    orientation: horizontal
+    reverse: false
+    headline: How the Video Growth Engine™ Works
+    title: How We Help You Win More Deals with Video
+    description: We turn your expertise into a video system that supports marketing and sales at every buying stage. The Video Growth Engine™ combines strategy, production, and deployment so videos are created with intention and used where they matter most.
+    features:
+      - title: Message & Positioning Clarity
+        description: Define your core message and differentiation so every video speaks to buyer problems.
+        icon: i-lucide-compass
+      - title: Buyer-Focused Video Framework
+        description: Structured videos mapped to buyer stages—education, evaluation, objection handling, decision support.
+        icon: i-lucide-map
+      - title: Strategic Video Production
+        description: Focused, reusable assets designed for clarity, credibility, and sales usage.
+        icon: i-lucide-video
+      - title: Sales & Marketing Deployment
+        description: Integrate video into outreach, follow-ups, proposals, and sales conversations.
+        icon: i-lucide-plug
+    links:
+      - label: See How the Video Growth Engine Works
+        to: /contact
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-video
+  - id: proof
+    image:
+      src: /images/services/video-growth-engine/video-engine-proof.png
+      alt: Proof That the Video Growth Engine Works
+    orientation: horizontal
+    reverse: true
+    headline: Proof That the Video Growth Engine™ Works
+    title: Real Results from the Video Growth Engine™
+    description: Companies use the Video Growth Engine™ to improve sales conversations, shorten cycles, and make marketing more effective. Instead of unused content, teams gain video assets that actively support deals.
+    features:
+      - title: Shorter Sales Cycles
+        description: Prospects arrive informed before the first call, reducing explanation time.
+        icon: i-lucide-clock
+      - title: Higher-Quality Sales Conversations
+        description: Sales teams focus on fit and next steps, not basic explanations.
+        icon: i-lucide-message-circle
+      - title: Increased Content Adoption
+        description: Videos consistently used in outreach and proposals instead of sitting idle.
+        icon: i-lucide-play
+      - title: Stronger Buyer Confidence
+        description: Clear messaging helps buyers decide with less friction.
+        icon: i-lucide-shield-check
+    links:
+      - label: Explore Proof Clips from Clients
+        to: /projects
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-video
+  - id: includes
+    image:
+      src: /images/services/video-growth-engine/video-engine-included.png
+      alt: What's Included in the Video Growth Engine
+    orientation: horizontal
+    reverse: false
+    links:
+      - label: Compare What's Included vs Traditional Video Production
+        to: /contact
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-video
+      - label: See Our Full Video Growth Packages
+        to: /contact
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-video
+        variant: subtle
+    headline: What’s Included in the Video Growth Engine
+    title: What’s Included in the Video Growth Engine
+    description: The Video Growth Engine combines strategy, production, and deployment. Everything is designed to ensure your videos are clear, usable, and integrated into how your team sells.
+    features:
+      - title: Messaging & Positioning Workshop
+        description: Guided session to clarify your message, differentiation, and buyer priorities.
+        icon: i-lucide-target
+        price:
+          display: Included ($1,500 value)
+      - title: Buyer-Focused Video Framework
+        description: Defined video types mapped to buyer stages—education, evaluation, objection handling, decision support.
+        icon: i-lucide-map
+      - title: Strategic Video Production
+        description: Professional assets designed for clarity, credibility, and repeat use.
+        icon: i-lucide-video
+      - title: Sales & Outreach-Ready Cuts
+        description: Short versions optimized for emails, follow-ups, and proposals.
+        icon: i-lucide-mail
+      - title: Deployment & Usage Guidance
+        description: Direction on integrating videos into CRM workflows and outreach sequences.
+        icon: i-lucide-settings
+  - id: not-for
+    orientation: horizontal
+    reverse: true
+    image:
+      src: /images/services/video-growth-engine/video-engine-not-for.png
+      alt: Who the Video Growth Engine Is Not For
+    headline: Who This Is Not For
+    links:
+      - label: See If You’re a Good Fit
+        to: /contact
+        trailingIcon: i-lucide-arrow-right
+        icon: i-lucide-video
+    title: Who the Video Growth Engine™ Is Not For
+    description: The Video Growth Engine works best for teams that want video to support revenue, not just branding.
+    features:
+      - title: Not for One-Off Videos
+        description: Teams wanting a single video without a broader system.
+        icon: i-lucide-x-circle
+      - title: Not for Pure Awareness Campaigns
+        description: Companies focused only on impressions and views, not sales impact.
+        icon: i-lucide-eye-off
+      - title: Not for Low-Commitment Teams
+        description: Organizations unwilling to align marketing and sales or adopt new workflows.
+        icon: i-lucide-user-round-x
 features:
   title: Video Growth Engine Packages
-  description: 'Choose the right way to start with the Video Growth Engine. Each package is designed to turn your expertise into sales-ready video assets your team can use across marketing, sales, and outreach.
+  description:
+    "Choose the right way to start with the Video Growth Engine. Each package is designed to turn your expertise into sales-ready video assets your team can use across marketing, sales, and outreach.
 
-    '
+    "
   items:
-  - title: FAQ Authority Pack
-    description: 'Turn your most common buyer questions into trust-building videos that Marketing  publishes and Sales sends before discovery calls. Answer objections early,  build credibility, and shorten your sales cycle.
+    - title: FAQ Authority Pack
+      description:
+        "Turn your most common buyer questions into trust-building videos that Marketing  publishes and Sales sends before discovery calls. Answer objections early,  build credibility, and shorten your sales cycle.
 
-      '
-    icon: i-lucide-circle-question-mark
-    to: /contact
-    price:
-      display: Starting at $5,000
-  - title: Case Study Engine
-    description: 'Transform client wins into social proof that closes deals. Video case studies  build credibility across outreach, proposals, and sales conversations—turning  happy customers into your best sales tool.
+        "
+      icon: i-lucide-circle-question-mark
+      to: /contact
+      price:
+        display: Starting at $5,000
+    - title: Case Study Engine
+      description:
+        "Transform client wins into social proof that closes deals. Video case studies  build credibility across outreach, proposals, and sales conversations—turning  happy customers into your best sales tool.
 
-      '
-    icon: i-lucide-award
-    to: /contact
-    price:
-      display: Starting at $8,000
-  - title: Content Storm Day
-    description: 'One focused shoot day delivers months of sales-ready video content. Walk away  with assets for outreach, social, email sequences, and website—all aligned with  your buyer journey and message.
+        "
+      icon: i-lucide-award
+      to: /contact
+      price:
+        display: Starting at $8,000
+    - title: Content Storm Day
+      description:
+        "One focused shoot day delivers months of sales-ready video content. Walk away  with assets for outreach, social, email sequences, and website—all aligned with  your buyer journey and message.
 
-      '
-    icon: i-lucide-camera
-    to: /contact
-    price:
-      display: Starting at $12,000
-  - title: Video Growth Club
-    description: 'Monthly video production that keeps your pipeline full. Recurring shoot days,  ongoing edits, and strategy support ensure you always have fresh content for  sales enablement and demand generation.
+        "
+      icon: i-lucide-camera
+      to: /contact
+      price:
+        display: Starting at $12,000
+    - title: Video Growth Club
+      description:
+        "Monthly video production that keeps your pipeline full. Recurring shoot days,  ongoing edits, and strategy support ensure you always have fresh content for  sales enablement and demand generation.
 
-      '
-    icon: i-lucide-repeat
-    to: /contact
-    price:
-      display: $4,500/month
-  - title: Strategic Fit Session
-    description: 'Not sure where to start? Book a 90-minute working session to clarify your  message, identify content gaps, and map which videos will drive the most  revenue impact for your business.
+        "
+      icon: i-lucide-repeat
+      to: /contact
+      price:
+        display: $4,500/month
+    - title: Strategic Fit Session
+      description:
+        "Not sure where to start? Book a 90-minute working session to clarify your  message, identify content gaps, and map which videos will drive the most  revenue impact for your business.
 
-      '
-    icon: i-lucide-calendar
-    to: /contact
-    price:
-      display: $500
+        "
+      icon: i-lucide-calendar
+      to: /contact
+      price:
+        display: $500
 testimonials:
   headline: Recent Work & Outcomes
   title: Here what our clients are saying.
   description: A sampling of outcomes clients see when they pair video with a simple distribution plan and our Outreach Engine.
   items:
-  - quote: Short, honest stories reduced the back‑and‑forth and helped prospects show up pre‑sold.
-    user:
-      name: Manufacturing Client
-      description: Operations‑led B2B company
-      avatar:
-        src: https://i.pravatar.cc/120?img=1
-  - quote: The FAQ library answered objections we used to handle on calls—sales cycles feel noticeably shorter.
-    user:
-      name: Professional Services Client
-      description: Boutique consulting firm
-      avatar:
-        src: https://i.pravatar.cc/120?img=7
-  - quote: Monthly shoot days kept us consistent. We finally have the assets sales has been asking for.
-    user:
-      name: Industrial Services Client
-      description: Regional contractor
-      avatar:
-        src: https://i.pravatar.cc/120?img=3
+    - quote: Short, honest stories reduced the back‑and‑forth and helped prospects show up pre‑sold.
+      user:
+        name: Manufacturing Client
+        description: Operations‑led B2B company
+        avatar:
+          src: https://i.pravatar.cc/120?img=1
+    - quote: The FAQ library answered objections we used to handle on calls—sales cycles feel noticeably shorter.
+      user:
+        name: Professional Services Client
+        description: Boutique consulting firm
+        avatar:
+          src: https://i.pravatar.cc/120?img=7
+    - quote: Monthly shoot days kept us consistent. We finally have the assets sales has been asking for.
+      user:
+        name: Industrial Services Client
+        description: Regional contractor
+        avatar:
+          src: https://i.pravatar.cc/120?img=3
 videoShowcase:
   title: Client Video Success Stories
   description: See real examples of how our Video Growth Engine™ has helped B2B companies clarify their message, build trust, and drive revenue
   headline: Video Proof Clips
   videos:
-  - title: Manufacturing Success Story
-    description: How a manufacturing company shortened their sales cycle with strategic video content
-    src: https://player.vimeo.com/progressive_redirect/playback/863697186/rendition/1080p/file.mp4?loc=external&log_user=0&signature=ace347a7ef2ae2c91e3efd8640f53115e73bdc49bb08c3e708613f404465b9d4
-    poster: /images/reel.png
-  - title: Financial Services Case Study
-    description: B2B financial firm increases qualified leads with targeted video messaging
-    src: https://player.vimeo.com/progressive_redirect/playback/863697186/rendition/1080p/file.mp4?loc=external&log_user=0&signature=ace347a7ef2ae2c91e3efd8640f53115e73bdc49bb08c3e708613f404465b9d4
-    poster: /images/reel.png
-  - title: Professional Services
-    description: Consulting firm builds trust and credibility with client testimonial videos
-    src: https://player.vimeo.com/progressive_redirect/playback/863697186/rendition/1080p/file.mp4?loc=external&log_user=0&signature=ace347a7ef2ae2c91e3efd8640f53115e73bdc49bb08c3e708613f404465b9d4
-    poster: /images/reel.png
+    - title: Manufacturing Success Story
+      description: How a manufacturing company shortened their sales cycle with strategic video content
+      src: https://player.vimeo.com/progressive_redirect/playback/863697186/rendition/1080p/file.mp4?loc=external&log_user=0&signature=ace347a7ef2ae2c91e3efd8640f53115e73bdc49bb08c3e708613f404465b9d4
+      poster: /images/reel.png
+    - title: Financial Services Case Study
+      description: B2B financial firm increases qualified leads with targeted video messaging
+      src: https://player.vimeo.com/progressive_redirect/playback/863697186/rendition/1080p/file.mp4?loc=external&log_user=0&signature=ace347a7ef2ae2c91e3efd8640f53115e73bdc49bb08c3e708613f404465b9d4
+      poster: /images/reel.png
+    - title: Professional Services
+      description: Consulting firm builds trust and credibility with client testimonial videos
+      src: https://player.vimeo.com/progressive_redirect/playback/863697186/rendition/1080p/file.mp4?loc=external&log_user=0&signature=ace347a7ef2ae2c91e3efd8640f53115e73bdc49bb08c3e708613f404465b9d4
+      poster: /images/reel.png
 cta:
   title: Ready to show proof and get it in front of the right buyers?
   description: Pick a package or book a strategy call. Done-for-you systems generate more pipeline, shorten sales cycles, and reduce burnout while your team focuses on closing deals.
@@ -283,10 +290,10 @@ cta:
     src: /images/services/video-growth-engine/video-engine-cta.png
     alt: Book a Video Growth Strategy Call
   links:
-  - label: Book a Video Growth Strategy Call
-    to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
-    trailingIcon: i-lucide-arrow-right
-  - label: See Video + Outreach Packages
-    to: /
-    variant: subtle
-    icon: i-lucide-layers
+    - label: Book a Video Growth Strategy Call
+      to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a
+      trailingIcon: i-lucide-arrow-right
+    - label: See Video + Outreach Packages
+      to: /
+      variant: subtle
+      icon: i-lucide-layers
