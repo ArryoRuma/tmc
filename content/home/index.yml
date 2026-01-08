@@ -59,7 +59,7 @@ sections:
       - title: We're ready to grow.
         description:
         icon: i-lucide-circle-x
-
+#TODO: Update client logos to SVGs where possible, as well as formatting correct dimensions and alt text.
 clients:
   title: Featured Clients
   description: Trusted by leaders across manufacturing, logistics, and professional services.

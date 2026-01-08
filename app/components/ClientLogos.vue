@@ -24,8 +24,8 @@ const logos = [
     src: "/images/clients/sp.png",
     alt: "Samaritan's Purse",
   },
-  // add more here as you go:
-  // { src: '/images/clients/whatever.png', alt: 'Whatever Co.' }
+  // TODO: add more here from /images/clients { src: '/images/clients/whatever.png', alt: 'Whatever Co.' }
+
 ];
 </script>
 

@@ -26,6 +26,7 @@ useSeoMeta({
         <template #title>
           <HomeHeroTitle />
         </template>
+
         <HomeMarquee />
       </UPageHero>
     </FadeInUp>

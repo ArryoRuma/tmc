@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative w-full h-[500px] overflow-hidden bg-gradient-to-br from-stone-100 to-stone-200 dark:from-stone-900 dark:to-stone-800"
+    class="relative w-full h-[500px] overflow-hidden bg-gradient-to-br from-stone-100 to-stone-200 dark:from-stone-900 dark:to-stone-800 shadow-2xl drop-shadow-2xl"
     style="perspective: 1000px"
   >
     <!-- First column - reverse -->
@@ -19,7 +19,7 @@
         width="460"
         height="258"
         :alt="`Nuxt UI Screenshot ${i}`"
-        class="aspect-video border border-default rounded-lg bg-white shadow-2xl drop-shadow-2xl"
+        class="aspect-video border border-default rounded-lg bg-white"
       />
     </UMarquee>
 
@@ -38,7 +38,7 @@
         width="460"
         height="258"
         :alt="`Nuxt UI Screenshot ${i}`"
-        class="aspect-video border border-default rounded-lg bg-white shadow-2xl drop-shadow-2xl"
+        class="aspect-video border border-default rounded-lg bg-white"
       />
     </UMarquee>
 
@@ -58,7 +58,7 @@
         width="460"
         height="258"
         :alt="`Nuxt UI Screenshot ${i}`"
-        class="aspect-video border border-default rounded-lg bg-white shadow-2xl drop-shadow-2xl"
+        class="aspect-video border border-default rounded-lg bg-white"
       />
     </UMarquee>
   </div>
