@@ -18,7 +18,7 @@
 
       <AppHeader />
 
-      <UMain class="relative">
+      <UMain as="main" class="relative">
         <slot />
       </UMain>
 
