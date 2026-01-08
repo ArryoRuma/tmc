@@ -5,8 +5,36 @@ const logos = [
     alt: "Amazon",
   },
   {
+    src: "/images/clients/autodrill.png",
+    alt: "AutoDrill",
+  },
+  {
+    src: "/images/clients/bidchip.svg",
+    alt: "BidChip",
+  },
+  {
     src: "/images/clients/chickfila.png",
     alt: "Chick-fil-A",
+  },
+  {
+    src: "/images/clients/colsonfellows.png",
+    alt: "Colson Fellows",
+  },
+  {
+    src: "/images/clients/cru.png",
+    alt: "Cru",
+  },
+  {
+    src: "/images/clients/fca.png",
+    alt: "FCA",
+  },
+  {
+    src: "/images/clients/ici.png",
+    alt: "ICI Consulting",
+  },
+  {
+    src: "/images/clients/nae.png",
+    alt: "NAE",
   },
   {
     src: "/images/clients/nascar.png",
@@ -24,8 +52,26 @@ const logos = [
     src: "/images/clients/sp.png",
     alt: "Samaritan's Purse",
   },
-  // TODO: add more here from /images/clients { src: '/images/clients/whatever.png', alt: 'Whatever Co.' }
-
+  {
+    src: "/images/clients/steiger.png",
+    alt: "Steiger International",
+  },
+  {
+    src: "/images/clients/treestaple.png",
+    alt: "TreeStaple",
+  },
+  {
+    src: "/images/clients/uwm.png",
+    alt: "UWM",
+  },
+  {
+    src: "/images/clients/wheaton.png",
+    alt: "Wheaton College",
+  },
+  {
+    src: "/images/clients/zerosurge.png",
+    alt: "ZeroSurge",
+  },
 ];
 </script>
 
