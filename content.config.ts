@@ -82,6 +82,15 @@ const createPersonSchema = () =>
     links: z.array(createLinkSchema()).optional(),
   });
 
+const createClientLogoSchema = () =>
+  z.object({
+    name: z.string().nonempty(),
+    logo: z.string().nonempty().editor({ input: "media" }),
+    alt: z.string().nonempty(),
+    link: z.string().optional(),
+    enabled: z.boolean().optional().default(true),
+  });
+
 const createProcessStepSchema = () =>
   z.object({
     id: z.string().nonempty(),
@@ -876,6 +885,16 @@ export const collections = {
           description: z.string().nonempty(),
         }),
       }),
+    }),
+  }),
+
+  // Client Logos
+  clientlogos: defineCollection({
+    source: "client-logos.yml",
+    type: "page",
+    schema: z.object({
+      title: z.string().nonempty(),
+      logos: z.array(createClientLogoSchema()),
     }),
   }),
 
