@@ -91,6 +91,11 @@ export default defineAppConfig({
         },
       },
     },
+    marquee: {
+      slots: {
+        root: "[--duration:40s]",
+      },
+    },
     pageSection: {
       slots: {
         root: "py-4 ",

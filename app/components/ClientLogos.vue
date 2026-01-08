@@ -1,4 +1,5 @@
 <script setup lang="ts">
+//TODO: Move logos to a content collection and create it so that it can have links associated with them as well as the ability to turn them on and off.
 const logos = [
   {
     src: "/images/clients/amazon.png",
@@ -89,6 +90,7 @@ const logos = [
         :alt="logo.alt"
         class="h-20 sm:h-28 md:h-32 object-contain brightness-0 dark:brightness-0 dark:invert transition"
         loading="lazy"
+        
       />
     </UPageLogos>
   </FadeInUp>
