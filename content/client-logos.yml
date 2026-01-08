@@ -3,14 +3,16 @@ logos:
   - name: Amazon
     logo: /images/clients/amazon.png
     alt: Amazon
+    link: https://www.amazon.com
     enabled: true
   - name: AutoDrill
     logo: /images/clients/autodrill.png
     alt: AutoDrill
-    enabled: true
+    enabled: false
   - name: BidChip
     logo: /images/clients/bidchip.svg
     alt: BidChip
+    link: https://www.bidchip.com
     enabled: true
   - name: Chick-fil-A
     logo: /images/clients/chickfila.png
