@@ -1,0 +1,74 @@
+title: Who We've Partnered with and Served
+logos:
+  - name: Amazon
+    logo: /images/clients/amazon.png
+    alt: Amazon
+    enabled: true
+  - name: AutoDrill
+    logo: /images/clients/autodrill.png
+    alt: AutoDrill
+    enabled: true
+  - name: BidChip
+    logo: /images/clients/bidchip.svg
+    alt: BidChip
+    enabled: true
+  - name: Chick-fil-A
+    logo: /images/clients/chickfila.png
+    alt: Chick-fil-A
+    enabled: true
+  - name: Colson Fellows
+    logo: /images/clients/colsonfellows.png
+    alt: Colson Fellows
+    enabled: true
+  - name: Cru
+    logo: /images/clients/cru.png
+    alt: Cru
+    enabled: true
+  - name: FCA
+    logo: /images/clients/fca.png
+    alt: FCA
+    enabled: true
+  - name: ICI Consulting
+    logo: /images/clients/ici.png
+    alt: ICI Consulting
+    enabled: true
+  - name: NAE
+    logo: /images/clients/nae.png
+    alt: NAE
+    enabled: true
+  - name: NASCAR
+    logo: /images/clients/nascar.png
+    alt: NASCAR
+    enabled: true
+  - name: PJ Polke
+    logo: /images/clients/pjpolke.png
+    alt: PJ Polke
+    enabled: true
+  - name: Rita's Italian Ice
+    logo: /images/clients/ritas.png
+    alt: Rita's Italian Ice
+    enabled: true
+  - name: Samaritan's Purse
+    logo: /images/clients/sp.png
+    alt: Samaritan's Purse
+    enabled: true
+  - name: Steiger International
+    logo: /images/clients/steiger.png
+    alt: Steiger International
+    enabled: true
+  - name: TreeStaple
+    logo: /images/clients/treestaple.png
+    alt: TreeStaple
+    enabled: true
+  - name: UWM
+    logo: /images/clients/uwm.png
+    alt: UWM
+    enabled: true
+  - name: Wheaton College
+    logo: /images/clients/wheaton.png
+    alt: Wheaton College
+    enabled: true
+  - name: ZeroSurge
+    logo: /images/clients/zerosurge.png
+    alt: ZeroSurge
+    enabled: true
