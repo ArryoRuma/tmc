@@ -2,7 +2,21 @@
 import { defineNuxtConfig } from "nuxt/config";
 
 export default defineNuxtConfig({
-  modules: ["@nuxt/eslint", "@nuxt/image", "@nuxt/ui", "@nuxt/content", "@vueuse/nuxt", "nuxt-og-image", "@nuxt/fonts", "@nuxt/hints", "@nuxtjs/seo", "nuxt-gtag", "motion-v/nuxt", "@nuxt/scripts", "@nuxt/a11y"],
+  modules: [
+    "@nuxt/eslint",
+    "@nuxt/image",
+    "@nuxt/ui",
+    "@nuxt/content",
+    "@vueuse/nuxt",
+    "nuxt-og-image",
+    "@nuxt/fonts",
+    "@nuxt/hints",
+    "@nuxtjs/seo",
+    "nuxt-gtag",
+    "motion-v/nuxt",
+    "@nuxt/scripts",
+    "@nuxt/a11y",
+  ],
   components: true,
   devtools: {
     enabled: true,
