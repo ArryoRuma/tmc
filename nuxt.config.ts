@@ -95,7 +95,7 @@ export default defineNuxtConfig({
   scripts: {
     registry: {
       googleTagManager: {
-        id: 'GTM-T6DBWPNS',
+        id: "GTM-T6DBWPNS",
       },
     },
   },

@@ -105,6 +105,12 @@ testimonials:
   title: Real Results from Real Ministries
   description: See how churches like yours are using professional AV and live streaming to expand their reach and deepen community engagement.
   items:
+    - quote: TruMedia Creative transformed our livestream from a challenge into a strength. Their thoughtful approach, clear planning, and technical expertise gave us a consistent, high-quality livestream and a confident, engaged tech team. We highly recommend them for AV and livestream upgrades.
+      user:
+        name: Jeff Mehl
+        description: Operations Director at Shore Christian Church
+        avatar:
+          src:
     - quote: Our online attendance tripled after upgrading our streaming setup. Now we reach members who can't attend in person and visitors who are checking us out before visiting.
       user:
         name: Pastor Mike Johnson
