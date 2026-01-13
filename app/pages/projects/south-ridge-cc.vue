@@ -23,6 +23,15 @@ const project: Project = {
     "Reliable production for weekly services and special events",
     "Scalable infrastructure for future campus expansion",
   ],
+  testimonial: {
+    quote:
+      "TruMedia Creative delivered exactly what we needed - a professional system that our volunteers can actually use. The multi-campus streaming capability has allowed us to expand our ministry reach while maintaining the quality our congregation expects.",
+    author: {
+      name: "Rev. David Williams",
+      title: "Lead Pastor",
+      company: "South Ridge Community Church",
+    },
+  },
 };
 
 definePageMeta({

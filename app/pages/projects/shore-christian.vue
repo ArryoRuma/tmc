@@ -23,6 +23,15 @@ const project: Project = {
     "Enhanced worship atmosphere with professional lighting",
     "Reliable technology supporting ministry growth",
   ],
+  testimonial: {
+    quote:
+      "The team at TruMedia Creative understood our vision and delivered a system that exceeded our expectations. Our online ministry has grown tremendously, and our volunteers feel confident running everything. The quality transformation has been remarkable.",
+    author: {
+      name: "Pastor Sarah Martinez",
+      title: "Senior Pastor",
+      company: "Shore Christian Fellowship",
+    },
+  },
 };
 
 definePageMeta({
