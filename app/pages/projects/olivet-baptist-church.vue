@@ -1,21 +1,5 @@
 <script setup lang="ts">
-interface Project {
-  title: string;
-  description: string;
-  year?: number;
-  client?: string;
-  services?: string[];
-  heroImage?: string;
-  websiteUrl?: string;
-  challenge?: string;
-  approach?: string;
-  solution?: string;
-  results?: string[];
-  caseStudySections?: Array<{
-    heading: string;
-    content: string;
-  }>;
-}
+import type { Project } from "~/types/project";
 
 const project: Project = {
   title: "Olivet Baptist Church - Professional Worship Production System",
@@ -46,28 +30,15 @@ const project: Project = {
     "Reduced setup time for Sunday services by 60%",
     "Expanded ministry reach to homebound members and remote viewers",
   ],
-  caseStudySections: [
-    {
-      heading: "Professional Live Streaming System",
-      content:
-        "We installed a complete multi-camera streaming system featuring three professional PTZ cameras positioned for wide shots, podium coverage, and worship team close-ups. The streaming computer with professional encoding software was configured for optimal quality on YouTube and Facebook. Graphics integration allows seamless display of lyrics, sermon notes, and announcements, while automated recording archives every service to build a searchable sermon library. The system allows a single operator to control all cameras, switch between shots, and manage graphics from one intuitive interface.",
+  testimonial: {
+    quote:
+      "TruMedia Creative didn't just install equipment—they transformed our entire approach to worship production. Our online ministry has exploded, our worship team is performing at their best, and our volunteers are empowered with tools they can actually use. The investment has already paid dividends in reaching more people with the Gospel.",
+    author: {
+      name: "Pastor James Richardson",
+      title: "Senior Pastor",
+      company: "Olivet Baptist Church",
     },
-    {
-      heading: "Digital Mixing Console",
-      content:
-        "We replaced their aging analog board with a 32-channel digital console providing scene recall to save and recall complete mixes for different service types, tablet control for mixing from anywhere in the sanctuary via iPad for optimal sound checking, professional processing with built-in compression, EQ, and effects for broadcast-quality audio, and USB recording for direct recording of services and individual tracks for training purposes. The digital board feeds both the main sanctuary speakers and the livestream, ensuring consistent quality across all outputs.",
-    },
-    {
-      heading: "In-Ear Monitor System",
-      content:
-        "To address monitoring challenges, we implemented a comprehensive wireless IEM system with eight wireless belt-pack receivers for worship team members, personal mix control allowing each musician to dial in their perfect monitor blend, improved stage sound by reducing overall stage volume for clearer house mix, and professional earphones providing accurate sound reproduction and hearing protection. The worship team immediately noticed improved pitch accuracy, tighter timing, and increased confidence during services.",
-    },
-    {
-      heading: "Training & Support",
-      content:
-        "Understanding that technology is only valuable when people can use it effectively, we provided four comprehensive training sessions covering all systems for volunteer teams, custom documentation with step-by-step guides for common tasks and troubleshooting, video tutorials available in the volunteer portal for ongoing reference, and ongoing support via phone, email, and periodic on-site optimization visits. Within one month, the volunteer teams were running all systems independently with confidence.",
-    },
-  ],
+  },
 };
 
 definePageMeta({

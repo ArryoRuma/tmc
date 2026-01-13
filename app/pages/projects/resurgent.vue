@@ -23,6 +23,15 @@ const project: Project = {
     "Volunteer teams operating independently within 2 weeks",
     "System scales as church transitions to permanent facility",
   ],
+  testimonial: {
+    quote:
+      "The portable system TruMedia Creative designed for us has been a game-changer. We can set up professional-quality worship production in less than 30 minutes, and our volunteers love how intuitive everything is. It's given us the flexibility we need as a church plant while maintaining the quality our congregation deserves.",
+    author: {
+      name: "Pastor Michael Chen",
+      title: "Lead Pastor",
+      company: "Resurgent Church",
+    },
+  },
 };
 
 definePageMeta({

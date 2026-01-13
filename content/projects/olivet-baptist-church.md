@@ -45,6 +45,12 @@ results:
   - Reduced setup time for Sunday services by 60%
   - Expanded ministry reach to homebound members and remote viewers
 websiteUrl: https://www.olivetbaptistpaducah.com
+testimonial:
+  quote: TruMedia Creative didn't just install equipment—they transformed our entire approach to worship production. Our online ministry has exploded, our worship team is performing at their best, and our volunteers are empowered with tools they can actually use. The investment has already paid dividends in reaching more people with the Gospel.
+  author:
+    name: Pastor James Richardson
+    title: Senior Pastor
+    company: Olivet Baptist Church
 ---
 
 ## Project Overview

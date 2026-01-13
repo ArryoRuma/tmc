@@ -203,6 +203,17 @@ const createTestimonialsSchema = () =>
     ),
   });
 
+const createTestimonialSchema = () =>
+  z.object({
+    quote: z.string().nonempty(),
+    author: z.object({
+      name: z.string().nonempty(),
+      title: z.string().nonempty(),
+      company: z.string().nonempty(),
+      avatar: z.string().optional().editor({ input: "media" }),
+    }),
+  });
+
 const createCTASchema = () =>
   createBaseSchema().extend({
     links: z.array(createLinkSchema()),
@@ -722,6 +733,7 @@ export const collections = {
       approach: z.string().optional(),
       solution: z.string().optional(),
       results: z.array(z.string()).optional(),
+      testimonial: createTestimonialSchema().optional(),
     }),
   }),
 
