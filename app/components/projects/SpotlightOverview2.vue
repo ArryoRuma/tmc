@@ -84,16 +84,16 @@ const props = defineProps<{ project: Project2 }>();
       <div
         class="rounded-3xl border border-white/50 bg-white/80 p-6 shadow-xl backdrop-blur"
       >
-        <p class="text-sm font-semibold text-slate-900 mb-3">Challenge</p>
-        <p class="text-sm text-slate-600">
+        <p class="text-sm font-semibold text-slate-900">Challenge</p>
+        <p class="mt-3 text-sm text-slate-600">
           {{ props.project.challenge }}
         </p>
       </div>
       <div
         class="rounded-3xl border border-white/50 bg-white/80 p-6 shadow-xl backdrop-blur"
       >
-        <p class="text-sm font-semibold text-slate-900 mb-3">Solution</p>
-        <p class="text-sm text-slate-600">
+        <p class="text-sm font-semibold text-slate-900">Solution</p>
+        <p class="mt-3 text-sm text-slate-600">
           {{ props.project.solution }}
         </p>
       </div>

@@ -57,7 +57,7 @@ const activeTab = ref<"before" | "after">("after");
                 v-if="props.beforeImage"
                 :src="props.beforeImage"
                 alt="Before - Old Website"
-                class="w-full h-auto object-top"
+                class="w-full min-h-full h-auto object-top"
               />
               <div
                 class="absolute bottom-4 left-4 bg-red-500 text-white px-3 py-1 rounded-md text-sm font-semibold"
@@ -70,7 +70,7 @@ const activeTab = ref<"before" | "after">("after");
                 v-if="props.afterImage"
                 :src="props.afterImage"
                 alt="After - New Website"
-                class="w-full h-auto object-top"
+                class="w-full min-h-full h-auto object-top"
               />
               <div
                 class="absolute bottom-4 left-4 bg-green-500 text-white px-3 py-1 rounded-md text-sm font-semibold"
