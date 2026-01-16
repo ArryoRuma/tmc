@@ -34,7 +34,7 @@ Tasks
 Tasks
 
 - Identify blog posts that are not business-related (e.g., nature/travel posts).
-- Choose one approach:
+- Choose one outcomes:
   1. Remove from repo/content, OR
   2. Mark as noindex and exclude from sitemap and internal listings.
      Acceptance criteria

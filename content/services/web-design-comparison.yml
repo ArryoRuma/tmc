@@ -1,15 +1,15 @@
 title: Web Design Comparison
-description: Compare our revenue-focused web design approach with traditional web design
+description: Compare our revenue-focused web design outcomes with traditional web design
 seo:
   title: Web Design Comparison | TruMedia Creative
-  description: See how our sales-ready web design approach differs from traditional web design and brochure websites.
+  description: See how our sales-ready web design outcomes differs from traditional web design and brochure websites.
 navigation: false
 
 hero:
   headline: Web Design Comparison
-  title: Our Revenue-Focused Approach vs. Traditional Web Design
+  title: Our Revenue-Focused outcomes vs. Traditional Web Design
   description: |
-    See how our strategic web design approach differs from traditional web design.
+    See how our strategic web design outcomes differs from traditional web design.
     We build websites that actively support sales and drive revenue, not just digital brochures.
   links:
     - label: Book a Free Website Audit
@@ -24,18 +24,18 @@ hero:
 
 comparison:
   title: Revenue-Focused vs Traditional Web Design
-  description: A clear comparison of what you get with each approach
+  description: A clear comparison of what you get with each outcomes
   items:
     - title: Traditional Web Design
       description: Digital brochure focused on aesthetics
       price: $5,000 - $15,000
       tagline: Looks good, doesn't convert
       badge:
-        label: Old Approach
+        label: Old outcomes
         color: neutral
         variant: subtle
       button:
-        label: Not This Approach
+        label: Not This outcomes
         to: /services/web-design
         color: neutral
         variant: outline
@@ -100,7 +100,7 @@ sections:
     headline: Why This Matters for Your Business
     description: |
       The difference isn't just in features—it's in outcomes. Traditional websites 
-      look polished but fail to support revenue goals. Our approach treats your 
+      look polished but fail to support revenue goals. Our outcomes treats your 
       website as an active sales asset that works alongside your team.
     orientation: vertical
     reverse: false
@@ -119,7 +119,7 @@ sections:
         icon: i-lucide-route
 
   - id: what-you-get
-    title: What's Included in Our Approach
+    title: What's Included in Our outcomes
     headline: Everything Needed for a Revenue-Ready Website
     description: |
       Our Website Growth System includes strategic positioning, buyer-focused 
@@ -144,7 +144,7 @@ cta:
   title: Ready to See How This Works for Your Business?
   description: |
     Book a free website audit to see how your current site compares and what's 
-    possible with a revenue-focused approach.
+    possible with a revenue-focused outcomes.
   links:
     - label: Book Free Website Audit
       to: https://trumediacreative.hbportal.co/schedule/6442d82d7999d90d3e0b430a

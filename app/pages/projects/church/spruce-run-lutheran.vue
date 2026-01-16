@@ -13,7 +13,7 @@ const project: Project = {
   websiteUrl: "",
   challenge:
     "During the COVID-19 pandemic, Spruce Run Lutheran Church needed to quickly implement livestreaming to serve their congregation remotely. They required a simple, affordable solution that could be operated by volunteers with minimal technical expertise.",
-  approach:
+  outcomes:
     "We focused on creating the simplest possible streaming setup that would still deliver quality audio and video. The design prioritized one-button operation and minimal ongoing maintenance, while keeping costs low for the small congregation.",
   solution:
     "We implemented a streamlined streaming system featuring a single PTZ camera with preset positions, USB audio interface connected to existing sound system, dedicated streaming computer with automated presets, and provided basic training for volunteer operators. The system was designed for minimal complexity and maximum reliability.",

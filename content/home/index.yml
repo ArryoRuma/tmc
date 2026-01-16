@@ -117,14 +117,14 @@ cta_after_features:
       icon: i-lucide-layers
 process:
   title: We've Got You Covered... Here's How.
-  description: Our 4-step approach to creating marketing systems that convert prospects into clients
+  description: Our 4-step outcomes to creating marketing systems that convert prospects into clients
   steps:
     - id: "1"
       title: Step 1
       subtitle: Discover
       description: Identifying your current marketing situation and future goals.
       icon: i-lucide-target
-      content: Every client engagement starts with our Road MAP (Marketing Action Plan)—a strategic project that uncovers your business needs and delivers an actionable plan. The goal is to define your target outcome (like growing revenue from $3M to $4M in the next year) and map the marketing steps to get there. We begin with a half-day strategy session with your CEO, sales leader, marketing director, and key team members who really understand your customers. We explore what you offer, who needs it, the decision-makers, your current approach, and the competitive landscape. Then we spend two weeks researching your market and the best ways to reach it. We document our recommendations and outline the steps to achieve your goals. By the end, you'll have a ready-to-execute blueprint.
+      content: Every client engagement starts with our Road MAP (Marketing Action Plan)—a strategic project that uncovers your business needs and delivers an actionable plan. The goal is to define your target outcome (like growing revenue from $3M to $4M in the next year) and map the marketing steps to get there. We begin with a half-day strategy session with your CEO, sales leader, marketing director, and key team members who really understand your customers. We explore what you offer, who needs it, the decision-makers, your current outcomes, and the competitive landscape. Then we spend two weeks researching your market and the best ways to reach it. We document our recommendations and outline the steps to achieve your goals. By the end, you'll have a ready-to-execute blueprint.
 
       image:
         src: /images/home/process-discover.jpg
@@ -152,7 +152,7 @@ process:
       subtitle: Deploy
       description: Launch & Monitor Your Campaigns
       icon: i-lucide-rocket
-      content: Now it's time to amplify your brand and generate sales. The goal is to get your messaging and content in front of your total addressable market at the right frequency, in the right places. We launch a dual campaign approach. Capture Demand targets your audience actively searching for what you offer—ready to decide now, while Create Demand engages the broader pool of ideal customers who aren't buying yet. We reach the right job titles at target companies in key regions. Using your content and messaging, campaigns will showcase your expertise, answer key questions, share success stories, and call people to action. As prospects move toward purchase, you'll be top of mind thanks to the brand awareness built in your niche. We recommend running campaigns for at least six months to see solid ROI. You can cancel anytime with 30-day notice. But if it's working, you'll likely want to invest more.
+      content: Now it's time to amplify your brand and generate sales. The goal is to get your messaging and content in front of your total addressable market at the right frequency, in the right places. We launch a dual campaign outcomes. Capture Demand targets your audience actively searching for what you offer—ready to decide now, while Create Demand engages the broader pool of ideal customers who aren't buying yet. We reach the right job titles at target companies in key regions. Using your content and messaging, campaigns will showcase your expertise, answer key questions, share success stories, and call people to action. As prospects move toward purchase, you'll be top of mind thanks to the brand awareness built in your niche. We recommend running campaigns for at least six months to see solid ROI. You can cancel anytime with 30-day notice. But if it's working, you'll likely want to invest more.
       image:
         src: /images/home/process-deploy.jpg
         alt: Analyzing video marketing performance data

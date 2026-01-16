@@ -37,7 +37,7 @@ sections:
     orientation: horizontal
     features:
       - name: Case‑Study Films
-        description: 60–120s customer stories that show the challenge → approach → outcome—built with chapters and CTAs for sales follow‑ups and campaigns.
+        description: 60–120s customer stories that show the challenge → outcomes → outcome—built with chapters and CTAs for sales follow‑ups and campaigns.
         icon: i-lucide-film
       - name: FAQ Video Library
         description: 8–12 short answers to the questions that stall deals, embedded on key pages and packaged for cold email and social.

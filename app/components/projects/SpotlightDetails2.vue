@@ -10,7 +10,7 @@ interface Project2 {
   afterImage?: string;
   websiteUrl?: string;
   challenge?: string;
-  approach?: string;
+  outcomes?: string;
   solution?: string;
   results?: string[];
 }
@@ -21,9 +21,9 @@ const props = defineProps<{ project: Project2 }>();
 <template>
   <div class="space-y-6">
     <div class="rounded-3xl border border-slate-100 bg-white/90 p-6 shadow-lg">
-      <p class="text-sm font-semibold text-slate-900">Approach</p>
+      <p class="text-sm font-semibold text-slate-900">Outcomes</p>
       <p class="mt-3 text-sm text-slate-600">
-        {{ props.project.approach }}
+        {{ props.project.outcomes }}
       </p>
     </div>
     <div

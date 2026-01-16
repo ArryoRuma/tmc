@@ -18,8 +18,8 @@ const project: Project = {
   websiteUrl: "https://www.olivetbaptistpaducah.com",
   challenge:
     "Olivet Baptist Church needed a comprehensive upgrade to their worship production capabilities. With a growing online audience and the desire to enhance both in-person and digital worship experiences, they faced several technical challenges. Their existing audio system couldn't support modern streaming requirements, volunteers struggled with inconsistent sound quality, and the lack of proper monitoring made it difficult for worship team members to hear themselves and stay in sync.",
-  approach:
-    "Our team conducted a thorough assessment of Olivet Baptist Church's sanctuary, understanding their worship flow, volunteer capabilities, and ministry goals. We designed a complete solution that balanced professional-quality results with ease of use for volunteer teams. The approach included multi-platform livestreaming capabilities, a digital mixing console for precise audio control, and a personal monitoring system for the worship team.",
+  outcomes:
+    "Our team conducted a thorough assessment of Olivet Baptist Church's sanctuary, understanding their worship flow, volunteer capabilities, and ministry goals. We designed a complete solution that balanced professional-quality results with ease of use for volunteer teams. The outcomes included multi-platform livestreaming capabilities, a digital mixing console for precise audio control, and a personal monitoring system for the worship team.",
   solution:
     "We implemented a complete worship production system featuring professional multi-camera livestreaming with automated recording, a 32-channel digital mixing console with tablet control and scene recall, and a comprehensive wireless in-ear monitor system with personal mix control for the worship team. The system was backed by comprehensive volunteer training, custom documentation, and ongoing technical support.",
   results: [
@@ -32,7 +32,7 @@ const project: Project = {
   ],
   testimonial: {
     quote:
-      "TruMedia Creative didn't just install equipment—they transformed our entire approach to worship production. Our online ministry has exploded, our worship team is performing at their best, and our volunteers are empowered with tools they can actually use. The investment has already paid dividends in reaching more people with the Gospel.",
+      "TruMedia Creative didn't just install equipment—they transformed our entire outcomes to worship production. Our online ministry has exploded, our worship team is performing at their best, and our volunteers are empowered with tools they can actually use. The investment has already paid dividends in reaching more people with the Gospel.",
     author: {
       name: "Pastor James Richardson",
       title: "Senior Pastor",

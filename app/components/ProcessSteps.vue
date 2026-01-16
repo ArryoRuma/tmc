@@ -12,7 +12,7 @@ interface Props {
 
 const props = withDefaults(defineProps<Props>(), {
   title: "Our Process",
-  subtitle: "A systematic approach to delivering exceptional results",
+  subtitle: "A systematic outcomes to delivering exceptional results",
   variant: "default",
   showIcons: true,
   showImages: true,

@@ -10,7 +10,7 @@ interface Project2 {
   afterImage?: string;
   websiteUrl?: string;
   challenge?: string;
-  approach?: string;
+  outcomes?: string;
   solution?: string;
   results?: string[];
 }

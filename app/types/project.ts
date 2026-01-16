@@ -9,7 +9,7 @@ export interface Project {
   afterImage?: string;
   websiteUrl?: string;
   challenge?: string;
-  approach?: string;
+  outcomes?: string;
   solution?: string;
   results?: string[];
   images?: ProjectImage[];

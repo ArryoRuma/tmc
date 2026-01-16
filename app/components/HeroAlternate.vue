@@ -31,7 +31,7 @@ interface Props {
 }
 
 const props = withDefaults(defineProps<Props>(), {
-  title: "Grow Sales with Our Strategy First Approach",
+  title: "Grow Sales with Our Strategy First outcomes",
   description:
     "Transform your business with data-driven strategies that deliver measurable results and sustainable growth.",
   showEmailCapture: true,

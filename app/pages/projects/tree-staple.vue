@@ -18,7 +18,7 @@ const project: Project = {
   heroImage: "/images/video/tree-staple/tree-staple-hero.png",
   challenge:
     "Tree Staple needed a way to demonstrate installation and durability to landscapers, contractors, and municipal buyers without being on-site for every bid.",
-  approach:
+  outcomes:
     "We storyboarded an installation walkthrough, filmed on location, and layered motion graphics to highlight anchoring strength, speed, and safety.",
   solution:
     "The final deliverables included a flagship explainer video plus short social and email cutdowns dealers can reuse to educate prospects and win specs.",

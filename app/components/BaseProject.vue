@@ -50,7 +50,7 @@ definePageMeta({
     <ProjectsDetails
       v-if="project.challenge || project.solution || project.services"
       :challenge="project.challenge"
-      :approach="project.approach"
+      :outcomes="project.outcomes"
       :solution="project.solution"
       :services="project.services"
     />

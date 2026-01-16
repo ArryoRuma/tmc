@@ -11,7 +11,7 @@ services:
   - Volunteer Training
 heroImage: /images/projects/olivet-baptist-hero.jpg
 challenge: Olivet Baptist Church needed a comprehensive upgrade to their worship production capabilities. With a growing online audience and the desire to enhance both in-person and digital worship experiences, they faced several technical challenges. Their existing audio system couldn't support modern streaming requirements, volunteers struggled with inconsistent sound quality, and the lack of proper monitoring made it difficult for worship team members to hear themselves and stay in sync.
-approach: Our team conducted a thorough assessment of Olivet Baptist Church's sanctuary, understanding their worship flow, volunteer capabilities, and ministry goals. We designed a complete solution that balanced professional-quality results with ease of use for volunteer teams. The approach included multi-platform livestreaming capabilities, a digital mixing console for precise audio control, and a personal monitoring system for the worship team.
+outcomes: Our team conducted a thorough assessment of Olivet Baptist Church's sanctuary, understanding their worship flow, volunteer capabilities, and ministry goals. We designed a complete solution that balanced professional-quality results with ease of use for volunteer teams. The outcomes included multi-platform livestreaming capabilities, a digital mixing console for precise audio control, and a personal monitoring system for the worship team.
 solution: |
   We implemented a complete worship production system featuring:
 
@@ -46,7 +46,7 @@ results:
   - Expanded ministry reach to homebound members and remote viewers
 websiteUrl: https://www.olivetbaptistpaducah.com
 testimonial:
-  quote: TruMedia Creative didn't just install equipment—they transformed our entire approach to worship production. Our online ministry has exploded, our worship team is performing at their best, and our volunteers are empowered with tools they can actually use. The investment has already paid dividends in reaching more people with the Gospel.
+  quote: TruMedia Creative didn't just install equipment—they transformed our entire outcomes to worship production. Our online ministry has exploded, our worship team is performing at their best, and our volunteers are empowered with tools they can actually use. The investment has already paid dividends in reaching more people with the Gospel.
   author:
     name: Pastor James Richardson
     title: Senior Pastor
@@ -77,7 +77,7 @@ Without proper monitoring, musicians and singers had difficulty hearing themselv
 
 The church wanted to empower their volunteer teams but needed systems that were powerful yet intuitive enough for volunteers with varying technical experience levels.
 
-## Our Approach
+## Our outcomes
 
 We began with an in-depth consultation, attending several worship services to understand the unique flow and needs of Olivet Baptist. Our team worked closely with the worship pastor, technical director, and key volunteers to design a solution that would:
 
@@ -158,7 +158,7 @@ Setup time for Sunday services decreased from 90 minutes to 35 minutes, allowing
 
 ## Client Testimonial
 
-> "TruMedia Creative didn't just install equipment—they transformed our entire approach to worship production. Our online ministry has exploded, our worship team is performing at their best, and our volunteers are empowered with tools they can actually use. The investment has already paid dividends in reaching more people with the Gospel."
+> "TruMedia Creative didn't just install equipment—they transformed our entire outcomes to worship production. Our online ministry has exploded, our worship team is performing at their best, and our volunteers are empowered with tools they can actually use. The investment has already paid dividends in reaching more people with the Gospel."
 
 _— Pastor James Richardson, Olivet Baptist Church_
 

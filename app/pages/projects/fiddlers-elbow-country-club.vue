@@ -17,7 +17,7 @@ const project: Project = {
   websiteUrl: "",
   challenge:
     "Fiddler's Elbow Country Club needed a complete overhaul of their outdated lighting system. The existing infrastructure was inefficient, difficult to control, and didn't meet the modern standards required for their events and daily operations.",
-  approach:
+  outcomes:
     "We conducted a comprehensive assessment of the facility's needs, designed a modern lighting system that would provide flexibility for various events while maintaining energy efficiency, and created a solution that integrated seamlessly with their existing infrastructure.",
   solution:
     "We implemented a complete lighting system redesign featuring LED technology, intelligent control systems, and scalable infrastructure. The new system provides superior illumination quality, energy savings, and intuitive controls for staff to manage different lighting scenarios for events and daily operations.",

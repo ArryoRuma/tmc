@@ -17,7 +17,7 @@ const project: Project = {
   websiteUrl: "https://vimeo.com/812175432/1d898d2c46?fl=pl&fe=sh",
   challenge:
     "Cody Ware needed dynamic video content and a digital marketing strategy to boost fan engagement and increase brand visibility in the competitive NASCAR environment.",
-  approach:
+  outcomes:
     "We focused on creating engaging video content tailored to Cody Ware's fan base, leveraging social media platforms and targeted digital campaigns to maximize reach and interaction.",
   solution:
     "We produced high-quality videos and implemented a comprehensive digital marketing plan that included content strategy and social media management to enhance fan connection and brand presence.",

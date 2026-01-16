@@ -8,7 +8,7 @@ interface Project {
   heroImage?: string;
   websiteUrl?: string;
   challenge?: string;
-  approach?: string;
+  outcomes?: string;
   solution?: string;
   results?: string[];
   caseStudySections?: Array<{
@@ -35,7 +35,7 @@ const project: Project = {
   websiteUrl: "",
   challenge:
     "BidChip had an active platform and a growing database of buyers and sellers, but many sellers were dormant or underutilizing the marketplace. Without consistent activation and education, marketplace liquidity and deal velocity were limited.",
-  approach:
+  outcomes:
     "We focused on re-engaging sellers by aligning outreach with real seller incentives, clarifying how BidChip creates value, and guiding users toward specific actions that increase participation rather than relying on generic platform announcements.",
   solution:
     "We implemented a structured activation and outbound system that segmented sellers by behavior and readiness, delivered targeted messaging sequences, and encouraged meaningful marketplace activity. Campaigns were designed to educate, re-activate, and move sellers toward consistent usage.",

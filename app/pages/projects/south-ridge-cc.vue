@@ -12,7 +12,7 @@ const project: Project = {
   websiteUrl: "",
   challenge:
     "South Ridge Community Church needed a professional-grade live production system to support their growing congregation and expanding online ministry. Their existing setup was inadequate for multi-campus streaming and lacked the reliability needed for weekly worship services.",
-  approach:
+  outcomes:
     "We designed a comprehensive production system that would serve both their main campus worship center and enable high-quality streaming to remote locations. The solution focused on ease of use for volunteer teams while maintaining broadcast-quality output.",
   solution:
     "We implemented a complete live production system featuring multi-camera setup with professional PTZ cameras, digital mixing console with scene recall, broadcast-quality livestreaming infrastructure, and integrated media playback systems. The system was designed for volunteer operation with extensive training and documentation.",

@@ -10,7 +10,7 @@ interface Project {
   afterImage?: string;
   websiteUrl?: string;
   challenge?: string;
-  approach?: string;
+  outcomes?: string;
   solution?: string;
   results?: string[];
   galleryImages?: string[];
@@ -35,7 +35,7 @@ const project: Project = {
   websiteUrl: "",
   challenge:
     "Cut. artisan. hair. design. delivered a premium in-salon experience, but growth was inconsistent. Client churn, underutilized rebooking, and weak local visibility limited revenue despite strong demand and talented stylists.",
-  approach:
+  outcomes:
     "We focused on increasing lifetime value before chasing more new clients by improving local search visibility, strengthening rebooking and retention systems, and aligning paid ads with real business goals instead of vanity metrics.",
   solution:
     "We implemented a client growth system that combined local SEO and Google Business optimization with targeted re-engagement campaigns and paid ads. The strategy emphasized repeat visits, predictable bookings, and clearer performance tracking for the owner and stylists.",

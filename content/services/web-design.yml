@@ -89,7 +89,7 @@ sections:
       build confidence, and take next steps.
       That requires clear positioning, intentional page structure,
       and tight alignment with sales and marketing workflows.
-      Our web design approach is built to do exactly that.
+      Our web design outcomes is built to do exactly that.
     features:
       - title: Clear Positioning & Buyer-Focused Messaging
         description: >
@@ -137,7 +137,7 @@ sections:
     description: >
       We help you turn your expertise into a strategic website that supports
       marketing and sales at every stage of the buying journey. Our web design
-      approach combines positioning, structure, and deployment so your site is
+      outcomes combines positioning, structure, and deployment so your site is
       built with intention and performs where it matters most.
     features:
       - title: Message & Positioning Clarity
@@ -173,13 +173,13 @@ sections:
   - id: proof
     image:
       src: /images/services/web-design/web-design-proof.png
-      alt: Proof That Our Web Design Approach Works
+      alt: Proof That Our Web Design outcomes Works
     orientation: vertical
     reverse: true
-    headline: Real Results from Our Web Design Approach
+    headline: Real Results from Our Web Design outcomes
     title: Proof That Strategic Web Design Works
     description: >
-      Companies use our web design approach to improve buyer engagement,
+      Companies use our web design outcomes to improve buyer engagement,
       shorten evaluation cycles, and turn their website into an active revenue
       asset across the entire buying journey. Instead of a static brochure,
       teams gain a strategic website that actively supports real deals.
@@ -380,7 +380,7 @@ pricing:
 
 idealFor:
   title: Ideal For
-  headline: Who Benefits Most from Our Approach
+  headline: Who Benefits Most from Our outcomes
   description: >
     Our Website Growth System works best for service-based B2B companies with complex
     offerings who need their website to actively support sales conversations and revenue growth.
@@ -529,7 +529,7 @@ faq:
     - label: How is this different from hiring a traditional web design agency?
       content: >
         Most agencies focus on aesthetics and delivering a "website" as a project. We focus on revenue outcomes.
-        Our approach integrates messaging strategy, buyer psychology, sales enablement, and conversion optimization—not
+        Our outcomes integrates messaging strategy, buyer psychology, sales enablement, and conversion optimization—not
         just design. We treat the website as a system that supports your entire go-to-market motion, not a one-time
         deliverable. You'll see the difference in how sales uses the site and how qualified your inbound leads become.
 

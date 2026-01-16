@@ -12,8 +12,8 @@ const project: Project = {
   websiteUrl: "",
   challenge:
     "Shore Christian Fellowship was experiencing rapid growth and needed to upgrade their worship production capabilities to serve both their expanding in-person congregation and growing online audience. Their existing equipment was limiting their ability to reach more people effectively.",
-  approach:
-    "We designed an integrated worship production system that balanced professional quality with volunteer-friendly operation. The approach prioritized reliable streaming, clear audio for both the sanctuary and online viewers, and intuitive controls for volunteer technical teams.",
+  outcomes:
+    "We designed an integrated worship production system that balanced professional quality with volunteer-friendly operation. The outcomes prioritized reliable streaming, clear audio for both the sanctuary and online viewers, and intuitive controls for volunteer technical teams.",
   solution:
     "We installed a comprehensive system including professional camera and streaming setup, digital audio mixing console with wireless capabilities, LED stage lighting with programmable scenes, integrated lyrics and media display system, and provided extensive volunteer training and ongoing support.",
   results: [

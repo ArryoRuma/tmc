@@ -12,7 +12,7 @@ const project: Project = {
   websiteUrl: "",
   challenge:
     "As a church plant meeting in a rented facility, Resurgent Church needed a complete worship production system that could be set up and torn down weekly. The system had to deliver professional quality while being portable, durable, and simple enough for volunteer teams to operate.",
-  approach:
+  outcomes:
     "We designed a fully portable worship production solution optimized for quick setup and teardown. Every component was selected for portability, durability, and ease of use, while maintaining the audio and video quality needed for engaging worship experiences and professional livestreaming.",
   solution:
     "We provided a portable production system featuring compact digital mixer with wireless tablet control, lightweight PTZ cameras with quick-mount stands, portable livestreaming computer with automated presets, wireless microphone systems with rechargeable batteries, and custom rolling cases for organized storage and transport.",

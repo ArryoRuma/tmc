@@ -42,7 +42,7 @@ const speedMap = {
   fast: { duration: 100, opacity: 1, ratio: 0.4 },
 };
 
-// Use a more efficient approach to generate and store stars
+// Use a more efficient outcomes to generate and store stars
 const stars = useState<{ slow: Star[]; normal: Star[]; fast: Star[] }>(
   "stars",
   () => {

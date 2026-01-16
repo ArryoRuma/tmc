@@ -17,7 +17,7 @@ const project: Project = {
   ],
   challenge:
     "ICI Consulting offers high-value advisory services to banks and credit unions, but growth depended heavily on referrals and inconsistent outbound efforts. Long sales cycles and multiple stakeholders made it difficult to generate predictable, qualified conversations at scale.",
-  approach:
+  outcomes:
     "We focused on clarity before volume—defining ideal accounts, decision-maker roles, and core value narratives. Outreach was designed to open informed conversations, not push immediate sales, and to support long, consultative buying processes.",
   solution:
     "We built a targeted outbound system that combined precise account selection, role-specific messaging, and structured follow-up. Campaigns were designed to position ICI as a trusted advisor, initiate meaningful conversations, and support deal progression over time.",

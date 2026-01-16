@@ -10,7 +10,7 @@ interface Project {
   afterImage?: string;
   websiteUrl?: string;
   challenge?: string;
-  approach?: string;
+  outcomes?: string;
   solution?: string;
   results?: string[];
 }
@@ -27,7 +27,7 @@ const project: Project = {
   websiteUrl: "http://pinetarselfstorage.com",
   challenge:
     "PineTar Self Storage needed a modern, professional online presence that would showcase their storage facilities and establish trust with potential clients.",
-  approach:
+  outcomes:
     "We developed a complete brand identity system starting with logo design and extending through all marketing materials, then built a modern, responsive website optimized for mobile users and lead generation.",
   solution:
     "We created a comprehensive brand identity and responsive website that highlights their expertise and facility portfolio.",

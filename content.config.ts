@@ -730,7 +730,7 @@ export const collections = {
       afterImage: z.string().optional(),
       websiteUrl: z.string().optional(),
       challenge: z.string().optional(),
-      approach: z.string().optional(),
+      outcomes: z.string().optional(),
       solution: z.string().optional(),
       results: z.array(z.string()).optional(),
       testimonial: createTestimonialSchema().optional(),
