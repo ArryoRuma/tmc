@@ -30,6 +30,15 @@ const project: Project = {
     "Product-line specific landing areas that make it easy for vendors and buyers to connect",
     "Mobile-optimized experience for field teams sharing links on-site",
   ],
+  testimonial: {
+    quote:
+      "Before the redesign, our website needed a fresh, more modern look that would better resonate with the designer and architectural community. We wanted to stand out more visually and felt it was also important to update our employee photography to better reflect our team. Working with TruMedia Creative was a great experience from start to finish. The team was professional, easy to collaborate with, and had a strong understanding of what we were looking for. They delivered everything in a timely manner and ultimately exceeded our expectations. TruMedia Creative is highly creative, thinks outside the box, and consistently presented thoughtful, well-executed options throughout the process. I would absolutely recommend TruMedia Creative to anyone in need of a new website or an updated one. They are extremely knowledgeable on the technical side while also being very talented creatively, which made the entire process smooth and successful.",
+    author: {
+      name: "Dawn A.",
+      title: "Owner",
+      company: "pjpolke",
+    },
+  },
 };
 </script>
 
