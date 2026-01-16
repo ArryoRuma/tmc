@@ -23,7 +23,7 @@ hero:
       icon: i-lucide-eye
       size: xl
 sections:
-  - title: Are You Struggling With...
+  - title: Are You Struggling With...?
     description: If this sounds familiar, you don’t need louder marketing. You need clarity, proof, and a system that works together.
     id: outdated-marketing
     orientation: horizontal
@@ -56,9 +56,9 @@ sections:
       - title: Prospecting taking too long
         description: #How do we build something that lasts?
         icon: i-lucide-circle-x
-      - title: We're ready to grow.
-        description:
-        icon: i-lucide-circle-x
+      -  #title: We're ready to grow.
+        #description:
+        #icon: i-lucide-circle-x
 #TODO: Update client logos to SVGs where possible, as well as formatting correct dimensions and alt text.
 clients:
   title: Featured Clients
@@ -117,41 +117,42 @@ cta_after_features:
       icon: i-lucide-layers
 process:
   title: We've Got You Covered... Here's How.
-  description: Our proven 4-step approach to creating marketing content that converts prospects into clients
+  description: Our 4-step approach to creating marketing systems that convert prospects into clients
   steps:
     - id: "1"
       title: Step 1
       subtitle: Discover
-      description: First, we dive in to what problems you're facing and determine what types of videos will best address those challenges.
+      description: Identifying your current marketing situation and future goals.
       icon: i-lucide-target
-      content: Our discovery process involves deep research into your market, competitors, and audience to create a foundation for success.
+      content: Every client engagement starts with our Road MAP (Marketing Action Plan)—a strategic project that uncovers your business needs and delivers an actionable plan. The goal is to define your target outcome (like growing revenue from $3M to $4M in the next year) and map the marketing steps to get there. We begin with a half-day strategy session with your CEO, sales leader, marketing director, and key team members who really understand your customers. We explore what you offer, who needs it, the decision-makers, your current approach, and the competitive landscape. Then we spend two weeks researching your market and the best ways to reach it. We document our recommendations and outline the steps to achieve your goals. By the end, you'll have a ready-to-execute blueprint.
+
       image:
         src: /images/home/process-discover.jpg
         alt: Team collaborating on video marketing strategy
     - id: "2"
       title: Step 2
       subtitle: Define
-      description: Next, we outline a clear messaging framework that your clients will understand and connect with.
+      description: Pinpoint your unique value propositions and tailor your messaging to your target demographic.
       icon: i-lucide-book-a
-      content: We implement your strategy using best practices and cutting-edge tools, ensuring every detail aligns with your objectives.
+      content: Next, we nail down your messaging. We interview your best customers to understand what resonates, uncover insights, and identify patterns that shape your go-to-market message. Then we build a clear "who we help and how" one-pager and deeper brand story with you. This defines how you stand out and deliver value in a way that resonates. Next, we create a content strategy—the articles, videos, and assets needed to support your message. Finally, we map the channels and campaigns to reach your goals.
       image:
         src: /images/home/process-define.jpg
         alt: Storyboarding video marketing content
     - id: "3"
       title: Step 3
       subtitle: Develop
-      description: Then, we produce high-quality marketing assets that resonate with your audience.
+      description: Craft and refine tailored content that aligns perfectly with your strategic goals and audience needs.
       icon: i-lucide-folder-kanban
-      content: Our production team creates compelling content that captures your brand's essence and engages your target audience effectively.
+      content: Once the foundation is set—marketing plan, customer insights, messaging, content strategy, and campaign roadmap—we produce the content that brings your message to life. Our writers and videographer work directly with your technical experts to extract their knowledge and turn it into content that resonates with your audience, including thought leadership blog posts, product/service descriptions, website copy updates, case studies, explainer videos, and conversion-optimized landing pages.
       image:
         src: /images/home/process-develop.jpg
         alt: Filming video marketing content
     - id: "4"
       title: Step 4
       subtitle: Deploy
-      description: Last, we distribute the marketing assets and analyze performance to optimize results.
+      description: Launch & Monitor Your Campaigns
       icon: i-lucide-rocket
-      content: Continuous monitoring and optimization ensure your investment delivers measurable results and long-term success.
+      content: Now it's time to amplify your brand and generate sales. The goal is to get your messaging and content in front of your total addressable market at the right frequency, in the right places. We launch a dual campaign approach. Capture Demand targets your audience actively searching for what you offer—ready to decide now, while Create Demand engages the broader pool of ideal customers who aren't buying yet. We reach the right job titles at target companies in key regions. Using your content and messaging, campaigns will showcase your expertise, answer key questions, share success stories, and call people to action. As prospects move toward purchase, you'll be top of mind thanks to the brand awareness built in your niche. We recommend running campaigns for at least six months to see solid ROI. You can cancel anytime with 30-day notice. But if it's working, you'll likely want to invest more.
       image:
         src: /images/home/process-deploy.jpg
         alt: Analyzing video marketing performance data
